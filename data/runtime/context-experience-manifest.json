@@ -1,0 +1,11 @@
+{
+  "schema_version": "3.2-context-experience-runtime-1.0",
+  "release_version": "3.2",
+  "base_release": "3.1",
+  "generated_at": "2026-08-14T11:39:17.567Z",
+  "canonical_data_changed": false,
+  "source_file": "data/experience/context-experience-v3.2.json",
+  "source_sha256": "4b9ac0ebb049b13846427ba6996de2bb88b5f1f085ef8b511a524d3acdc57b90",
+  "runtime_file": "data/runtime/context-experience-runtime.js",
+  "runtime_sha256": "2bf88c2fe7f69cc0023805c81db9557522e4fe4b46d9bcce1e147d2d40fb0891"
+}

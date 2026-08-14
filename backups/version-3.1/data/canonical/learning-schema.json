@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "azure-digital-brain-learning-schema-v2.1",
+  "title": "Azure Digital Brain Architecture Learning Framework",
+  "type": "object",
+  "required": ["schema_version", "meta", "maturity_levels", "user_profile_contract", "learning_paths"],
+  "properties": {
+    "schema_version": {"const":"2.1"},
+    "meta": {"type":"object","required":["title","path_count","learning_mode","knowledge_policy"]},
+    "maturity_levels": {"type":"array","minItems":4,"maxItems":4},
+    "user_profile_contract": {"type":"object","required":["profile_schema_version","progress_path","notes_path"]},
+    "learning_paths": {
+      "type":"array",
+      "minItems":5,
+      "maxItems":5,
+      "items": {
+        "type":"object",
+        "required":["id","title","goal","outcome","sequence","steps"],
+        "properties": {
+          "id":{"type":"string","pattern":"^learning-path-[a-z0-9-]+$"},
+          "steps": {
+            "type":"array","minItems":1,
+            "items": {
+              "type":"object",
+              "required":["id","title","learning_goal","explanation","referenced_nodes","referenced_scenarios","prerequisites","next_learning_steps","architecture_questions","maturity_level","practice_references"],
+              "properties": {
+                "id":{"type":"string","pattern":"^learning-step-[a-z0-9-]+$"},
+                "referenced_nodes":{"type":"array"},
+                "referenced_scenarios":{"type":"array"},
+                "prerequisites":{"type":"array"},
+                "next_learning_steps":{"type":"array"},
+                "architecture_questions":{"type":"array","minItems":1},
+                "maturity_level":{"enum":["level-1-understand","level-2-connect","level-3-apply","level-4-decide"]},
+                "practice_references":{"type":"array"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

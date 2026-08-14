@@ -1,0 +1,1252 @@
+{
+  "meta": {
+    "count": 155,
+    "generated_at": "2026-08-11",
+    "schema_version": "1.1",
+    "canonical": true,
+    "migrated_at": "2026-08-11",
+    "enrichment_version": "1.8"
+  },
+  "sources": [
+    {
+      "id": "mindmeister-source",
+      "title": "Originale Azure AZ-900 Mindmap",
+      "url": "https://www.mindmeister.com/app/map/3834766227?t=UvVNUtIhsJ",
+      "publisher": "MindMeister / Nutzerdaten",
+      "accessed_at": "2026-08-10",
+      "type": "original"
+    },
+    {
+      "id": "ms-entra-name",
+      "title": "New name for Azure Active Directory",
+      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/new-name",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-blueprints-retirement",
+      "title": "Azure Blueprints retirement",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/blueprints/blueprint-retirement",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-regions-overview",
+      "title": "Azure regions overview",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/regions-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-zones-overview",
+      "title": "Availability zones overview",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-app-gateway",
+      "title": "Application Gateway overview",
+      "url": "https://learn.microsoft.com/en-us/azure/application-gateway/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-front-door",
+      "title": "Azure Front Door documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/frontdoor/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-private-link",
+      "title": "What is Azure Private Link?",
+      "url": "https://learn.microsoft.com/en-us/azure/private-link/private-link-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-private-dns",
+      "title": "Azure Private Endpoint DNS configuration",
+      "url": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-rbac",
+      "title": "What is Azure role-based access control?",
+      "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-defender-overview",
+      "title": "Microsoft Defender for Cloud documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-10",
+      "type": "official"
+    },
+    {
+      "id": "ms-vnet-subnets",
+      "title": "Azure virtual networks and subnets",
+      "url": "https://learn.microsoft.com/en-us/azure/networking/design-guide/vnets-subnets",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-ip-services",
+      "title": "What is Azure Virtual Network IP Services?",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/ip-services-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-nsg-asg",
+      "title": "Network security groups and application security groups",
+      "url": "https://learn.microsoft.com/en-us/azure/networking/design-guide/network-application-security-groups",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-route-tables",
+      "title": "Azure virtual network traffic routing",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vnet-peering",
+      "title": "Connect virtual networks with virtual network peering",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-network/tutorial-connect-virtual-networks",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-service-endpoints",
+      "title": "Azure virtual network service endpoints",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vpn-gateway",
+      "title": "What is Azure VPN Gateway?",
+      "url": "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vpn-settings",
+      "title": "About Azure VPN Gateway configuration settings",
+      "url": "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-expressroute",
+      "title": "What is Azure ExpressRoute?",
+      "url": "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-load-balancing",
+      "title": "Load-balancing options in Azure",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/load-balancing-overview",
+      "publisher": "Azure Architecture Center",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-load-balancer-components",
+      "title": "Azure Load Balancer components",
+      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/components",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-traffic-manager",
+      "title": "Azure Traffic Manager overview",
+      "url": "https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-dns",
+      "title": "Azure DNS overview",
+      "url": "https://learn.microsoft.com/en-us/azure/dns/dns-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-private-dns-overview",
+      "title": "What is Azure Private DNS?",
+      "url": "https://learn.microsoft.com/en-us/azure/dns/private-dns-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-firewall",
+      "title": "Azure Firewall and traffic inspection",
+      "url": "https://learn.microsoft.com/en-us/azure/networking/design-guide/azure-firewall",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-ddos",
+      "title": "What is Azure DDoS Protection?",
+      "url": "https://learn.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-waf",
+      "title": "What is Azure Web Application Firewall?",
+      "url": "https://learn.microsoft.com/en-us/azure/web-application-firewall/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-entra-overview",
+      "title": "What is Microsoft Entra?",
+      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/what-is-entra",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-identity-fundamentals",
+      "title": "Identity and access management fundamental concepts",
+      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/identity-fundamental-concepts",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-role-assignments",
+      "title": "Understand Azure role assignments",
+      "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-role-assignment-steps",
+      "title": "Steps to assign an Azure role",
+      "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-pim",
+      "title": "What is Microsoft Entra Privileged Identity Management?",
+      "url": "https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-managed-identities",
+      "title": "Managed identities for Azure resources",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-app-objects",
+      "title": "Application and service principal objects in Microsoft Entra ID",
+      "url": "https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-app-management",
+      "title": "What is application management in Microsoft Entra ID?",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/what-is-application-management",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-conditional-access",
+      "title": "What is Conditional Access?",
+      "url": "https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-mfa",
+      "title": "Microsoft Entra multifactor authentication overview",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-id-protection",
+      "title": "What is Microsoft Entra ID Protection?",
+      "url": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-access-tokens",
+      "title": "Access tokens in the Microsoft identity platform",
+      "url": "https://learn.microsoft.com/en-us/entra/identity-platform/access-tokens",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-id-tokens",
+      "title": "OpenID Connect on the Microsoft identity platform",
+      "url": "https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-refresh-tokens",
+      "title": "Refresh tokens in the Microsoft identity platform",
+      "url": "https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-b2b",
+      "title": "What is Microsoft Entra B2B collaboration?",
+      "url": "https://learn.microsoft.com/en-us/entra/external-id/what-is-b2b",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-external-id",
+      "title": "Introduction to Microsoft Entra External ID",
+      "url": "https://learn.microsoft.com/en-us/entra/external-id/external-identities-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-device-identity",
+      "title": "What is a device identity?",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/devices/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-defender-identity",
+      "title": "Microsoft Defender for Identity overview",
+      "url": "https://learn.microsoft.com/en-us/defender-for-identity/what-is",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-sso",
+      "title": "Plan a single sign-on deployment",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/plan-sso-deployment",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-entra-rbac",
+      "title": "Microsoft Entra RBAC documentation",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-keyvault-auth",
+      "title": "Authentication in Azure Key Vault",
+      "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/authentication",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vm-overview",
+      "title": "Virtual machines in Azure",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vm-sizes",
+      "title": "Sizes for virtual machines in Azure",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-managed-disks",
+      "title": "Introduction to Azure Managed Disks",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-availability-sets",
+      "title": "Availability sets overview",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vmss-overview",
+      "title": "What are Virtual Machine Scale Sets?",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vmss-autoscale",
+      "title": "Overview of autoscale with Virtual Machine Scale Sets",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vmss-repair",
+      "title": "Automatic instance repairs for Virtual Machine Scale Sets",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-app-service",
+      "title": "App Service overview",
+      "url": "https://learn.microsoft.com/en-us/azure/app-service/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-app-service-plan",
+      "title": "What are Azure App Service plans?",
+      "url": "https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-app-service-patching",
+      "title": "Azure App Service OS and runtime patching",
+      "url": "https://learn.microsoft.com/en-us/azure/app-service/overview-patch-os-runtime",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-app-service-slots",
+      "title": "Set up staging environments in Azure App Service",
+      "url": "https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-aci-overview",
+      "title": "What is Azure Container Instances?",
+      "url": "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-aci-groups",
+      "title": "Container groups in Azure Container Instances",
+      "url": "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-container-groups",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-aks-overview",
+      "title": "What is Azure Kubernetes Service (AKS)?",
+      "url": "https://learn.microsoft.com/en-us/azure/aks/what-is-aks",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-aks-support",
+      "title": "Support policies for Azure Kubernetes Service",
+      "url": "https://learn.microsoft.com/en-us/azure/aks/support-policies",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-container-options",
+      "title": "Comparing AKS with other Azure container options",
+      "url": "https://learn.microsoft.com/en-us/azure/aks/compare-container-options-with-aks",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-monitor-vm",
+      "title": "Monitor virtual machines in Azure",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/vm/monitor-vm",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-log-analytics",
+      "title": "Overview of Log Analytics in Azure Monitor",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-monitor-aks",
+      "title": "Monitor Azure Kubernetes Service",
+      "url": "https://learn.microsoft.com/en-us/azure/aks/monitor-aks",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-defender-servers",
+      "title": "Defender for Servers",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-servers-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-jit-vm",
+      "title": "Just-in-time virtual machine access",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vm-backup",
+      "title": "An overview of Azure VM backup",
+      "url": "https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-site-recovery",
+      "title": "About Azure Site Recovery",
+      "url": "https://learn.microsoft.com/en-us/azure/site-recovery/site-recovery-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-vm-maintenance",
+      "title": "Guest updates and host maintenance overview",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/updates-maintenance-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-governance-overview",
+      "title": "What are the Azure Management areas?",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/management-groups/azure-management",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-management-groups",
+      "title": "Manage Azure subscriptions at scale with management groups",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/management-groups/manage",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-management-group-design",
+      "title": "Management groups – Cloud Adoption Framework",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-subscription-design",
+      "title": "Subscriptions – Cloud Adoption Framework",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-arm-overview",
+      "title": "What is Azure Resource Manager?",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-policy-overview",
+      "title": "What is Azure Policy?",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/policy/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-policy-definitions",
+      "title": "Azure Policy definition structure basics",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-basics",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-policy-assignments",
+      "title": "Azure Policy assignment structure",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-policy-initiatives",
+      "title": "Azure Policy initiative definition structure",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/initiative-definition-structure",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-policy-effects",
+      "title": "Azure Policy definitions effect basics",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-policy-compliance",
+      "title": "Azure Policy compliance states",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/compliance-states",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-policy-regulatory",
+      "title": "Regulatory Compliance in Azure Policy",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/regulatory-compliance",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-resource-naming",
+      "title": "Define your naming convention",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-resource-tags",
+      "title": "Use tags to organize your Azure resources and management hierarchy",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-resource-tagging-strategy",
+      "title": "Define your tagging strategy",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-resource-locks",
+      "title": "Lock your Azure resources to protect your infrastructure",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-cost-management",
+      "title": "What is Microsoft Cost Management?",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-cost-plan",
+      "title": "Plan to manage Azure costs",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/plan-manage-costs",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-cost-analysis",
+      "title": "Start using Cost Analysis",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-defender-posture",
+      "title": "Cloud overview dashboard in Microsoft Defender for Cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/cloud-infrastructure-dashboard",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-defender-regulatory",
+      "title": "Assign regulatory compliance standards in Microsoft Defender for Cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/assign-regulatory-compliance-standards",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-security-benchmark",
+      "title": "Microsoft cloud security benchmark",
+      "url": "https://learn.microsoft.com/en-us/security/benchmark/azure/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-intro",
+      "title": "Introduction to Azure Storage",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-account",
+      "title": "Storage account overview",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-authorization",
+      "title": "Authorize access to data in Azure Storage",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/authorize-data-access",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-sas",
+      "title": "Grant limited access with shared access signatures (SAS)",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-private-endpoints",
+      "title": "Use private endpoints for Azure Storage",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-private-endpoints",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-encryption",
+      "title": "Azure Storage encryption for data at rest",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-redundancy",
+      "title": "Azure Storage redundancy",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-disaster-recovery",
+      "title": "Azure Storage disaster recovery planning and failover",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-blob-overview",
+      "title": "Introduction to Azure Blob Storage",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-blob-access-tiers",
+      "title": "Access tiers for blob data",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-blob-lifecycle",
+      "title": "Azure Blob Storage lifecycle management overview",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-blob-data-protection",
+      "title": "Data protection overview for Azure Blob Storage",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/data-protection-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-files-overview",
+      "title": "Introduction to Azure Files",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-file-sync",
+      "title": "Introduction to Azure File Sync",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-queue-overview",
+      "title": "Introduction to Azure Queue Storage",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-table-overview",
+      "title": "Introduction to Azure Table storage",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-data-lake-overview",
+      "title": "Introduction to Azure Data Lake Storage",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-data-box",
+      "title": "Microsoft Azure Data Box overview",
+      "url": "https://learn.microsoft.com/en-us/azure/databox/data-box-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-azure-migrate",
+      "title": "About Azure Migrate",
+      "url": "https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-azure-sql-overview",
+      "title": "What is Azure SQL?",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?view=azuresql",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-cosmos-resource-model",
+      "title": "Databases, containers, and items in Azure Cosmos DB",
+      "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/resource-model",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-dms-overview",
+      "title": "What is Azure Database Migration Service?",
+      "url": "https://learn.microsoft.com/en-us/azure/dms/dms-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-shared-responsibility",
+      "title": "Shared responsibility in the cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-security-overview",
+      "title": "Introduction to Azure security",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-security-pillar",
+      "title": "Azure Well-Architected Framework – Security pillar",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/security/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-security-design-patterns",
+      "title": "Architecture design patterns that support security",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/security/design-patterns",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-zero-trust-infrastructure",
+      "title": "Secure infrastructure with Zero Trust",
+      "url": "https://learn.microsoft.com/en-us/security/zero-trust/deploy/infrastructure",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-azure-infrastructure-security",
+      "title": "Azure infrastructure security",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/infrastructure",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-azure-physical-security",
+      "title": "Physical security of Azure datacenters",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/physical-security",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-networking-overview",
+      "title": "Azure networking services overview",
+      "url": "https://learn.microsoft.com/en-us/azure/networking/networking-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-keyvault-concepts",
+      "title": "Azure Key Vault basic concepts",
+      "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-keyvault-objects",
+      "title": "Azure Key Vault keys, secrets, and certificates overview",
+      "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-keyvault-security",
+      "title": "Secure your Azure Key Vault",
+      "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/secure-key-vault",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-key-management-choice",
+      "title": "Choose the right Azure key management solution",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management-choose",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-defender-secure-score",
+      "title": "Secure score in Microsoft Defender for Cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/secure-score-security-controls",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-defender-recommendations",
+      "title": "Security recommendations in Microsoft Defender for Cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/security-recommendations",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-defender-vulnerability",
+      "title": "Enable vulnerability scanning with Microsoft Defender Vulnerability Management",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-backup-security",
+      "title": "Azure Backup security best practices for data protection",
+      "url": "https://learn.microsoft.com/en-us/azure/backup/azure-backup-data-protection-best-practices",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-backup-immutable",
+      "title": "Manage Azure Backup Immutable vault operations",
+      "url": "https://learn.microsoft.com/en-us/azure/backup/backup-azure-immutable-vault-how-to-manage",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-recovery-services-vault",
+      "title": "Create and configure a Recovery Services vault",
+      "url": "https://learn.microsoft.com/en-us/azure/backup/backup-create-recovery-services-vault",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-bcdr-concepts",
+      "title": "Business continuity, high availability, and disaster recovery",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/concept-business-continuity-high-availability-disaster-recovery",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-azure-monitor-overview",
+      "title": "Azure Monitor overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-azure-monitor-data-platform",
+      "title": "Azure Monitor data platform",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/data-platform",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-monitor-metrics",
+      "title": "Azure Monitor Metrics overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/metrics/data-platform-metrics",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-monitor-logs",
+      "title": "Azure Monitor Logs overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-monitor-diagnostic-settings",
+      "title": "Diagnostic settings in Azure Monitor",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/platform/diagnostic-settings",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-monitor-alerts",
+      "title": "Azure Monitor alerts overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-application-insights",
+      "title": "Application Insights overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-application-map",
+      "title": "Application map in Application Insights",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-map",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-monitor-workbooks",
+      "title": "Azure Workbooks overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-service-health-overview",
+      "title": "What is Azure Service Health?",
+      "url": "https://learn.microsoft.com/en-us/azure/service-health/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-resource-health-overview",
+      "title": "Azure Resource Health overview",
+      "url": "https://learn.microsoft.com/en-us/azure/service-health/resource-health-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-advisor-overview",
+      "title": "Azure Advisor documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/advisor/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-advisor-score",
+      "title": "Advisor score",
+      "url": "https://learn.microsoft.com/en-us/azure/advisor/advisor-score",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-operations-observability",
+      "title": "Architecture strategies for designing a monitoring system",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/observability",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-cloud-estate-monitor",
+      "title": "Monitor your Azure cloud estate",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/monitor",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-cloud-operations-functions",
+      "title": "Understand cloud operations functions",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-operations",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-reliability-targets",
+      "title": "Architecture strategies for defining reliability targets",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/metrics",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-failover-failback",
+      "title": "What are failover and failback?",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/concept-failover-failback",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    },
+    {
+      "id": "ms-sla-concepts",
+      "title": "How to read a service-level agreement",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/concept-service-level-agreements",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-08-11",
+      "type": "official"
+    }
+  ]
+}

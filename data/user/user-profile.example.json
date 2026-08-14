@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1",
+  "profile_id": "local-default",
+  "updated_at": "2026-08-11T00:00:00.000Z",
+  "notes": {},
+  "learning_status": {},
+  "favorites": [],
+  "custom_links": [],
+  "preferences": {
+    "default_mode": "mindmap"
+  },
+  "migrations": {
+    "legacy_node_keys": "completed"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "azure-digital-brain-scenario-schema-v2.0",
+  "title": "Azure Digital Brain Architecture Scenario Layer",
+  "type": "object",
+  "required": ["schema_version", "meta", "sources", "scenarios"],
+  "properties": {
+    "schema_version": { "const": "2.0" },
+    "meta": {
+      "type": "object",
+      "required": ["title", "scenario_count", "source_policy", "node_reference_policy"]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "url", "publisher", "type", "accessed_at"]
+      }
+    },
+    "scenarios": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "title", "short_description", "architecture_goal", "actors",
+          "architecture_flow", "component_instances", "diagram", "technical_explanation",
+          "architecture_decisions", "security_considerations", "monitoring_considerations",
+          "reliability_considerations", "cost_considerations", "common_mistakes",
+          "enterprise_example", "operations_model", "learning_path", "merksatz",
+          "relationships", "sources", "status"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^scenario-[a-z0-9-]+$" },
+          "status": { "const": "published" },
+          "actors": { "type": "array", "minItems": 1 },
+          "architecture_flow": { "type": "array", "minItems": 3 },
+          "component_instances": { "type": "array", "minItems": 3 },
+          "relationships": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "source", "target", "type", "inverse_type", "explanation", "sources", "confidence", "status"]
+            }
+          },
+          "learning_path": { "type": "array", "minItems": 3 },
+          "sources": { "type": "array", "minItems": 1 }
+        }
+      }
+    }
+  }
+}

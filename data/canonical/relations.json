@@ -1,0 +1,4330 @@
+{
+  "meta": {
+    "schema_version": "1.1",
+    "title": "Azure Digital Brain – Canonical Relations",
+    "relation_count": 243,
+    "migrated_at": "2026-08-11",
+    "canonical": true,
+    "enrichment_version": "1.8",
+    "networking_relation_count": 29,
+    "identity_relation_count": 35,
+    "compute_relation_count": 34,
+    "governance_relation_count": 34,
+    "storage_relation_count": 26,
+    "security_relation_count": 34,
+    "monitoring_operations_relation_count": 24
+  },
+  "relations": [
+    {
+      "schema_version": "1.1",
+      "id": "rel-001",
+      "source": "azure-0442",
+      "target": "azure-0864",
+      "type": "secured_by",
+      "inverse_type": "secures",
+      "explanation": "NSGs filtern Verkehr für Subnetze oder Netzwerkschnittstellen innerhalb eines VNet; sie werden nicht direkt dem gesamten VNet zugeordnet.",
+      "sources": [
+        "ms-nsg-asg"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "gesichert-durch"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-002",
+      "source": "azure-0442",
+      "target": "azure-0881",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Ein Private Endpoint stellt einem Dienst eine private IP aus dem VNet bereit.",
+      "sources": [
+        "ms-private-link"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "verbindet-mit"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-003",
+      "source": "azure-0881",
+      "target": "azure-0558",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Private DNS sorgt dafür, dass der Dienstname zur privaten Endpoint-IP aufgelöst wird.",
+      "sources": [
+        "ms-private-dns"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "abhängig-von"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-004",
+      "source": "azure-0881",
+      "target": "azure-0731",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Azure SQL kann über einen Private Endpoint privat aus einem VNet erreicht werden.",
+      "sources": [
+        "ms-private-link"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "verbindet-mit"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-005",
+      "source": "azure-0881",
+      "target": "azure-0571",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Blob Storage kann über Private Link ohne öffentlichen Datenpfad erreicht werden.",
+      "sources": [
+        "ms-private-link"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "verbindet-mit"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-006",
+      "source": "azure-0562",
+      "target": "azure-0519",
+      "type": "routes_to",
+      "inverse_type": "receives_from",
+      "explanation": "Front Door kann als globaler Einstiegspunkt an einen regionalen Application Gateway weiterleiten.",
+      "sources": [
+        "ms-front-door"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "leitet-an"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-007",
+      "source": "azure-0519",
+      "target": "azure-0351",
+      "type": "routes_to",
+      "inverse_type": "receives_from",
+      "explanation": "Application Gateway kann HTTP(S)-Anfragen auf App Service routen; Backend-, TLS- und Zugriffskonfiguration müssen als gemeinsamer Layer-7-Pfad entworfen werden.",
+      "sources": [
+        "ms-app-gateway",
+        "ms-app-service"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "leitet-an"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-008",
+      "source": "azure-0519",
+      "target": "azure-0864",
+      "type": "similar_to",
+      "inverse_type": "similar_to",
+      "explanation": "Beide kontrollieren Netzwerkpfade, aber Application Gateway arbeitet anwendungsbezogen auf Layer 7, während NSGs zustandsbehaftete L3/L4-Regeln auf Subnet- oder NIC-Ebene anwenden.",
+      "sources": [
+        "ms-app-gateway",
+        "ms-nsg-asg"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "ähnlich-zu"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-009",
+      "source": "azure-0505",
+      "target": "azure-0519",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Load Balancer verteilt TCP/UDP-Flows auf Layer 4; Application Gateway trifft inhaltsbezogene Routingentscheidungen für HTTP(S) auf Layer 7.",
+      "sources": [
+        "ms-load-balancing",
+        "ms-app-gateway"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "alternativ-zu"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-010",
+      "source": "azure-0560",
+      "target": "azure-0562",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Traffic Manager lenkt Clients DNS-basiert zu Endpunkten; Front Door ist ein globaler HTTP(S)-Proxy und CDN mit Layer-7-Funktionen.",
+      "sources": [
+        "ms-traffic-manager",
+        "ms-front-door",
+        "ms-load-balancing"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "alternativ-zu"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-011",
+      "source": "azure-0962",
+      "target": "azure-0277",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy bewertet und erzwingt Regeln für Ressourcen im Geltungsbereich.",
+      "sources": [
+        "ms-rbac"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "steuert"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-012",
+      "source": "azure-0964",
+      "target": "azure-0277",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure RBAC autorisiert Security Principals über Role Assignments an Azure-Ressourcen-Scopes wie einer Resource Group.",
+      "sources": [
+        "ms-rbac",
+        "ms-role-assignments"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "steuert"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-013",
+      "source": "azure-0046",
+      "target": "azure-0964",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "PIM ermöglicht zeitlich begrenzte, genehmigte und überwachte Aktivierung privilegierter Azure-RBAC-Rollen.",
+      "sources": [
+        "ms-pim",
+        "ms-rbac"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "steuert"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-014",
+      "source": "azure-0300",
+      "target": "azure-0284",
+      "type": "deployed_by",
+      "inverse_type": "deploys",
+      "explanation": "ARM/Bicep-Deklarationen werden über Azure Resource Manager bereitgestellt.",
+      "sources": [
+        "mindmeister-source"
+      ],
+      "confidence": 0.82,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "bereitgestellt-durch"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-015",
+      "source": "azure-0387",
+      "target": "azure-0505",
+      "type": "depends_on",
+      "inverse_type": "depended_on_by",
+      "explanation": "VM Scale Sets verwenden häufig Azure Load Balancer für Layer-4-Verteilung und Health Probes; Application Gateway ist eine Layer-7-Alternative für HTTP(S).",
+      "sources": [
+        "ms-vmss-overview",
+        "ms-load-balancing",
+        "ms-app-gateway"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "abhängig-von"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-016",
+      "source": "azure-0351",
+      "target": "azure-0944",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "App Service kann Geheimnisse und Zertifikate aus Key Vault beziehen.",
+      "sources": [
+        "mindmeister-source"
+      ],
+      "confidence": 0.82,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "verwendet"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-017",
+      "source": "azure-0425",
+      "target": "azure-0442",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "AKS integriert seine Node- und Pod-Netzwerkpfade in Azure Virtual Network; das konkrete Netzwerkmodell bestimmt IP-Planung und Konnektivität.",
+      "sources": [
+        "ms-aks-overview",
+        "ms-vnet-subnets"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "verwendet"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-018",
+      "source": "azure-0425",
+      "target": "azure-0983",
+      "type": "monitored_by",
+      "inverse_type": "monitors",
+      "explanation": "Azure Monitor und Container Insights erfassen AKS-Metriken, Logs und Zustandsinformationen über Control Plane, Nodes, Pods und Anwendungen.",
+      "sources": [
+        "ms-monitor-aks"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "überwacht-durch"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-019",
+      "source": "azure-0987",
+      "target": "azure-0983",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Application Insights ist eine Funktion innerhalb von Azure Monitor.",
+      "sources": [
+        "mindmeister-source"
+      ],
+      "confidence": 0.82,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "Teil-von"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-020",
+      "source": "azure-0985",
+      "target": "azure-0983",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Log Analytics dient der Abfrage und Analyse von Azure-Monitor-Logs.",
+      "sources": [
+        "mindmeister-source"
+      ],
+      "confidence": 0.82,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "Teil-von"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-021",
+      "source": "azure-0731",
+      "target": "azure-0724",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Azure SQL ist relational; Cosmos DB ist für global verteilte NoSQL-Szenarien ausgelegt.",
+      "sources": [
+        "mindmeister-source"
+      ],
+      "confidence": 0.82,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "alternativ-zu"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-022",
+      "source": "azure-0772",
+      "target": "azure-0782",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Functions und Logic Apps können serverlose Workflows gemeinsam umsetzen.",
+      "sources": [
+        "mindmeister-source"
+      ],
+      "confidence": 0.82,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "integriert-mit"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-023",
+      "source": "azure-0785",
+      "target": "azure-0772",
+      "type": "triggers",
+      "inverse_type": "triggered_by",
+      "explanation": "Event Grid kann ereignisgesteuerte Azure Functions auslösen.",
+      "sources": [
+        "mindmeister-source"
+      ],
+      "confidence": 0.82,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "löst-aus"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-024",
+      "source": "azure-0944",
+      "target": "azure-0904",
+      "type": "secured_by",
+      "inverse_type": "secures",
+      "explanation": "Key Vault verwendet Microsoft Entra ID zur Authentifizierung des aufrufenden Security Principals und prüft anschließend dessen Autorisierung.",
+      "sources": [
+        "ms-keyvault-auth"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "gesichert-durch"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-025",
+      "source": "azure-0912",
+      "target": "azure-0904",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Conditional Access ist die kontextabhängige Zero-Trust-Policy-Engine von Microsoft Entra ID.",
+      "sources": [
+        "ms-conditional-access"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": "2026-08-11",
+      "legacy_type": "Teil-von"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-026",
+      "source": "azure-0937",
+      "target": "azure-0935",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Microsoft Sentinel und Defender for Cloud können Sicherheitsdaten und Vorfälle zusammenführen.",
+      "sources": [
+        "mindmeister-source"
+      ],
+      "confidence": 0.82,
+      "status": "accepted",
+      "created_by": "original_mindmap_inference",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "integriert-mit"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "rel-027",
+      "source": "azure-0972",
+      "target": "azure-0962",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Blueprints bündelten unter anderem Policy-Zuweisungen; der Dienst wird eingestellt.",
+      "sources": [
+        "ms-blueprints-retirement"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-08-10",
+      "reviewed_at": null,
+      "legacy_type": "integriert-mit"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-001",
+      "source": "azure-0442",
+      "target": "azure-0453",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Ein VNet enthält einen oder mehrere Subnetz-Adressbereiche.",
+      "sources": [
+        "ms-vnet-subnets"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-002",
+      "source": "azure-0453",
+      "target": "azure-0864",
+      "type": "secured_by",
+      "inverse_type": "secures",
+      "explanation": "Eine NSG kann einem Subnet zugeordnet werden und dessen eingehenden sowie ausgehenden Verkehr filtern.",
+      "sources": [
+        "ms-nsg-asg"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-003",
+      "source": "azure-0453",
+      "target": "azure-0871",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Eine Route Table wird einem Subnet zugeordnet und beeinflusst dessen ausgehende Routen.",
+      "sources": [
+        "ms-route-tables"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-004",
+      "source": "azure-0462",
+      "target": "azure-0442",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "VPN Gateway verbindet ein VNet verschlüsselt mit On-Premises-Netzen, Clients oder anderen VNets.",
+      "sources": [
+        "ms-vpn-gateway"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-005",
+      "source": "azure-0473",
+      "target": "azure-0462",
+      "type": "required_by",
+      "inverse_type": "requires",
+      "explanation": "Azure VPN Gateway benötigt ein dediziertes Subnet mit dem Namen GatewaySubnet.",
+      "sources": [
+        "ms-vpn-settings"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-006",
+      "source": "azure-0467",
+      "target": "azure-0462",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Point-to-Site ist ein von Azure VPN Gateway unterstütztes Verbindungsszenario.",
+      "sources": [
+        "ms-vpn-gateway"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-007",
+      "source": "azure-0468",
+      "target": "azure-0462",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Site-to-Site ist ein von Azure VPN Gateway unterstütztes Verbindungsszenario.",
+      "sources": [
+        "ms-vpn-gateway"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-008",
+      "source": "azure-0478",
+      "target": "azure-0493",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Ein VNet wird über ein ExpressRoute Gateway mit dem ExpressRoute Circuit verbunden.",
+      "sources": [
+        "ms-expressroute"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-009",
+      "source": "azure-0493",
+      "target": "azure-0442",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Das ExpressRoute Gateway stellt die Verbindung zwischen ExpressRoute und dem VNet her.",
+      "sources": [
+        "ms-expressroute"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-010",
+      "source": "azure-0462",
+      "target": "azure-0478",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "VPN Gateway und ExpressRoute sind alternative beziehungsweise kombinierbare Wege für Hybridkonnektivität.",
+      "sources": [
+        "ms-vpn-gateway",
+        "ms-expressroute"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-011",
+      "source": "azure-0510",
+      "target": "azure-0505",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Health Probes bestimmen, welche Backend-Pool-Mitglieder neue Load-Balancer-Flows erhalten.",
+      "sources": [
+        "ms-load-balancer-components"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-012",
+      "source": "azure-0521",
+      "target": "azure-0519",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Application Gateway verwendet Layer-7-Routing für HTTP(S)-Anfragen.",
+      "sources": [
+        "ms-app-gateway"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-013",
+      "source": "azure-0519",
+      "target": "azure-0863",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Application Gateway kann eine WAF Policy zur Prüfung und Blockierung schädlicher Webanfragen verwenden.",
+      "sources": [
+        "ms-app-gateway",
+        "ms-waf"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-014",
+      "source": "azure-0562",
+      "target": "azure-0863",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Front Door Standard/Premium kann Azure WAF am globalen Edge-Einstiegspunkt einsetzen.",
+      "sources": [
+        "ms-front-door",
+        "ms-waf"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-015",
+      "source": "azure-0560",
+      "target": "azure-0545",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Traffic Manager verwendet DNS-Antworten, um Clients zu einem geeigneten Endpunkt zu lenken.",
+      "sources": [
+        "ms-traffic-manager",
+        "ms-dns"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-016",
+      "source": "azure-0548",
+      "target": "azure-0545",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "DNS-Zonen und ihre Einträge werden durch Azure DNS gehostet und verwaltet.",
+      "sources": [
+        "ms-dns"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-017",
+      "source": "azure-0558",
+      "target": "azure-0545",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Azure Private DNS ist der Azure-DNS-Dienst für private Namensauflösung in VNets.",
+      "sources": [
+        "ms-dns",
+        "ms-private-dns-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-018",
+      "source": "azure-0841",
+      "target": "azure-0442",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "Azure Firewall kann VNet-Verkehr zentral inspizieren und anhand von Policies filtern.",
+      "sources": [
+        "ms-firewall"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-019",
+      "source": "azure-0871",
+      "target": "azure-0841",
+      "type": "routes_to",
+      "inverse_type": "receives_from",
+      "explanation": "Eine UDR kann Subnet-Verkehr zur Inspektion an Azure Firewall als nächsten Hop leiten.",
+      "sources": [
+        "ms-route-tables",
+        "ms-firewall"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-020",
+      "source": "azure-0846",
+      "target": "azure-0841",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "NAT Rules sind ein Regeltyp von Azure Firewall.",
+      "sources": [
+        "ms-firewall"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-021",
+      "source": "azure-0848",
+      "target": "azure-0841",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Network Rules sind ein Regeltyp von Azure Firewall für L3/L4-Verkehr.",
+      "sources": [
+        "ms-firewall"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-022",
+      "source": "azure-0850",
+      "target": "azure-0841",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Application Rules sind ein Regeltyp von Azure Firewall für benannte Anwendungsziele.",
+      "sources": [
+        "ms-firewall"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-023",
+      "source": "azure-0852",
+      "target": "azure-0442",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "DDoS Network Protection schützt unterstützte öffentliche IP-Ressourcen in aktivierten VNets auf Layer 3 und 4.",
+      "sources": [
+        "ms-ddos"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-024",
+      "source": "azure-0875",
+      "target": "azure-0864",
+      "type": "used_by",
+      "inverse_type": "uses",
+      "explanation": "Application Security Groups werden in NSG-Regeln als logische Quellen oder Ziele verwendet.",
+      "sources": [
+        "ms-nsg-asg"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-025",
+      "source": "azure-0878",
+      "target": "azure-0571",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Ein Storage Service Endpoint ermöglicht einem Subnet den direkten Zugriff auf Blob Storage über das Azure-Backbone.",
+      "sources": [
+        "ms-service-endpoints"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-026",
+      "source": "azure-0881",
+      "target": "azure-0882",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Ein Private Endpoint verwendet Azure Private Link für die private Verbindung zur konkreten Dienstressource.",
+      "sources": [
+        "ms-private-link"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-027",
+      "source": "azure-0878",
+      "target": "azure-0881",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Service Endpoint und Private Endpoint sind unterschiedliche Optionen zur Absicherung des Zugriffs auf unterstützte Azure-PaaS-Dienste.",
+      "sources": [
+        "ms-service-endpoints",
+        "ms-private-link"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-028",
+      "source": "azure-0884",
+      "target": "azure-0881",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Ein öffentlicher und ein privater Endpunkt stellen unterschiedliche Erreichbarkeits- und Expositionsmodelle dar.",
+      "sources": [
+        "ms-private-link",
+        "ms-ip-services"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-029",
+      "source": "azure-0887",
+      "target": "azure-0442",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "VNet Peering verbindet Virtual Networks privat über das Microsoft-Backbone.",
+      "sources": [
+        "ms-vnet-peering"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.2",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-001",
+      "source": "azure-0903",
+      "target": "azure-0822",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Authentifizierung ist die Identitätsprüfung innerhalb des umfassenderen Modells aus Authentifizierung und Autorisierung.",
+      "sources": [
+        "ms-identity-fundamentals"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-002",
+      "source": "azure-0908",
+      "target": "azure-0904",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Single Sign-On verwendet Microsoft Entra ID als vertrauenswürdigen Identity Provider für verbundene Anwendungen.",
+      "sources": [
+        "ms-sso",
+        "ms-entra-overview"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-003",
+      "source": "azure-0909",
+      "target": "azure-0904",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "App Registrations, Service Principals und Enterprise Applications werden in Microsoft Entra ID verwaltet.",
+      "sources": [
+        "ms-app-objects",
+        "ms-app-management"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-004",
+      "source": "azure-0909",
+      "target": "azure-0917",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Integrierte Anwendungen verwenden Security Tokens für Anmeldung und API-Zugriff.",
+      "sources": [
+        "ms-app-objects",
+        "ms-access-tokens",
+        "ms-id-tokens"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-005",
+      "source": "azure-0910",
+      "target": "azure-0904",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Entra ID Protection erkennt und bewertet identitätsbezogene Risiken im Microsoft-Entra-Tenant.",
+      "sources": [
+        "ms-id-protection"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-006",
+      "source": "azure-0910",
+      "target": "azure-0912",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Identity Protection liefert User- und Sign-in-Risk an Conditional Access für adaptive Entscheidungen.",
+      "sources": [
+        "ms-id-protection",
+        "ms-conditional-access"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-007",
+      "source": "azure-0911",
+      "target": "azure-0910",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Risikodetektionen sind die einzelnen Signale, aus denen Identity Protection Risiko ableitet.",
+      "sources": [
+        "ms-id-protection"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-008",
+      "source": "azure-0912",
+      "target": "azure-0913",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Conditional Access verwendet Signale zu Identität, Ressource, Gerät, Standort und Risiko.",
+      "sources": [
+        "ms-conditional-access"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-009",
+      "source": "azure-0914",
+      "target": "azure-0912",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Grant und Session Controls sind die durchsetzenden Zugriffskontrollen einer Conditional-Access-Policy.",
+      "sources": [
+        "ms-conditional-access"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-010",
+      "source": "azure-0915",
+      "target": "azure-0912",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Risikobasierter Zugriff ist ein Conditional-Access-Szenario mit User- oder Sign-in-Risk als Bedingung.",
+      "sources": [
+        "ms-id-protection",
+        "ms-conditional-access"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-011",
+      "source": "azure-0916",
+      "target": "azure-0912",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Policy Management steuert Lebenszyklus, Test und Aktivierung von Conditional-Access-Richtlinien.",
+      "sources": [
+        "ms-conditional-access"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-012",
+      "source": "azure-0912",
+      "target": "azure-0928",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Conditional-Access-Policies können Microsoft Entra MFA als Grant Control verlangen.",
+      "sources": [
+        "ms-conditional-access",
+        "ms-mfa"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-013",
+      "source": "azure-0904",
+      "target": "azure-0917",
+      "type": "issues",
+      "inverse_type": "issued_by",
+      "explanation": "Die Microsoft Identity Platform in Entra ID stellt Security Tokens für Anwendungen und Ressourcen aus.",
+      "sources": [
+        "ms-access-tokens",
+        "ms-id-tokens",
+        "ms-refresh-tokens"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-014",
+      "source": "azure-0918",
+      "target": "azure-0917",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Access Tokens sind Security Tokens zur Autorisierung geschützter Ressourcen.",
+      "sources": [
+        "ms-access-tokens"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-015",
+      "source": "azure-0920",
+      "target": "azure-0917",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "ID Tokens sind OpenID-Connect-Security-Tokens für den Client und die Benutzeranmeldung.",
+      "sources": [
+        "ms-id-tokens"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-016",
+      "source": "azure-0922",
+      "target": "azure-0917",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Refresh Tokens sind Security Tokens zur Erneuerung einer Clientsitzung.",
+      "sources": [
+        "ms-refresh-tokens"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-017",
+      "source": "azure-0922",
+      "target": "azure-0918",
+      "type": "refreshes",
+      "inverse_type": "refreshed_by",
+      "explanation": "Ein gültiges Refresh Token kann verwendet werden, um ein neues Access Token zu beziehen.",
+      "sources": [
+        "ms-refresh-tokens"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-018",
+      "source": "azure-0919",
+      "target": "azure-0918",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Eine geschützte Resource API validiert und verwendet das für sie bestimmte Access Token als Autorisierungsnachweis.",
+      "sources": [
+        "ms-access-tokens"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-019",
+      "source": "azure-0921",
+      "target": "azure-0920",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Identitätsclaims sind Bestandteile eines ID Tokens und werden erst nach dessen Validierung verwendet.",
+      "sources": [
+        "ms-id-tokens"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-020",
+      "source": "azure-0924",
+      "target": "azure-0917",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "Korrekte Signatur-, Issuer-, Audience- und Zeitvalidierung schützt die Verwendung von Security Tokens.",
+      "sources": [
+        "ms-access-tokens",
+        "ms-id-tokens"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-021",
+      "source": "azure-0925",
+      "target": "azure-0904",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "B2B Collaboration ist eine External-ID-Funktion für Gäste in einem Microsoft-Entra-Workforce-Tenant.",
+      "sources": [
+        "ms-b2b",
+        "ms-external-id"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-022",
+      "source": "azure-0926",
+      "target": "azure-0904",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Azure AD B2C und Microsoft Entra External ID gehören zur Microsoft-Identitätsplattform für externe Kundenidentitäten.",
+      "sources": [
+        "ms-external-id"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-023",
+      "source": "azure-0927",
+      "target": "azure-0904",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Geräteidentitäten werden als Objekte in Microsoft Entra ID geführt.",
+      "sources": [
+        "ms-device-identity"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-024",
+      "source": "azure-0912",
+      "target": "azure-0927",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Conditional Access kann Registrierung, Join und Compliance eines Geräteobjekts als Zugriffssignal verwenden.",
+      "sources": [
+        "ms-device-identity",
+        "ms-conditional-access"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-025",
+      "source": "azure-0928",
+      "target": "azure-0903",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "MFA stärkt die Authentifizierung, indem mindestens zwei unabhängige Faktorkategorien erforderlich sind.",
+      "sources": [
+        "ms-mfa"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-026",
+      "source": "azure-0046",
+      "target": "azure-0931",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "PIM kann die Aktivierung hochprivilegierter Rollen wie Global Administrator zeitlich begrenzen und überwachen.",
+      "sources": [
+        "ms-pim"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-027",
+      "source": "azure-0947",
+      "target": "azure-0904",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Eine Managed Identity wird durch einen speziellen Service Principal in Microsoft Entra ID repräsentiert.",
+      "sources": [
+        "ms-managed-identities",
+        "ms-app-objects"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-028",
+      "source": "azure-0947",
+      "target": "azure-0944",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Ein Azure-Workload kann seine Managed Identity verwenden, um ein Access Token für Key Vault zu beziehen; Key Vault prüft anschließend die Berechtigung.",
+      "sources": [
+        "ms-managed-identities",
+        "ms-keyvault-auth"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-029",
+      "source": "azure-0959",
+      "target": "azure-0960",
+      "type": "replaced_by",
+      "inverse_type": "replaces",
+      "explanation": "Azure Advanced Threat Protection ist die historische Produktbezeichnung der heutigen Defender-for-Identity-Produktlinie.",
+      "sources": [
+        "ms-defender-identity"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-030",
+      "source": "azure-0960",
+      "target": "azure-0904",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Defender for Identity analysiert Identitätssignale aus lokalen, hybriden und Cloud-Identitätsumgebungen.",
+      "sources": [
+        "ms-defender-identity"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-031",
+      "source": "azure-0045",
+      "target": "azure-0964",
+      "type": "similar_to",
+      "inverse_type": "similar_to",
+      "explanation": "Beide Knoten beschreiben Azure RBAC; der erste erklärt das Grundprinzip, der zweite das kanonische Autorisierungssystem für Azure-Ressourcen.",
+      "sources": [
+        "ms-rbac"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-032",
+      "source": "azure-0965",
+      "target": "azure-0964",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Role Assignments sind die konkreten Zugriffszuweisungen innerhalb von Azure RBAC.",
+      "sources": [
+        "ms-role-assignments"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-033",
+      "source": "azure-0965",
+      "target": "azure-0967",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Eine Role Assignment verweist auf eine Role Definition, die den Berechtigungsumfang beschreibt.",
+      "sources": [
+        "ms-role-assignments"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-034",
+      "source": "azure-0965",
+      "target": "azure-0968",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Eine Role Assignment verwendet einen Scope, der Reichweite und Vererbung bestimmt.",
+      "sources": [
+        "ms-role-assignments",
+        "ms-role-assignment-steps"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "id-rel-035",
+      "source": "azure-0966",
+      "target": "azure-0964",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Least Privilege ist das zentrale Gestaltungsprinzip für Rollen, Zuweisungen und Scopes in Azure RBAC.",
+      "sources": [
+        "ms-role-assignment-steps"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.3",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-001",
+      "source": "azure-0322",
+      "target": "azure-0442",
+      "type": "deployed_in",
+      "inverse_type": "hosts",
+      "explanation": "Eine Azure VM erhält eine Netzwerkschnittstelle in einem Subnetz des Virtual Network und nutzt dessen private Netzwerkgrenze.",
+      "sources": [
+        "ms-vm-overview",
+        "ms-vnet-subnets"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-002",
+      "source": "azure-0505",
+      "target": "azure-0322",
+      "type": "routes_to",
+      "inverse_type": "receives_from",
+      "explanation": "Azure Load Balancer verteilt Layer-4-Flows an erreichbare VM-Backends im Backend Pool.",
+      "sources": [
+        "ms-load-balancing",
+        "ms-vm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-003",
+      "source": "azure-0322",
+      "target": "azure-0947",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Eine VM oder eine auf ihr laufende Workload kann Managed Identity für tokenbasierten Zugriff ohne gespeichertes Anwendungsgeheimnis verwenden.",
+      "sources": [
+        "ms-managed-identities",
+        "ms-vm-overview"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-004",
+      "source": "azure-0964",
+      "target": "azure-0322",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure RBAC steuert Management-Plane-Aktionen auf der VM und ihrem Scope; es ersetzt keine Anmeldung im Gastbetriebssystem.",
+      "sources": [
+        "ms-rbac",
+        "ms-role-assignments",
+        "ms-vm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-005",
+      "source": "azure-0322",
+      "target": "azure-0864",
+      "type": "secured_by",
+      "inverse_type": "secures",
+      "explanation": "Eine der VM-NIC oder ihrem Subnetz zugeordnete NSG filtert eingehende und ausgehende Layer-3/4-Verbindungen.",
+      "sources": [
+        "ms-nsg-asg",
+        "ms-vm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-006",
+      "source": "azure-0933",
+      "target": "azure-0322",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Defender for Cloud bewertet die Sicherheitslage der VM und Defender for Servers ergänzt Bedrohungs- und Schwachstellenschutz.",
+      "sources": [
+        "ms-defender-servers"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-007",
+      "source": "azure-0983",
+      "target": "azure-0322",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Azure Monitor erfasst standardmäßig Hostmetriken und kann über den Azure Monitor Agent Gastmetriken und Logs der VM sammeln.",
+      "sources": [
+        "ms-monitor-vm"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-008",
+      "source": "azure-0322",
+      "target": "azure-0985",
+      "type": "logs_to",
+      "inverse_type": "receives_logs_from",
+      "explanation": "VM-Aktivitäts- und konfigurierte Gastlogs können zur zentralen KQL-Analyse in einen Log Analytics Workspace geschrieben werden.",
+      "sources": [
+        "ms-monitor-vm",
+        "ms-log-analytics"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-009",
+      "source": "azure-0322",
+      "target": "azure-0567",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure VMs verwenden Managed Disks als persistente OS- und Daten-Blockvolumes.",
+      "sources": [
+        "ms-managed-disks",
+        "ms-vm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-010",
+      "source": "azure-0322",
+      "target": "azure-0116",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Backup erzeugt richtliniengesteuerte Wiederherstellungspunkte für geschützte Azure VMs.",
+      "sources": [
+        "ms-vm-backup"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-011",
+      "source": "azure-0322",
+      "target": "azure-0118",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Site Recovery kann VMs kontinuierlich replizieren und Failover in eine Zielumgebung orchestrieren.",
+      "sources": [
+        "ms-site-recovery"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-012",
+      "source": "azure-0322",
+      "target": "azure-0005",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Mehrere VMs in einem Availability Set werden auf Fault und Update Domains verteilt.",
+      "sources": [
+        "ms-availability-sets"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-013",
+      "source": "azure-0322",
+      "target": "azure-0007",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Redundante VM-Instanzen können über Availability Zones verteilt werden, um Rechenzentrumsausfälle zu tolerieren.",
+      "sources": [
+        "ms-vm-overview",
+        "ms-zones-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-014",
+      "source": "azure-0387",
+      "target": "azure-0322",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Ein VM Scale Set verwaltet eine Gruppe von VM-Instanzen über ein gemeinsames Orchestrierungs- und Skalierungsmodell.",
+      "sources": [
+        "ms-vmss-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-015",
+      "source": "azure-0387",
+      "target": "azure-0007",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Ein VM Scale Set kann Instanzen zonal oder über mehrere Availability Zones verteilen.",
+      "sources": [
+        "ms-vmss-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-016",
+      "source": "azure-0387",
+      "target": "azure-0025",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "VMSS verwendet Autoscale-Regeln oder Zeitpläne, um seine Instanzzahl an den Bedarf anzupassen.",
+      "sources": [
+        "ms-vmss-autoscale"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-017",
+      "source": "azure-0025",
+      "target": "azure-0020",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Autoscale setzt bei VMSS und App Service typischerweise horizontale Skalierung durch Erhöhen oder Reduzieren der Instanzzahl um.",
+      "sources": [
+        "ms-vmss-autoscale",
+        "ms-app-service-plan"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-018",
+      "source": "azure-0015",
+      "target": "azure-0020",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Vertikale und horizontale Skalierung sind alternative oder kombinierbare Kapazitätsstrategien mit unterschiedlichen Verfügbarkeits- und Anwendungsanforderungen.",
+      "sources": [
+        "ms-vm-overview",
+        "ms-vmss-overview"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-019",
+      "source": "azure-0351",
+      "target": "azure-0363",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Jede App-Service-App läuft in einem App Service Plan, der ihre Compute-Kapazität und Plattformfunktionen festlegt.",
+      "sources": [
+        "ms-app-service-plan"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-020",
+      "source": "azure-0376",
+      "target": "azure-0351",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Websites und Web APIs sind zentrale Anwendungstypen, die auf Azure App Service ausgeführt werden.",
+      "sources": [
+        "ms-app-service"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-021",
+      "source": "azure-0371",
+      "target": "azure-0351",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Deployment Slots, Custom Domains und TLS sind App-Service-Funktionen für sichere Veröffentlichung und Releases.",
+      "sources": [
+        "ms-app-service-slots",
+        "ms-app-service-plan"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-022",
+      "source": "azure-0351",
+      "target": "azure-0947",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "App Service kann eine system- oder benutzerzugewiesene Managed Identity für Azure-Ressourcenzugriffe verwenden.",
+      "sources": [
+        "ms-managed-identities",
+        "ms-app-service"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-023",
+      "source": "azure-0964",
+      "target": "azure-0351",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure RBAC steuert, welche Security Principals die App-Service-Ressource auf der Management Plane verwalten dürfen.",
+      "sources": [
+        "ms-rbac",
+        "ms-role-assignments"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-024",
+      "source": "azure-0983",
+      "target": "azure-0351",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Azure Monitor verarbeitet Plattformmetriken, Diagnoseprotokolle und anwendungsbezogene Telemetrie von App Service.",
+      "sources": [
+        "ms-app-service",
+        "ms-log-analytics"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-025",
+      "source": "azure-0351",
+      "target": "azure-0985",
+      "type": "logs_to",
+      "inverse_type": "receives_logs_from",
+      "explanation": "App-Service-Diagnoseeinstellungen können unterstützte Plattform- und Anwendungslogs an Log Analytics senden.",
+      "sources": [
+        "ms-log-analytics",
+        "ms-app-service"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-026",
+      "source": "azure-0369",
+      "target": "azure-0025",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "App Service Autoscale verwendet Regeln und Plangrenzen, um die Zahl der Worker-Instanzen anzupassen.",
+      "sources": [
+        "ms-app-service-plan"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-027",
+      "source": "azure-0415",
+      "target": "azure-0425",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "ACI und AKS führen Container aus, unterscheiden sich aber grundlegend zwischen einfacher Containergruppe und vollständiger Kubernetes-Orchestrierung.",
+      "sources": [
+        "ms-container-options",
+        "ms-aci-overview",
+        "ms-aks-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-028",
+      "source": "azure-0415",
+      "target": "azure-0412",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Azure Container Instances ist eine der vorhandenen Compute-Optionen für Azure-Containerworkloads.",
+      "sources": [
+        "ms-aci-overview",
+        "ms-container-options"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-029",
+      "source": "azure-0425",
+      "target": "azure-0412",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Azure Kubernetes Service ist die verwaltete Kubernetes-Option innerhalb der Azure-Containerdienste.",
+      "sources": [
+        "ms-aks-overview",
+        "ms-container-options"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-030",
+      "source": "azure-0425",
+      "target": "azure-0947",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "AKS-Workloads können Workload Identity auf Basis von Microsoft Entra und Managed-Identity-Komponenten für Azure-Zugriffe verwenden.",
+      "sources": [
+        "ms-aks-overview",
+        "ms-managed-identities"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-031",
+      "source": "azure-0964",
+      "target": "azure-0425",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure RBAC kann Managementzugriff auf den AKS-Cluster und bei entsprechender Integration Kubernetes-Autorisierung steuern.",
+      "sources": [
+        "ms-aks-overview",
+        "ms-rbac"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-032",
+      "source": "azure-0425",
+      "target": "azure-0985",
+      "type": "logs_to",
+      "inverse_type": "receives_logs_from",
+      "explanation": "Container Insights und Diagnoseeinstellungen können AKS-Logs zur zentralen Analyse an Log Analytics senden.",
+      "sources": [
+        "ms-monitor-aks",
+        "ms-log-analytics"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-033",
+      "source": "azure-0429",
+      "target": "azure-0425",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Worker Nodes bilden als VM-basierte Node Pools die Compute-Ebene, auf der AKS-Pods ausgeführt werden.",
+      "sources": [
+        "ms-aks-overview",
+        "ms-aks-support"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "compute-rel-034",
+      "source": "azure-0831",
+      "target": "azure-0322",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "Compute Security Responsibility umfasst für VMs Gast-Härtung, Patches, Netzwerk-, Identitäts- und Überwachungskontrollen.",
+      "sources": [
+        "ms-vm-overview",
+        "ms-defender-servers"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.4",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-001",
+      "source": "azure-0036",
+      "target": "azure-0038",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure Governance enthält die Managementhierarchie als Scope-Modell für vererbte Kontrollen und Delegation.",
+      "sources": [
+        "ms-governance-overview",
+        "ms-arm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-002",
+      "source": "azure-0038",
+      "target": "azure-1022",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Die Governance-Scope-Struktur beginnt oberhalb von Subscriptions mit Azure Management Groups.",
+      "sources": [
+        "ms-arm-overview",
+        "ms-management-groups"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-003",
+      "source": "azure-1022",
+      "target": "azure-1011",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Management Groups enthalten Subscriptions und übertragen unterstützte Policy- sowie RBAC-Zuweisungen auf untergeordnete Scopes.",
+      "sources": [
+        "ms-management-groups"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-004",
+      "source": "azure-1011",
+      "target": "azure-0277",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Eine Azure Subscription enthält Resource Groups als untergeordnete Verwaltungs- und Lebenszyklusscopes.",
+      "sources": [
+        "ms-arm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-005",
+      "source": "azure-0277",
+      "target": "azure-0322",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Eine Azure VM ist eine Resource-Manager-Ressource und gehört typischerweise genau einer Resource Group an.",
+      "sources": [
+        "ms-arm-overview",
+        "ms-vm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-006",
+      "source": "azure-0277",
+      "target": "azure-0442",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Ein Virtual Network ist eine Resource-Manager-Ressource innerhalb einer Resource Group.",
+      "sources": [
+        "ms-arm-overview",
+        "ms-vnet-subnets"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-007",
+      "source": "azure-0284",
+      "target": "azure-0277",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Resource Manager stellt die Control Plane bereit, über die Resource Groups und ihre Ressourcen verwaltet werden.",
+      "sources": [
+        "ms-arm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-008",
+      "source": "azure-0964",
+      "target": "azure-1022",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure RBAC-Zuweisungen an einer Management Group autorisieren Managementaktionen auf diesem und geerbten untergeordneten Scopes.",
+      "sources": [
+        "ms-rbac",
+        "ms-management-groups"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-009",
+      "source": "azure-0964",
+      "target": "azure-1011",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure RBAC steuert Managementzugriff auf eine Subscription und ihre untergeordneten Scopes.",
+      "sources": [
+        "ms-rbac",
+        "ms-role-assignments",
+        "ms-arm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-010",
+      "source": "azure-0965",
+      "target": "azure-0322",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Ein Role Assignment verbindet Security Principal, Role Definition und Scope und kontrolliert dadurch Managementzugriff auf die VM.",
+      "sources": [
+        "ms-role-assignments",
+        "ms-vm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-011",
+      "source": "azure-0962",
+      "target": "azure-0036",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Azure Policy ist ein zentraler technischer Baustein des Azure-Governance-Systems.",
+      "sources": [
+        "ms-governance-overview",
+        "ms-policy-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-012",
+      "source": "azure-0041",
+      "target": "azure-0962",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Policy Initiatives bündeln mehrere Policy Definitions innerhalb des Azure-Policy-Systems.",
+      "sources": [
+        "ms-policy-initiatives",
+        "ms-policy-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-013",
+      "source": "azure-0042",
+      "target": "azure-0962",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Effects bestimmen die Reaktion einer Azure-Policy-Definition auf erfüllte Bedingungen.",
+      "sources": [
+        "ms-policy-effects"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-014",
+      "source": "azure-0059",
+      "target": "azure-0962",
+      "type": "depends_on",
+      "inverse_type": "depended_on_by",
+      "explanation": "Governance-Compliance-Reporting verwendet die durch Policy Assignments erzeugten Compliance States als technische Evidenz.",
+      "sources": [
+        "ms-policy-compliance"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-015",
+      "source": "azure-0962",
+      "target": "azure-1022",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Policy Assignments auf Management-Group-Ebene bewerten und steuern Ressourcen in untergeordneten Subscriptions.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-management-groups"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-016",
+      "source": "azure-0962",
+      "target": "azure-1011",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Ein Policy Assignment auf Subscription-Ebene gilt für anwendbare Ressourcen im Scope und darunter.",
+      "sources": [
+        "ms-policy-assignments",
+        "ms-arm-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-017",
+      "source": "azure-0962",
+      "target": "azure-0322",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann VM-Konfigurationen wie erlaubte SKUs, Regionen, Tags oder Diagnostikeinstellungen bewerten und je nach Effect steuern.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-policy-definitions"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-018",
+      "source": "azure-0962",
+      "target": "azure-0351",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann Resource-Manager-Eigenschaften von App Service gegen organisatorische Plattformstandards bewerten.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-app-service"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-019",
+      "source": "azure-0962",
+      "target": "azure-0425",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann ARM-Eigenschaften und unterstützte Kubernetes-Konfigurationen eines AKS-Umfelds gegen Standards bewerten.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-aks-overview"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-020",
+      "source": "azure-0962",
+      "target": "azure-0442",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann Netzwerkressourcen wie VNets anhand unterstützter Eigenschaften, Regionen, Tags und Sicherheitsanforderungen bewerten.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-vnet-subnets"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-021",
+      "source": "azure-0962",
+      "target": "azure-0864",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann unterstützte NSG-Konfigurationen und zugehörige Sicherheitsanforderungen im Resource-Manager-Scope bewerten.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-nsg-asg"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-022",
+      "source": "azure-0047",
+      "target": "azure-0442",
+      "type": "organizes",
+      "inverse_type": "organized_by",
+      "explanation": "Eine Naming Convention strukturiert Netzwerkressourcen mit konsistenten Bestandteilen für Typ, Workload, Umgebung, Region und Instanz.",
+      "sources": [
+        "ms-resource-naming"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-023",
+      "source": "azure-0980",
+      "target": "azure-0322",
+      "type": "organizes",
+      "inverse_type": "organized_by",
+      "explanation": "Tags klassifizieren VMs nach Metadaten wie Anwendung, Umgebung, Owner und Kostenstelle.",
+      "sources": [
+        "ms-resource-tags"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-024",
+      "source": "azure-0980",
+      "target": "azure-0442",
+      "type": "organizes",
+      "inverse_type": "organized_by",
+      "explanation": "Tags klassifizieren Netzwerkressourcen für Inventar, Ownership, Automatisierung und Kostenanalyse.",
+      "sources": [
+        "ms-resource-tags",
+        "ms-resource-tagging-strategy"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-025",
+      "source": "azure-1034",
+      "target": "azure-0980",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Cost Management verwendet verfügbare Tags, um Kosten feiner zu gruppieren und zuzuordnen.",
+      "sources": [
+        "ms-cost-management",
+        "ms-resource-tags"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-026",
+      "source": "azure-0033",
+      "target": "azure-1011",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Ein Budget überwacht tatsächliche oder prognostizierte Kosten einer Subscription und erzeugt Warnungen an definierten Schwellen.",
+      "sources": [
+        "ms-cost-plan",
+        "ms-cost-management"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-027",
+      "source": "azure-1034",
+      "target": "azure-1011",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Cost Management analysiert und überwacht Kosten und Nutzung innerhalb des Subscription-Scopes.",
+      "sources": [
+        "ms-cost-management"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-028",
+      "source": "azure-1034",
+      "target": "azure-0277",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Cost Management kann Kosten auf Resource-Group-Ebene anzeigen und verantwortlichen Teams zuordnen.",
+      "sources": [
+        "ms-cost-management"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-029",
+      "source": "azure-1030",
+      "target": "azure-1034",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Bewertete Nutzungs- und Kaufdaten bilden die Datengrundlage für Cost Management.",
+      "sources": [
+        "ms-cost-management"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-030",
+      "source": "azure-0933",
+      "target": "azure-0060",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Defender for Cloud bewertet verbundene Scopes gegen zugewiesene Regulatory-Compliance-Standards und zeigt Findings sowie Empfehlungen.",
+      "sources": [
+        "ms-defender-regulatory",
+        "ms-defender-posture"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-031",
+      "source": "azure-0933",
+      "target": "azure-0962",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Defender for Cloud verwendet Azure-Policy-Initiatives zur Zuweisung und Bewertung unterstützter regulatorischer Standards.",
+      "sources": [
+        "ms-defender-regulatory",
+        "ms-policy-regulatory"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-032",
+      "source": "azure-0962",
+      "target": "azure-0831",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann technische Security-Baseline-Anforderungen für Compute-Ressourcen prüfen und je nach Effect durchsetzen oder melden.",
+      "sources": [
+        "ms-security-benchmark",
+        "ms-policy-overview"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-033",
+      "source": "azure-0970",
+      "target": "azure-0277",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "Ein Resource Lock auf einer Resource Group schützt ihren Managementscope vor versehentlicher Löschung oder Änderung und wird auf Ressourcen vererbt.",
+      "sources": [
+        "ms-resource-locks"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "gov-rel-034",
+      "source": "azure-0057",
+      "target": "azure-1034",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Kostensteuerung verwendet Cost Management als Daten- und Werkzeugbasis für Analyse, Budgets, Alerts und Optimierung.",
+      "sources": [
+        "ms-cost-management",
+        "ms-cost-plan"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.5",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-001",
+      "source": "azure-0566",
+      "target": "azure-0571",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure Storage umfasst Blob Storage als Objektspeicherdienst für unstrukturierte Daten.",
+      "sources": [
+        "ms-storage-intro",
+        "ms-blob-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-002",
+      "source": "azure-0566",
+      "target": "azure-0596",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure Storage umfasst Azure Files als verwalteten Dienst für SMB-, NFS- und REST-Dateifreigaben.",
+      "sources": [
+        "ms-storage-intro",
+        "ms-files-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-003",
+      "source": "azure-0566",
+      "target": "azure-0616",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Data Lake Storage baut auf Blob Storage und damit auf der Azure-Storage-Plattform auf.",
+      "sources": [
+        "ms-storage-intro",
+        "ms-data-lake-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-004",
+      "source": "azure-0566",
+      "target": "azure-0624",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure Storage umfasst Queue Storage für asynchrone Nachrichten zwischen Anwendungskomponenten.",
+      "sources": [
+        "ms-storage-intro",
+        "ms-queue-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-005",
+      "source": "azure-0566",
+      "target": "azure-0632",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure Storage umfasst Table Storage als schemalosen Key-Value-Datendienst.",
+      "sources": [
+        "ms-storage-intro",
+        "ms-table-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-006",
+      "source": "azure-0579",
+      "target": "azure-0583",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Ein Storage Account enthält im Blob Service Container, die Blobs logisch gruppieren.",
+      "sources": [
+        "ms-storage-account",
+        "ms-blob-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-007",
+      "source": "azure-0574",
+      "target": "azure-0571",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Access Tiers steuern Kosten und Abrufverhalten unterstützter Blobdaten.",
+      "sources": [
+        "ms-blob-access-tiers"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-008",
+      "source": "azure-0575",
+      "target": "azure-0574",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Hot ist das Online-Tier für häufig gelesene oder geänderte Blobdaten.",
+      "sources": [
+        "ms-blob-access-tiers"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-009",
+      "source": "azure-0576",
+      "target": "azure-0574",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Cool ist das Online-Tier für selten genutzte Blobdaten mit unmittelbarem Zugriff.",
+      "sources": [
+        "ms-blob-access-tiers"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-010",
+      "source": "azure-0578",
+      "target": "azure-0574",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Archive ist das Offline-Tier für selten abgerufene Langzeitdaten.",
+      "sources": [
+        "ms-blob-access-tiers"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-011",
+      "source": "azure-0584",
+      "target": "azure-0579",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Die Redundanzkonfiguration wird am Storage Account gewählt und bestimmt die Replikation seiner Daten.",
+      "sources": [
+        "ms-storage-redundancy",
+        "ms-storage-account"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-012",
+      "source": "azure-0585",
+      "target": "azure-0584",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "LRS ist die lokal redundante Grundoption innerhalb eines Standorts der Primärregion.",
+      "sources": [
+        "ms-storage-redundancy"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-013",
+      "source": "azure-0587",
+      "target": "azure-0584",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "ZRS ist die zonenredundante Option innerhalb der Primärregion.",
+      "sources": [
+        "ms-storage-redundancy"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-014",
+      "source": "azure-0589",
+      "target": "azure-0584",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "GRS ist die georedundante Option mit asynchroner Kopie in einer Sekundärregion.",
+      "sources": [
+        "ms-storage-redundancy"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-015",
+      "source": "azure-0592",
+      "target": "azure-0584",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "GZRS kombiniert synchrone Zonenredundanz in der Primärregion mit asynchroner Georeplikation.",
+      "sources": [
+        "ms-storage-redundancy"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-016",
+      "source": "azure-0601",
+      "target": "azure-0596",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure File Sync verwendet eine Azure-Files-Freigabe als zentralen Cloud Endpoint.",
+      "sources": [
+        "ms-file-sync",
+        "ms-files-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-017",
+      "source": "azure-0351",
+      "target": "azure-0571",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Eine App-Service-Anwendung kann persistente Objektdaten und Uploads in Blob Storage speichern, statt sie an den kurzlebigen App-Instanzen zu binden.",
+      "sources": [
+        "ms-blob-overview",
+        "ms-storage-authorization"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-018",
+      "source": "azure-0881",
+      "target": "azure-0579",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Ein Storage Private Endpoint stellt einem konkreten Storage-Dienst eine private IP aus dem VNet bereit; öffentliche Erreichbarkeit wird separat am Account gesteuert.",
+      "sources": [
+        "ms-storage-private-endpoints"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-019",
+      "source": "azure-0964",
+      "target": "azure-0579",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure RBAC steuert identitätsbasierte Management- und unterstützte Datenzugriffe auf Storage-Ressourcen; Datenrollen und Scope müssen passend zugewiesen werden.",
+      "sources": [
+        "ms-storage-authorization",
+        "ms-rbac"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-020",
+      "source": "azure-0947",
+      "target": "azure-0579",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Eine Azure-Anwendung kann ihre Managed Identity für tokenbasierte, schlüssellose Datenzugriffe auf unterstützte Storage-Dienste verwenden.",
+      "sources": [
+        "ms-storage-authorization",
+        "ms-managed-identities"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-021",
+      "source": "azure-0962",
+      "target": "azure-0579",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann Storage-Account-Konfigurationen wie Netzwerkzugriff, Verschlüsselungsoptionen oder erlaubte Einstellungen prüfen und durchsetzen.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-storage-account"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-022",
+      "source": "azure-0980",
+      "target": "azure-0579",
+      "type": "organizes",
+      "inverse_type": "organized_by",
+      "explanation": "Azure Resource Tags klassifizieren den Storage Account für Ownership, Kostenanalyse und Betrieb; sie markieren nicht automatisch die enthaltenen Datenobjekte.",
+      "sources": [
+        "ms-resource-tags",
+        "ms-storage-account"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-023",
+      "source": "azure-0638",
+      "target": "azure-0566",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Data Box überträgt große Datenmengen offline in unterstützte Azure-Storage-Ziele.",
+      "sources": [
+        "ms-data-box",
+        "ms-blob-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-024",
+      "source": "azure-0645",
+      "target": "azure-0738",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Migrate bindet Database Migration Service als spezialisiertes Werkzeug für unterstützte Datenbankmigrationen ein.",
+      "sources": [
+        "ms-azure-migrate",
+        "ms-dms-overview"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-025",
+      "source": "azure-0881",
+      "target": "azure-0724",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Azure Cosmos DB kann über einen Private Endpoint privat aus einem VNet erreicht werden.",
+      "sources": [
+        "ms-storage-private-endpoints",
+        "ms-cosmos-resource-model"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "storage-rel-026",
+      "source": "azure-0964",
+      "target": "azure-0571",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure RBAC kann Datenzugriff auf Blob Storage mit Storage-Datenrollen und geeignetem Scope autorisieren.",
+      "sources": [
+        "ms-storage-authorization",
+        "ms-rbac"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.6",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-001",
+      "source": "azure-0815",
+      "target": "azure-0816",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Die Security-&-Protection-Architektur umfasst Network Security als eigene Schutzdomäne.",
+      "sources": [
+        "ms-security-overview",
+        "ms-networking-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-002",
+      "source": "azure-0815",
+      "target": "azure-0932",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Security Tools and Features liefern Schutz-, Bewertungs-, Erkennungs- und Governance-Funktionen für die Security-Architektur.",
+      "sources": [
+        "ms-security-overview",
+        "ms-defender-overview"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-003",
+      "source": "azure-0815",
+      "target": "azure-0944",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure Key Vault ist ein zentraler Baustein der Security-Architektur für Keys, Secrets und Certificates.",
+      "sources": [
+        "ms-keyvault-concepts",
+        "ms-keyvault-objects"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-004",
+      "source": "azure-0821",
+      "target": "azure-0817",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Identity & Access Security ist eine Defense-in-Depth-Schicht, die Authentication und Authorization kontrolliert.",
+      "sources": [
+        "ms-security-overview",
+        "ms-zero-trust-infrastructure"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-005",
+      "source": "azure-0824",
+      "target": "azure-0817",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Perimeter Security schützt Übergänge zu externen oder weniger vertrauenswürdigen Bereichen.",
+      "sources": [
+        "ms-security-overview",
+        "ms-networking-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-006",
+      "source": "azure-0827",
+      "target": "azure-0817",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Interne Segmentierung begrenzt laterale Bewegung als eigene Defense-in-Depth-Schicht.",
+      "sources": [
+        "ms-security-design-patterns",
+        "ms-nsg-asg"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-007",
+      "source": "azure-0833",
+      "target": "azure-0817",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Application Security schützt Code, APIs, Abhängigkeiten und Laufzeitkonfiguration innerhalb von Defense in Depth.",
+      "sources": [
+        "ms-security-design-patterns",
+        "ms-shared-responsibility"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-008",
+      "source": "azure-0836",
+      "target": "azure-0817",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Data Security schützt gespeicherte, übertragene und verarbeitete Informationen innerhalb von Defense in Depth.",
+      "sources": [
+        "ms-security-pillar",
+        "ms-storage-encryption"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-009",
+      "source": "azure-0840",
+      "target": "azure-0815",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Shared Responsibility ordnet Security-Aufgaben zwischen Microsoft, Plattformteams und Workloadteams zu.",
+      "sources": [
+        "ms-shared-responsibility"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-010",
+      "source": "azure-0966",
+      "target": "azure-0817",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Least Privilege reduziert den Blast Radius kompromittierter Identitäten und ist ein Kernprinzip gestaffelter Security.",
+      "sources": [
+        "ms-zero-trust-infrastructure",
+        "ms-rbac"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-011",
+      "source": "azure-0824",
+      "target": "azure-0852",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Perimeter Security verwendet DDoS Protection zur Mitigation volumetrischer Layer-3/4-Angriffe auf öffentliche Endpunkte.",
+      "sources": [
+        "ms-ddos",
+        "ms-networking-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-012",
+      "source": "azure-0824",
+      "target": "azure-0841",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Perimeter Security verwendet Azure Firewall für zentrale Netzwerk- und Anwendungsregeln, NAT und Logging.",
+      "sources": [
+        "ms-firewall",
+        "ms-networking-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-013",
+      "source": "azure-0824",
+      "target": "azure-0863",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Perimeter Security verwendet WAF zur Layer-7-Prüfung von HTTP/S-Anfragen.",
+      "sources": [
+        "ms-waf",
+        "ms-networking-overview"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-014",
+      "source": "azure-0827",
+      "target": "azure-0864",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Interne Segmentierung verwendet NSGs für zustandsbehaftete Layer-3/4-Regeln an Subnetzen oder NICs.",
+      "sources": [
+        "ms-nsg-asg"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-015",
+      "source": "azure-0827",
+      "target": "azure-0875",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Interne Segmentierung verwendet Application Security Groups zur rollenbasierten Gruppierung von NICs in NSG-Regeln.",
+      "sources": [
+        "ms-nsg-asg"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-016",
+      "source": "azure-0827",
+      "target": "azure-0881",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Interne Segmentierung verwendet Private Endpoints, um unterstützte PaaS-Dienste über private IP-Pfade zu erreichen.",
+      "sources": [
+        "ms-storage-private-endpoints",
+        "ms-private-link"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-017",
+      "source": "azure-0833",
+      "target": "azure-0863",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Application Security verwendet WAF als ergänzende Schutzschicht für Webanfragen; sichere Anwendungscodepfade bleiben erforderlich.",
+      "sources": [
+        "ms-waf",
+        "ms-security-design-patterns"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-018",
+      "source": "azure-0833",
+      "target": "azure-0944",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Anwendungen verwenden Key Vault, um sensitive Werte und kryptografische Objekte außerhalb von Code und Images zu verwalten.",
+      "sources": [
+        "ms-keyvault-security",
+        "ms-keyvault-concepts"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-019",
+      "source": "azure-0836",
+      "target": "azure-0944",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Data Security verwendet Key Vault für kontrollierte Schlüssel-, Secret- und Zertifikatsverwaltung.",
+      "sources": [
+        "ms-keyvault-objects",
+        "ms-key-management-choice"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-020",
+      "source": "azure-0944",
+      "target": "azure-0945",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Key Vault enthält versionierte Secrets und stellt dafür eigene Datenaktionen bereit.",
+      "sources": [
+        "ms-keyvault-objects",
+        "ms-keyvault-concepts"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-021",
+      "source": "azure-0944",
+      "target": "azure-0946",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Key Vault verwaltet die unterschiedlichen Objekttypen Keys, Secrets und Certificates.",
+      "sources": [
+        "ms-keyvault-objects"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-022",
+      "source": "azure-0944",
+      "target": "azure-0076",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Customer-Managed Keys werden für unterstützte Dienste in Key Vault oder Managed HSM gehalten und betrieben.",
+      "sources": [
+        "ms-key-management-choice",
+        "ms-keyvault-security"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-023",
+      "source": "azure-0579",
+      "target": "azure-0076",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Ein unterstützter Storage Account kann einen Customer-Managed Key aus Key Vault oder Managed HSM für die Verschlüsselung referenzieren.",
+      "sources": [
+        "ms-storage-encryption",
+        "ms-key-management-choice"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-024",
+      "source": "azure-0838",
+      "target": "azure-0579",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "Data Protection Controls schützen Storage-Daten durch Verschlüsselung, Zugriffskontrolle, Versionierung, Backup und Recovery-Mechanismen.",
+      "sources": [
+        "ms-storage-encryption",
+        "ms-blob-data-protection",
+        "ms-backup-security"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-025",
+      "source": "azure-0933",
+      "target": "azure-0322",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "Defender for Cloud ergänzt die VM-Sicherheitsarchitektur durch kontinuierliche Bewertung und aktivierte Workload-Protection-Funktionen.",
+      "sources": [
+        "ms-defender-overview",
+        "ms-defender-servers"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-026",
+      "source": "azure-0934",
+      "target": "azure-0933",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Secure Score, Recommendations und Vulnerability Findings sind Teil der Defender-for-Cloud-Posture- und Workload-Protection-Erfahrung.",
+      "sources": [
+        "ms-defender-secure-score",
+        "ms-defender-recommendations",
+        "ms-defender-vulnerability"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-027",
+      "source": "azure-0934",
+      "target": "azure-0936",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Recommendations und Secure Score liefern bewertete Signale für Security Posture und Compliance Monitoring.",
+      "sources": [
+        "ms-defender-secure-score",
+        "ms-defender-recommendations",
+        "ms-defender-posture"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-028",
+      "source": "azure-0962",
+      "target": "azure-0817",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann Security-Baselines über Ressourcen hinweg prüfen, melden oder mit geeigneten Effects durchsetzen.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-security-benchmark"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-029",
+      "source": "azure-0114",
+      "target": "azure-0116",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Disaster Recovery verwendet Azure Backup für unabhängige VM-Recovery-Points und Restore-Szenarien.",
+      "sources": [
+        "ms-vm-backup",
+        "ms-backup-security",
+        "ms-bcdr-concepts"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-030",
+      "source": "azure-0114",
+      "target": "azure-0118",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Disaster Recovery verwendet Azure Site Recovery für unterstützte Replikations-, Failover- und Failback-Szenarien.",
+      "sources": [
+        "ms-site-recovery",
+        "ms-bcdr-concepts"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-031",
+      "source": "azure-0115",
+      "target": "azure-0114",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Recovery-Planung ist der operative Teil einer Disaster-Recovery-Strategie und definiert Reihenfolge, Rollen, Tests und Validierung.",
+      "sources": [
+        "ms-bcdr-concepts",
+        "ms-backup-security"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-032",
+      "source": "azure-0117",
+      "target": "azure-0114",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Replikation, Failover und Failback sind mögliche technische Mechanismen innerhalb eines Disaster-Recovery-Plans.",
+      "sources": [
+        "ms-bcdr-concepts",
+        "ms-site-recovery"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-033",
+      "source": "azure-0116",
+      "target": "azure-0322",
+      "type": "secures",
+      "inverse_type": "secured_by",
+      "explanation": "Azure Backup schützt VM-Wiederherstellbarkeit mit getrennten Recovery Points und Restore-Funktionen.",
+      "sources": [
+        "ms-vm-backup",
+        "ms-backup-security"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "security-rel-034",
+      "source": "azure-0838",
+      "target": "azure-0116",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Data Protection Controls verwenden Azure Backup als wiederherstellende Schutzschicht gegen Löschung, Beschädigung und Ransomware-Szenarien.",
+      "sources": [
+        "ms-backup-security",
+        "ms-backup-immutable"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.7",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-001",
+      "source": "azure-0094",
+      "target": "azure-0098",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Manageability umfasst Monitoring und Operations als zentrale Betriebsfähigkeit.",
+      "sources": [
+        "ms-cloud-operations-functions",
+        "ms-cloud-estate-monitor"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-002",
+      "source": "azure-0098",
+      "target": "azure-0983",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Monitoring und Operations verwenden Azure Monitor als zentrale Signale- und Analyseplattform.",
+      "sources": [
+        "ms-azure-monitor-overview",
+        "ms-cloud-estate-monitor"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-003",
+      "source": "azure-0983",
+      "target": "azure-0985",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Azure Monitor Logs verwendet Log Analytics Workspaces als primären Speicher- und Abfragerahmen für Logdaten.",
+      "sources": [
+        "ms-monitor-logs",
+        "ms-log-analytics"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-004",
+      "source": "azure-0987",
+      "target": "azure-0985",
+      "type": "logs_to",
+      "inverse_type": "receives_logs_from",
+      "explanation": "Workspacebasiertes Application Insights speichert seine Log- und Trace-Telemetrie in einem Log Analytics Workspace.",
+      "sources": [
+        "ms-application-insights",
+        "ms-monitor-logs"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-005",
+      "source": "azure-0985",
+      "target": "azure-0984",
+      "type": "triggers",
+      "inverse_type": "triggered_by",
+      "explanation": "Logabfragen in einem Log Analytics Workspace können Log-Search-Alerts auslösen, wenn ihre Bedingung erfüllt ist.",
+      "sources": [
+        "ms-monitor-alerts",
+        "ms-log-analytics"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-006",
+      "source": "azure-0987",
+      "target": "azure-0351",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Application Insights überwacht Anwendungen auf Azure App Service durch Anwendungsinstrumentierung und korrelierte Telemetrie.",
+      "sources": [
+        "ms-application-insights"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-007",
+      "source": "azure-0989",
+      "target": "azure-0987",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Application Performance Monitoring ist eine Kernfähigkeit von Application Insights.",
+      "sources": [
+        "ms-application-insights"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-008",
+      "source": "azure-0990",
+      "target": "azure-0987",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Fehler- und Anomalieerkennung wird aus Application-Insights-Telemetrie abgeleitet.",
+      "sources": [
+        "ms-application-insights"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-009",
+      "source": "azure-0983",
+      "target": "azure-0442",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Azure Monitor kann Metriken und unterstützte Logs von Virtual Networks und zugehörigen Netzwerkdiensten erfassen.",
+      "sources": [
+        "ms-azure-monitor-overview",
+        "ms-cloud-estate-monitor"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-010",
+      "source": "azure-0983",
+      "target": "azure-0579",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Azure Monitor erfasst Plattformmetriken und konfigurierte Ressourcenlogs von Storage Accounts.",
+      "sources": [
+        "ms-azure-monitor-overview",
+        "ms-monitor-diagnostic-settings"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-011",
+      "source": "azure-0994",
+      "target": "azure-0993",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Kategorisierte Optimierungsempfehlungen sind die zentrale Ausgabe von Azure Advisor.",
+      "sources": [
+        "ms-advisor-overview",
+        "ms-advisor-score"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-012",
+      "source": "azure-0995",
+      "target": "azure-0993",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Die Cloud-Coach-Perspektive beschreibt die beratende, nicht automatisch entscheidende Rolle von Azure Advisor.",
+      "sources": [
+        "ms-advisor-overview"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-013",
+      "source": "azure-0993",
+      "target": "azure-0322",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Azure Advisor analysiert unterstützte VM-Konfigurationen und Nutzungssignale für Optimierungsempfehlungen.",
+      "sources": [
+        "ms-advisor-overview",
+        "ms-advisor-score"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-014",
+      "source": "azure-0993",
+      "target": "azure-0351",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Azure Advisor bewertet unterstützte App-Service-Konfigurationen für Reliability-, Performance-, Security- und Kostenhinweise.",
+      "sources": [
+        "ms-advisor-overview",
+        "ms-advisor-score"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-015",
+      "source": "azure-0999",
+      "target": "azure-1000",
+      "type": "triggers",
+      "inverse_type": "triggered_by",
+      "explanation": "Relevante Service-Health-Ereignisse können gefilterte Service-Health-Alerts auslösen.",
+      "sources": [
+        "ms-service-health-overview",
+        "ms-monitor-alerts"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-016",
+      "source": "azure-0999",
+      "target": "azure-0322",
+      "type": "monitors",
+      "inverse_type": "monitored_by",
+      "explanation": "Resource Health als Teil der Service-Health-Erfahrungen meldet den Plattformzustand unterstützter virtueller Maschinen.",
+      "sources": [
+        "ms-service-health-overview",
+        "ms-resource-health-overview"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-017",
+      "source": "azure-0933",
+      "target": "azure-0983",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Defender for Cloud nutzt die gemeinsame Azure-Monitor-Datenplattform und kann Security-Signale in operative Telemetrieflüsse integrieren.",
+      "sources": [
+        "ms-azure-monitor-overview",
+        "ms-defender-overview"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-018",
+      "source": "azure-0934",
+      "target": "azure-0985",
+      "type": "logs_to",
+      "inverse_type": "receives_logs_from",
+      "explanation": "Defender-for-Cloud-Signale können für Korrelation und Betriebsanalyse an einen Log Analytics Workspace exportiert werden.",
+      "sources": [
+        "ms-azure-monitor-overview",
+        "ms-defender-overview"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-019",
+      "source": "azure-0962",
+      "target": "azure-0983",
+      "type": "governs",
+      "inverse_type": "governed_by",
+      "explanation": "Azure Policy kann Monitoring-Baselines wie Diagnostic Settings und zulässige Konfigurationen prüfen oder bereitstellen.",
+      "sources": [
+        "ms-policy-overview",
+        "ms-monitor-diagnostic-settings"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-020",
+      "source": "azure-0114",
+      "target": "azure-0983",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Disaster-Recovery-Entscheidungen verwenden überwachte Health- und Recovery-Signale zur Auslösung und Validierung.",
+      "sources": [
+        "ms-reliability-targets",
+        "ms-failover-failback"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-021",
+      "source": "azure-0107",
+      "target": "azure-0983",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Fault Tolerance verwendet Monitoring-Signale, um Fehler zu erkennen und vorgesehene Reaktionen zu validieren.",
+      "sources": [
+        "ms-operations-observability",
+        "ms-reliability-targets"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-022",
+      "source": "azure-0984",
+      "target": "azure-0110",
+      "type": "triggers",
+      "inverse_type": "triggered_by",
+      "explanation": "Ein qualifizierter Azure-Monitor-Alert kann in einem getesteten Runbook automatisches Failover auslösen.",
+      "sources": [
+        "ms-monitor-alerts",
+        "ms-failover-failback"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-023",
+      "source": "azure-1042",
+      "target": "azure-0983",
+      "type": "depends_on",
+      "inverse_type": "depended_on_by",
+      "explanation": "Workload-SLOs und SLA-Berichte benötigen messbare Indikatoren aus einer Monitoring- und Observability-Plattform.",
+      "sources": [
+        "ms-reliability-targets",
+        "ms-operations-observability"
+      ],
+      "confidence": 0.98,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-024",
+      "source": "azure-1034",
+      "target": "azure-0993",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Cost Management und Azure Advisor ergänzen sich bei proaktiver Kostenanalyse und Optimierungsempfehlungen.",
+      "sources": [
+        "ms-advisor-overview",
+        "ms-cloud-estate-monitor"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "knowledge_enrichment_v1.8",
+      "created_at": "2026-08-11",
+      "reviewed_at": "2026-08-11"
+    }
+  ]
+}

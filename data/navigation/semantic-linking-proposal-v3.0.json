@@ -1,0 +1,239 @@
+{
+  "schema_version": "3.0-proposal-1.0",
+  "status": "proposal_only_not_active",
+  "principles": [
+    "existing_nodes_only",
+    "no_automatic_node_creation",
+    "longest_match_first",
+    "ambiguous_matches_require_disambiguation",
+    "human_reviewed_alias_registry",
+    "offline_runtime_index"
+  ],
+  "alias_registry_sample": [
+    {
+      "term": "Azure AD",
+      "normalized_term": "azure ad",
+      "target_node_id": "azure-0904",
+      "alias_type": "historical",
+      "match_policy": "exact",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "AAD",
+      "normalized_term": "aad",
+      "target_node_id": "azure-0904",
+      "alias_type": "historical",
+      "match_policy": "exact",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Entra ID",
+      "normalized_term": "entra id",
+      "target_node_id": "azure-0904",
+      "alias_type": "abbreviation",
+      "match_policy": "exact",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Virtual Machine",
+      "normalized_term": "virtual machine",
+      "target_node_id": "azure-0322",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "VM",
+      "normalized_term": "vm",
+      "target_node_id": "azure-0322",
+      "alias_type": "abbreviation",
+      "match_policy": "exact",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Virtual Machines",
+      "normalized_term": "virtual machines",
+      "target_node_id": "azure-0322",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "VNet",
+      "normalized_term": "vnet",
+      "target_node_id": "azure-0442",
+      "alias_type": "abbreviation",
+      "match_policy": "exact",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Virtual Network",
+      "normalized_term": "virtual network",
+      "target_node_id": "azure-0442",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Availability Set",
+      "normalized_term": "availability set",
+      "target_node_id": "azure-0005",
+      "alias_type": "canonical_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Availability Sets",
+      "normalized_term": "availability sets",
+      "target_node_id": "azure-0005",
+      "alias_type": "inflection",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Availability Zone",
+      "normalized_term": "availability zone",
+      "target_node_id": "azure-0007",
+      "alias_type": "canonical_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Availability Zones",
+      "normalized_term": "availability zones",
+      "target_node_id": "azure-0007",
+      "alias_type": "canonical_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "App Service",
+      "normalized_term": "app service",
+      "target_node_id": "azure-0351",
+      "alias_type": "canonical_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "AKS",
+      "normalized_term": "aks",
+      "target_node_id": "azure-0425",
+      "alias_type": "abbreviation",
+      "match_policy": "exact",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Azure Policy",
+      "normalized_term": "azure policy",
+      "target_node_id": "azure-0962",
+      "alias_type": "canonical_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "RBAC",
+      "normalized_term": "rbac",
+      "target_node_id": "azure-0964",
+      "alias_type": "abbreviation",
+      "match_policy": "exact",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Managed Identity",
+      "normalized_term": "managed identity",
+      "target_node_id": "azure-0947",
+      "alias_type": "canonical_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Azure Monitor",
+      "normalized_term": "azure monitor",
+      "target_node_id": "azure-0983",
+      "alias_type": "canonical_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Log Analytics",
+      "normalized_term": "log analytics",
+      "target_node_id": "azure-0985",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    },
+    {
+      "term": "Storage Account",
+      "normalized_term": "storage account",
+      "target_node_id": "azure-0579",
+      "alias_type": "canonical_term",
+      "match_policy": "phrase",
+      "status": "proposal",
+      "context_scope": "all_explanation_fields",
+      "source": "V3.0 architecture proposal"
+    }
+  ],
+  "annotation_contract": {
+    "source_node_id": "azure-xxxx",
+    "field": "description.simple|description.technical|description.architecture|why_important|examples|merksatz|analogy",
+    "start": 0,
+    "end": 0,
+    "matched_text": "",
+    "target_node_id": "azure-yyyy",
+    "resolver": "canonical_title|approved_alias|explicit_annotation",
+    "confidence": 1,
+    "status": "proposed|approved|rejected"
+  },
+  "navigation_contract": {
+    "action": "navigateToNode",
+    "steps": [
+      "save current navigation context",
+      "switch to or reveal Mindmap only when explicitly requested",
+      "expand ancestor path",
+      "select target node",
+      "center target without global fit",
+      "apply temporary highlight",
+      "open detail panel",
+      "offer back-to-source action"
+    ],
+    "deep_link": "#mode=mindmap&node=azure-0005"
+  }
+}

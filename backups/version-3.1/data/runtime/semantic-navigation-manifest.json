@@ -1,0 +1,18 @@
+{
+  "schema_version": "3.1-navigation-runtime-1.0",
+  "release_version": "3.1",
+  "base_release": "2.4",
+  "proposal_release": "3.0",
+  "generated_at": "2026-08-14T11:04:32.100Z",
+  "operating_mode": "additive-runtime-overlay",
+  "canonical_data_changed": false,
+  "node_count": 1058,
+  "alias_count": 24,
+  "runtime_file": "semantic-navigation-runtime.js",
+  "runtime_sha256": "87971a1cd663c98838971a3e03573af7de56df856cd56ea0283d88280c791d96",
+  "source_hashes": {
+    "node-classification-v3.0.json": "9a39d47b390823e08fb1bc6d7b741da319a47987220a120fa2bf85629ebfc386",
+    "semantic-linking-proposal-v3.0.json": "800d81d0081330ed6eebfc1c2e17cd6bd149d24995c521aaa0e8f9b6211d876d",
+    "semantic-aliases-v3.1.json": "9fa6232f9499a11911c85878256b0e50edb01a7f7e223ab21178bce71659a514"
+  }
+}

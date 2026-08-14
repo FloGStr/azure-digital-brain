@@ -1,0 +1,65 @@
+{
+  "status": "PASS_WITH_BROWSER_EXECUTION_PENDING",
+  "version": "2.2",
+  "checked_at": "2026-08-13T19:45:42.694Z",
+  "backup": {
+    "status": "PASS",
+    "file_count": 25407,
+    "byte_identical_to_source": true
+  },
+  "protected_data": {
+    "node_count": 1058,
+    "node_ids_unchanged": true,
+    "hierarchy_unchanged": true,
+    "relation_count": 243,
+    "source_count": 155,
+    "scenario_count": 5,
+    "scenario_data_byte_identical": true,
+    "learning_path_count": 5,
+    "learning_data_byte_identical": true,
+    "runtimes_byte_identical": true,
+    "user_profile_examples_byte_identical": true
+  },
+  "ui": {
+    "modes": [
+      "mindmap",
+      "brain",
+      "architecture",
+      "learning"
+    ],
+    "dom_references_valid": true,
+    "node_links_valid": true,
+    "scenario_links_valid": true,
+    "learning_step_links_valid": true,
+    "release_metadata_central": true,
+    "local_profile_contract_reused": true,
+    "external_scripts": 0,
+    "ai_integration": false,
+    "github_integration": false,
+    "start_html_local": true,
+    "mindmap_expand_all": {
+      "status": "PASS",
+      "visible_nodes": 1058,
+      "render_cycles": 1
+    },
+    "mindmap_collapse_all": {
+      "status": "PASS",
+      "visible_nodes": 8,
+      "render_cycles": 1
+    },
+    "single_branch_after_global_control": "PASS",
+    "search_wiring": "PASS"
+  },
+  "builds": {
+    "knowledge": "PASS",
+    "architecture": "PASS",
+    "learning": "PASS",
+    "release": "PASS"
+  },
+  "compatibility": {
+    "offline_file_protocol": "PASS_STATIC",
+    "safari": "COMPATIBILITY_REVIEW_PASS_EXECUTION_PENDING",
+    "chrome": "INSTALLED_AUTOMATION_EXTENSION_UNAVAILABLE"
+  },
+  "note": "Chrome und Safari müssen für einen ausgeführten Interaktionstest manuell geöffnet werden; die Codex-Chrome-Verbindung war nicht verfügbar."
+}

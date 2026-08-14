@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.azure-digital-brain/schema/v1.1.json",
+  "title": "Azure Digital Brain Canonical Data Contract",
+  "type": "object",
+  "$defs": {
+    "description": {
+      "type": "object",
+      "required": ["simple", "technical", "architecture"],
+      "additionalProperties": false,
+      "properties": {
+        "simple": {"type": "string"},
+        "technical": {"type": "string"},
+        "architecture": {"type": "string"}
+      }
+    },
+    "node": {
+      "type": "object",
+      "required": ["schema_version", "id", "title", "domain", "category", "subcategory", "description", "parent", "children", "tags", "aliases", "relations", "examples", "sources", "metadata", "origin", "created_at", "updated_at"],
+      "properties": {
+        "schema_version": {"const": "1.1"},
+        "id": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "domain": {"type": "string", "minLength": 1},
+        "category": {"type": "string", "minLength": 1},
+        "subcategory": {"type": "string"},
+        "description": {"$ref": "#/$defs/description"},
+        "why_important": {"type": "string"},
+        "parent": {"type": ["string", "null"]},
+        "children": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "aliases": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "relations": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "examples": {"type": "array", "items": {"type": "string"}},
+        "merksatz": {"type": "string"},
+        "analogy": {"type": "string"},
+        "sources": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "metadata": {
+          "type": "object",
+          "required": ["difficulty", "importance", "status", "certifications", "audit_flags"],
+          "properties": {
+            "difficulty": {"type": "string"},
+            "importance": {"type": "number"},
+            "status": {"enum": ["draft", "review", "published", "deprecated", "archived"]},
+            "certifications": {"type": "array", "items": {"type": "string"}},
+            "audit_flags": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "origin": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string"},
+        "updated_at": {"type": "string"},
+        "legacy": {"type": "object"}
+      }
+    },
+    "relation": {
+      "type": "object",
+      "required": ["schema_version", "id", "source", "target", "type", "inverse_type", "explanation", "sources", "confidence", "status", "created_by", "created_at", "reviewed_at"],
+      "properties": {
+        "schema_version": {"const": "1.1"},
+        "id": {"type": "string", "minLength": 1},
+        "source": {"type": "string", "minLength": 1},
+        "target": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1},
+        "inverse_type": {"type": "string", "minLength": 1},
+        "explanation": {"type": "string", "minLength": 1},
+        "sources": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "status": {"enum": ["pending", "accepted", "rejected", "deprecated"]},
+        "created_by": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string"},
+        "reviewed_at": {"type": ["string", "null"]},
+        "legacy_type": {"type": "string"}
+      }
+    },
+    "relation_type": {
+      "type": "object",
+      "required": ["id", "label", "inverse_type", "inverse_label", "description", "color", "priority", "symmetric"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "label": {"type": "string"},
+        "inverse_type": {"type": "string"},
+        "inverse_label": {"type": "string"},
+        "description": {"type": "string"},
+        "color": {"type": "string"},
+        "priority": {"type": "number"},
+        "symmetric": {"type": "boolean"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "url", "publisher", "accessed_at", "type"],
+      "properties": {
+        "id": {"type": "string"},
+        "title": {"type": "string"},
+        "url": {"type": "string"},
+        "publisher": {"type": "string"},
+        "accessed_at": {"type": "string"},
+        "type": {"type": "string"}
+      }
+    },
+    "ai_proposal": {
+      "type": "object",
+      "required": ["id", "proposal_type", "payload", "reason", "sources", "confidence", "status", "created_at"],
+      "properties": {
+        "id": {"type": "string"},
+        "proposal_type": {"enum": ["new_node", "update_node", "new_relation", "update_relation"]},
+        "payload": {"type": "object"},
+        "reason": {"type": "string"},
+        "sources": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "status": {"enum": ["pending", "accepted", "rejected"]},
+        "created_at": {"type": "string"},
+        "reviewed_at": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

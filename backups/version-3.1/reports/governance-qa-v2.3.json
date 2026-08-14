@@ -1,0 +1,67 @@
+{
+  "status": "PASS WITH EXCEPTIONS",
+  "version": "2.3",
+  "checked_at": "2026-08-13T19:57:17.619Z",
+  "backup": {
+    "version": "2.2",
+    "file_count": 50824,
+    "byte_identical": true
+  },
+  "change_scope": {
+    "class": "B – additive governance plus central release metadata",
+    "changed_existing_files": [
+      "data/canonical/release.json",
+      "data/runtime/release-runtime.js",
+      "tools/build-release-runtime.mjs"
+    ],
+    "unexpected_changes": 0,
+    "new_governance_files": [
+      "PROJECT-GOVERNANCE.md",
+      "QUALITY-GATES.md",
+      "CHANGE-POLICY.md",
+      "DECISION-LOG.md"
+    ]
+  },
+  "protected_data": {
+    "node_count": 1058,
+    "node_ids_unchanged": true,
+    "hierarchy_unchanged": true,
+    "relation_count": 243,
+    "source_count": 155,
+    "scenarios_byte_identical": true,
+    "learning_byte_identical": true,
+    "ui_byte_identical": true,
+    "user_profile_unchanged": true,
+    "mindmap_expand_collapse_present": true
+  },
+  "governance": {
+    "lifecycle_phases": 8,
+    "change_classes": 4,
+    "quality_gates": 6,
+    "audit_categories": 8,
+    "finding_statuses": 7,
+    "decision_entries": 5,
+    "documents_consistent": true
+  },
+  "builds": {
+    "knowledge": "PASS",
+    "architecture": "PASS",
+    "learning": "PASS",
+    "release": "PASS"
+  },
+  "browser": {
+    "static_regression": "PASS",
+    "executed_browser": "PENDING"
+  },
+  "exceptions": [
+    {
+      "exception_id": "EX-V2.3-001",
+      "cause": "Codex-Browsersteuerung für einen echten Chrome-/Safari-Interaktionstest nicht verfügbar.",
+      "risk": "Niedrig: V2.3 verändert keine UI-Datei; statische Regression und Bytevergleich zu V2.2 sind erfolgreich.",
+      "affected_area": "Gate 5 – Browser Compatibility",
+      "decision": "Release als Governance-only mit browser execution pending; kein executed browser PASS.",
+      "owner": "Human Project Owner / nächster browserfähiger QA-Lauf",
+      "follow_up": "Ausgeführten Chrome- und Safari-Smoke-Test nachholen, sobald Browsersteuerung verfügbar ist."
+    }
+  ]
+}

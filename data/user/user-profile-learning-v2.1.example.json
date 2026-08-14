@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.1",
+  "profile_id": "local-default",
+  "updated_at": "2026-08-11T00:00:00.000Z",
+  "notes": {
+    "learning-step-application-traffic-management": "Eigene Reflexion zu Front Door, Application Gateway und Load Balancer."
+  },
+  "learning_status": {
+    "learning-step-application-traffic-management": {
+      "progress_percent": 50,
+      "last_opened_at": "2026-08-11T00:00:00.000Z",
+      "understanding_level": 3,
+      "completed": false
+    }
+  },
+  "favorites": [],
+  "custom_links": [],
+  "preferences": {
+    "default_mode": "mindmap"
+  },
+  "migrations": {
+    "legacy_node_keys": "completed"
+  }
+}

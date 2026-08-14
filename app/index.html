@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Azure Digital Brain</title>
+  <meta name="description" content="Lokale Azure-Wissensplattform mit Mindmap, Knowledge Graph, Architecture Scenarios und geführten Lernpfaden.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-orbit" aria-hidden="true"><i></i></span><div><strong>Azure Digital Brain</strong><small id="dataSummary">Wissensplattform wird geladen …</small></div></div>
+      <div class="mode-switch" role="tablist" aria-label="Ansichtsmodus">
+        <button id="mindmapMode" class="active" role="tab" aria-selected="true">Mindmap</button>
+        <button id="brainMode" role="tab" aria-selected="false">Brain</button>
+        <button id="architectureMode" role="tab" aria-selected="false">Architecture</button>
+        <button id="learningMode" role="tab" aria-selected="false">Lernen</button>
+      </div>
+      <div class="search-box" role="search">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Node-ID, Titel, Alias oder Inhalt …" autocomplete="off" spellcheck="false" aria-controls="searchResults" aria-autocomplete="list">
+        <kbd>⌘ K</kbd>
+        <div id="searchResults" class="search-results" hidden></div>
+      </div>
+      <div class="toolbar">
+        <button id="expandAllBtn" class="text-button" title="Alle Mindmap-Zweige öffnen">Alles aufklappen</button>
+        <button id="collapseBtn" class="text-button" title="Alle Mindmap-Zweige schließen">Alles zuklappen</button>
+        <button id="focusBtn" class="text-button brain-only" hidden>Fokus lösen</button>
+        <button id="zoomOut" aria-label="Verkleinern">−</button>
+        <button id="fitView" class="zoom-readout">Einpassen</button>
+        <button id="zoomIn" aria-label="Vergrößern">+</button>
+        <button id="exportProfile" class="text-button" title="Notizen und Lernstände sichern">Profil ↓</button>
+        <button id="importProfile" class="text-button" title="Gesichertes Profil importieren">Profil ↑</button>
+        <input id="profileFile" type="file" accept="application/json,.json" hidden>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section id="stage" class="stage" aria-label="Azure Wissenskarte">
+        <svg id="mindmapCanvas" class="visual active" tabindex="0" aria-label="Hierarchische Azure-Mindmap">
+          <g id="mindViewport"><g id="mindLinks"></g><g id="mindNodes"></g></g>
+        </svg>
+        <canvas id="brainCanvas" class="visual" tabindex="0" aria-label="Semantischer Azure Knowledge Graph"></canvas>
+        <section id="architectureView" class="content-view" aria-label="Architecture Scenarios" hidden>
+          <nav class="content-sidebar"><div class="view-kicker">Architecture</div><h1>Referenzarchitekturen</h1><p>Bestehende V2.0-Szenarien im Zusammenhang erkunden.</p><div id="scenarioList" class="selection-list"></div></nav>
+          <article id="scenarioContent" class="content-main"></article>
+        </section>
+        <section id="learningView" class="content-view" aria-label="Architecture Learning Paths" hidden>
+          <nav class="content-sidebar"><div class="view-kicker">Lernen</div><h1>Architecture Learning</h1><p>Vom mentalen Azure-Modell zur begründeten Architekturentscheidung.</p><div id="learningPathList" class="selection-list"></div></nav>
+          <article id="learningContent" class="content-main"></article>
+        </section>
+        <div id="graphTooltip" class="graph-tooltip" hidden></div>
+        <div class="legend" id="legend"></div>
+        <div class="stage-note"><span id="viewStatus">Hierarchieansicht</span><span>·</span><span id="visibleStatus">–</span></div>
+        <div class="help-chip"><b>Navigation</b><span>Ziehen: verschieben · Mausrad: zoomen · Doppelklick: öffnen/fokussieren</span></div>
+      </section>
+
+      <aside id="detailPanel" class="detail-panel" aria-label="Knotendetails">
+        <button id="backNavigation" class="back-button" aria-label="Zum vorherigen Wissenskontext zurück" title="Zum vorherigen Wissenskontext zurück" hidden>← Zurück</button>
+        <button id="closeDetails" class="close-button" aria-label="Details schließen">×</button>
+        <div id="detailCategory" class="category-pill">Azure</div>
+        <h1 id="detailTitle">Azure Digital Brain</h1>
+        <p id="detailPath" class="detail-path">Wähle einen Knoten, um Lerninhalt und Zusammenhänge zu sehen.</p>
+        <nav id="contextModeActions" class="context-mode-actions" aria-label="Knoten in anderen Perspektiven öffnen" hidden>
+          <button id="contextMindmap" type="button">Mindmap</button>
+          <button id="contextBrain" type="button">Brain</button>
+          <button id="contextArchitecture" type="button">Architecture</button>
+          <button id="contextLearning" type="button">Lernen</button>
+        </nav>
+        <div id="auditBox" class="audit-box" hidden></div>
+        <section id="contextSummarySection" hidden><h2>Kontext</h2><div id="contextSummary" class="context-summary"></div></section>
+        <section id="simpleSection"><h2>Kurz erklärt</h2><p id="detailShort">Die ursprüngliche AZ-900-Hierarchie bleibt vollständig erhalten. Der Brain-Modus ergänzt semantische Querverbindungen.</p></section>
+        <section id="technicalSection"><h2>Technische Erklärung</h2><div id="detailTechnical" class="original-content">Lokale Wissensplattform · Local · Offline capable</div></section>
+        <section id="architectureSection" hidden><h2>Architektur-Relevanz</h2><div id="detailArchitecture" class="original-content"></div><div id="architectureContextList" class="architecture-context-list"></div></section>
+        <section id="whySection" hidden><h2>Warum wichtig?</h2><p id="detailWhy"></p></section>
+        <section id="examplesSection" hidden><h2>Beispiele</h2><div id="detailExamples" class="original-content"></div></section>
+        <section id="memorySection" hidden><h2>Merksatz &amp; Analogie</h2><p id="detailMemory"></p></section>
+        <div id="detailMeta" class="detail-meta"></div>
+        <section id="learningSection" hidden>
+          <h2>Lernfortschritt</h2>
+          <select id="learningStatus" aria-label="Lernstatus"><option value="unbekannt">Unbekannt</option><option value="offen">Offen</option><option value="in-arbeit">In Arbeit</option><option value="verstanden">Verstanden</option><option value="wiederholen">Wiederholen</option></select>
+        </section>
+        <section id="relationsSection" hidden><h2>Verbindungen</h2><div id="relationList" class="relation-list"></div></section>
+        <section id="contextSection" hidden><h2>Lernpfad</h2><div id="contextList" class="context-list"></div></section>
+        <section id="sourcesSection" hidden><h2>Quellen</h2><div id="sourceList" class="source-list"></div></section>
+        <details id="qualityDetails" class="quality-details" hidden><summary>Qualitätsinformationen</summary><div id="qualityContent"></div></details>
+        <section id="notesSection" hidden><h2>Eigene Notizen</h2><textarea id="notes" rows="4" placeholder="Nur lokal in diesem Browser gespeichert …"></textarea></section>
+        <div id="detailActions" class="detail-actions" hidden>
+          <button id="toggleBranch" class="secondary">Ast öffnen</button>
+          <button id="showRelations" class="primary">Zusammenhänge anzeigen</button>
+        </div>
+        <div id="semanticChooser" class="semantic-chooser" role="dialog" aria-modal="false" aria-labelledby="semanticChooserTitle" hidden>
+          <div class="semantic-chooser-header"><b id="semanticChooserTitle">Begriff auswählen</b><button id="closeSemanticChooser" type="button" aria-label="Auswahl schließen">×</button></div>
+          <div id="semanticChooserList" class="semantic-chooser-list"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <noscript>Diese Anwendung benötigt JavaScript.</noscript>
+  <script src="../data/runtime/release-runtime.js"></script>
+  <script src="../data/runtime/knowledge-runtime.js"></script>
+  <script src="../data/runtime/architecture-runtime.js"></script>
+  <script src="../data/runtime/learning-runtime.js"></script>
+  <script src="../data/runtime/semantic-navigation-runtime.js"></script>
+  <script src="../data/runtime/context-experience-runtime.js"></script>
+  <script src="semantic-navigation-core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

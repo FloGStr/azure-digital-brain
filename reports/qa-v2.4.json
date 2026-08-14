@@ -1,0 +1,89 @@
+{
+  "status": "PASS WITH EXCEPTIONS",
+  "version": "2.4",
+  "checked_at": "2026-08-13T20:34:00.485Z",
+  "change_scope": "Class B – additive audit, proposals, reports and central release metadata",
+  "backup": {
+    "version": "2.3",
+    "file_count": 101658,
+    "byte_identical": true,
+    "verification": "full diff -qr completed with exit code 0 before QA"
+  },
+  "protected_data": {
+    "node_count": 1058,
+    "node_ids_unchanged": true,
+    "hierarchy_byte_identical": true,
+    "relation_count": 243,
+    "relations_byte_identical": true,
+    "source_count": 155,
+    "sources_byte_identical": true,
+    "scenarios_byte_identical": true,
+    "learning_byte_identical": true,
+    "ui_byte_identical": true,
+    "user_examples_byte_identical": true,
+    "node_creations": 0,
+    "node_deletions": 0,
+    "node_moves": 0,
+    "node_merges": 0
+  },
+  "audit": {
+    "coverage": "1058/1058",
+    "findings": 77,
+    "categories": {
+      "A": 16,
+      "B": 6,
+      "C": 8,
+      "D": 8,
+      "E": 8,
+      "F": 14,
+      "G": 12,
+      "H": 5
+    },
+    "confidence": {
+      "high": 54,
+      "low": 6,
+      "medium": 17
+    },
+    "priorities": {
+      "P1": 34,
+      "P2": 25,
+      "P3": 18
+    },
+    "category_h_awaiting_review": true,
+    "schema_valid": true
+  },
+  "gates": {
+    "gate_1_data_integrity": "PASS",
+    "gate_2_knowledge_quality": "PASS – findings only, no automatic change",
+    "gate_4_operability": "PASS",
+    "gate_5_ui_regression": "PASS – static and byte-identical to V2.3; executed browser PENDING",
+    "gate_6_release_readiness": "PASS at handoff – final ZIP integrity and SHA-256 verified externally after report freeze"
+  },
+  "builds": {
+    "runtime": "PASS",
+    "scenario-runtime": "PASS",
+    "learning-runtime": "PASS",
+    "release-runtime": "PASS"
+  },
+  "personal_browser_data": {
+    "audited": false,
+    "statement": "Private browser-local notes and learning state were not accessible and were not claimed as covered."
+  },
+  "browser": {
+    "static_regression": "PASS",
+    "ui_byte_identical_to_v2_3": true,
+    "executed_in_app_browser": "PENDING",
+    "chrome": "PENDING",
+    "safari": "PENDING"
+  },
+  "exceptions": [
+    {
+      "exception_id": "EX-V2.4-001",
+      "cause": "Browser security policy blocks local file URLs, and the managed environment blocks binding a local test server.",
+      "risk": "Low: V2.4 does not change START.html or any app file; protected UI files are byte-identical to V2.3 and static feature checks pass.",
+      "affected_area": "Gate 5 – executed browser regression",
+      "decision": "Report browser execution as PENDING; do not claim an executed Chrome/Safari PASS.",
+      "follow_up": "Open START.html on the Mac and perform the existing smoke checklist in Chrome and Safari during human release review."
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "schema_version": "3.1-qa-1.0",
+  "release_version": "3.1",
+  "base_release": "2.4",
+  "status": "PASS_WITH_BROWSER_LIMITATION",
+  "generated_at": "2026-08-14T11:06:54.603Z",
+  "assertions": {
+    "node_count_1058": true,
+    "node_ids_unique": true,
+    "relations_unchanged_count": true,
+    "sources_unchanged_count": true,
+    "canonical_file_set_unchanged": true,
+    "canonical_hashes_unchanged": true,
+    "navigation_runtime_complete": true,
+    "navigation_aliases_valid": true,
+    "exact_node_id_first": true,
+    "exact_title_first": true,
+    "alias_search": true,
+    "historical_search": true,
+    "contextual_alias_search": true,
+    "semantic_sample_all_terms": true,
+    "semantic_targets_exist": true,
+    "navigate_api_present": true,
+    "mode_preserving_navigation_present": true,
+    "back_navigation_present": true,
+    "semantic_runtime_loaded": true,
+    "direct_start_present": true,
+    "javascript_syntax_checked_externally": true
+  },
+  "failed_assertions": [],
+  "counts": {
+    "nodes": 1058,
+    "relations": 243,
+    "sources": 155,
+    "classifications": 1058,
+    "aliases": 24,
+    "semantic_sample_matches": 4
+  },
+  "search_samples": {
+    "exact_id": {
+      "id": "azure-0005",
+      "match_type": "Exakte Node-ID",
+      "score": 1200
+    },
+    "exact_title": {
+      "id": "azure-0322",
+      "match_type": "Exakter Titel",
+      "score": 1000
+    },
+    "alias": {
+      "id": "azure-0322",
+      "match_type": "Alias",
+      "score": 900
+    },
+    "historical": {
+      "id": "azure-0904",
+      "match_type": "Historischer Begriff",
+      "score": 850
+    },
+    "contextual": {
+      "id": "azure-0326",
+      "match_type": "Alias",
+      "score": 900
+    }
+  },
+  "semantic_sample": [
+    {
+      "term": "Availability Sets",
+      "targets": [
+        "azure-0005"
+      ]
+    },
+    {
+      "term": "Virtual Machines",
+      "targets": [
+        "azure-0322"
+      ]
+    },
+    {
+      "term": "Fault Domains",
+      "targets": [
+        "azure-0326"
+      ]
+    },
+    {
+      "term": "Update Domains",
+      "targets": [
+        "azure-0326"
+      ]
+    }
+  ],
+  "canonical_hash_comparison": [
+    {
+      "file": "README.md",
+      "v2_4_sha256": "89b452671b87bcb517e530cbf8c1f228e1be71e3a7d631b580fb587ca30b0155",
+      "v3_1_sha256": "89b452671b87bcb517e530cbf8c1f228e1be71e3a7d631b580fb587ca30b0155",
+      "unchanged": true
+    },
+    {
+      "file": "learning-framework.json",
+      "v2_4_sha256": "cac05b3cf0ca90ce3dced077840d012280061e7603dcde1c5f4be7c4987def32",
+      "v3_1_sha256": "cac05b3cf0ca90ce3dced077840d012280061e7603dcde1c5f4be7c4987def32",
+      "unchanged": true
+    },
+    {
+      "file": "learning-schema.json",
+      "v2_4_sha256": "3aaa81915ff5eafb7d8aae9f70ecb7056f7d426a4de74caf87ebc16fce8a5e34",
+      "v3_1_sha256": "3aaa81915ff5eafb7d8aae9f70ecb7056f7d426a4de74caf87ebc16fce8a5e34",
+      "unchanged": true
+    },
+    {
+      "file": "nodes.json",
+      "v2_4_sha256": "90b6fe19adb1944005c04ab7077d328a69ab31a9331dd4195211a51d8ea881ba",
+      "v3_1_sha256": "90b6fe19adb1944005c04ab7077d328a69ab31a9331dd4195211a51d8ea881ba",
+      "unchanged": true
+    },
+    {
+      "file": "relation-types.json",
+      "v2_4_sha256": "347dff91c0c5a984f5237890b2d0ce848f496ef27e868e4b82683f33eb859604",
+      "v3_1_sha256": "347dff91c0c5a984f5237890b2d0ce848f496ef27e868e4b82683f33eb859604",
+      "unchanged": true
+    },
+    {
+      "file": "relations.json",
+      "v2_4_sha256": "336c85b9a2f9b44f9c17bdf0ba9043feb1613d9bdb3ac98852a81d649f9f2b2f",
+      "v3_1_sha256": "336c85b9a2f9b44f9c17bdf0ba9043feb1613d9bdb3ac98852a81d649f9f2b2f",
+      "unchanged": true
+    },
+    {
+      "file": "release.json",
+      "v2_4_sha256": "fdbc2b885f876e0a21fe5b439448accc1574b051c989c769bb405763deffae99",
+      "v3_1_sha256": "fdbc2b885f876e0a21fe5b439448accc1574b051c989c769bb405763deffae99",
+      "unchanged": true
+    },
+    {
+      "file": "scenario-schema.json",
+      "v2_4_sha256": "de7fb1cb2638b518dd02e584e26b5817f084644c70a0cc870e9a50acd600b083",
+      "v3_1_sha256": "de7fb1cb2638b518dd02e584e26b5817f084644c70a0cc870e9a50acd600b083",
+      "unchanged": true
+    },
+    {
+      "file": "scenarios.json",
+      "v2_4_sha256": "8af00bb09e2bda604213f5232a16a51b1a21c6434e28e47190287757800a8041",
+      "v3_1_sha256": "8af00bb09e2bda604213f5232a16a51b1a21c6434e28e47190287757800a8041",
+      "unchanged": true
+    },
+    {
+      "file": "schema.json",
+      "v2_4_sha256": "2f80f4ab3eba7a539f044759717a1e57a689bf37808d857b8550071cb6d384ed",
+      "v3_1_sha256": "2f80f4ab3eba7a539f044759717a1e57a689bf37808d857b8550071cb6d384ed",
+      "unchanged": true
+    },
+    {
+      "file": "sources.json",
+      "v2_4_sha256": "17937f055f7952b3255a0952a1b65e3f0e342566d3e32b4b16f465fdd3425a10",
+      "v3_1_sha256": "17937f055f7952b3255a0952a1b65e3f0e342566d3e32b4b16f465fdd3425a10",
+      "unchanged": true
+    }
+  ],
+  "browser_qa": {
+    "status": "BLOCKED_BY_TEST_ENVIRONMENT",
+    "reason": "Die integrierte Browser-Sicherheitsrichtlinie blockiert file://-Navigation. Kein alternativer Browser oder Server wurde als Umgehung verwendet.",
+    "manual_checks_required": [
+      "START.html per Doppelklick in Safari öffnen",
+      "START.html per Doppelklick in Chrome öffnen",
+      "Suche, Sprung, Textlink und Zurück-Navigation visuell bestätigen"
+    ]
+  },
+  "legacy_backup_dependent_qa": {
+    "status": "NOT_APPLICABLE_TO_LEAN_PACKAGE",
+    "reason": "Historische QA-Skripte verlangen den rekursiven 22-GB-Backupbaum. V3.1 ersetzt diese Verpackungsprüfung durch vollständige Canonical-Hashvergleiche."
+  }
+}

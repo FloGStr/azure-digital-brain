@@ -1,0 +1,11 @@
+{
+  "data_format_version": "1.1",
+  "title": "Azure Digital Brain",
+  "node_count": 1058,
+  "relation_count": 243,
+  "relation_type_count": 36,
+  "source_count": 155,
+  "max_depth": 10,
+  "generated_from": "data/canonical",
+  "generated_at": "2026-08-11T06:46:52.061Z"
+}

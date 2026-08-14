@@ -1,0 +1,35 @@
+{
+  "schema_version": "3.1-navigation-aliases-1.0",
+  "status": "runtime-overlay",
+  "canonical_data_changed": false,
+  "aliases": [
+    {
+      "term": "Fault Domain",
+      "target_node_id": "azure-0326",
+      "alias_type": "contextual",
+      "match_policy": "phrase",
+      "reason": "Kein eigener kanonischer Knoten vorhanden; Verlinkung auf den bestehenden Knoten zu Fault und Update Domains."
+    },
+    {
+      "term": "Fault Domains",
+      "target_node_id": "azure-0326",
+      "alias_type": "contextual",
+      "match_policy": "phrase",
+      "reason": "Pluralform der bestehenden Fault-/Update-Domain-Erklärung."
+    },
+    {
+      "term": "Update Domain",
+      "target_node_id": "azure-0326",
+      "alias_type": "contextual",
+      "match_policy": "phrase",
+      "reason": "Kein eigener kanonischer Knoten vorhanden; Verlinkung auf den bestehenden Knoten zu Fault und Update Domains."
+    },
+    {
+      "term": "Update Domains",
+      "target_node_id": "azure-0326",
+      "alias_type": "contextual",
+      "match_policy": "phrase",
+      "reason": "Pluralform der bestehenden Fault-/Update-Domain-Erklärung."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.1",
+  "proposals": [
+    {
+      "id": "proposal-example-001",
+      "proposal_type": "new_relation",
+      "payload": {
+        "source": "azure-0881",
+        "target": "azure-0558",
+        "type": "requires",
+        "inverse_type": "required_by",
+        "explanation": "Private DNS ermöglicht die korrekte Namensauflösung privater Endpunkte innerhalb eines virtuellen Netzwerks."
+      },
+      "reason": "Beispiel für einen prüfbaren KI-Vorschlag; wird nicht automatisch angewendet.",
+      "sources": ["ms-private-dns"],
+      "confidence": 0.87,
+      "status": "pending",
+      "created_at": "2026-08-11T00:00:00.000Z",
+      "reviewed_at": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "version": "2.1",
+  "checked_at": "2026-08-11T08:25:42.603Z",
+  "baseline": {
+    "version": "2.0",
+    "file_count": 12697,
+    "missing_files": 0,
+    "changed_files": 0,
+    "byte_identical": true
+  },
+  "canonical": {
+    "node_count": 1058,
+    "node_ids_unchanged": true,
+    "hierarchy_unchanged": true,
+    "relation_count": 243,
+    "relations_unchanged": true,
+    "source_count": 155,
+    "sources_unchanged": true
+  },
+  "scenario_layer": {
+    "scenario_count": 5,
+    "byte_identical": true
+  },
+  "learning_framework": {
+    "path_count": 5,
+    "step_count": 33,
+    "referenced_node_count": 72,
+    "referenced_scenario_count": 5,
+    "all_references_valid": true,
+    "duplicate_ids": 0,
+    "practice_integrations": 0
+  },
+  "profile": {
+    "schema_reused": true,
+    "canonical_mutation": false
+  },
+  "runtime_build": {
+    "status": "PASS",
+    "file": "data/runtime/learning-runtime.js"
+  }
+}

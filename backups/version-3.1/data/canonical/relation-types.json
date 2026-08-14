@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "schema_version": "1.1",
+    "title": "Semantic Relation Type Registry",
+    "type_count": 36,
+    "canonical": true,
+    "updated_at": "2026-08-11",
+    "enrichment_version": "1.8"
+  },
+  "relation_types": [
+    {
+      "id": "contains",
+      "label": "enthält",
+      "inverse_type": "part_of",
+      "inverse_label": "ist Teil von",
+      "description": "Ein Wissensobjekt enthält ein anderes als strukturellen oder fachlichen Bestandteil.",
+      "color": "#8ea6bd",
+      "priority": 70,
+      "symmetric": false
+    },
+    {
+      "id": "part_of",
+      "label": "ist Teil von",
+      "inverse_type": "contains",
+      "inverse_label": "enthält",
+      "description": "Ein Wissensobjekt ist Bestandteil eines übergeordneten Konzepts.",
+      "color": "#8ea6bd",
+      "priority": 70,
+      "symmetric": false
+    },
+    {
+      "id": "depends_on",
+      "label": "hängt ab von",
+      "inverse_type": "depended_on_by",
+      "inverse_label": "ist Abhängigkeit für",
+      "description": "Die Funktionsfähigkeit oder Ausgestaltung des Quellobjekts hängt vom Zielobjekt ab.",
+      "color": "#ffb454",
+      "priority": 90,
+      "symmetric": false
+    },
+    {
+      "id": "depended_on_by",
+      "label": "ist Abhängigkeit für",
+      "inverse_type": "depends_on",
+      "inverse_label": "hängt ab von",
+      "description": "Das Quellobjekt ist eine Abhängigkeit des verbundenen Zielobjekts.",
+      "color": "#ffb454",
+      "priority": 90,
+      "symmetric": false
+    },
+    {
+      "id": "requires",
+      "label": "benötigt",
+      "inverse_type": "required_by",
+      "inverse_label": "wird benötigt von",
+      "description": "Das Quellobjekt benötigt das Zielobjekt für die beschriebene Funktion.",
+      "color": "#ffc266",
+      "priority": 95,
+      "symmetric": false
+    },
+    {
+      "id": "required_by",
+      "label": "wird benötigt von",
+      "inverse_type": "requires",
+      "inverse_label": "benötigt",
+      "description": "Das Quellobjekt wird vom Zielobjekt benötigt.",
+      "color": "#ffc266",
+      "priority": 95,
+      "symmetric": false
+    },
+    {
+      "id": "uses",
+      "label": "verwendet",
+      "inverse_type": "used_by",
+      "inverse_label": "wird verwendet von",
+      "description": "Ein Service verwendet eine Ressource, Technologie oder Funktion.",
+      "color": "#52c7ff",
+      "priority": 80,
+      "symmetric": false
+    },
+    {
+      "id": "used_by",
+      "label": "wird verwendet von",
+      "inverse_type": "uses",
+      "inverse_label": "verwendet",
+      "description": "Eine Ressource oder Technologie wird vom verbundenen Service verwendet.",
+      "color": "#52c7ff",
+      "priority": 80,
+      "symmetric": false
+    },
+    {
+      "id": "secures",
+      "label": "schützt",
+      "inverse_type": "secured_by",
+      "inverse_label": "wird geschützt durch",
+      "description": "Ein Objekt schützt den Zugriff, die Daten oder den Betrieb eines anderen Objekts.",
+      "color": "#ff5f73",
+      "priority": 100,
+      "symmetric": false
+    },
+    {
+      "id": "secured_by",
+      "label": "wird geschützt durch",
+      "inverse_type": "secures",
+      "inverse_label": "schützt",
+      "description": "Das Objekt wird durch die verbundene Sicherheitsfunktion geschützt.",
+      "color": "#ff5f73",
+      "priority": 100,
+      "symmetric": false
+    },
+    {
+      "id": "connects_to",
+      "label": "verbindet mit",
+      "inverse_type": "connects_to",
+      "inverse_label": "verbindet mit",
+      "description": "Zwei Dienste oder Netzwerkbereiche werden miteinander verbunden.",
+      "color": "#43a6ff",
+      "priority": 90,
+      "symmetric": true
+    },
+    {
+      "id": "routes_to",
+      "label": "leitet weiter an",
+      "inverse_type": "receives_from",
+      "inverse_label": "empfängt von",
+      "description": "Anfragen oder Datenverkehr werden an das Ziel weitergeleitet.",
+      "color": "#55d9d0",
+      "priority": 85,
+      "symmetric": false
+    },
+    {
+      "id": "receives_from",
+      "label": "empfängt von",
+      "inverse_type": "routes_to",
+      "inverse_label": "leitet weiter an",
+      "description": "Anfragen oder Datenverkehr werden vom verbundenen Objekt empfangen.",
+      "color": "#55d9d0",
+      "priority": 85,
+      "symmetric": false
+    },
+    {
+      "id": "replaces",
+      "label": "ersetzt",
+      "inverse_type": "replaced_by",
+      "inverse_label": "wird ersetzt durch",
+      "description": "Das Quellobjekt ist der fachliche oder technische Nachfolger des Ziels.",
+      "color": "#a889ff",
+      "priority": 75,
+      "symmetric": false
+    },
+    {
+      "id": "replaced_by",
+      "label": "wird ersetzt durch",
+      "inverse_type": "replaces",
+      "inverse_label": "ersetzt",
+      "description": "Das Quellobjekt wird durch das Ziel abgelöst.",
+      "color": "#a889ff",
+      "priority": 75,
+      "symmetric": false
+    },
+    {
+      "id": "alternative_to",
+      "label": "ist Alternative zu",
+      "inverse_type": "alternative_to",
+      "inverse_label": "ist Alternative zu",
+      "description": "Die verbundenen Objekte lösen ähnliche Anforderungen mit unterschiedlichen Eigenschaften.",
+      "color": "#f3ce58",
+      "priority": 65,
+      "symmetric": true
+    },
+    {
+      "id": "monitors",
+      "label": "überwacht",
+      "inverse_type": "monitored_by",
+      "inverse_label": "wird überwacht durch",
+      "description": "Das Quellobjekt erfasst oder bewertet Signale des Zielobjekts.",
+      "color": "#ff9c54",
+      "priority": 80,
+      "symmetric": false
+    },
+    {
+      "id": "monitored_by",
+      "label": "wird überwacht durch",
+      "inverse_type": "monitors",
+      "inverse_label": "überwacht",
+      "description": "Das Objekt wird durch den verbundenen Monitoringdienst überwacht.",
+      "color": "#ff9c54",
+      "priority": 80,
+      "symmetric": false
+    },
+    {
+      "id": "deploys",
+      "label": "stellt bereit",
+      "inverse_type": "deployed_by",
+      "inverse_label": "wird bereitgestellt durch",
+      "description": "Das Quellobjekt stellt das Zielobjekt bereit.",
+      "color": "#b38cff",
+      "priority": 75,
+      "symmetric": false
+    },
+    {
+      "id": "deployed_by",
+      "label": "wird bereitgestellt durch",
+      "inverse_type": "deploys",
+      "inverse_label": "stellt bereit",
+      "description": "Das Objekt wird durch das verbundene Werkzeug bereitgestellt.",
+      "color": "#b38cff",
+      "priority": 75,
+      "symmetric": false
+    },
+    {
+      "id": "governs",
+      "label": "steuert",
+      "inverse_type": "governed_by",
+      "inverse_label": "wird gesteuert durch",
+      "description": "Regeln oder Berechtigungen des Quellobjekts steuern das Zielobjekt.",
+      "color": "#ff7e88",
+      "priority": 90,
+      "symmetric": false
+    },
+    {
+      "id": "governed_by",
+      "label": "wird gesteuert durch",
+      "inverse_type": "governs",
+      "inverse_label": "steuert",
+      "description": "Das Objekt unterliegt Regeln oder Berechtigungen des verbundenen Objekts.",
+      "color": "#ff7e88",
+      "priority": 90,
+      "symmetric": false
+    },
+    {
+      "id": "integrates_with",
+      "label": "integriert mit",
+      "inverse_type": "integrates_with",
+      "inverse_label": "integriert mit",
+      "description": "Die Dienste tauschen Funktionen oder Daten in einer gemeinsamen Lösung aus.",
+      "color": "#51e1bf",
+      "priority": 70,
+      "symmetric": true
+    },
+    {
+      "id": "triggers",
+      "label": "löst aus",
+      "inverse_type": "triggered_by",
+      "inverse_label": "wird ausgelöst durch",
+      "description": "Ein Ereignis des Quellobjekts startet eine Aktion im Zielobjekt.",
+      "color": "#68d391",
+      "priority": 85,
+      "symmetric": false
+    },
+    {
+      "id": "triggered_by",
+      "label": "wird ausgelöst durch",
+      "inverse_type": "triggers",
+      "inverse_label": "löst aus",
+      "description": "Das Objekt wird durch ein Ereignis des verbundenen Objekts ausgelöst.",
+      "color": "#68d391",
+      "priority": 85,
+      "symmetric": false
+    },
+    {
+      "id": "similar_to",
+      "label": "ist ähnlich zu",
+      "inverse_type": "similar_to",
+      "inverse_label": "ist ähnlich zu",
+      "description": "Die verbundenen Konzepte besitzen wesentliche fachliche Gemeinsamkeiten.",
+      "color": "#9aaabd",
+      "priority": 45,
+      "symmetric": true
+    },
+    {
+      "id": "issues",
+      "label": "stellt aus",
+      "inverse_type": "issued_by",
+      "inverse_label": "wird ausgestellt von",
+      "description": "Das Quellobjekt stellt das Zielobjekt als Identitäts- oder Sicherheitsartefakt aus.",
+      "color": "#b38cff",
+      "priority": 88,
+      "symmetric": false
+    },
+    {
+      "id": "issued_by",
+      "label": "wird ausgestellt von",
+      "inverse_type": "issues",
+      "inverse_label": "stellt aus",
+      "description": "Das Objekt wird durch den verbundenen Identitätsdienst ausgestellt.",
+      "color": "#b38cff",
+      "priority": 88,
+      "symmetric": false
+    },
+    {
+      "id": "refreshes",
+      "label": "erneuert",
+      "inverse_type": "refreshed_by",
+      "inverse_label": "wird erneuert durch",
+      "description": "Das Quellobjekt wird verwendet, um ein kurzlebigeres Zielartefakt erneut zu beziehen.",
+      "color": "#68d391",
+      "priority": 82,
+      "symmetric": false
+    },
+    {
+      "id": "refreshed_by",
+      "label": "wird erneuert durch",
+      "inverse_type": "refreshes",
+      "inverse_label": "erneuert",
+      "description": "Das Objekt kann mithilfe des verbundenen Artefakts erneut bezogen werden.",
+      "color": "#68d391",
+      "priority": 82,
+      "symmetric": false
+    },
+    {
+      "id": "deployed_in",
+      "label": "wird bereitgestellt in",
+      "inverse_type": "hosts",
+      "inverse_label": "hostet",
+      "description": "Eine Compute-Ressource wird innerhalb des Zielkontexts bereitgestellt.",
+      "color": "#43a6ff",
+      "priority": 92,
+      "symmetric": false
+    },
+    {
+      "id": "hosts",
+      "label": "hostet",
+      "inverse_type": "deployed_in",
+      "inverse_label": "wird bereitgestellt in",
+      "description": "Ein Infrastruktur- oder Plattformkontext hostet die verbundene Compute-Ressource.",
+      "color": "#43a6ff",
+      "priority": 92,
+      "symmetric": false
+    },
+    {
+      "id": "logs_to",
+      "label": "schreibt Logs nach",
+      "inverse_type": "receives_logs_from",
+      "inverse_label": "empfängt Logs von",
+      "description": "Das Quellobjekt sendet Protokoll- oder Telemetriedaten an das Ziel.",
+      "color": "#ff9c54",
+      "priority": 86,
+      "symmetric": false
+    },
+    {
+      "id": "receives_logs_from",
+      "label": "empfängt Logs von",
+      "inverse_type": "logs_to",
+      "inverse_label": "schreibt Logs nach",
+      "description": "Das Objekt empfängt Protokoll- oder Telemetriedaten vom verbundenen Quellobjekt.",
+      "color": "#ff9c54",
+      "priority": 86,
+      "symmetric": false
+    },
+    {
+      "id": "organizes",
+      "label": "organisiert",
+      "inverse_type": "organized_by",
+      "inverse_label": "wird organisiert durch",
+      "description": "Das Quellobjekt strukturiert oder klassifiziert das Ziel nach einer vereinbarten Taxonomie.",
+      "color": "#b38cff",
+      "priority": 72,
+      "symmetric": false
+    },
+    {
+      "id": "organized_by",
+      "label": "wird organisiert durch",
+      "inverse_type": "organizes",
+      "inverse_label": "organisiert",
+      "description": "Das Objekt wird durch die verbundene Taxonomie, Kennzeichnung oder Konvention strukturiert.",
+      "color": "#b38cff",
+      "priority": 72,
+      "symmetric": false
+    }
+  ]
+}
