@@ -71,3 +71,18 @@ Der automatisierte Test prüft das bytegleiche V3.1-Backup, alle kanonischen Dat
 - keine vollständige Produktabdeckung, wenn die Ausgangsdaten keinen geeigneten Kontext enthalten
 
 Weitere Details stehen in `reports/context-experience-v3.2.md` und `reports/qa-v3.2.md`.
+
+## Mobile First und Responsive Design
+
+Die V3.2-Oberfläche ist für Smartphone-Breiten von 320 bis 430 Pixeln optimiert, ohne die Desktop-Darstellung oder die Datenstruktur zu verändern.
+
+- `START.html` und `app/index.html` berücksichtigen Display-Safe-Areas über `viewport-fit=cover`.
+- Die App-Höhe folgt mit `dvh` und `svh` den dynamischen Browserleisten von iOS Safari und Android Chrome.
+- Die vier Ansichtsmodi werden auf schmalen Displays als vollständig sichtbares 2×2-Raster dargestellt.
+- Die Desktop-Werkzeugleiste bleibt mobil als horizontal bedienbare Aktionsleiste erreichbar.
+- Detailansicht, Suche, Inhaltskarten und Lernansichten nutzen die gesamte verfügbare Breite und sichere Bildschirmränder.
+- Touch-Ziele sind auf mobilen Breakpoints mindestens 44 Pixel hoch; aktive Zustände ersetzen reine Hover-Rückmeldungen.
+- Horizontales Scrollen bleibt ausschließlich bei funktional breiten Auswahllisten und Architekturdiagrammen erhalten.
+- Abgebrochene Pointer-Gesten setzen Mindmap- und Brain-Drag-Zustände zuverlässig zurück.
+
+Die Änderungen betreffen ausschließlich `START.html`, `app/index.html`, `app/mobile-responsive.css`, `app/app.js` und diese Dokumentation. Die bestehende `app/styles.css` sowie alle Dateien unter `data/` bleiben unverändert.

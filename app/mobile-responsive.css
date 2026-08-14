@@ -1,0 +1,304 @@
+/* Mobile-first responsive enhancements for 320–430 px devices. */
+html,
+body,
+.app-shell {
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+button,
+a,
+input,
+select,
+textarea,
+summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: #42b8ff33;
+}
+
+@supports (height: 100dvh) {
+  html,
+  body,
+  .app-shell {
+    height: 100dvh;
+  }
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    height: 100dvh;
+    min-height: 100svh;
+  }
+
+  .toolbar {
+    display: flex;
+    position: fixed;
+    left: max(8px, env(safe-area-inset-left));
+    right: max(8px, env(safe-area-inset-right));
+    bottom: max(8px, env(safe-area-inset-bottom));
+    z-index: 9;
+    gap: 6px;
+    padding: 6px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    background: #091522f2;
+    border: 1px solid #294258;
+    border-radius: 13px;
+    box-shadow: var(--shadow);
+    scrollbar-width: none;
+  }
+
+  .toolbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toolbar button {
+    flex: 0 0 auto;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .toolbar .text-button {
+    padding: 0 12px;
+  }
+
+  .stage-note {
+    bottom: 72px;
+    left: 12px;
+  }
+
+  .legend {
+    bottom: 98px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+  }
+
+  .selection-list,
+  .step-list,
+  .architecture-diagram {
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .content-main {
+    min-width: 0;
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+
+  .selection-card,
+  .step-card,
+  .context-link,
+  .node-link,
+  .scenario-link,
+  .step-link,
+  .relation-item,
+  .detail-actions button,
+  .context-mode-actions button,
+  .architecture-context-card > button,
+  .learning-context-card,
+  .back-button,
+  .search-results button,
+  .semantic-chooser-list > button,
+  .accordion-list summary {
+    min-height: 44px;
+  }
+
+  .source-list a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    margin: 0;
+  }
+
+  .close-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .detail-panel {
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --top: 208px;
+  }
+
+  .topbar {
+    height: var(--top);
+    min-height: var(--top);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 48px 92px 54px;
+    gap: 4px;
+    padding: 4px max(10px, env(safe-area-inset-right)) 8px max(10px, env(safe-area-inset-left));
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mode-switch {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .mode-switch button {
+    min-width: 0;
+    min-height: 40px;
+    padding: 7px 5px;
+    font-size: 12px;
+  }
+
+  .search-box {
+    height: 48px;
+    min-width: 0;
+  }
+
+  .search-box kbd {
+    display: none;
+  }
+
+  .detail-panel {
+    inset: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: calc(20px + env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) calc(88px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
+    border-left: 0;
+    box-shadow: none;
+  }
+
+  .detail-panel.navigation-target {
+    box-shadow: inset 3px 0 #62d2ff;
+  }
+
+  .close-button {
+    top: max(8px, env(safe-area-inset-top));
+    right: max(8px, env(safe-area-inset-right));
+  }
+
+  .content-sidebar {
+    padding: 18px 16px;
+  }
+
+  .content-main {
+    padding: 24px 16px calc(88px + env(safe-area-inset-bottom));
+  }
+
+  .content-header h1 {
+    font-size: clamp(24px, 8vw, 30px);
+    overflow-wrap: anywhere;
+  }
+
+  .content-lead,
+  .info-card p,
+  .learning-step p,
+  .learning-step li {
+    font-size: 14px;
+  }
+
+  .summary-grid {
+    gap: 10px;
+  }
+
+  .info-card,
+  .learning-step {
+    padding: 15px;
+  }
+
+  .context-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-diagram {
+    padding: 12px;
+  }
+
+  .architecture-diagram svg {
+    min-width: 680px;
+  }
+
+  .search-results {
+    max-height: min(420px, 55dvh);
+  }
+
+  .search-result-heading {
+    align-items: flex-start;
+  }
+
+  .search-result-heading b {
+    overflow-wrap: anywhere;
+  }
+
+  .semantic-chooser {
+    bottom: 68px;
+  }
+}
+
+@media (max-width: 350px) {
+  :root {
+    --top: 204px;
+  }
+
+  .topbar {
+    padding-left: max(6px, env(safe-area-inset-left));
+    padding-right: max(6px, env(safe-area-inset-right));
+  }
+
+  .brand-orbit {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+
+  .brand strong {
+    font-size: 14px;
+  }
+
+  .mode-switch button {
+    font-size: 11px;
+  }
+
+  .content-main,
+  .content-sidebar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .detail-panel {
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
+  }
+}
+
+@media (hover: none) {
+  .mode-switch button:active,
+  .toolbar button:active,
+  .selection-card:active,
+  .step-card:active,
+  .context-link:active,
+  .node-link:active,
+  .scenario-link:active,
+  .step-link:active,
+  .relation-item:active,
+  .semantic-chooser-list > button:active {
+    border-color: #62d2ff;
+    background: #12334a;
+    color: #fff;
+  }
+}
