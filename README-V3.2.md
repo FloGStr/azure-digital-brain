@@ -79,7 +79,7 @@ Die V3.2-Oberfläche ist für Smartphone-Breiten von 320 bis 430 Pixeln optimier
 - `START.html` und `app/index.html` berücksichtigen Display-Safe-Areas über `viewport-fit=cover`.
 - Die App-Höhe folgt mit `dvh` und `svh` den dynamischen Browserleisten von iOS Safari und Android Chrome.
 - Die vier Ansichtsmodi werden auf schmalen Displays als vollständig sichtbares 2×2-Raster dargestellt.
-- Die Desktop-Werkzeugleiste bleibt mobil als horizontal bedienbare Aktionsleiste erreichbar.
+- Die Desktop-Werkzeugleiste bleibt mobil als horizontal bedienbare Aktionsleiste am unteren Bildschirmrand erreichbar.
 - Detailansicht, Suche, Inhaltskarten und Lernansichten nutzen die gesamte verfügbare Breite und sichere Bildschirmränder.
 - Touch-Ziele sind auf mobilen Breakpoints mindestens 44 Pixel hoch; aktive Zustände ersetzen reine Hover-Rückmeldungen.
 - Horizontales Scrollen bleibt ausschließlich bei funktional breiten Auswahllisten und Architekturdiagrammen erhalten.
