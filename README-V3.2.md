@@ -86,3 +86,5 @@ Die V3.2-Oberfläche ist für Smartphone-Breiten von 320 bis 430 Pixeln optimier
 - Abgebrochene Pointer-Gesten setzen Mindmap- und Brain-Drag-Zustände zuverlässig zurück.
 
 Die Änderungen betreffen ausschließlich `START.html`, `app/index.html`, `app/mobile-responsive.css`, `app/app.js` und diese Dokumentation. Die bestehende `app/styles.css` sowie alle Dateien unter `data/` bleiben unverändert.
+
+Die abschließende Oberflächenprüfung umfasst die Smartphone-Breiten 320, 375, 390 und 430 Pixel sowie die unveränderte Desktop-Darstellung.
