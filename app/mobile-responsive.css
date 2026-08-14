@@ -129,14 +129,14 @@ summary {
 
 @media (max-width: 560px) {
   :root {
-    --top: 208px;
+    --top: 222px;
   }
 
   .topbar {
     height: var(--top);
     min-height: var(--top);
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 48px 92px 54px;
+    grid-template-rows: 48px 100px 54px;
     gap: 4px;
     padding: 4px max(10px, env(safe-area-inset-right)) 8px max(10px, env(safe-area-inset-left));
   }
@@ -160,7 +160,7 @@ summary {
 
   .mode-switch button {
     min-width: 0;
-    min-height: 40px;
+    min-height: 44px;
     padding: 7px 5px;
     font-size: 12px;
   }
@@ -252,7 +252,7 @@ summary {
 
 @media (max-width: 350px) {
   :root {
-    --top: 204px;
+    --top: 222px;
   }
 
   .topbar {
