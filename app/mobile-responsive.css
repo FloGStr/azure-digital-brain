@@ -34,6 +34,12 @@ summary {
     min-height: 100svh;
   }
 
+  .topbar {
+    background: #091522;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .toolbar {
     display: flex;
     position: fixed;
