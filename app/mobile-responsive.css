@@ -199,10 +199,21 @@ summary {
   }
 
   .content-sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 18px 16px;
   }
 
+  .content-view {
+    grid-template-columns: minmax(0, 1fr);
+    overflow-x: hidden;
+  }
+
   .content-main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 24px 16px calc(88px + env(safe-area-inset-bottom));
   }
 
@@ -232,7 +243,10 @@ summary {
   }
 
   .architecture-diagram {
+    width: 100%;
+    max-width: 100%;
     padding: 12px;
+    overflow-x: auto;
   }
 
   .architecture-diagram svg {
