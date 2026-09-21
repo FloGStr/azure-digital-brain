@@ -225,7 +225,7 @@
   function edgeHit(x,y){const p=graphWorld(x,y);let best=null,dist=10/state.graph.scale;for(const e of state.graph.edges.filter(e=>!e.synthetic)){const a=state.graph.nodes.find(n=>n.id===e.source),b=state.graph.nodes.find(n=>n.id===e.target);if(!a||!b)continue;const d=pointLineDistance(p,a,b);if(d<dist){dist=d;best=e}}return best}
   function pointLineDistance(p,a,b){const dx=b.x-a.x,dy=b.y-a.y,l=dx*dx+dy*dy;if(!l)return Math.hypot(p.x-a.x,p.y-a.y);const t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/l)),x=a.x+t*dx,y=a.y+t*dy;return Math.hypot(p.x-x,p.y-y)}
 
-  function selectNode(id){if(!nodeById.has(id))return;state.selected=id;updateDetails(nodeById.get(id));if(state.mode==='mindmap')renderMindmap();else if(state.mode==='brain')drawGraph();if(innerWidth<=760)dom.panel.classList.add('open')}
+  function selectNode(id){if(!nodeById.has(id))return;state.selected=id;updateDetails(nodeById.get(id));if(state.mode==='mindmap')renderMindmap();else if(state.mode==='brain')drawGraph();if(innerWidth<1200)dom.panel.classList.add('open')}
   let highlightTimer=null;
   function updateBackButton(){dom.back.hidden=!state.navigationStack.length}
   function captureNavigationContext(){return{mode:state.mode,selected:state.selected,expanded:[...state.expanded],mind:{scale:state.mind.scale,tx:state.mind.tx,ty:state.mind.ty},graph:{scale:state.graph.scale,tx:state.graph.tx,ty:state.graph.ty,focusId:state.graph.focusId},scenarioId:state.scenarioId,learningPathId:state.learningPathId,learningStepId:state.learningStepId,crossModeOrigin:state.crossModeOrigin?JSON.parse(JSON.stringify(state.crossModeOrigin)):null}}
