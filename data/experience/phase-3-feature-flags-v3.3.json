@@ -1,0 +1,14 @@
+{
+  "schema_version": "3.3-phase-3-feature-flags-1.0",
+  "release": "3.3-phase-3",
+  "generated_at": "2026-08-16T00:00:00.000Z",
+  "features": {
+    "cross_mode_context": {
+      "enabled": false,
+      "fallback": "v3.2-direct-maps",
+      "fail_closed": true,
+      "allow_query_force_disable": true,
+      "allow_query_force_enable": false
+    }
+  }
+}

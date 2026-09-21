@@ -1,0 +1,5396 @@
+{
+  "schema_version": "3.4-source-ledger-1.0",
+  "release": "3.4",
+  "sources": [
+    {
+      "source_id": "mindmeister-source",
+      "original_record": {
+        "id": "mindmeister-source",
+        "title": "Originale Azure AZ-900 Mindmap",
+        "url": "https://www.mindmeister.com/app/map/3834766227?t=UvVNUtIhsJ",
+        "publisher": "MindMeister / Nutzerdaten",
+        "accessed_at": "2026-08-10",
+        "type": "original"
+      },
+      "nodes": [],
+      "relations": [
+        "rel-014",
+        "rel-016",
+        "rel-019",
+        "rel-020",
+        "rel-021",
+        "rel-022",
+        "rel-023",
+        "rel-026"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-entra-name",
+      "original_record": {
+        "id": "ms-entra-name",
+        "title": "New name for Azure Active Directory",
+        "url": "https://learn.microsoft.com/en-us/entra/fundamentals/new-name",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0904",
+          "resolved_id": "azure-0904",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-blueprints-retirement",
+      "original_record": {
+        "id": "ms-blueprints-retirement",
+        "title": "Azure Blueprints retirement",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/blueprints/blueprint-retirement",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0972",
+          "resolved_id": "azure-0972",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-027"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-regions-overview",
+      "original_record": {
+        "id": "ms-regions-overview",
+        "title": "Azure regions overview",
+        "url": "https://learn.microsoft.com/en-us/azure/reliability/regions-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0112",
+          "resolved_id": "azure-0112",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0239",
+          "resolved_id": "azure-0239",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-zones-overview",
+      "original_record": {
+        "id": "ms-zones-overview",
+        "title": "Availability zones overview",
+        "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0007",
+          "resolved_id": "azure-0007",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0112",
+          "resolved_id": "azure-0112",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-013"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-app-gateway",
+      "original_record": {
+        "id": "ms-app-gateway",
+        "title": "Application Gateway overview",
+        "url": "https://learn.microsoft.com/en-us/azure/application-gateway/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0519",
+          "resolved_id": "azure-0519",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0521",
+          "resolved_id": "azure-0521",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0523",
+          "resolved_id": "azure-0523",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-007",
+        "rel-008",
+        "rel-009",
+        "rel-015",
+        "net-rel-012",
+        "net-rel-013"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-front-door",
+      "original_record": {
+        "id": "ms-front-door",
+        "title": "Azure Front Door documentation",
+        "url": "https://learn.microsoft.com/en-us/azure/frontdoor/",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0562",
+          "resolved_id": "azure-0562",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-006",
+        "rel-010",
+        "net-rel-014"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-private-link",
+      "original_record": {
+        "id": "ms-private-link",
+        "title": "What is Azure Private Link?",
+        "url": "https://learn.microsoft.com/en-us/azure/private-link/private-link-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0881",
+          "resolved_id": "azure-0881",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0882",
+          "resolved_id": "azure-0882",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0884",
+          "resolved_id": "azure-0884",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-002",
+        "rel-004",
+        "rel-005",
+        "net-rel-026",
+        "net-rel-027",
+        "net-rel-028",
+        "security-rel-016"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-private-dns",
+      "original_record": {
+        "id": "ms-private-dns",
+        "title": "Azure Private Endpoint DNS configuration",
+        "url": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0558",
+          "resolved_id": "azure-0558",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0881",
+          "resolved_id": "azure-0881",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-003"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-rbac",
+      "original_record": {
+        "id": "ms-rbac",
+        "title": "What is Azure role-based access control?",
+        "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0045",
+          "resolved_id": "azure-0045",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0821",
+          "resolved_id": "azure-0821",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0822",
+          "resolved_id": "azure-0822",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0964",
+          "resolved_id": "azure-0964",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0967",
+          "resolved_id": "azure-0967",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-011",
+        "rel-012",
+        "rel-013",
+        "id-rel-031",
+        "compute-rel-004",
+        "compute-rel-023",
+        "compute-rel-031",
+        "gov-rel-008",
+        "gov-rel-009",
+        "storage-rel-019",
+        "storage-rel-026",
+        "security-rel-010"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-defender-overview",
+      "original_record": {
+        "id": "ms-defender-overview",
+        "title": "Microsoft Defender for Cloud documentation",
+        "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-10",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0932",
+          "resolved_id": "azure-0932",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0933",
+          "resolved_id": "azure-0933",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-002",
+        "security-rel-025",
+        "monitoring-rel-017",
+        "monitoring-rel-018"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vnet-subnets",
+      "original_record": {
+        "id": "ms-vnet-subnets",
+        "title": "Azure virtual networks and subnets",
+        "url": "https://learn.microsoft.com/en-us/azure/networking/design-guide/vnets-subnets",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0442",
+          "resolved_id": "azure-0442",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0453",
+          "resolved_id": "azure-0453",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0473",
+          "resolved_id": "azure-0473",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0887",
+          "resolved_id": "azure-0887",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-017",
+        "net-rel-001",
+        "compute-rel-001",
+        "gov-rel-006",
+        "gov-rel-020"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-ip-services",
+      "original_record": {
+        "id": "ms-ip-services",
+        "title": "What is Azure Virtual Network IP Services?",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/ip-services-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0884",
+          "resolved_id": "azure-0884",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-028"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-nsg-asg",
+      "original_record": {
+        "id": "ms-nsg-asg",
+        "title": "Network security groups and application security groups",
+        "url": "https://learn.microsoft.com/en-us/azure/networking/design-guide/network-application-security-groups",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0816",
+          "resolved_id": "azure-0816",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0827",
+          "resolved_id": "azure-0827",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0864",
+          "resolved_id": "azure-0864",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0875",
+          "resolved_id": "azure-0875",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-001",
+        "rel-008",
+        "net-rel-002",
+        "net-rel-024",
+        "compute-rel-005",
+        "gov-rel-021",
+        "security-rel-006",
+        "security-rel-014",
+        "security-rel-015"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-route-tables",
+      "original_record": {
+        "id": "ms-route-tables",
+        "title": "Azure virtual network traffic routing",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0871",
+          "resolved_id": "azure-0871",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-003",
+        "net-rel-019"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vnet-peering",
+      "original_record": {
+        "id": "ms-vnet-peering",
+        "title": "Connect virtual networks with virtual network peering",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network/tutorial-connect-virtual-networks",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0887",
+          "resolved_id": "azure-0887",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-029"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-service-endpoints",
+      "original_record": {
+        "id": "ms-service-endpoints",
+        "title": "Azure virtual network service endpoints",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0878",
+          "resolved_id": "azure-0878",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0884",
+          "resolved_id": "azure-0884",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-025",
+        "net-rel-027"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vpn-gateway",
+      "original_record": {
+        "id": "ms-vpn-gateway",
+        "title": "What is Azure VPN Gateway?",
+        "url": "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0462",
+          "resolved_id": "azure-0462",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0467",
+          "resolved_id": "azure-0467",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0468",
+          "resolved_id": "azure-0468",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-004",
+        "net-rel-006",
+        "net-rel-007",
+        "net-rel-010"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vpn-settings",
+      "original_record": {
+        "id": "ms-vpn-settings",
+        "title": "About Azure VPN Gateway configuration settings",
+        "url": "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-gateway-settings",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0461",
+          "resolved_id": "azure-0461",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0462",
+          "resolved_id": "azure-0462",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0473",
+          "resolved_id": "azure-0473",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0493",
+          "resolved_id": "azure-0493",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-005"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-expressroute",
+      "original_record": {
+        "id": "ms-expressroute",
+        "title": "What is Azure ExpressRoute?",
+        "url": "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0461",
+          "resolved_id": "azure-0461",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0478",
+          "resolved_id": "azure-0478",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0493",
+          "resolved_id": "azure-0493",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-008",
+        "net-rel-009",
+        "net-rel-010"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-load-balancing",
+      "original_record": {
+        "id": "ms-load-balancing",
+        "title": "Load-balancing options in Azure",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/load-balancing-overview",
+        "publisher": "Azure Architecture Center",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0111",
+          "resolved_id": "azure-0111",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0505",
+          "resolved_id": "azure-0505",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0519",
+          "resolved_id": "azure-0519",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0560",
+          "resolved_id": "azure-0560",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0562",
+          "resolved_id": "azure-0562",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-009",
+        "rel-010",
+        "rel-015",
+        "compute-rel-002"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-load-balancer-components",
+      "original_record": {
+        "id": "ms-load-balancer-components",
+        "title": "Azure Load Balancer components",
+        "url": "https://learn.microsoft.com/en-us/azure/load-balancer/components",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0505",
+          "resolved_id": "azure-0505",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0510",
+          "resolved_id": "azure-0510",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-011"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-traffic-manager",
+      "original_record": {
+        "id": "ms-traffic-manager",
+        "title": "Azure Traffic Manager overview",
+        "url": "https://learn.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0560",
+          "resolved_id": "azure-0560",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-010",
+        "net-rel-015"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-dns",
+      "original_record": {
+        "id": "ms-dns",
+        "title": "Azure DNS overview",
+        "url": "https://learn.microsoft.com/en-us/azure/dns/dns-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0545",
+          "resolved_id": "azure-0545",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0548",
+          "resolved_id": "azure-0548",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-015",
+        "net-rel-016",
+        "net-rel-017"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-private-dns-overview",
+      "original_record": {
+        "id": "ms-private-dns-overview",
+        "title": "What is Azure Private DNS?",
+        "url": "https://learn.microsoft.com/en-us/azure/dns/private-dns-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0558",
+          "resolved_id": "azure-0558",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-017"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-firewall",
+      "original_record": {
+        "id": "ms-firewall",
+        "title": "Azure Firewall and traffic inspection",
+        "url": "https://learn.microsoft.com/en-us/azure/networking/design-guide/azure-firewall",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0816",
+          "resolved_id": "azure-0816",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0824",
+          "resolved_id": "azure-0824",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0841",
+          "resolved_id": "azure-0841",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0846",
+          "resolved_id": "azure-0846",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0848",
+          "resolved_id": "azure-0848",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0850",
+          "resolved_id": "azure-0850",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-018",
+        "net-rel-019",
+        "net-rel-020",
+        "net-rel-021",
+        "net-rel-022",
+        "security-rel-012"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-ddos",
+      "original_record": {
+        "id": "ms-ddos",
+        "title": "What is Azure DDoS Protection?",
+        "url": "https://learn.microsoft.com/en-us/azure/ddos-protection/ddos-protection-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0824",
+          "resolved_id": "azure-0824",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0852",
+          "resolved_id": "azure-0852",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-023",
+        "security-rel-011"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-waf",
+      "original_record": {
+        "id": "ms-waf",
+        "title": "What is Azure Web Application Firewall?",
+        "url": "https://learn.microsoft.com/en-us/azure/web-application-firewall/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0523",
+          "resolved_id": "azure-0523",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0824",
+          "resolved_id": "azure-0824",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0863",
+          "resolved_id": "azure-0863",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "net-rel-013",
+        "net-rel-014",
+        "security-rel-013",
+        "security-rel-017"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-entra-overview",
+      "original_record": {
+        "id": "ms-entra-overview",
+        "title": "What is Microsoft Entra?",
+        "url": "https://learn.microsoft.com/en-us/entra/fundamentals/what-is-entra",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0904",
+          "resolved_id": "azure-0904",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0929",
+          "resolved_id": "azure-0929",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-002"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-identity-fundamentals",
+      "original_record": {
+        "id": "ms-identity-fundamentals",
+        "title": "Identity and access management fundamental concepts",
+        "url": "https://learn.microsoft.com/en-us/entra/fundamentals/identity-fundamental-concepts",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0822",
+          "resolved_id": "azure-0822",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0903",
+          "resolved_id": "azure-0903",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0904",
+          "resolved_id": "azure-0904",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0908",
+          "resolved_id": "azure-0908",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-001"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-role-assignments",
+      "original_record": {
+        "id": "ms-role-assignments",
+        "title": "Understand Azure role assignments",
+        "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0045",
+          "resolved_id": "azure-0045",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0964",
+          "resolved_id": "azure-0964",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0965",
+          "resolved_id": "azure-0965",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0967",
+          "resolved_id": "azure-0967",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0968",
+          "resolved_id": "azure-0968",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-012",
+        "id-rel-032",
+        "id-rel-033",
+        "id-rel-034",
+        "compute-rel-004",
+        "compute-rel-023",
+        "gov-rel-009",
+        "gov-rel-010"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-role-assignment-steps",
+      "original_record": {
+        "id": "ms-role-assignment-steps",
+        "title": "Steps to assign an Azure role",
+        "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0965",
+          "resolved_id": "azure-0965",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0966",
+          "resolved_id": "azure-0966",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0968",
+          "resolved_id": "azure-0968",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-034",
+        "id-rel-035"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-pim",
+      "original_record": {
+        "id": "ms-pim",
+        "title": "What is Microsoft Entra Privileged Identity Management?",
+        "url": "https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0046",
+          "resolved_id": "azure-0046",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0821",
+          "resolved_id": "azure-0821",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0929",
+          "resolved_id": "azure-0929",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0931",
+          "resolved_id": "azure-0931",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0966",
+          "resolved_id": "azure-0966",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-013",
+        "id-rel-026"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-managed-identities",
+      "original_record": {
+        "id": "ms-managed-identities",
+        "title": "Managed identities for Azure resources",
+        "url": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0358",
+          "resolved_id": "azure-0358",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0945",
+          "resolved_id": "azure-0945",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0947",
+          "resolved_id": "azure-0947",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-027",
+        "id-rel-028",
+        "compute-rel-003",
+        "compute-rel-022",
+        "compute-rel-030",
+        "storage-rel-020"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-app-objects",
+      "original_record": {
+        "id": "ms-app-objects",
+        "title": "Application and service principal objects in Microsoft Entra ID",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0909",
+          "resolved_id": "azure-0909",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0947",
+          "resolved_id": "azure-0947",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-003",
+        "id-rel-004",
+        "id-rel-027"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-app-management",
+      "original_record": {
+        "id": "ms-app-management",
+        "title": "What is application management in Microsoft Entra ID?",
+        "url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/what-is-application-management",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0909",
+          "resolved_id": "azure-0909",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-003"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-conditional-access",
+      "original_record": {
+        "id": "ms-conditional-access",
+        "title": "What is Conditional Access?",
+        "url": "https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0821",
+          "resolved_id": "azure-0821",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0910",
+          "resolved_id": "azure-0910",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0912",
+          "resolved_id": "azure-0912",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0913",
+          "resolved_id": "azure-0913",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0914",
+          "resolved_id": "azure-0914",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0915",
+          "resolved_id": "azure-0915",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0916",
+          "resolved_id": "azure-0916",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0927",
+          "resolved_id": "azure-0927",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0928",
+          "resolved_id": "azure-0928",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-025",
+        "id-rel-006",
+        "id-rel-008",
+        "id-rel-009",
+        "id-rel-010",
+        "id-rel-011",
+        "id-rel-012",
+        "id-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-mfa",
+      "original_record": {
+        "id": "ms-mfa",
+        "title": "Microsoft Entra multifactor authentication overview",
+        "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0821",
+          "resolved_id": "azure-0821",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0903",
+          "resolved_id": "azure-0903",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0928",
+          "resolved_id": "azure-0928",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-012",
+        "id-rel-025"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-id-protection",
+      "original_record": {
+        "id": "ms-id-protection",
+        "title": "What is Microsoft Entra ID Protection?",
+        "url": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0910",
+          "resolved_id": "azure-0910",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0911",
+          "resolved_id": "azure-0911",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0915",
+          "resolved_id": "azure-0915",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0929",
+          "resolved_id": "azure-0929",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-005",
+        "id-rel-006",
+        "id-rel-007",
+        "id-rel-010"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-access-tokens",
+      "original_record": {
+        "id": "ms-access-tokens",
+        "title": "Access tokens in the Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/access-tokens",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0917",
+          "resolved_id": "azure-0917",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0918",
+          "resolved_id": "azure-0918",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0919",
+          "resolved_id": "azure-0919",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0924",
+          "resolved_id": "azure-0924",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-004",
+        "id-rel-013",
+        "id-rel-014",
+        "id-rel-018",
+        "id-rel-020"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-id-tokens",
+      "original_record": {
+        "id": "ms-id-tokens",
+        "title": "OpenID Connect on the Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0917",
+          "resolved_id": "azure-0917",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0920",
+          "resolved_id": "azure-0920",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0921",
+          "resolved_id": "azure-0921",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0924",
+          "resolved_id": "azure-0924",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-004",
+        "id-rel-013",
+        "id-rel-015",
+        "id-rel-019",
+        "id-rel-020"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-refresh-tokens",
+      "original_record": {
+        "id": "ms-refresh-tokens",
+        "title": "Refresh tokens in the Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0917",
+          "resolved_id": "azure-0917",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0922",
+          "resolved_id": "azure-0922",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0923",
+          "resolved_id": "azure-0923",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-013",
+        "id-rel-016",
+        "id-rel-017"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-b2b",
+      "original_record": {
+        "id": "ms-b2b",
+        "title": "What is Microsoft Entra B2B collaboration?",
+        "url": "https://learn.microsoft.com/en-us/entra/external-id/what-is-b2b",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0925",
+          "resolved_id": "azure-0925",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-021"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-external-id",
+      "original_record": {
+        "id": "ms-external-id",
+        "title": "Introduction to Microsoft Entra External ID",
+        "url": "https://learn.microsoft.com/en-us/entra/external-id/external-identities-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0925",
+          "resolved_id": "azure-0925",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0926",
+          "resolved_id": "azure-0926",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-021",
+        "id-rel-022"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-device-identity",
+      "original_record": {
+        "id": "ms-device-identity",
+        "title": "What is a device identity?",
+        "url": "https://learn.microsoft.com/en-us/entra/identity/devices/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0927",
+          "resolved_id": "azure-0927",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-023",
+        "id-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-defender-identity",
+      "original_record": {
+        "id": "ms-defender-identity",
+        "title": "Microsoft Defender for Identity overview",
+        "url": "https://learn.microsoft.com/en-us/defender-for-identity/what-is",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0959",
+          "resolved_id": "azure-0960",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0960",
+          "resolved_id": "azure-0960",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-029",
+        "id-rel-030"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-sso",
+      "original_record": {
+        "id": "ms-sso",
+        "title": "Plan a single sign-on deployment",
+        "url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/plan-sso-deployment",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0908",
+          "resolved_id": "azure-0908",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "id-rel-002"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-entra-rbac",
+      "original_record": {
+        "id": "ms-entra-rbac",
+        "title": "Microsoft Entra RBAC documentation",
+        "url": "https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0931",
+          "resolved_id": "azure-0931",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-keyvault-auth",
+      "original_record": {
+        "id": "ms-keyvault-auth",
+        "title": "Authentication in Azure Key Vault",
+        "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/authentication",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0944",
+          "resolved_id": "azure-0944",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-024",
+        "id-rel-028"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vm-overview",
+      "original_record": {
+        "id": "ms-vm-overview",
+        "title": "Virtual machines in Azure",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0015",
+          "resolved_id": "azure-0015",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0198",
+          "resolved_id": "azure-0198",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0322",
+          "resolved_id": "azure-0322",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0324",
+          "resolved_id": "azure-0324",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0329",
+          "resolved_id": "azure-0329",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0376",
+          "resolved_id": "azure-0376",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0831",
+          "resolved_id": "azure-0831",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-001",
+        "compute-rel-002",
+        "compute-rel-003",
+        "compute-rel-004",
+        "compute-rel-005",
+        "compute-rel-009",
+        "compute-rel-013",
+        "compute-rel-018",
+        "compute-rel-034",
+        "gov-rel-005",
+        "gov-rel-010"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vm-sizes",
+      "original_record": {
+        "id": "ms-vm-sizes",
+        "title": "Sizes for virtual machines in Azure",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0015",
+          "resolved_id": "azure-0015",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0034",
+          "resolved_id": "azure-0034",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0429",
+          "resolved_id": "azure-0429",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0567",
+          "resolved_id": "azure-0567",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0568",
+          "resolved_id": "azure-0568",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-managed-disks",
+      "original_record": {
+        "id": "ms-managed-disks",
+        "title": "Introduction to Azure Managed Disks",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0322",
+          "resolved_id": "azure-0322",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0567",
+          "resolved_id": "azure-0567",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0568",
+          "resolved_id": "azure-0568",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-009"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-availability-sets",
+      "original_record": {
+        "id": "ms-availability-sets",
+        "title": "Availability sets overview",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0005",
+          "resolved_id": "azure-0005",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-012"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vmss-overview",
+      "original_record": {
+        "id": "ms-vmss-overview",
+        "title": "What are Virtual Machine Scale Sets?",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0007",
+          "resolved_id": "azure-0007",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0020",
+          "resolved_id": "azure-0020",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0387",
+          "resolved_id": "azure-0387",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0395",
+          "resolved_id": "azure-0395",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0399",
+          "resolved_id": "azure-0399",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-015",
+        "compute-rel-014",
+        "compute-rel-015",
+        "compute-rel-018"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vmss-autoscale",
+      "original_record": {
+        "id": "ms-vmss-autoscale",
+        "title": "Overview of autoscale with Virtual Machine Scale Sets",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0020",
+          "resolved_id": "azure-0020",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0025",
+          "resolved_id": "azure-0025",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0387",
+          "resolved_id": "azure-0387",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0400",
+          "resolved_id": "azure-0400",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-016",
+        "compute-rel-017"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vmss-repair",
+      "original_record": {
+        "id": "ms-vmss-repair",
+        "title": "Automatic instance repairs for Virtual Machine Scale Sets",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0399",
+          "resolved_id": "azure-0399",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-app-service",
+      "original_record": {
+        "id": "ms-app-service",
+        "title": "App Service overview",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0324",
+          "resolved_id": "azure-0324",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0351",
+          "resolved_id": "azure-0351",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0354",
+          "resolved_id": "azure-0354",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0358",
+          "resolved_id": "azure-0358",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0362",
+          "resolved_id": "azure-0362",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0370",
+          "resolved_id": "azure-0370",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0376",
+          "resolved_id": "azure-0376",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-007",
+        "compute-rel-020",
+        "compute-rel-022",
+        "compute-rel-024",
+        "compute-rel-025",
+        "gov-rel-018"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-app-service-plan",
+      "original_record": {
+        "id": "ms-app-service-plan",
+        "title": "What are Azure App Service plans?",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0015",
+          "resolved_id": "azure-0015",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0020",
+          "resolved_id": "azure-0020",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0034",
+          "resolved_id": "azure-0034",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0351",
+          "resolved_id": "azure-0351",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0363",
+          "resolved_id": "azure-0363",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0369",
+          "resolved_id": "azure-0369",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0371",
+          "resolved_id": "azure-0371",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-017",
+        "compute-rel-019",
+        "compute-rel-021",
+        "compute-rel-026"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-app-service-patching",
+      "original_record": {
+        "id": "ms-app-service-patching",
+        "title": "Azure App Service OS and runtime patching",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/overview-patch-os-runtime",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0354",
+          "resolved_id": "azure-0354",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0357",
+          "resolved_id": "azure-0357",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0362",
+          "resolved_id": "azure-0362",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0831",
+          "resolved_id": "azure-0831",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-app-service-slots",
+      "original_record": {
+        "id": "ms-app-service-slots",
+        "title": "Set up staging environments in Azure App Service",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0357",
+          "resolved_id": "azure-0357",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0371",
+          "resolved_id": "azure-0371",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-021"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-aci-overview",
+      "original_record": {
+        "id": "ms-aci-overview",
+        "title": "What is Azure Container Instances?",
+        "url": "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0412",
+          "resolved_id": "azure-0412",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0413",
+          "resolved_id": "azure-0413",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0415",
+          "resolved_id": "azure-0415",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-027",
+        "compute-rel-028"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-aci-groups",
+      "original_record": {
+        "id": "ms-aci-groups",
+        "title": "Container groups in Azure Container Instances",
+        "url": "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-container-groups",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0415",
+          "resolved_id": "azure-0415",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-aks-overview",
+      "original_record": {
+        "id": "ms-aks-overview",
+        "title": "What is Azure Kubernetes Service (AKS)?",
+        "url": "https://learn.microsoft.com/en-us/azure/aks/what-is-aks",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0412",
+          "resolved_id": "azure-0412",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0425",
+          "resolved_id": "azure-0425",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0427",
+          "resolved_id": "azure-0427",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0428",
+          "resolved_id": "azure-0428",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0429",
+          "resolved_id": "azure-0429",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0430",
+          "resolved_id": "azure-0430",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-017",
+        "compute-rel-027",
+        "compute-rel-029",
+        "compute-rel-030",
+        "compute-rel-031",
+        "compute-rel-033",
+        "gov-rel-019"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-aks-support",
+      "original_record": {
+        "id": "ms-aks-support",
+        "title": "Support policies for Azure Kubernetes Service",
+        "url": "https://learn.microsoft.com/en-us/azure/aks/support-policies",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0425",
+          "resolved_id": "azure-0425",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0427",
+          "resolved_id": "azure-0427",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0428",
+          "resolved_id": "azure-0428",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0429",
+          "resolved_id": "azure-0429",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0831",
+          "resolved_id": "azure-0831",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-033"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-container-options",
+      "original_record": {
+        "id": "ms-container-options",
+        "title": "Comparing AKS with other Azure container options",
+        "url": "https://learn.microsoft.com/en-us/azure/aks/compare-container-options-with-aks",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0376",
+          "resolved_id": "azure-0376",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0412",
+          "resolved_id": "azure-0412",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0413",
+          "resolved_id": "azure-0413",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0415",
+          "resolved_id": "azure-0415",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0430",
+          "resolved_id": "azure-0430",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-027",
+        "compute-rel-028",
+        "compute-rel-029"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-monitor-vm",
+      "original_record": {
+        "id": "ms-monitor-vm",
+        "title": "Monitor virtual machines in Azure",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/vm/monitor-vm",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0322",
+          "resolved_id": "azure-0322",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0832",
+          "resolved_id": "azure-0832",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-007",
+        "compute-rel-008"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-log-analytics",
+      "original_record": {
+        "id": "ms-log-analytics",
+        "title": "Overview of Log Analytics in Azure Monitor",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0358",
+          "resolved_id": "azure-0358",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0370",
+          "resolved_id": "azure-0370",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0985",
+          "resolved_id": "azure-0985",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0986",
+          "resolved_id": "azure-0986",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-008",
+        "compute-rel-024",
+        "compute-rel-025",
+        "compute-rel-032",
+        "monitoring-rel-003",
+        "monitoring-rel-005"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-monitor-aks",
+      "original_record": {
+        "id": "ms-monitor-aks",
+        "title": "Monitor Azure Kubernetes Service",
+        "url": "https://learn.microsoft.com/en-us/azure/aks/monitor-aks",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0425",
+          "resolved_id": "azure-0425",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0430",
+          "resolved_id": "azure-0430",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "rel-018",
+        "compute-rel-032"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-defender-servers",
+      "original_record": {
+        "id": "ms-defender-servers",
+        "title": "Defender for Servers",
+        "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-servers-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0329",
+          "resolved_id": "azure-0329",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0831",
+          "resolved_id": "azure-0831",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0832",
+          "resolved_id": "azure-0832",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-006",
+        "compute-rel-034",
+        "security-rel-025"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-jit-vm",
+      "original_record": {
+        "id": "ms-jit-vm",
+        "title": "Just-in-time virtual machine access",
+        "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0832",
+          "resolved_id": "azure-0832",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vm-backup",
+      "original_record": {
+        "id": "ms-vm-backup",
+        "title": "An overview of Azure VM backup",
+        "url": "https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0116",
+          "resolved_id": "azure-0116",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-010",
+        "security-rel-029",
+        "security-rel-033"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-site-recovery",
+      "original_record": {
+        "id": "ms-site-recovery",
+        "title": "About Azure Site Recovery",
+        "url": "https://learn.microsoft.com/en-us/azure/site-recovery/site-recovery-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0114",
+          "resolved_id": "azure-0114",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0117",
+          "resolved_id": "azure-0117",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0118",
+          "resolved_id": "azure-0118",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "compute-rel-011",
+        "security-rel-030",
+        "security-rel-032"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-vm-maintenance",
+      "original_record": {
+        "id": "ms-vm-maintenance",
+        "title": "Guest updates and host maintenance overview",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/updates-maintenance-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0329",
+          "resolved_id": "azure-0329",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0832",
+          "resolved_id": "azure-0832",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-governance-overview",
+      "original_record": {
+        "id": "ms-governance-overview",
+        "title": "What are the Azure Management areas?",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/management-groups/azure-management",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0036",
+          "resolved_id": "azure-0036",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0037",
+          "resolved_id": "azure-0037",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0961",
+          "resolved_id": "azure-0961",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-001",
+        "gov-rel-011"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-management-groups",
+      "original_record": {
+        "id": "ms-management-groups",
+        "title": "Manage Azure subscriptions at scale with management groups",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/management-groups/manage",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0038",
+          "resolved_id": "azure-0038",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1011",
+          "resolved_id": "azure-1011",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1022",
+          "resolved_id": "azure-1022",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1023",
+          "resolved_id": "azure-1023",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-002",
+        "gov-rel-003",
+        "gov-rel-008",
+        "gov-rel-015"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-management-group-design",
+      "original_record": {
+        "id": "ms-management-group-design",
+        "title": "Management groups – Cloud Adoption Framework",
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0036",
+          "resolved_id": "azure-0036",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0037",
+          "resolved_id": "azure-0037",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0040",
+          "resolved_id": "azure-0040",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0961",
+          "resolved_id": "azure-0961",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1022",
+          "resolved_id": "azure-1022",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1023",
+          "resolved_id": "azure-1023",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-subscription-design",
+      "original_record": {
+        "id": "ms-subscription-design",
+        "title": "Subscriptions – Cloud Adoption Framework",
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-1011",
+          "resolved_id": "azure-1011",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-arm-overview",
+      "original_record": {
+        "id": "ms-arm-overview",
+        "title": "What is Azure Resource Manager?",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0038",
+          "resolved_id": "azure-0038",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0277",
+          "resolved_id": "azure-0277",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0284",
+          "resolved_id": "azure-0284",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0961",
+          "resolved_id": "azure-0961",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1011",
+          "resolved_id": "azure-1011",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-001",
+        "gov-rel-002",
+        "gov-rel-004",
+        "gov-rel-005",
+        "gov-rel-006",
+        "gov-rel-007",
+        "gov-rel-009",
+        "gov-rel-016"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-policy-overview",
+      "original_record": {
+        "id": "ms-policy-overview",
+        "title": "What is Azure Policy?",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/policy/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0037",
+          "resolved_id": "azure-0037",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0040",
+          "resolved_id": "azure-0040",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0041",
+          "resolved_id": "azure-0041",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0047",
+          "resolved_id": "azure-0047",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0962",
+          "resolved_id": "azure-0962",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-011",
+        "gov-rel-012",
+        "gov-rel-015",
+        "gov-rel-017",
+        "gov-rel-018",
+        "gov-rel-019",
+        "gov-rel-020",
+        "gov-rel-021",
+        "gov-rel-032",
+        "storage-rel-021",
+        "security-rel-028",
+        "monitoring-rel-019"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-policy-definitions",
+      "original_record": {
+        "id": "ms-policy-definitions",
+        "title": "Azure Policy definition structure basics",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-basics",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0041",
+          "resolved_id": "azure-0041",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0962",
+          "resolved_id": "azure-0962",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0963",
+          "resolved_id": "azure-0963",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-017"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-policy-assignments",
+      "original_record": {
+        "id": "ms-policy-assignments",
+        "title": "Azure Policy assignment structure",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0041",
+          "resolved_id": "azure-0041",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0962",
+          "resolved_id": "azure-0962",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-016"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-policy-initiatives",
+      "original_record": {
+        "id": "ms-policy-initiatives",
+        "title": "Azure Policy initiative definition structure",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/initiative-definition-structure",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0041",
+          "resolved_id": "azure-0041",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-012"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-policy-effects",
+      "original_record": {
+        "id": "ms-policy-effects",
+        "title": "Azure Policy definitions effect basics",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0040",
+          "resolved_id": "azure-0040",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0042",
+          "resolved_id": "azure-0042",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0963",
+          "resolved_id": "azure-0963",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-013"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-policy-compliance",
+      "original_record": {
+        "id": "ms-policy-compliance",
+        "title": "Azure Policy compliance states",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/compliance-states",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0042",
+          "resolved_id": "azure-0042",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0059",
+          "resolved_id": "azure-0059",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0962",
+          "resolved_id": "azure-0962",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-014"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-policy-regulatory",
+      "original_record": {
+        "id": "ms-policy-regulatory",
+        "title": "Regulatory Compliance in Azure Policy",
+        "url": "https://learn.microsoft.com/en-us/azure/governance/policy/concepts/regulatory-compliance",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0059",
+          "resolved_id": "azure-0059",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0060",
+          "resolved_id": "azure-0060",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-031"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-resource-naming",
+      "original_record": {
+        "id": "ms-resource-naming",
+        "title": "Define your naming convention",
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0047",
+          "resolved_id": "azure-0047",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0963",
+          "resolved_id": "azure-0963",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-022"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-resource-tags",
+      "original_record": {
+        "id": "ms-resource-tags",
+        "title": "Use tags to organize your Azure resources and management hierarchy",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0963",
+          "resolved_id": "azure-0963",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0980",
+          "resolved_id": "azure-0980",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0981",
+          "resolved_id": "azure-0981",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-023",
+        "gov-rel-024",
+        "gov-rel-025",
+        "storage-rel-022"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-resource-tagging-strategy",
+      "original_record": {
+        "id": "ms-resource-tagging-strategy",
+        "title": "Define your tagging strategy",
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0047",
+          "resolved_id": "azure-0047",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0980",
+          "resolved_id": "azure-0980",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-resource-locks",
+      "original_record": {
+        "id": "ms-resource-locks",
+        "title": "Lock your Azure resources to protect your infrastructure",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0970",
+          "resolved_id": "azure-0970",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-033"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-cost-management",
+      "original_record": {
+        "id": "ms-cost-management",
+        "title": "What is Microsoft Cost Management?",
+        "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0033",
+          "resolved_id": "azure-0033",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0057",
+          "resolved_id": "azure-0057",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0981",
+          "resolved_id": "azure-0981",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1025",
+          "resolved_id": "azure-1025",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1030",
+          "resolved_id": "azure-1030",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1034",
+          "resolved_id": "azure-1034",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-025",
+        "gov-rel-026",
+        "gov-rel-027",
+        "gov-rel-028",
+        "gov-rel-029",
+        "gov-rel-034"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-cost-plan",
+      "original_record": {
+        "id": "ms-cost-plan",
+        "title": "Plan to manage Azure costs",
+        "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/plan-manage-costs",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0033",
+          "resolved_id": "azure-0033",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0057",
+          "resolved_id": "azure-0057",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1025",
+          "resolved_id": "azure-1025",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-026",
+        "gov-rel-034"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-cost-analysis",
+      "original_record": {
+        "id": "ms-cost-analysis",
+        "title": "Start using Cost Analysis",
+        "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0981",
+          "resolved_id": "azure-0981",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1025",
+          "resolved_id": "azure-1025",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1034",
+          "resolved_id": "azure-1034",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-defender-posture",
+      "original_record": {
+        "id": "ms-defender-posture",
+        "title": "Cloud overview dashboard in Microsoft Defender for Cloud",
+        "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/cloud-infrastructure-dashboard",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0933",
+          "resolved_id": "azure-0933",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0934",
+          "resolved_id": "azure-0934",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0936",
+          "resolved_id": "azure-0936",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-030",
+        "security-rel-027"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-defender-regulatory",
+      "original_record": {
+        "id": "ms-defender-regulatory",
+        "title": "Assign regulatory compliance standards in Microsoft Defender for Cloud",
+        "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/assign-regulatory-compliance-standards",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0059",
+          "resolved_id": "azure-0059",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0060",
+          "resolved_id": "azure-0060",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0933",
+          "resolved_id": "azure-0933",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0936",
+          "resolved_id": "azure-0936",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-030",
+        "gov-rel-031"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-security-benchmark",
+      "original_record": {
+        "id": "ms-security-benchmark",
+        "title": "Microsoft cloud security benchmark",
+        "url": "https://learn.microsoft.com/en-us/security/benchmark/azure/",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0060",
+          "resolved_id": "azure-0060",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0074",
+          "resolved_id": "azure-0074",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "gov-rel-032",
+        "security-rel-028"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-storage-intro",
+      "original_record": {
+        "id": "ms-storage-intro",
+        "title": "Introduction to Azure Storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0566",
+          "resolved_id": "azure-0566",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0624",
+          "resolved_id": "azure-0624",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0632",
+          "resolved_id": "azure-0632",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-001",
+        "storage-rel-002",
+        "storage-rel-003",
+        "storage-rel-004",
+        "storage-rel-005"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-storage-account",
+      "original_record": {
+        "id": "ms-storage-account",
+        "title": "Storage account overview",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0579",
+          "resolved_id": "azure-0579",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-006",
+        "storage-rel-011",
+        "storage-rel-021",
+        "storage-rel-022"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-storage-authorization",
+      "original_record": {
+        "id": "ms-storage-authorization",
+        "title": "Authorize access to data in Azure Storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/authorize-data-access",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0566",
+          "resolved_id": "azure-0566",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0571",
+          "resolved_id": "azure-0571",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0579",
+          "resolved_id": "azure-0579",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0583",
+          "resolved_id": "azure-0583",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0616",
+          "resolved_id": "azure-0616",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0836",
+          "resolved_id": "azure-0836",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-017",
+        "storage-rel-019",
+        "storage-rel-020",
+        "storage-rel-026"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-storage-sas",
+      "original_record": {
+        "id": "ms-storage-sas",
+        "title": "Grant limited access with shared access signatures (SAS)",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0579",
+          "resolved_id": "azure-0579",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-storage-private-endpoints",
+      "original_record": {
+        "id": "ms-storage-private-endpoints",
+        "title": "Use private endpoints for Azure Storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-private-endpoints",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0571",
+          "resolved_id": "azure-0571",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0579",
+          "resolved_id": "azure-0579",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0596",
+          "resolved_id": "azure-0596",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0616",
+          "resolved_id": "azure-0616",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0724",
+          "resolved_id": "azure-0724",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0731",
+          "resolved_id": "azure-0731",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0816",
+          "resolved_id": "azure-0816",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0827",
+          "resolved_id": "azure-0827",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-018",
+        "storage-rel-025",
+        "security-rel-016"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-storage-encryption",
+      "original_record": {
+        "id": "ms-storage-encryption",
+        "title": "Azure Storage encryption for data at rest",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0076",
+          "resolved_id": "azure-0076",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0566",
+          "resolved_id": "azure-0566",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0836",
+          "resolved_id": "azure-0836",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0837",
+          "resolved_id": "azure-0837",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0838",
+          "resolved_id": "azure-0838",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-008",
+        "security-rel-023",
+        "security-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-storage-redundancy",
+      "original_record": {
+        "id": "ms-storage-redundancy",
+        "title": "Azure Storage redundancy",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0566",
+          "resolved_id": "azure-0566",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0584",
+          "resolved_id": "azure-0584",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0585",
+          "resolved_id": "azure-0585",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0587",
+          "resolved_id": "azure-0587",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0589",
+          "resolved_id": "azure-0589",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0592",
+          "resolved_id": "azure-0592",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-011",
+        "storage-rel-012",
+        "storage-rel-013",
+        "storage-rel-014",
+        "storage-rel-015"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-storage-disaster-recovery",
+      "original_record": {
+        "id": "ms-storage-disaster-recovery",
+        "title": "Azure Storage disaster recovery planning and failover",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0117",
+          "resolved_id": "azure-0117",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0578",
+          "resolved_id": "azure-0578",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0584",
+          "resolved_id": "azure-0584",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0589",
+          "resolved_id": "azure-0589",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0592",
+          "resolved_id": "azure-0592",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0601",
+          "resolved_id": "azure-0601",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-blob-overview",
+      "original_record": {
+        "id": "ms-blob-overview",
+        "title": "Introduction to Azure Blob Storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0571",
+          "resolved_id": "azure-0571",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0583",
+          "resolved_id": "azure-0583",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0638",
+          "resolved_id": "azure-0638",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-001",
+        "storage-rel-006",
+        "storage-rel-017",
+        "storage-rel-023"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-blob-access-tiers",
+      "original_record": {
+        "id": "ms-blob-access-tiers",
+        "title": "Access tiers for blob data",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0574",
+          "resolved_id": "azure-0574",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0575",
+          "resolved_id": "azure-0575",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0576",
+          "resolved_id": "azure-0576",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0578",
+          "resolved_id": "azure-0578",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-007",
+        "storage-rel-008",
+        "storage-rel-009",
+        "storage-rel-010"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-blob-lifecycle",
+      "original_record": {
+        "id": "ms-blob-lifecycle",
+        "title": "Azure Blob Storage lifecycle management overview",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0574",
+          "resolved_id": "azure-0574",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0583",
+          "resolved_id": "azure-0583",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-blob-data-protection",
+      "original_record": {
+        "id": "ms-blob-data-protection",
+        "title": "Data protection overview for Azure Blob Storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/data-protection-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0571",
+          "resolved_id": "azure-0571",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0584",
+          "resolved_id": "azure-0584",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0596",
+          "resolved_id": "azure-0596",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-files-overview",
+      "original_record": {
+        "id": "ms-files-overview",
+        "title": "Introduction to Azure Files",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0596",
+          "resolved_id": "azure-0596",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0601",
+          "resolved_id": "azure-0601",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-002",
+        "storage-rel-016"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-file-sync",
+      "original_record": {
+        "id": "ms-file-sync",
+        "title": "Introduction to Azure File Sync",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0601",
+          "resolved_id": "azure-0601",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-016"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-queue-overview",
+      "original_record": {
+        "id": "ms-queue-overview",
+        "title": "Introduction to Azure Queue Storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0624",
+          "resolved_id": "azure-0624",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-004"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-table-overview",
+      "original_record": {
+        "id": "ms-table-overview",
+        "title": "Introduction to Azure Table storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0632",
+          "resolved_id": "azure-0632",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-005"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-data-lake-overview",
+      "original_record": {
+        "id": "ms-data-lake-overview",
+        "title": "Introduction to Azure Data Lake Storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0616",
+          "resolved_id": "azure-0616",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-003"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-data-box",
+      "original_record": {
+        "id": "ms-data-box",
+        "title": "Microsoft Azure Data Box overview",
+        "url": "https://learn.microsoft.com/en-us/azure/databox/data-box-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0637",
+          "resolved_id": "azure-0637",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0638",
+          "resolved_id": "azure-0638",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-023"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-azure-migrate",
+      "original_record": {
+        "id": "ms-azure-migrate",
+        "title": "About Azure Migrate",
+        "url": "https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0637",
+          "resolved_id": "azure-0637",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0645",
+          "resolved_id": "azure-0645",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0738",
+          "resolved_id": "azure-0738",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-azure-sql-overview",
+      "original_record": {
+        "id": "ms-azure-sql-overview",
+        "title": "What is Azure SQL?",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?view=azuresql",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0731",
+          "resolved_id": "azure-0731",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0738",
+          "resolved_id": "azure-0738",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-cosmos-resource-model",
+      "original_record": {
+        "id": "ms-cosmos-resource-model",
+        "title": "Databases, containers, and items in Azure Cosmos DB",
+        "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/resource-model",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0724",
+          "resolved_id": "azure-0724",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-025"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-dms-overview",
+      "original_record": {
+        "id": "ms-dms-overview",
+        "title": "What is Azure Database Migration Service?",
+        "url": "https://learn.microsoft.com/en-us/azure/dms/dms-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0637",
+          "resolved_id": "azure-0637",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0645",
+          "resolved_id": "azure-0645",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0738",
+          "resolved_id": "azure-0738",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "storage-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-shared-responsibility",
+      "original_record": {
+        "id": "ms-shared-responsibility",
+        "title": "Shared responsibility in the cloud",
+        "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0070",
+          "resolved_id": "azure-0070",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0815",
+          "resolved_id": "azure-0815",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0818",
+          "resolved_id": "azure-0818",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0833",
+          "resolved_id": "azure-0833",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0840",
+          "resolved_id": "azure-0840",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-007",
+        "security-rel-009"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-security-overview",
+      "original_record": {
+        "id": "ms-security-overview",
+        "title": "Introduction to Azure security",
+        "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0073",
+          "resolved_id": "azure-0073",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0074",
+          "resolved_id": "azure-0074",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0815",
+          "resolved_id": "azure-0815",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0817",
+          "resolved_id": "azure-0817",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-001",
+        "security-rel-002",
+        "security-rel-004",
+        "security-rel-005"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-security-pillar",
+      "original_record": {
+        "id": "ms-security-pillar",
+        "title": "Azure Well-Architected Framework – Security pillar",
+        "url": "https://learn.microsoft.com/en-us/azure/well-architected/security/",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0070",
+          "resolved_id": "azure-0070",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0073",
+          "resolved_id": "azure-0073",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0840",
+          "resolved_id": "azure-0840",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-008"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-security-design-patterns",
+      "original_record": {
+        "id": "ms-security-design-patterns",
+        "title": "Architecture design patterns that support security",
+        "url": "https://learn.microsoft.com/en-us/azure/well-architected/security/design-patterns",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0817",
+          "resolved_id": "azure-0817",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0827",
+          "resolved_id": "azure-0827",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0833",
+          "resolved_id": "azure-0833",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0834",
+          "resolved_id": "azure-0834",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-006",
+        "security-rel-007",
+        "security-rel-017"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-zero-trust-infrastructure",
+      "original_record": {
+        "id": "ms-zero-trust-infrastructure",
+        "title": "Secure infrastructure with Zero Trust",
+        "url": "https://learn.microsoft.com/en-us/security/zero-trust/deploy/infrastructure",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0074",
+          "resolved_id": "azure-0074",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0815",
+          "resolved_id": "azure-0815",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0817",
+          "resolved_id": "azure-0817",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0821",
+          "resolved_id": "azure-0821",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0932",
+          "resolved_id": "azure-0932",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-004",
+        "security-rel-010"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-azure-infrastructure-security",
+      "original_record": {
+        "id": "ms-azure-infrastructure-security",
+        "title": "Azure infrastructure security",
+        "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/infrastructure",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0818",
+          "resolved_id": "azure-0818",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-azure-physical-security",
+      "original_record": {
+        "id": "ms-azure-physical-security",
+        "title": "Physical security of Azure datacenters",
+        "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/physical-security",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0818",
+          "resolved_id": "azure-0818",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-networking-overview",
+      "original_record": {
+        "id": "ms-networking-overview",
+        "title": "Azure networking services overview",
+        "url": "https://learn.microsoft.com/en-us/azure/networking/networking-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0816",
+          "resolved_id": "azure-0816",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0824",
+          "resolved_id": "azure-0824",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-001",
+        "security-rel-005",
+        "security-rel-011",
+        "security-rel-012",
+        "security-rel-013"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-keyvault-concepts",
+      "original_record": {
+        "id": "ms-keyvault-concepts",
+        "title": "Azure Key Vault basic concepts",
+        "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0944",
+          "resolved_id": "azure-0944",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0945",
+          "resolved_id": "azure-0945",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-003",
+        "security-rel-018",
+        "security-rel-020"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-keyvault-objects",
+      "original_record": {
+        "id": "ms-keyvault-objects",
+        "title": "Azure Key Vault keys, secrets, and certificates overview",
+        "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0944",
+          "resolved_id": "azure-0944",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0946",
+          "resolved_id": "azure-0946",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-003",
+        "security-rel-019",
+        "security-rel-020",
+        "security-rel-021"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-keyvault-security",
+      "original_record": {
+        "id": "ms-keyvault-security",
+        "title": "Secure your Azure Key Vault",
+        "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/secure-key-vault",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0076",
+          "resolved_id": "azure-0076",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0833",
+          "resolved_id": "azure-0833",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0834",
+          "resolved_id": "azure-0834",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0838",
+          "resolved_id": "azure-0838",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0944",
+          "resolved_id": "azure-0944",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0945",
+          "resolved_id": "azure-0945",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0946",
+          "resolved_id": "azure-0946",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-018",
+        "security-rel-022"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-key-management-choice",
+      "original_record": {
+        "id": "ms-key-management-choice",
+        "title": "Choose the right Azure key management solution",
+        "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management-choose",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0076",
+          "resolved_id": "azure-0076",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0836",
+          "resolved_id": "azure-0836",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0837",
+          "resolved_id": "azure-0837",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0946",
+          "resolved_id": "azure-0946",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-019",
+        "security-rel-022",
+        "security-rel-023"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-defender-secure-score",
+      "original_record": {
+        "id": "ms-defender-secure-score",
+        "title": "Secure score in Microsoft Defender for Cloud",
+        "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/secure-score-security-controls",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0934",
+          "resolved_id": "azure-0934",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-026",
+        "security-rel-027"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-defender-recommendations",
+      "original_record": {
+        "id": "ms-defender-recommendations",
+        "title": "Security recommendations in Microsoft Defender for Cloud",
+        "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/security-recommendations",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0834",
+          "resolved_id": "azure-0834",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0932",
+          "resolved_id": "azure-0932",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0934",
+          "resolved_id": "azure-0934",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-026",
+        "security-rel-027"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-defender-vulnerability",
+      "original_record": {
+        "id": "ms-defender-vulnerability",
+        "title": "Enable vulnerability scanning with Microsoft Defender Vulnerability Management",
+        "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0934",
+          "resolved_id": "azure-0934",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-026"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-backup-security",
+      "original_record": {
+        "id": "ms-backup-security",
+        "title": "Azure Backup security best practices for data protection",
+        "url": "https://learn.microsoft.com/en-us/azure/backup/azure-backup-data-protection-best-practices",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0114",
+          "resolved_id": "azure-0114",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0115",
+          "resolved_id": "azure-0115",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0836",
+          "resolved_id": "azure-0836",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0837",
+          "resolved_id": "azure-0837",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0838",
+          "resolved_id": "azure-0838",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-024",
+        "security-rel-029",
+        "security-rel-031",
+        "security-rel-033",
+        "security-rel-034"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-backup-immutable",
+      "original_record": {
+        "id": "ms-backup-immutable",
+        "title": "Manage Azure Backup Immutable vault operations",
+        "url": "https://learn.microsoft.com/en-us/azure/backup/backup-azure-immutable-vault-how-to-manage",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0838",
+          "resolved_id": "azure-0838",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-034"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-recovery-services-vault",
+      "original_record": {
+        "id": "ms-recovery-services-vault",
+        "title": "Create and configure a Recovery Services vault",
+        "url": "https://learn.microsoft.com/en-us/azure/backup/backup-create-recovery-services-vault",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0115",
+          "resolved_id": "azure-0115",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-bcdr-concepts",
+      "original_record": {
+        "id": "ms-bcdr-concepts",
+        "title": "Business continuity, high availability, and disaster recovery",
+        "url": "https://learn.microsoft.com/en-us/azure/reliability/concept-business-continuity-high-availability-disaster-recovery",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0070",
+          "resolved_id": "azure-0070",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0107",
+          "resolved_id": "azure-0107",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0109",
+          "resolved_id": "azure-0109",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0113",
+          "resolved_id": "azure-0113",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0114",
+          "resolved_id": "azure-0114",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0115",
+          "resolved_id": "azure-0115",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0117",
+          "resolved_id": "azure-0117",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "security-rel-029",
+        "security-rel-030",
+        "security-rel-031",
+        "security-rel-032"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-azure-monitor-overview",
+      "original_record": {
+        "id": "ms-azure-monitor-overview",
+        "title": "Azure Monitor overview",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0095",
+          "resolved_id": "azure-0095",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0098",
+          "resolved_id": "azure-0098",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0979",
+          "resolved_id": "azure-0979",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0983",
+          "resolved_id": "azure-0983",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0988",
+          "resolved_id": "azure-0988",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-002",
+        "monitoring-rel-009",
+        "monitoring-rel-010",
+        "monitoring-rel-017",
+        "monitoring-rel-018"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-azure-monitor-data-platform",
+      "original_record": {
+        "id": "ms-azure-monitor-data-platform",
+        "title": "Azure Monitor data platform",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/data-platform",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0983",
+          "resolved_id": "azure-0983",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-monitor-metrics",
+      "original_record": {
+        "id": "ms-monitor-metrics",
+        "title": "Azure Monitor Metrics overview",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/metrics/data-platform-metrics",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0109",
+          "resolved_id": "azure-0109",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-monitor-logs",
+      "original_record": {
+        "id": "ms-monitor-logs",
+        "title": "Azure Monitor Logs overview",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0985",
+          "resolved_id": "azure-0985",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0986",
+          "resolved_id": "azure-0986",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-003",
+        "monitoring-rel-004"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-monitor-diagnostic-settings",
+      "original_record": {
+        "id": "ms-monitor-diagnostic-settings",
+        "title": "Diagnostic settings in Azure Monitor",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/platform/diagnostic-settings",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [],
+      "relations": [
+        "monitoring-rel-010",
+        "monitoring-rel-019"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-monitor-alerts",
+      "original_record": {
+        "id": "ms-monitor-alerts",
+        "title": "Azure Monitor alerts overview",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0984",
+          "resolved_id": "azure-0984",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1000",
+          "resolved_id": "azure-1000",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-005",
+        "monitoring-rel-015",
+        "monitoring-rel-022"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-application-insights",
+      "original_record": {
+        "id": "ms-application-insights",
+        "title": "Application Insights overview",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0987",
+          "resolved_id": "azure-0987",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0988",
+          "resolved_id": "azure-0988",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0989",
+          "resolved_id": "azure-0989",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0990",
+          "resolved_id": "azure-0990",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0992",
+          "resolved_id": "azure-0992",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-004",
+        "monitoring-rel-006",
+        "monitoring-rel-007",
+        "monitoring-rel-008"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-application-map",
+      "original_record": {
+        "id": "ms-application-map",
+        "title": "Application map in Application Insights",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-map",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0987",
+          "resolved_id": "azure-0987",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0989",
+          "resolved_id": "azure-0989",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-monitor-workbooks",
+      "original_record": {
+        "id": "ms-monitor-workbooks",
+        "title": "Azure Workbooks overview",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0988",
+          "resolved_id": "azure-0988",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-service-health-overview",
+      "original_record": {
+        "id": "ms-service-health-overview",
+        "title": "What is Azure Service Health?",
+        "url": "https://learn.microsoft.com/en-us/azure/service-health/overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0999",
+          "resolved_id": "azure-0999",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1000",
+          "resolved_id": "azure-1000",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-015",
+        "monitoring-rel-016"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-resource-health-overview",
+      "original_record": {
+        "id": "ms-resource-health-overview",
+        "title": "Azure Resource Health overview",
+        "url": "https://learn.microsoft.com/en-us/azure/service-health/resource-health-overview",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0999",
+          "resolved_id": "azure-0999",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1000",
+          "resolved_id": "azure-1000",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-016"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-advisor-overview",
+      "original_record": {
+        "id": "ms-advisor-overview",
+        "title": "Azure Advisor documentation",
+        "url": "https://learn.microsoft.com/en-us/azure/advisor/",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0993",
+          "resolved_id": "azure-0993",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0994",
+          "resolved_id": "azure-0994",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0995",
+          "resolved_id": "azure-0995",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0998",
+          "resolved_id": "azure-0998",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-011",
+        "monitoring-rel-012",
+        "monitoring-rel-013",
+        "monitoring-rel-014",
+        "monitoring-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-advisor-score",
+      "original_record": {
+        "id": "ms-advisor-score",
+        "title": "Advisor score",
+        "url": "https://learn.microsoft.com/en-us/azure/advisor/advisor-score",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0993",
+          "resolved_id": "azure-0993",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0994",
+          "resolved_id": "azure-0994",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0995",
+          "resolved_id": "azure-0995",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0998",
+          "resolved_id": "azure-0998",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-011",
+        "monitoring-rel-013",
+        "monitoring-rel-014"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-operations-observability",
+      "original_record": {
+        "id": "ms-operations-observability",
+        "title": "Architecture strategies for designing a monitoring system",
+        "url": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/observability",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0098",
+          "resolved_id": "azure-0098",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0100",
+          "resolved_id": "azure-0100",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0111",
+          "resolved_id": "azure-0111",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0979",
+          "resolved_id": "azure-0979",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0983",
+          "resolved_id": "azure-0983",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0984",
+          "resolved_id": "azure-0984",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0986",
+          "resolved_id": "azure-0986",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0987",
+          "resolved_id": "azure-0987",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0989",
+          "resolved_id": "azure-0989",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0990",
+          "resolved_id": "azure-0990",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0992",
+          "resolved_id": "azure-0992",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1042",
+          "resolved_id": "azure-1042",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1046",
+          "resolved_id": "azure-1046",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-021",
+        "monitoring-rel-023"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-cloud-estate-monitor",
+      "original_record": {
+        "id": "ms-cloud-estate-monitor",
+        "title": "Monitor your Azure cloud estate",
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/monitor",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0094",
+          "resolved_id": "azure-0094",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0095",
+          "resolved_id": "azure-0095",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0098",
+          "resolved_id": "azure-0098",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0985",
+          "resolved_id": "azure-0985",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0993",
+          "resolved_id": "azure-0993",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0994",
+          "resolved_id": "azure-0994",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0999",
+          "resolved_id": "azure-0999",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-001",
+        "monitoring-rel-002",
+        "monitoring-rel-009",
+        "monitoring-rel-024"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-cloud-operations-functions",
+      "original_record": {
+        "id": "ms-cloud-operations-functions",
+        "title": "Understand cloud operations functions",
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/cloud-operations",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0094",
+          "resolved_id": "azure-0094",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0100",
+          "resolved_id": "azure-0100",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0979",
+          "resolved_id": "azure-0979",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0995",
+          "resolved_id": "azure-0995",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0998",
+          "resolved_id": "azure-0998",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-001"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-reliability-targets",
+      "original_record": {
+        "id": "ms-reliability-targets",
+        "title": "Architecture strategies for defining reliability targets",
+        "url": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/metrics",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0107",
+          "resolved_id": "azure-0107",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0108",
+          "resolved_id": "azure-0108",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0109",
+          "resolved_id": "azure-0109",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0110",
+          "resolved_id": "azure-0110",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0111",
+          "resolved_id": "azure-0111",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0113",
+          "resolved_id": "azure-0113",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1042",
+          "resolved_id": "azure-1042",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1043",
+          "resolved_id": "azure-1043",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1045",
+          "resolved_id": "azure-1045",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1046",
+          "resolved_id": "azure-1046",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-020",
+        "monitoring-rel-021",
+        "monitoring-rel-023"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-failover-failback",
+      "original_record": {
+        "id": "ms-failover-failback",
+        "title": "What are failover and failback?",
+        "url": "https://learn.microsoft.com/en-us/azure/reliability/concept-failover-failback",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0107",
+          "resolved_id": "azure-0107",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0108",
+          "resolved_id": "azure-0108",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0110",
+          "resolved_id": "azure-0110",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-0112",
+          "resolved_id": "azure-0112",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [
+        "monitoring-rel-020",
+        "monitoring-rel-022"
+      ],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    },
+    {
+      "source_id": "ms-sla-concepts",
+      "original_record": {
+        "id": "ms-sla-concepts",
+        "title": "How to read a service-level agreement",
+        "url": "https://learn.microsoft.com/en-us/azure/reliability/concept-service-level-agreements",
+        "publisher": "Microsoft Learn",
+        "accessed_at": "2026-08-11",
+        "type": "official"
+      },
+      "nodes": [
+        {
+          "node_id": "azure-0113",
+          "resolved_id": "azure-0113",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1042",
+          "resolved_id": "azure-1042",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1043",
+          "resolved_id": "azure-1043",
+          "scope": "original node only"
+        },
+        {
+          "node_id": "azure-1045",
+          "resolved_id": "azure-1045",
+          "scope": "original node only"
+        }
+      ],
+      "relations": [],
+      "preservation_status": "EXACT",
+      "union_policy": "index only; no claim-scope expansion"
+    }
+  ]
+}

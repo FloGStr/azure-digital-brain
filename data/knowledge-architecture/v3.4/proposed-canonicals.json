@@ -1,0 +1,180 @@
+{
+  "schema_version": "3.4-proposed-canonicals-1.0",
+  "release": "3.4",
+  "active": false,
+  "proposed": [
+    {
+      "proposed_id": "proposed-v3.4-azure-geography",
+      "title": "Azure Geography",
+      "domain": "Cloud & Azure Foundations",
+      "capability": "Azure Global Infrastructure",
+      "lifecycle_status": "active",
+      "aliases": [],
+      "source_artifacts": [
+        "azure-0276",
+        "azure-0240"
+      ],
+      "proposed_sources": [
+        {
+          "url": "https://learn.microsoft.com/en-ca/azure/reliability/regions-overview",
+          "evidence": "V3.4-MISSING-CANONICAL-CANDIDATES.md",
+          "prior_review_date": "2026-09-10",
+          "revalidated_now": false,
+          "registered": false
+        }
+      ],
+      "proposed_relations": [],
+      "approval_status": "USER-APPROVED-FOR-DRY-RUN",
+      "materialized": false,
+      "record_type": "PROPOSED-NEW-CANONICAL",
+      "claim_status": "PRIOR-REVIEW-EVIDENCE"
+    },
+    {
+      "proposed_id": "proposed-v3.4-azure-ad-b2c",
+      "title": "Azure AD B2C",
+      "domain": "Identity & Access",
+      "capability": "Customer Identity",
+      "lifecycle_status": "deprecated",
+      "aliases": [],
+      "source_artifacts": [
+        "azure-0926"
+      ],
+      "proposed_sources": [
+        {
+          "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/faq-customers",
+          "evidence": "V3.4-MISSING-CANONICAL-CANDIDATES.md",
+          "prior_review_date": "2026-09-10",
+          "revalidated_now": false,
+          "registered": false
+        }
+      ],
+      "proposed_relations": [
+        {
+          "source": "proposed-v3.4-azure-ad-b2c",
+          "target": "proposed-v3.4-microsoft-entra-external-id",
+          "type": "migrates_to",
+          "inverse_type": "migration_target_for",
+          "explanation": "Bedingter CIAM-Migrationspfad, keine Identität oder automatische Migration; Anwendungseignung prüfen.",
+          "evidence": "V3.4-MISSING-CANONICAL-CANDIDATES.md: External ID FAQ",
+          "confidence": "NOT-ASSIGNED; not accepted",
+          "status": "NEW-RELATION-TYPE-CANDIDATE",
+          "materialized": false,
+          "existing_alternative": "replaced_by wäre zu stark; Lifecycle-Vergleich als Overlay genügt bis zur Relationsfreigabe."
+        }
+      ],
+      "approval_status": "USER-APPROVED-FOR-DRY-RUN",
+      "materialized": false,
+      "record_type": "PROPOSED-NEW-CANONICAL",
+      "claim_status": "PRIOR-REVIEW-EVIDENCE"
+    },
+    {
+      "proposed_id": "proposed-v3.4-microsoft-entra-external-id",
+      "title": "Microsoft Entra External ID",
+      "domain": "Identity & Access",
+      "capability": "Customer Identity",
+      "lifecycle_status": "active",
+      "aliases": [],
+      "source_artifacts": [
+        "azure-0926"
+      ],
+      "proposed_sources": [
+        {
+          "url": "https://learn.microsoft.com/en-us/entra/external-id/customers/faq-customers",
+          "evidence": "V3.4-MISSING-CANONICAL-CANDIDATES.md",
+          "prior_review_date": "2026-09-10",
+          "revalidated_now": false,
+          "registered": false
+        }
+      ],
+      "proposed_relations": [
+        {
+          "source": "proposed-v3.4-azure-ad-b2c",
+          "target": "proposed-v3.4-microsoft-entra-external-id",
+          "type": "migrates_to",
+          "inverse_type": "migration_target_for",
+          "explanation": "Bedingter CIAM-Migrationspfad, keine Identität oder automatische Migration; Anwendungseignung prüfen.",
+          "evidence": "V3.4-MISSING-CANONICAL-CANDIDATES.md: External ID FAQ",
+          "confidence": "NOT-ASSIGNED; not accepted",
+          "status": "NEW-RELATION-TYPE-CANDIDATE",
+          "materialized": false,
+          "existing_alternative": "replaced_by wäre zu stark; Lifecycle-Vergleich als Overlay genügt bis zur Relationsfreigabe."
+        }
+      ],
+      "approval_status": "USER-APPROVED-FOR-DRY-RUN",
+      "materialized": false,
+      "record_type": "PROPOSED-NEW-CANONICAL",
+      "claim_status": "PRIOR-REVIEW-EVIDENCE"
+    },
+    {
+      "proposed_id": "proposed-v3.4-microsoft-defender-xdr",
+      "title": "Microsoft Defender XDR",
+      "domain": "Security & Protection",
+      "capability": "Security Operations",
+      "lifecycle_status": "active",
+      "aliases": [],
+      "source_artifacts": [
+        "azure-0941"
+      ],
+      "proposed_sources": [
+        {
+          "url": "https://learn.microsoft.com/en-us/azure/sentinel/microsoft-365-defender-sentinel-integration",
+          "evidence": "V3.4-MISSING-CANONICAL-CANDIDATES.md",
+          "prior_review_date": "2026-09-10",
+          "revalidated_now": false,
+          "registered": false
+        }
+      ],
+      "proposed_relations": [],
+      "approval_status": "USER-APPROVED-FOR-DRY-RUN",
+      "materialized": false,
+      "record_type": "PROPOSED-NEW-CANONICAL",
+      "claim_status": "PRIOR-REVIEW-EVIDENCE"
+    },
+    {
+      "proposed_id": "proposed-v3.4-microsoft-purview-information-protection",
+      "title": "Microsoft Purview Information Protection",
+      "domain": "Security & Protection",
+      "capability": "Data, Key & Secret Protection",
+      "lifecycle_status": "active",
+      "aliases": [],
+      "source_artifacts": [
+        "azure-0948",
+        "azure-0949",
+        "azure-0950"
+      ],
+      "proposed_sources": [
+        {
+          "url": "https://learn.microsoft.com/en-us/office365/servicedescriptions/azure-information-protection",
+          "evidence": "V3.4-MISSING-CANONICAL-CANDIDATES.md",
+          "prior_review_date": "2026-09-10",
+          "revalidated_now": false,
+          "registered": false
+        }
+      ],
+      "proposed_relations": [],
+      "approval_status": "USER-APPROVED-FOR-DRY-RUN",
+      "materialized": false,
+      "record_type": "PROPOSED-NEW-CANONICAL",
+      "claim_status": "PRIOR-REVIEW-EVIDENCE"
+    },
+    {
+      "proposed_id": "proposed-v3.4-hyper-v",
+      "title": "Hyper-V",
+      "domain": "Compute & Application Platform",
+      "capability": "Virtualization Foundations",
+      "lifecycle_status": "active",
+      "aliases": [
+        "Hyper-V Host"
+      ],
+      "source_artifacts": [
+        "azure-1056"
+      ],
+      "proposed_sources": [],
+      "proposed_relations": [],
+      "approval_status": "USER-APPROVED-FOR-DRY-RUN",
+      "materialized": false,
+      "record_type": "PROPOSED-NEW-CANONICAL",
+      "claim_status": "SOURCE-REQUIRED"
+    }
+  ]
+}

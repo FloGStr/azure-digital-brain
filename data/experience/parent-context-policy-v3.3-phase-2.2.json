@@ -1,0 +1,193 @@
+{
+  "schema_version": "3.3-phase-2.2-parent-context-policy-1.0",
+  "base_version": "3.2",
+  "phase": "3.3-phase-2.2",
+  "status": "test_only",
+  "runtime_enabled": false,
+  "production_enabled": false,
+  "canonical_data_changed": false,
+  "purpose": "Filtert die globale Phase-2.1-Elternkontext-Vererbung anhand fachlich geprüfter Direct-Pfade und kandidatenspezifischer Related-Freigaben.",
+  "policy": {
+    "maximum_parent_edges": 4,
+    "long_direct_path_starts_at": 3,
+    "direct_donors_allowed": true,
+    "long_direct_path_requires_allowlist": true,
+    "related_donors_globally_allowed": false,
+    "related_candidate_allowlist_required": true,
+    "copy_complete_related_candidate_set": false,
+    "prefer_immediate_parent_context_for_presentation_roles": true,
+    "allow_recursive_inheritance": false,
+    "allow_children": false,
+    "allow_siblings": false,
+    "allow_tags": false,
+    "allow_domain": false,
+    "allow_text_similarity": false,
+    "automatic_open": false
+  },
+  "broad_related_donors_requiring_explicit_review": [
+    {
+      "node_id": "azure-0566",
+      "title": "Azure Storage"
+    },
+    {
+      "node_id": "azure-0236",
+      "title": "Azure Architectural Components"
+    },
+    {
+      "node_id": "azure-0002",
+      "title": "Key Cloud Conecpts"
+    },
+    {
+      "node_id": "azure-0151",
+      "title": "Cloud-Modelle"
+    },
+    {
+      "node_id": "azure-0754",
+      "title": "Azure Solutions"
+    }
+  ],
+  "long_direct_path_allowlist": [
+    {
+      "origin_node_id": "azure-0261",
+      "mode": "architecture",
+      "donor_node_id": "azure-0254",
+      "parent_distance": 3,
+      "reason": "Die Erklärungskette bleibt vollständig beim Konzept Region Pairs und führt in das Hochverfügbarkeitsszenario."
+    },
+    {
+      "origin_node_id": "azure-0261",
+      "mode": "learning",
+      "donor_node_id": "azure-0254",
+      "parent_distance": 3,
+      "reason": "Die Region-Pair-Analogie bleibt über reine Erklärungsknoten mit dem freigegebenen Hochverfügbarkeits-Lernschritt verbunden."
+    },
+    {
+      "origin_node_id": "azure-0422",
+      "mode": "learning",
+      "donor_node_id": "azure-0415",
+      "parent_distance": 3,
+      "reason": "Die Erklärungskette bleibt vollständig bei Azure Container Instances und der Compute-Plattformentscheidung."
+    },
+    {
+      "origin_node_id": "azure-0334",
+      "mode": "architecture",
+      "donor_node_id": "azure-0322",
+      "parent_distance": 4,
+      "reason": "Alle Zwischenknoten gehören zum Verantwortungs- und Merksatzast von Azure Virtual Machines."
+    },
+    {
+      "origin_node_id": "azure-0334",
+      "mode": "learning",
+      "donor_node_id": "azure-0322",
+      "parent_distance": 4,
+      "reason": "Die vier Kanten bleiben innerhalb des VM-Verantwortungskontexts und führen zu passenden Compute-Lernschritten."
+    }
+  ],
+  "related_candidate_allowlist": [
+    {
+      "origin_node_id": "azure-0455",
+      "mode": "learning",
+      "donor_node_id": "azure-0450",
+      "candidate_id": "learning-step-platform-network",
+      "reason": "Die Gateway-Analogie unterstützt unmittelbar das Verständnis der Network Foundation."
+    },
+    {
+      "origin_node_id": "azure-0455",
+      "mode": "learning",
+      "donor_node_id": "azure-0450",
+      "candidate_id": "learning-step-scenario-hub-spoke",
+      "reason": "VPN- und ExpressRoute-Gateways sind konkrete Konnektivitätsoptionen im Hub-Spoke-Szenario."
+    },
+    {
+      "origin_node_id": "azure-0337",
+      "mode": "learning",
+      "donor_node_id": "azure-0321",
+      "candidate_id": "learning-step-decision-compute",
+      "reason": "Der Legacy-Service-Fabric-Knoten wird ausschließlich als Teil der Compute-Plattformentscheidung eingeordnet."
+    },
+    {
+      "origin_node_id": "azure-0264",
+      "mode": "architecture",
+      "donor_node_id": "azure-0236",
+      "candidate_id": "scenario-highly-available-application",
+      "reason": "Die Single-VM-Analogie erklärt ein konkretes Ausfallrisiko und gehört deshalb zum Hochverfügbarkeitsszenario."
+    },
+    {
+      "origin_node_id": "azure-0081",
+      "mode": "learning",
+      "donor_node_id": "azure-0002",
+      "candidate_id": "learning-step-cloud-foundations",
+      "reason": "Nutzererlebnis durch regionale Nähe ist ein Cloud-Grundlagenkonzept; Governance-Kandidaten wurden bewusst ausgeschlossen."
+    },
+    {
+      "origin_node_id": "azure-0180",
+      "mode": "architecture",
+      "donor_node_id": "azure-0179",
+      "candidate_id": "scenario-hybrid-cloud",
+      "reason": "Der Präsentationsknoten Vorteile gehört unmittelbar zur Kombination aus Private und Public Cloud."
+    },
+    {
+      "origin_node_id": "azure-0367",
+      "mode": "learning",
+      "donor_node_id": "azure-0352",
+      "candidate_id": "learning-step-application-compute",
+      "reason": "App-Service-Features sind Teil der Entscheidung, wo Anwendungslogik betrieben wird."
+    },
+    {
+      "origin_node_id": "azure-0367",
+      "mode": "learning",
+      "donor_node_id": "azure-0352",
+      "candidate_id": "learning-step-decision-compute",
+      "reason": "Die Features unterstützen die Abgrenzung von App Service gegenüber VM und Container."
+    },
+    {
+      "origin_node_id": "azure-0367",
+      "mode": "learning",
+      "donor_node_id": "azure-0352",
+      "candidate_id": "learning-step-scenario-secure-web",
+      "reason": "App Service ist eine vorhandene Compute-Option im Secure-Web-Application-Lernschritt."
+    },
+    {
+      "origin_node_id": "azure-0541",
+      "mode": "learning",
+      "donor_node_id": "azure-0441",
+      "candidate_id": "learning-step-application-dns",
+      "reason": "CDN-Nutzung setzt Namensauflösung und Endpunktzuordnung fachlich voraus."
+    },
+    {
+      "origin_node_id": "azure-0541",
+      "mode": "learning",
+      "donor_node_id": "azure-0441",
+      "candidate_id": "learning-step-application-traffic-management",
+      "reason": "CDN gehört zur Entscheidung über globale Inhaltsauslieferung und Traffic-Steuerung."
+    },
+    {
+      "origin_node_id": "azure-0729",
+      "mode": "architecture",
+      "donor_node_id": "azure-0724",
+      "candidate_id": "scenario-cloud-migration",
+      "reason": "Cosmos DB kann eine bewusste Datenplattformentscheidung in einer Cloud-Migration sein."
+    },
+    {
+      "origin_node_id": "azure-0729",
+      "mode": "architecture",
+      "donor_node_id": "azure-0724",
+      "candidate_id": "scenario-secure-web-application",
+      "reason": "Cosmos DB ist eine vorhandene Datenoption für die Secure-Web-Application-Architektur."
+    },
+    {
+      "origin_node_id": "azure-0613",
+      "mode": "learning",
+      "donor_node_id": "azure-0566",
+      "candidate_id": "learning-step-application-data",
+      "reason": "Azure Files gehört zur Auswahl geeigneter Daten- und Dateispeicher."
+    },
+    {
+      "origin_node_id": "azure-0613",
+      "mode": "learning",
+      "donor_node_id": "azure-0566",
+      "candidate_id": "learning-step-application-private-access",
+      "reason": "Azure Files kann über private Datenpfade und identitätsbasierten Zugriff bereitgestellt werden."
+    }
+  ]
+}

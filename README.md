@@ -1,8 +1,11 @@
-# Azure Digital Brain V3.2
+# Azure Digital Brain V3.4
 
-Die aktuelle Version ergänzt die bestehende semantische Navigation um eine zusammenhängende Kontext-, Architektur- und Lernerfahrung. Die Wissensbasis bleibt unverändert. Einstieg, Bedienung, Build und QA sind in `README-V3.2.md` dokumentiert. Der Änderungsbericht liegt unter `reports/context-experience-v3.2.md`.
+Die aktuelle Portfolio-Version verbindet fünf Ansichten: Mindmap, 2D Brain, 3D Brain, Architecture und Lernen. Die V3.4-Wissensarchitektur ergänzt die bestehende kanonische Wissensbasis, ohne deren 1.058 Nodes, 243 Relationen oder 155 Quellen zu verändern.
 
-`START.html` kann direkt per Doppelklick geöffnet werden; Installation und Server sind nicht erforderlich.
+- [Live-Demo starten](https://flogstr.github.io/azure-digital-brain/START.html)
+- [3D Brain direkt öffnen](https://flogstr.github.io/azure-digital-brain/experiments/3d-brain/index.html)
+
+`START.html` kann außerdem direkt per Doppelklick geöffnet werden; Installation und Server sind für die Nutzung nicht erforderlich. Die historische V3.2-Dokumentation bleibt in `README-V3.2.md` erhalten.
 
 ---
 

@@ -1,0 +1,641 @@
+{
+  "schema_version": "3.4-claims-1.0",
+  "release": "3.4",
+  "claims": [
+    {
+      "node_id": "azure-0049",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/49",
+        "original_node_id": "azure-0049"
+      },
+      "proposed_rewrite": "Azure Blueprints bündelte Richtlinienzuweisungen, RBAC-Zuweisungen und Bereitstellungsartefakte. Diese historische Paketfunktion ist von Policy, RBAC und ARM/Bicep als eigenständigen Konzepten zu unterscheiden.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Multi-target architecture overlay preserves the historical package concept; Blueprints is in phased retirement and has complementary, not identical, successors."
+    },
+    {
+      "node_id": "azure-0070",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/70",
+        "original_node_id": "azure-0070"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [
+        "ms-security-pillar",
+        "ms-bcdr-concepts",
+        "ms-shared-responsibility"
+      ],
+      "decision_basis": "Cross-domain context intentionally links reliability and security without assigning a false single owner."
+    },
+    {
+      "node_id": "azure-0072",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/72",
+        "original_node_id": "azure-0072"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Multi-target overlay maps redundancy, monitoring, failover and backup to their existing concepts."
+    },
+    {
+      "node_id": "azure-0073",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/73",
+        "original_node_id": "azure-0073"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [
+        "ms-security-pillar",
+        "ms-security-overview"
+      ],
+      "decision_basis": "The CIA security objectives are a stable security principle with substantial sourced content and deserve canonical ownership."
+    },
+    {
+      "node_id": "azure-0275",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/275",
+        "original_node_id": "azure-0275"
+      },
+      "proposed_rewrite": "Vereinfachte Lernanalogie: Region, Availability Zone und Region Pair beschreiben unterschiedliche Infrastrukturbegriffe. Ein Region Pair ist keine zusätzliche Zone und garantiert nicht automatisch die Replikation aller Dienste.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Approved multi-target learning overlay; analogy must be labelled as simplified and not treated as literal infrastructure semantics."
+    },
+    {
+      "node_id": "azure-0276",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/276",
+        "original_node_id": "azure-0276"
+      },
+      "proposed_rewrite": "Eine Azure Geography beschreibt eine Datenresidenzgrenze mit einer oder mehreren Regionen. Sie ist nicht zwingend mit genau einem Land oder Staat identisch.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "The artifact describes a real missing concept; current wording is inaccurate because a geography is a data-residency boundary, not necessarily a country or state."
+    },
+    {
+      "node_id": "azure-0336",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/336",
+        "original_node_id": "azure-0336"
+      },
+      "proposed_rewrite": "Azure Service Fabric ist eine Plattform für verteilte Anwendungen sowie die Orchestrierung von Prozessen und Containern. Der pauschale Titelzusatz Legacy/optional wird nicht als Produktstatus übernommen.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Current Microsoft documentation describes Service Fabric as an active distributed-systems platform; remove the unsupported Legacy/optional title qualifier."
+    },
+    {
+      "node_id": "azure-0337",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/337",
+        "original_node_id": "azure-0337"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Microsoft documents Service Fabric as a process/container orchestrator for scalable and reliable microservices."
+    },
+    {
+      "node_id": "azure-0338",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/338",
+        "original_node_id": "azure-0338"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Selective analogy belongs to the Service Fabric learning overlay and does not define taxonomy."
+    },
+    {
+      "node_id": "azure-0339",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/339",
+        "original_node_id": "azure-0339"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Cluster sizing and node planning are Service Fabric architecture concerns."
+    },
+    {
+      "node_id": "azure-0340",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/340",
+        "original_node_id": "azure-0340"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Node count is a cluster planning input, not a standalone taxonomy concept."
+    },
+    {
+      "node_id": "azure-0341",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/341",
+        "original_node_id": "azure-0341"
+      },
+      "proposed_rewrite": "Für einen Service-Fabric-Cluster sind Knotentypen, Kapazität sowie Durability- und Reliability-Anforderungen gemeinsam zu planen. Eine feste Knotenzahl allein beschreibt weder Lastverteilung noch Ausfallsicherheit vollständig.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Keep as planning context; rewrite to precise node types, capacity, durability and reliability requirements."
+    },
+    {
+      "node_id": "azure-0342",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/342",
+        "original_node_id": "azure-0342"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Multiple service instances can run across cluster nodes; the statement remains explanatory, not canonical."
+    },
+    {
+      "node_id": "azure-0343",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/343",
+        "original_node_id": "azure-0343"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Service Fabric partition replicas and instances provide availability; High Availability is a supporting cross-domain link."
+    },
+    {
+      "node_id": "azure-0344",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/344",
+        "original_node_id": "azure-0344"
+      },
+      "proposed_rewrite": "Service Fabric steuert intern Platzierung und Lastverteilung von Diensten. Eingehender Netzwerkverkehr ist davon zu unterscheiden; nicht jede interne Balancing-Funktion ist Azure Load Balancer.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Clarify internal placement/load reporting and external traffic distribution; do not equate all Service Fabric balancing with Azure Load Balancer."
+    },
+    {
+      "node_id": "azure-0345",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/345",
+        "original_node_id": "azure-0345"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Replica recovery and rebalancing are documented Service Fabric runtime behaviors."
+    },
+    {
+      "node_id": "azure-0346",
+      "claim_status": "DEPRECATE-CLAIM",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/346",
+        "original_node_id": "azure-0346"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "BLOCK-ACTIVE-FACT",
+      "original_source_ids": [],
+      "decision_basis": "AKS and Service Fabric overlap in some orchestration scenarios but are not a general predecessor/successor pair."
+    },
+    {
+      "node_id": "azure-0347",
+      "claim_status": "DEPRECATE-CLAIM",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/347",
+        "original_node_id": "azure-0347"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "BLOCK-ACTIVE-FACT",
+      "original_source_ids": [],
+      "decision_basis": "The analogy falsely frames Service Fabric as obsolete; retain only after neutral rewrite as a platform comparison."
+    },
+    {
+      "node_id": "azure-0348",
+      "claim_status": "SOURCE-REQUIRED",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/348",
+        "original_node_id": "azure-0348"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "BLOCK-ACTIVE-FACT",
+      "original_source_ids": [],
+      "decision_basis": "The broad internal-use examples are not sufficiently supported by the reviewed canonical sources; quarantine as unverified until sourced."
+    },
+    {
+      "node_id": "azure-0349",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/349",
+        "original_node_id": "azure-0349"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Approved multi-target learning explanation for the compute family; no new generic Compute node is required."
+    },
+    {
+      "node_id": "azure-0350",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/350",
+        "original_node_id": "azure-0350"
+      },
+      "proposed_rewrite": "Dieser Lernabschnitt vergleicht Compute-Angebote wie VM, App Service, Functions, ACI und AKS. Solutions bildet dafür keine einheitliche technische Gegenkategorie.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Solutions is undefined and the contrast is too broad; retain only as rewritten presentation copy."
+    },
+    {
+      "node_id": "azure-0441",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/441",
+        "original_node_id": "azure-0441"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Approved multi-target networking analogy anchored on Virtual Network and linked to connectivity/routing services."
+    },
+    {
+      "node_id": "azure-0746",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/746",
+        "original_node_id": "azure-0746"
+      },
+      "proposed_rewrite": "Azure SQL Database und Azure Cosmos DB stehen für unterschiedliche Datenmodelle und Betriebsentscheidungen. Database Migration Service unterstützt dokumentierte Quell-/Zielkombinationen und ist kein universeller Umsetzer beliebiger Datenmodelle.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Multi-target learning comparison is useful but must clarify that migration scope and database models are more nuanced."
+    },
+    {
+      "node_id": "azure-0764",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/764",
+        "original_node_id": "azure-0764"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Microsoft confirms Azure Data Lake Analytics retired on 2024-02-29; preserve ID/content without false redirect to one successor."
+    },
+    {
+      "node_id": "azure-0765",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/765",
+        "original_node_id": "azure-0765"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "The on-demand analytics job description remains valid historical learning content attached to the tombstone."
+    },
+    {
+      "node_id": "azure-0803",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/803",
+        "original_node_id": "azure-0803"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Microsoft states retirement is scheduled for 2027-06-28; keep a retiring/deprecated tombstone and no single-successor redirect."
+    },
+    {
+      "node_id": "azure-0804",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/804",
+        "original_node_id": "azure-0804"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "Lab environment creation is retained as historical service explanation."
+    },
+    {
+      "node_id": "azure-0907",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/907",
+        "original_node_id": "azure-0907"
+      },
+      "proposed_rewrite": "Authentifizierung (AuthN) prüft die Identität. Der historische Schreibfehler bleibt als Suchalias des vorhandenen AuthN-Knotens erhalten.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "azure-0903 Authentifizierung (AuthN) is the existing canonical leader; preserve the misspelled ID as a historical lookup redirect."
+    },
+    {
+      "node_id": "azure-0926",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/926",
+        "original_node_id": "azure-0926"
+      },
+      "proposed_rewrite": "Azure AD B2C und Microsoft Entra External ID sind getrennte Konzepte. External ID ist nicht lediglich ein neuer Name für B2C; der Vergleich gehört in einen gekennzeichneten Lifecycle- und Migrationskontext.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [
+        "ms-external-id"
+      ],
+      "decision_basis": "Microsoft explicitly states External ID is not merely a new name for B2C; preserve the comparison as lifecycle/migration context and propose two separate leaders."
+    },
+    {
+      "node_id": "azure-0941",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/941",
+        "original_node_id": "azure-0941"
+      },
+      "proposed_rewrite": "Microsoft Sentinel und Microsoft Defender XDR integrieren Sicherheitsdaten und Untersuchungsabläufe. Die Integration macht Sentinel nicht zum identischen Dienst oder bloßen Namen von Defender XDR.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Official documentation describes integration and unified operations, not identity as a component of the Defender XDR suite."
+    },
+    {
+      "node_id": "azure-0948",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/948",
+        "original_node_id": "azure-0948"
+      },
+      "proposed_rewrite": "Azure Information Protection bleibt als historischer, komponentenspezifischer Begriff erhalten. Der Übergang zu Purview Information Protection darf nicht als pauschale Einstellung sämtlicher AIP- und Azure-RMS-Funktionen beschrieben werden.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "AIP capabilities and Azure RMS persist in scoped form, while the standalone offer/client experience moved into Purview; preserve a scoped tombstone, not a blanket retirement claim."
+    },
+    {
+      "node_id": "azure-0949",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/949",
+        "original_node_id": "azure-0949"
+      },
+      "proposed_rewrite": "Klassifizierung, Labels und Informationsschutz sind vom historischen AIP-Client beziehungsweise Angebot zu unterscheiden. Aktuelle Information-Protection-Fähigkeiten und ältere Komponenten benötigen getrennte Lifecycle-Angaben.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "The classification/labeling/protection explanation remains useful but must distinguish AIP legacy components from current Purview capabilities."
+    },
+    {
+      "node_id": "azure-0950",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/950",
+        "original_node_id": "azure-0950"
+      },
+      "proposed_rewrite": "Microsoft Purview umfasst mehr als Information Protection. Microsoft Purview Information Protection ist der spezifische Bezug für Klassifizierung, Sensitivitätslabels und Informationsschutz.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Purview is a broader platform; this statement should link to the existing Purview node and a future specific Information Protection leader."
+    },
+    {
+      "node_id": "azure-0972",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/972",
+        "original_node_id": "azure-0972"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [
+        "ms-blueprints-retirement"
+      ],
+      "decision_basis": "Blueprints is in phased retirement through 2027-01-31; Deployment Stacks and Template Specs are complementary migration targets, not a single equivalent leader."
+    },
+    {
+      "node_id": "azure-0973",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/973",
+        "original_node_id": "azure-0973"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "The repeatable-resource-set explanation remains historical learning content attached to the Blueprints tombstone."
+    },
+    {
+      "node_id": "azure-0974",
+      "claim_status": "REWRITE",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/974",
+        "original_node_id": "azure-0974"
+      },
+      "proposed_rewrite": "Azure Blueprints bleibt historischer Governance- und Bereitstellungskontext. Policy, RBAC und ARM/Bicep sind eigenständige Bestandteile; komplementäre Migrationsmöglichkeiten sind keine identischen Nachfolger.",
+      "rewrite_status": "DRAFT-REQUIRES-APPROVAL",
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "REWRITE-APPROVAL-REQUIRED",
+      "original_source_ids": [],
+      "decision_basis": "Approved multi-target historical architecture context; clarify that Blueprints packaged governance/deployment artifacts and is being replaced by complementary capabilities."
+    },
+    {
+      "node_id": "azure-1018",
+      "claim_status": "DEPRECATE-CLAIM",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/1018",
+        "original_node_id": "azure-1018"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "BLOCK-ACTIVE-FACT",
+      "original_source_ids": [],
+      "decision_basis": "Latest user: unclear, no inferred successor."
+    },
+    {
+      "node_id": "azure-1056",
+      "claim_status": "SOURCE-REQUIRED",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/1056",
+        "original_node_id": "azure-1056"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "BLOCK-ACTIVE-FACT",
+      "original_source_ids": [],
+      "decision_basis": "The sentence describes a distinct real concept absent from the canonical set; propose a leader, retain Azure Migrate as an additional context, and do not create it automatically."
+    },
+    {
+      "node_id": "azure-1057",
+      "claim_status": "VALID",
+      "original_content_ref": {
+        "bundle": "V3.4-PHASE-2C-EVIDENCE/preservation.json",
+        "file": "Master-Brain/data/canonical/nodes.json",
+        "json_pointer": "/nodes/1057",
+        "original_node_id": "azure-1057"
+      },
+      "proposed_rewrite": null,
+      "rewrite_status": null,
+      "evidence": "V3.4-PHASE-2B.1-REVIEW-RESOLUTION.md / .csv",
+      "publication": "PRIOR-REVIEW-VALID",
+      "original_source_ids": [],
+      "decision_basis": "The existing Manageability und Cloud Operations node is the primary donor; management tools provide secondary context."
+    }
+  ]
+}

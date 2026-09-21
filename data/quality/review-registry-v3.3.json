@@ -1,0 +1,173 @@
+{
+  "schema_version": "3.3-overlay-1.0",
+  "status": "preparatory_overlay",
+  "base_version": "3.2",
+  "canonical_data_changed": false,
+  "purpose": "Dokumentiert geprüfte Qualitätskandidaten, ohne daraus eine Datenmigration abzuleiten.",
+  "review_types": [
+    "duplicate",
+    "contextual_reference",
+    "distinct"
+  ],
+  "status_values": [
+    "accepted_for_navigation_pilot",
+    "reviewed_not_activated",
+    "needs_human_review"
+  ],
+  "entries": [
+    {
+      "review_id": "V33-QR-001",
+      "review_type": "duplicate",
+      "source_node_ids": [
+        "azure-0005",
+        "azure-0265"
+      ],
+      "proposed_canonical_node_id": "azure-0005",
+      "reasoning": "Beide Knoten benennen Availability Set; azure-0005 ist der angereicherte Wissensknoten.",
+      "unique_content_risk": "medium",
+      "reference_impact": "Analogie und historischer Elternpfad von azure-0265 müssen erhalten bleiben.",
+      "confidence": 0.99,
+      "status": "accepted_for_navigation_pilot",
+      "source_findings": [
+        "QF-2026-0001"
+      ]
+    },
+    {
+      "review_id": "V33-QR-002",
+      "review_type": "duplicate",
+      "source_node_ids": [
+        "azure-0591",
+        "azure-0709"
+      ],
+      "proposed_canonical_node_id": "azure-0591",
+      "reasoning": "Titel und Redundanzkonzept RA-GRS sind identisch; der zweite Knoten ist ein kurzer Parallelpunkt.",
+      "unique_content_risk": "low",
+      "reference_impact": "Historischer Pfad bleibt bis zu einer separaten Migrationsfreigabe erhalten.",
+      "confidence": 0.99,
+      "status": "reviewed_not_activated",
+      "source_findings": [
+        "QF-2026-0002"
+      ]
+    },
+    {
+      "review_id": "V33-QR-003",
+      "review_type": "duplicate",
+      "source_node_ids": [
+        "azure-0605",
+        "azure-0715"
+      ],
+      "proposed_canonical_node_id": "azure-0605",
+      "reasoning": "Beide Knoten benennen AzCopy; azure-0715 ist ein leerer Parallelknoten.",
+      "unique_content_risk": "low",
+      "reference_impact": "Die alternative ID bleibt adressierbar.",
+      "confidence": 0.99,
+      "status": "reviewed_not_activated",
+      "source_findings": [
+        "QF-2026-0005"
+      ]
+    },
+    {
+      "review_id": "V33-QR-004",
+      "review_type": "contextual_reference",
+      "source_node_ids": [
+        "azure-0215",
+        "azure-0351"
+      ],
+      "proposed_canonical_node_id": "azure-0351",
+      "reasoning": "azure-0215 ist ein PaaS-Beispiel; azure-0351 ist der führende Produktknoten für Azure App Service.",
+      "unique_content_risk": "medium",
+      "reference_impact": "Der PaaS-Pfad bleibt als Lernkontext sichtbar.",
+      "confidence": 0.95,
+      "status": "accepted_for_navigation_pilot",
+      "source_findings": [
+        "QF-2026-0018"
+      ]
+    },
+    {
+      "review_id": "V33-QR-005",
+      "review_type": "contextual_reference",
+      "source_node_ids": [
+        "azure-0292",
+        "azure-0962"
+      ],
+      "proposed_canonical_node_id": "azure-0962",
+      "reasoning": "azure-0292 erwähnt Policy als ARM-Funktion; azure-0962 enthält das führende Produktwissen.",
+      "unique_content_risk": "medium",
+      "reference_impact": "Der ARM-Funktionskontext bleibt erhalten.",
+      "confidence": 0.97,
+      "status": "accepted_for_navigation_pilot",
+      "source_findings": [
+        "QF-2026-0011"
+      ]
+    },
+    {
+      "review_id": "V33-QR-006",
+      "review_type": "contextual_reference",
+      "source_node_ids": [
+        "azure-0653",
+        "azure-0731"
+      ],
+      "proposed_canonical_node_id": "azure-0731",
+      "reasoning": "azure-0653 nennt Azure SQL Database als Migrationsziel und benötigt keinen zweiten Produktleader.",
+      "unique_content_risk": "low",
+      "reference_impact": "Der Migrationsziel-Pfad bleibt erhalten.",
+      "confidence": 0.96,
+      "status": "reviewed_not_activated",
+      "source_findings": [
+        "QF-2026-0060"
+      ]
+    },
+    {
+      "review_id": "V33-QR-007",
+      "review_type": "contextual_reference",
+      "source_node_ids": [
+        "azure-0654",
+        "azure-0724"
+      ],
+      "proposed_canonical_node_id": "azure-0724",
+      "reasoning": "azure-0654 nennt Azure Cosmos DB als Migrationsziel und benötigt keinen zweiten Produktleader.",
+      "unique_content_risk": "low",
+      "reference_impact": "Der Migrationsziel-Pfad bleibt erhalten.",
+      "confidence": 0.96,
+      "status": "reviewed_not_activated",
+      "source_findings": [
+        "QF-2026-0016",
+        "QF-2026-0060"
+      ]
+    },
+    {
+      "review_id": "V33-QR-008",
+      "review_type": "distinct",
+      "source_node_ids": [
+        "azure-0442",
+        "azure-0864"
+      ],
+      "proposed_canonical_node_id": null,
+      "reasoning": "Virtual Network und Network Security Group sind unterschiedliche Azure-Konzepte mit einer Security-Beziehung.",
+      "unique_content_risk": "high",
+      "reference_impact": "Beide IDs und Fachrollen müssen getrennt bleiben.",
+      "confidence": 1.0,
+      "status": "accepted_for_navigation_pilot",
+      "source_findings": [
+        "QF-2026-0022"
+      ]
+    },
+    {
+      "review_id": "V33-QR-009",
+      "review_type": "distinct",
+      "source_node_ids": [
+        "azure-0566",
+        "azure-0657"
+      ],
+      "proposed_canonical_node_id": null,
+      "reasoning": "Die Knoten bilden Produkttaxonomie und historischen Lernast ab und besitzen damit unterschiedliche Navigationsrollen.",
+      "unique_content_risk": "high",
+      "reference_impact": "Beide Pfade bleiben erhalten; eine spätere Verbindung darf nur als Overlay erfolgen.",
+      "confidence": 0.9,
+      "status": "reviewed_not_activated",
+      "source_findings": [
+        "QF-2026-0021"
+      ]
+    }
+  ]
+}

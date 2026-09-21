@@ -308,6 +308,7 @@ summary {
 
 @media (hover: none) {
   .mode-switch button:active,
+  .mode-switch .mode-link:active,
   .toolbar button:active,
   .selection-card:active,
   .step-card:active,
@@ -320,5 +321,25 @@ summary {
     border-color: #62d2ff;
     background: #12334a;
     color: #fff;
+  }
+}
+
+/* Local V3.4 integration: five view entries fit into two mobile rows. */
+@media (max-width: 560px) {
+  .mode-switch {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .mode-switch .mode-link {
+    min-width: 0;
+    min-height: 44px;
+    padding: 7px 5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 350px) {
+  .mode-switch .mode-link {
+    font-size: 11px;
   }
 }

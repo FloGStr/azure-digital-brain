@@ -1,0 +1,119 @@
+{
+  "schema_version": "3.3-overlay-1.0",
+  "status": "preparatory_overlay",
+  "base_version": "3.2",
+  "canonical_data_changed": false,
+  "purpose": "Enthält ausschließlich kompakte, geprüfte Pilot-Aliase für bestehende führende Knoten.",
+  "policy": {
+    "target_must_exist": true,
+    "long_legacy_sentences_allowed": false,
+    "automatic_alias_generation": false,
+    "ambiguous_terms_require_selection": true,
+    "historical_terms_remain_labeled": true
+  },
+  "alias_types": [
+    "abbreviation",
+    "common_term",
+    "historical",
+    "inflection",
+    "spelling_variant"
+  ],
+  "aliases": [
+    {
+      "term": "Availability Sets",
+      "normalized_term": "availability sets",
+      "target_node_id": "azure-0005",
+      "alias_type": "inflection",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "Availability Set (VMs)",
+      "normalized_term": "availability set (vms)",
+      "target_node_id": "azure-0005",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "VM",
+      "normalized_term": "vm",
+      "target_node_id": "azure-0322",
+      "alias_type": "abbreviation",
+      "match_policy": "exact",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "Virtual Machine",
+      "normalized_term": "virtual machine",
+      "target_node_id": "azure-0322",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "Virtual Machines",
+      "normalized_term": "virtual machines",
+      "target_node_id": "azure-0322",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "App Service",
+      "normalized_term": "app service",
+      "target_node_id": "azure-0351",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "Azure App Services",
+      "normalized_term": "azure app services",
+      "target_node_id": "azure-0351",
+      "alias_type": "inflection",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "VNet",
+      "normalized_term": "vnet",
+      "target_node_id": "azure-0442",
+      "alias_type": "abbreviation",
+      "match_policy": "exact",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "Azure Virtual Network",
+      "normalized_term": "azure virtual network",
+      "target_node_id": "azure-0442",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "Azure AD",
+      "normalized_term": "azure ad",
+      "target_node_id": "azure-0904",
+      "alias_type": "historical",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "AAD",
+      "normalized_term": "aad",
+      "target_node_id": "azure-0904",
+      "alias_type": "historical",
+      "match_policy": "exact",
+      "status": "approved_for_v3.3_pilot"
+    },
+    {
+      "term": "Entra ID",
+      "normalized_term": "entra id",
+      "target_node_id": "azure-0904",
+      "alias_type": "common_term",
+      "match_policy": "phrase",
+      "status": "approved_for_v3.3_pilot"
+    }
+  ]
+}

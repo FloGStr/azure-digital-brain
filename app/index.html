@@ -2,12 +2,13 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
   <title>Azure Digital Brain</title>
   <meta name="description" content="Lokale Azure-Wissensplattform mit Mindmap, Knowledge Graph, Architecture Scenarios und geführten Lernpfaden.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="mobile-responsive.css?v=3.2.2">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=3.4-portfolio">
+  <link rel="stylesheet" href="mobile-responsive.css?v=3.4-portfolio">
 </head>
 <body>
   <div class="app-shell">
@@ -16,6 +17,7 @@
       <div class="mode-switch" role="tablist" aria-label="Ansichtsmodus">
         <button id="mindmapMode" class="active" role="tab" aria-selected="true">Mindmap</button>
         <button id="brainMode" role="tab" aria-selected="false">Brain</button>
+        <a id="brain3dMode" class="mode-link" href="../experiments/3d-brain/index.html" role="tab" aria-selected="false" aria-label="3D Brain öffnen">3D Brain</a>
         <button id="architectureMode" role="tab" aria-selected="false">Architecture</button>
         <button id="learningMode" role="tab" aria-selected="false">Lernen</button>
       </div>
@@ -74,7 +76,7 @@
         <section id="contextSummarySection" hidden><h2>Kontext</h2><div id="contextSummary" class="context-summary"></div></section>
         <section id="simpleSection"><h2>Kurz erklärt</h2><p id="detailShort">Die ursprüngliche AZ-900-Hierarchie bleibt vollständig erhalten. Der Brain-Modus ergänzt semantische Querverbindungen.</p></section>
         <section id="technicalSection"><h2>Technische Erklärung</h2><div id="detailTechnical" class="original-content">Lokale Wissensplattform · Local · Offline capable</div></section>
-        <section id="architectureSection" hidden><h2>Architektur-Relevanz</h2><div id="detailArchitecture" class="original-content"></div><div id="architectureContextList" class="architecture-context-list"></div></section>
+        <section id="architectureSection" hidden><h2>Architektur-Relevanz</h2><div id="detailArchitecture" class="original-content"></div><div id="architectureContextList" class="architecture-context-list" role="region" aria-label="Architecture-Kontext" aria-live="polite"></div></section>
         <section id="whySection" hidden><h2>Warum wichtig?</h2><p id="detailWhy"></p></section>
         <section id="examplesSection" hidden><h2>Beispiele</h2><div id="detailExamples" class="original-content"></div></section>
         <section id="memorySection" hidden><h2>Merksatz &amp; Analogie</h2><p id="detailMemory"></p></section>
@@ -84,7 +86,7 @@
           <select id="learningStatus" aria-label="Lernstatus"><option value="unbekannt">Unbekannt</option><option value="offen">Offen</option><option value="in-arbeit">In Arbeit</option><option value="verstanden">Verstanden</option><option value="wiederholen">Wiederholen</option></select>
         </section>
         <section id="relationsSection" hidden><h2>Verbindungen</h2><div id="relationList" class="relation-list"></div></section>
-        <section id="contextSection" hidden><h2>Lernpfad</h2><div id="contextList" class="context-list"></div></section>
+        <section id="contextSection" hidden><h2>Lernpfad</h2><div id="contextList" class="context-list" role="region" aria-label="Learning-Kontext" aria-live="polite"></div></section>
         <section id="sourcesSection" hidden><h2>Quellen</h2><div id="sourceList" class="source-list"></div></section>
         <details id="qualityDetails" class="quality-details" hidden><summary>Qualitätsinformationen</summary><div id="qualityContent"></div></details>
         <section id="notesSection" hidden><h2>Eigene Notizen</h2><textarea id="notes" rows="4" placeholder="Nur lokal in diesem Browser gespeichert …"></textarea></section>
@@ -102,11 +104,15 @@
   <noscript>Diese Anwendung benötigt JavaScript.</noscript>
   <script src="../data/runtime/release-runtime.js"></script>
   <script src="../data/runtime/knowledge-runtime.js"></script>
+  <script src="../data/knowledge-architecture/v3.4/runtime.js"></script>
   <script src="../data/runtime/architecture-runtime.js"></script>
   <script src="../data/runtime/learning-runtime.js"></script>
   <script src="../data/runtime/semantic-navigation-runtime.js"></script>
   <script src="../data/runtime/context-experience-runtime.js"></script>
+  <script src="../data/runtime/phase-3-feature-runtime.js"></script>
+  <script src="../data/runtime/cross-mode-runtime-v3.3.js"></script>
   <script src="semantic-navigation-core.js"></script>
+  <script src="cross-mode-context-core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

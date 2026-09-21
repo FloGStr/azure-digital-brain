@@ -1,0 +1,45 @@
+{
+  "schema_version": "3.3-cross-mode-runtime-manifest-1.0",
+  "release": "3.3-phase-3",
+  "generated_at": "2026-08-16T00:00:00.000Z",
+  "status": "PASS",
+  "feature_enabled": false,
+  "fallback": "v3.2-direct-maps",
+  "fail_closed": true,
+  "source_hashes": {
+    "phase22_index": "09a425a92347d55b08c1644bd91496463cb327fde9753a03be50344eb779c9fb",
+    "feature_flags": "ab489e8987ac5d7efca098f9e063a164e04f7abc10ec530c1e14ef63ef5fc6cc",
+    "canonical_nodes": "90b6fe19adb1944005c04ab7077d328a69ab31a9331dd4195211a51d8ea881ba",
+    "architecture_runtime": "3d9022859f44774e58f5ba7a58145b5035a1945e331bd4ee540077ede3ad81b0",
+    "learning_runtime": "3782c7caa640f394ecc7e2afb1bb7cde0b1838078b23e5b7c5d471a070bf5177"
+  },
+  "runtime": {
+    "file": "data/runtime/cross-mode-runtime-v3.3.js",
+    "sha256": "26e83859051d4404407ce88713fa7730dbd5b5dd58fb1dbaef934888ed0796cd",
+    "bytes": 579877,
+    "maximum_bytes": 1500000,
+    "node_count": 1058,
+    "architecture_context_count": 356,
+    "architecture_none_count": 702,
+    "learning_context_count": 441,
+    "learning_none_count": 617
+  },
+  "feature_runtime": {
+    "file": "data/runtime/phase-3-feature-runtime.js",
+    "sha256": "9419e6af1b9372b34f4e114a8933c5216e2899a27f9f4119ab3dd6331c1f4108",
+    "bytes": 274
+  },
+  "validation": {
+    "status": "PASS",
+    "nodes": 1058,
+    "index_nodes": 1058,
+    "scenarios": 5,
+    "learning_steps": 33
+  },
+  "invariants": {
+    "canonical_data_changed": false,
+    "automatic_relation_generation": false,
+    "automatic_open": false,
+    "productive_activation": false
+  }
+}

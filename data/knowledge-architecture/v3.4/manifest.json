@@ -1,0 +1,77 @@
+{
+  "schema_version": "3.4-migration-manifest-1.0",
+  "release": "3.4",
+  "status": "ACTIVE",
+  "source": "Review/V3.4-PHASE-2C-EVIDENCE/simulation.json",
+  "source_sha256": "9569eaac0af6316b2711eaac92413e930b13dc669c2e5b760bd07bee356cbafe",
+  "counts": {
+    "original_nodes": 1058,
+    "active_taxonomy_slots": 258,
+    "overlays": 771,
+    "aliases": 6,
+    "merge_redirects": 23,
+    "relations": 243,
+    "sources": 155,
+    "proposed_canonicals": 6,
+    "materialized_proposed_canonicals": 0
+  },
+  "guardrails": {
+    "original_records_unchanged": true,
+    "context_anchors_are_nodes": false,
+    "context_anchors_are_relations": false,
+    "proposed_canonicals_active": false,
+    "claim_quarantine_enforced": true
+  },
+  "production_validation": {
+    "validated_at": "2026-09-10",
+    "checks_pass": 26,
+    "checks_fail": 0,
+    "canonical_nodes_byte_identical": true,
+    "canonical_relations_byte_identical": true,
+    "canonical_sources_byte_identical": true,
+    "start_path_http_status": 200,
+    "visual_browser_check": "UNAVAILABLE-IN-AUTOMATION-ENVIRONMENT"
+  },
+  "files": {
+    "taxonomy.json": {
+      "sha256": "3f6a9839754d1ed79a57ab28689766f2e4b82770033845222dc6e14cf65451eb",
+      "bytes": 204584
+    },
+    "overlays.json": {
+      "sha256": "2c7fdd780751eef2b04d66d24b80647f1f32b4f03788fdcf4eca8fb8c43d86b5",
+      "bytes": 1091678
+    },
+    "id-resolution.json": {
+      "sha256": "a3c7ca3831a7c00bf5b1d811c5167d932595547035cba63d6c41dd50a11aec72",
+      "bytes": 5454813
+    },
+    "relation-projection.json": {
+      "sha256": "7672898a29a56f1fb624107d9e21288f2cb5db85fac93fefef1f42cfb7e9047c",
+      "bytes": 294562
+    },
+    "source-ledger.json": {
+      "sha256": "8f83252288718c62e54bf52b8d9cd66a2756dd78bb0db6ab1729b1586afe5a65",
+      "bytes": 158179
+    },
+    "merge-provenance.json": {
+      "sha256": "6c9d0b49e602a4ddcc73860359c0411305f7485943648d189617141447209928",
+      "bytes": 1230611
+    },
+    "claims.json": {
+      "sha256": "e4f3b573c74ef1727e5e32f57014e2c2b35ca4981a3176eff84511b16a490a42",
+      "bytes": 29837
+    },
+    "proposed-canonicals.json": {
+      "sha256": "20f51c26d92779dc24cffce07a010a584ce70feddd7c7fd283db8f68b82ab0cf",
+      "bytes": 6444
+    },
+    "original-structure.json": {
+      "sha256": "b9c9e7157de7139a203e0a4502b0cff8ff0998d0cd721c847b25fa5f2be261da",
+      "bytes": 649516
+    },
+    "runtime.js": {
+      "sha256": "cf49d13e0306781d4df4054efab30e9869628ac6a025b07f92a1647a5ca4124e",
+      "bytes": 1110071
+    }
+  }
+}

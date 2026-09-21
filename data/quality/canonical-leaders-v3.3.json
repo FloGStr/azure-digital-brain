@@ -1,0 +1,90 @@
+{
+  "schema_version": "3.3-overlay-1.0",
+  "status": "preparatory_overlay",
+  "base_version": "3.2",
+  "canonical_data_changed": false,
+  "purpose": "Definiert führende Navigationsknoten, ohne bestehende Knoten, IDs oder Hierarchie zu verändern.",
+  "policy": {
+    "exact_node_id_remains_addressable": true,
+    "semantic_links_prefer_leader": true,
+    "title_search_prefers_leader": true,
+    "silent_node_redirects": false,
+    "physical_merges_allowed": false,
+    "human_review_required_for_activation": true
+  },
+  "leaders": [
+    {
+      "term": "Availability Set",
+      "leader_node_id": "azure-0005",
+      "alternate_nodes": [
+        {
+          "node_id": "azure-0265",
+          "role": "duplicate_candidate",
+          "mapping_status": "accepted_for_navigation_pilot",
+          "preservation_note": "Analogie und historischer Elternpfad müssen bei einer späteren Migration erhalten bleiben."
+        }
+      ],
+      "review_status": "accepted_for_phase_1_overlay",
+      "source_findings": [
+        "QF-2026-0001"
+      ]
+    },
+    {
+      "term": "Azure Virtual Machines",
+      "leader_node_id": "azure-0322",
+      "alternate_nodes": [],
+      "review_status": "accepted_for_phase_1_overlay",
+      "source_findings": []
+    },
+    {
+      "term": "Azure App Service",
+      "leader_node_id": "azure-0351",
+      "alternate_nodes": [
+        {
+          "node_id": "azure-0215",
+          "role": "contextual_reference",
+          "mapping_status": "accepted_for_navigation_pilot",
+          "preservation_note": "Der PaaS-Beispielkontext bleibt unter seiner bestehenden ID und Position erhalten."
+        }
+      ],
+      "review_status": "accepted_for_phase_1_overlay",
+      "source_findings": [
+        "QF-2026-0018"
+      ]
+    },
+    {
+      "term": "Virtual Network",
+      "leader_node_id": "azure-0442",
+      "alternate_nodes": [],
+      "review_status": "accepted_for_phase_1_overlay",
+      "source_findings": [
+        "QF-2026-0022"
+      ]
+    },
+    {
+      "term": "Azure Policy",
+      "leader_node_id": "azure-0962",
+      "alternate_nodes": [
+        {
+          "node_id": "azure-0292",
+          "role": "contextual_reference",
+          "mapping_status": "accepted_for_navigation_pilot",
+          "preservation_note": "Der ARM-Funktionskontext bleibt unter seiner bestehenden ID und Position erhalten."
+        }
+      ],
+      "review_status": "accepted_for_phase_1_overlay",
+      "source_findings": [
+        "QF-2026-0011"
+      ]
+    },
+    {
+      "term": "Microsoft Entra ID",
+      "leader_node_id": "azure-0904",
+      "alternate_nodes": [],
+      "review_status": "accepted_for_phase_1_overlay",
+      "source_findings": [
+        "QF-2026-0029"
+      ]
+    }
+  ]
+}

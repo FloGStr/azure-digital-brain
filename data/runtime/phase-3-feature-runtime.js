@@ -1,0 +1,1 @@
+window.AZURE_PHASE3_FEATURES = {"schema_version":"3.3-phase-3-feature-flags-1.0","release":"3.3-phase-3","features":{"cross_mode_context":{"enabled":false,"fallback":"v3.2-direct-maps","fail_closed":true,"allow_query_force_disable":true,"allow_query_force_enable":false}}};

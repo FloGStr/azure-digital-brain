@@ -1,0 +1,203 @@
+{
+  "schema_version": "3.3-overlay-1.0",
+  "status": "schema_and_pilot_data_only",
+  "base_version": "3.2",
+  "canonical_data_changed": false,
+  "runtime_enabled": false,
+  "automatic_relation_generation": false,
+  "purpose": "Definiert den vorbereitenden Vertrag für nachvollziehbare Navigation von Wissensknoten zu Architecture und Learning.",
+  "resolution_types": {
+    "direct": "Der Ursprungsknoten wird vom Szenario oder Lernschritt ausdrücklich referenziert.",
+    "related": "Ein vorhandener Kontext ist über eine akzeptierte Relation oder enge Strukturkante nachvollziehbar erreichbar.",
+    "none": "Es existiert kein ausreichend belastbarer vorhandener Kontext."
+  },
+  "context_contract": {
+    "required_fields": [
+      "origin_node_id",
+      "target_mode",
+      "resolution",
+      "candidates",
+      "reason"
+    ],
+    "candidate_fields": [
+      "candidate_id",
+      "candidate_type",
+      "via_node_id",
+      "path",
+      "score",
+      "reason"
+    ],
+    "target_modes": [
+      "architecture",
+      "learning"
+    ]
+  },
+  "resolution_policy": {
+    "max_candidates": 3,
+    "minimum_related_score": 40,
+    "ranking": [
+      {
+        "signal": "direct_node_reference",
+        "score": 100,
+        "resolution": "direct"
+      },
+      {
+        "signal": "accepted_semantic_relation",
+        "score": 70,
+        "resolution": "related"
+      },
+      {
+        "signal": "direct_parent_or_child",
+        "score": 60,
+        "resolution": "related"
+      },
+      {
+        "signal": "two_hop_path_with_semantic_relation",
+        "score": 40,
+        "resolution": "related"
+      }
+    ],
+    "disallowed_as_automatic_evidence": [
+      "same_tags_only",
+      "same_domain_only",
+      "generic_sibling_path_only",
+      "unexplained_similarity_score"
+    ]
+  },
+  "pilot_contexts": [
+    {
+      "origin_node_id": "azure-0322",
+      "target_mode": "architecture",
+      "resolution": "direct",
+      "candidates": [
+        {
+          "candidate_id": "scenario-secure-web-application",
+          "candidate_type": "scenario",
+          "via_node_id": null,
+          "path": [
+            "azure-0322"
+          ],
+          "score": 100,
+          "reason": "Azure Virtual Machines wird im Szenario ausdrücklich als Application-Layer-Option referenziert."
+        },
+        {
+          "candidate_id": "scenario-cloud-migration",
+          "candidate_type": "scenario",
+          "via_node_id": null,
+          "path": [
+            "azure-0322"
+          ],
+          "score": 100,
+          "reason": "Azure Virtual Machines wird im Cloud-Migration-Szenario ausdrücklich referenziert."
+        }
+      ],
+      "reason": "Mehrere direkte Architecture-Kontexte sind vorhanden; die spätere UI muss eine Auswahl anzeigen."
+    },
+    {
+      "origin_node_id": "azure-0322",
+      "target_mode": "learning",
+      "resolution": "direct",
+      "candidates": [
+        {
+          "candidate_id": "learning-step-application-compute",
+          "candidate_type": "learning_step",
+          "via_node_id": null,
+          "path": [
+            "azure-0322"
+          ],
+          "score": 100,
+          "reason": "Der Lernschritt referenziert Azure Virtual Machines ausdrücklich."
+        },
+        {
+          "candidate_id": "learning-step-decision-compute",
+          "candidate_type": "learning_step",
+          "via_node_id": null,
+          "path": [
+            "azure-0322"
+          ],
+          "score": 100,
+          "reason": "Der Architekturentscheidungs-Lernschritt referenziert Azure Virtual Machines ausdrücklich."
+        }
+      ],
+      "reason": "Mehrere direkte Learning-Kontexte sind vorhanden; die spätere UI muss eine Auswahl anzeigen."
+    },
+    {
+      "origin_node_id": "azure-0005",
+      "target_mode": "architecture",
+      "resolution": "related",
+      "candidates": [
+        {
+          "candidate_id": "scenario-secure-web-application",
+          "candidate_type": "scenario",
+          "via_node_id": "azure-0322",
+          "path": [
+            "azure-0005",
+            "compute-rel-012",
+            "azure-0322"
+          ],
+          "score": 70,
+          "reason": "Availability Set ist über die akzeptierte Relation compute-rel-012 mit Azure Virtual Machines verbunden."
+        },
+        {
+          "candidate_id": "scenario-cloud-migration",
+          "candidate_type": "scenario",
+          "via_node_id": "azure-0322",
+          "path": [
+            "azure-0005",
+            "compute-rel-012",
+            "azure-0322"
+          ],
+          "score": 70,
+          "reason": "Der verwandte VM-Knoten besitzt einen direkten Cloud-Migration-Kontext."
+        }
+      ],
+      "reason": "Kein direkter Szenariobezug; belastbarer indirekter Bezug über Azure Virtual Machines."
+    },
+    {
+      "origin_node_id": "azure-0005",
+      "target_mode": "learning",
+      "resolution": "related",
+      "candidates": [
+        {
+          "candidate_id": "learning-step-application-compute",
+          "candidate_type": "learning_step",
+          "via_node_id": "azure-0322",
+          "path": [
+            "azure-0005",
+            "compute-rel-012",
+            "azure-0322"
+          ],
+          "score": 70,
+          "reason": "Der verbundene VM-Knoten wird im Application-Compute-Lernschritt direkt behandelt."
+        },
+        {
+          "candidate_id": "learning-step-decision-compute",
+          "candidate_type": "learning_step",
+          "via_node_id": "azure-0322",
+          "path": [
+            "azure-0005",
+            "compute-rel-012",
+            "azure-0322"
+          ],
+          "score": 70,
+          "reason": "Der verbundene VM-Knoten wird im Compute-Entscheidungs-Lernschritt direkt behandelt."
+        }
+      ],
+      "reason": "Kein direkter Lernpfadbezug; belastbarer indirekter Bezug über Azure Virtual Machines."
+    },
+    {
+      "origin_node_id": "azure-0605",
+      "target_mode": "architecture",
+      "resolution": "none",
+      "candidates": [],
+      "reason": "Für AzCopy ist im geprüften V3.2-Bestand kein ausreichend belastbarer Architecture-Kontext vorhanden."
+    },
+    {
+      "origin_node_id": "azure-0605",
+      "target_mode": "learning",
+      "resolution": "none",
+      "candidates": [],
+      "reason": "Für AzCopy ist im geprüften V3.2-Bestand kein ausreichend belastbarer Learning-Kontext vorhanden."
+    }
+  ]
+}

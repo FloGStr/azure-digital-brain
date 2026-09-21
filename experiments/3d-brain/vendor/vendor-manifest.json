@@ -1,0 +1,15 @@
+{
+  "package": "three",
+  "version": "0.185.1",
+  "revision": "185",
+  "license": "MIT",
+  "source": "npm package three@0.185.1",
+  "retrieved_at": "2026-08-16",
+  "package_sha256": "a2143f5bf978bd3470a51024b2b6bdd581913ba8f36ff1538d433f3a95adf2df",
+  "files": {
+    "three.r185.cjs.js": "a681da9aba775c1de422367863efda9e5638847e6e1fccc51ba57e8a8124fc07",
+    "THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+  },
+  "runtime_network_required": false,
+  "productive_dependency": false
+}

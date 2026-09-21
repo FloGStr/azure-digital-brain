@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.3-phase-2.1-node-roles-1.0",
+  "status": "test_policy_only",
+  "base_version": "3.2",
+  "runtime_enabled": false,
+  "canonical_data_changed": false,
+  "purpose": "Explizite und exakt erkennbare Präsentations- und Analogierollen für den isolierten Phase-2.1-Testresolver.",
+  "policy": {
+    "maximum_parent_edges": 4,
+    "parent_path_only": true,
+    "allow_children": false,
+    "allow_siblings": false,
+    "allow_tags": false,
+    "allow_domain": false,
+    "allow_text_similarity": false,
+    "allow_recursive_inheritance": false,
+    "allow_root_as_donor": false,
+    "inherited_resolution": "related",
+    "inherited_subtype": "indirect_parent_context",
+    "automatic_open": false
+  },
+  "exact_title_roles": [
+    {
+      "normalized_title": "merksatz",
+      "role": "presentation"
+    },
+    {
+      "normalized_title": "beispiel",
+      "role": "presentation"
+    },
+    {
+      "normalized_title": "analogie",
+      "role": "analogy"
+    },
+    {
+      "normalized_title": "funktion & aufbau",
+      "role": "presentation"
+    }
+  ],
+  "explicit_node_roles": [
+    {
+      "node_id": "azure-0414",
+      "role": "analogy",
+      "reason": "Geprüfte Container-Analogie mit frei formuliertem Titel."
+    },
+    {
+      "node_id": "azure-0193",
+      "role": "analogy",
+      "reason": "Geprüfte Azure-Arc-Analogie mit frei formuliertem Titel."
+    },
+    {
+      "node_id": "azure-0180",
+      "role": "presentation",
+      "reason": "Geprüfter Abschnittstitel Vorteile im Hybrid-Cloud-Ast."
+    },
+    {
+      "node_id": "azure-0367",
+      "role": "presentation",
+      "reason": "Geprüfter Abschnittstitel Features im App-Service-Ast."
+    }
+  ]
+}
