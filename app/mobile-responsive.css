@@ -605,3 +605,451 @@ summary {
     margin-bottom: 20px;
   }
 }
+
+/* Portfolio pass: compact navigation, readable canvases and touch-first content. */
+.brand-full {
+  display: none;
+}
+
+.brand-compact {
+  display: inline;
+}
+
+@media (min-width: 761px) and (max-width: 950px) {
+  .stage.mindmap-mode .legend,
+  .stage.mindmap-mode.networking-focus .legend,
+  .stage.brain-mode .legend {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    left: 14px;
+    right: 14px;
+    bottom: 48px;
+    width: auto;
+    max-width: none;
+    overflow-x: auto;
+    padding: 4px;
+    border: 1px solid #294258;
+    border-radius: 12px;
+    background: #071522ed;
+    box-shadow: 0 8px 22px #0007;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .stage.mindmap-mode .legend::-webkit-scrollbar,
+  .stage.brain-mode .legend::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stage.mindmap-mode .legend button,
+  .stage.brain-mode .legend button {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 42px;
+    padding: 8px 11px;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+
+  #learningView .selection-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+
+  #learningView .network-flow-entry {
+    flex: 0 0 min(360px, 72vw);
+    min-width: 0;
+    margin: 0;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --top: 184px;
+  }
+
+  .topbar {
+    grid-template-rows: 36px 88px 44px;
+    gap: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand strong {
+    font-size: 14px;
+  }
+
+  .mode-switch {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .mode-switch button,
+  .mode-switch .mode-link {
+    min-height: 42px;
+    border: 1px solid #294258;
+    background: #07111d;
+  }
+
+  .mode-switch button.active,
+  .mode-switch .mode-link.active {
+    border-color: #3f8db7;
+    background: #183f58;
+  }
+
+  .search-box {
+    height: 44px;
+  }
+
+  .search-box input,
+  .detail-panel input,
+  .detail-panel select,
+  .detail-panel textarea,
+  .ac-root input,
+  .ac-root select,
+  .ac-root textarea {
+    font-size: 16px;
+  }
+
+  .toolbar {
+    z-index: 10;
+  }
+
+  .stage.mindmap-mode .legend,
+  .stage.mindmap-mode.networking-focus .legend,
+  .stage.brain-mode .legend {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    left: 8px;
+    right: 8px;
+    bottom: 64px;
+    width: auto;
+    max-width: none;
+    max-height: 54px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px;
+    border: 1px solid #294258;
+    border-radius: 12px;
+    background: #071522f2;
+    box-shadow: 0 8px 22px #0008;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .stage.mindmap-mode .legend::-webkit-scrollbar,
+  .stage.brain-mode .legend::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stage.mindmap-mode .legend button,
+  .stage.brain-mode .legend button {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 44px;
+    padding: 7px 10px;
+    white-space: nowrap;
+    font-size: 10px;
+    scroll-snap-align: start;
+  }
+
+  .stage.mindmap-mode .stage-note,
+  .stage.brain-mode .stage-note {
+    left: 10px;
+    right: 10px;
+    bottom: 122px;
+    max-width: calc(100% - 20px);
+    padding: 5px 7px;
+    border-radius: 7px;
+    background: #071522d9;
+    pointer-events: none;
+  }
+
+  .brain-view-switch,
+  .mind-scope-switch {
+    top: 8px;
+    right: 8px;
+  }
+
+  .brain-view-switch button,
+  .mind-scope-switch button {
+    min-width: 48px;
+    min-height: 44px;
+  }
+
+  .detail-panel {
+    inset: auto 0 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: min(78dvh, 680px);
+    min-height: min(46dvh, 420px);
+    z-index: 12;
+    padding: 26px max(16px, env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    border-top: 1px solid #36566f;
+    border-left: 0;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -20px 50px #0009;
+    transform: translateY(calc(100% + 2px));
+    transition: transform .2s ease;
+  }
+
+  .detail-panel::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 42px;
+    height: 4px;
+    border-radius: 999px;
+    background: #58758b;
+    transform: translateX(-50%);
+  }
+
+  .detail-panel.open {
+    transform: none;
+  }
+
+  .detail-panel h1 {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+
+  .close-button {
+    position: sticky;
+    top: 0;
+    right: auto;
+    z-index: 2;
+    float: right;
+    margin: -12px -5px 2px 12px;
+    border: 1px solid #36566f;
+    border-radius: 50%;
+    background: #0b1b29f2;
+    color: #e8f5ff;
+  }
+
+  .context-mode-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #learningView .selection-list {
+    display: flex;
+    gap: 9px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  #learningView .selection-list::-webkit-scrollbar,
+  #learningView .network-flow-steps::-webkit-scrollbar {
+    display: none;
+  }
+
+  #learningView .network-flow-entry {
+    flex: 0 0 min(84vw, 310px);
+    min-width: 0;
+    margin: 0;
+    scroll-snap-align: start;
+  }
+
+  #learningView .network-flow-steps {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  #learningView .network-flow-steps button {
+    flex: 0 0 min(72vw, 270px);
+    min-height: 44px;
+    border: 1px solid #29475d;
+    border-radius: 8px;
+    scroll-snap-align: start;
+  }
+
+  .network-flow-main {
+    padding: 20px 14px calc(82px + env(safe-area-inset-bottom));
+  }
+
+  .network-flow-header h1 {
+    font-size: clamp(23px, 7.5vw, 28px);
+    line-height: 1.15;
+  }
+
+  .network-flow-header p,
+  .network-story p,
+  .learning-step p,
+  .learning-step li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .network-flow-actions {
+    align-items: stretch;
+  }
+
+  .network-flow-actions button,
+  .network-flow-actions .mindmap-action {
+    flex: 1 1 140px;
+    min-height: 44px;
+    margin-left: 0;
+  }
+
+  .ac-root {
+    padding: 18px 14px calc(74px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .ac-case-head {
+    position: static;
+    padding-top: 0;
+  }
+
+  .ac-steps {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    display: flex;
+    gap: 7px;
+    margin: 14px -6px;
+    padding: 7px 6px;
+    overflow-x: auto;
+    border-block: 1px solid #29465c;
+    background: #0b1928f7;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .ac-steps::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ac-root .ac-steps button {
+    flex: 0 0 142px;
+    min-height: 48px;
+    padding: 8px 10px;
+    scroll-snap-align: start;
+  }
+
+  .ac-steps button > span {
+    display: inline;
+    margin: 0 7px 0 0;
+    font-size: 14px;
+  }
+
+  .ac-root button,
+  .ac-root summary,
+  .ac-root form input,
+  .ac-root form select {
+    min-height: 44px;
+  }
+
+  .ac-root h1 {
+    font-size: 25px;
+  }
+
+  .ac-root h2 {
+    font-size: 21px;
+  }
+
+  .ac-root p,
+  .ac-root li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .ac-customer,
+  .ac-card,
+  .ac-options .ac-card,
+  .ac-hero,
+  .ac-diagram {
+    padding: 15px;
+  }
+
+  .ac-pagination > button,
+  .dm-decision-areas > button,
+  .dm-blockers button {
+    width: 100%;
+  }
+
+  .brain3d-viewport .node-label:not(.focus):not(.selected) {
+    display: none;
+  }
+
+  .brain3d-viewport .node-label b {
+    font-size: 11px;
+  }
+
+  .brain3d-viewport .node-label code,
+  .brain3d-viewport .cluster-label span {
+    font-size: 9px;
+  }
+
+  .brain3d-viewport .cluster-label {
+    min-width: 82px;
+    padding: 8px 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  :root {
+    --top: 180px;
+  }
+
+  .topbar {
+    grid-template-rows: 34px 86px 44px;
+  }
+
+  .brand strong {
+    font-size: 13px;
+  }
+
+  .mode-switch button,
+  .mode-switch .mode-link {
+    min-height: 41px;
+    font-size: 11px;
+  }
+
+  .detail-panel {
+    max-height: 84dvh;
+  }
+}
+
+@media (max-width: 560px) and (orientation: landscape) {
+  .detail-panel {
+    max-height: 90dvh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detail-panel,
+  .toolbar {
+    transition: none;
+  }
+}
+
+/* Keep every coarse-pointer gesture on the 3D canvas. The visual domain labels
+   remain keyboard accessible, while touch selection continues through the
+   matching raycast targets behind them. */
+@media (pointer: coarse) {
+  .brain3d-viewport,
+  #brain3dCanvas,
+  .brain3d-viewport .label-layer {
+    touch-action: none;
+  }
+
+  .brain3d-viewport .cluster-label {
+    pointer-events: none;
+  }
+}

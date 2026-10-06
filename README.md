@@ -1,6 +1,6 @@
-# Azure Digital Brain V3.4
+# Azure Knowledge & Architecture Platform
 
-Azure Digital Brain is an interactive, static web application for exploring structured Azure knowledge, guided learning paths, and architecture decisions. The current portfolio release combines five coordinated views in one browser-based interface:
+Azure Knowledge & Architecture Platform is an interactive, static web application for exploring structured Azure knowledge, guided learning paths, and architecture decisions. The current V3.4 portfolio release combines five coordinated views in one browser-based interface:
 
 - **Mindmap** for hierarchical knowledge exploration
 - **2D Brain** for relationship-focused navigation
