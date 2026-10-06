@@ -1,11 +1,12 @@
 {
   "meta": {
-    "count": 155,
-    "generated_at": "2026-08-11",
+    "count": 264,
+    "generated_at": "2026-09-24",
     "schema_version": "1.1",
     "canonical": true,
     "migrated_at": "2026-08-11",
-    "enrichment_version": "1.8"
+    "enrichment_version": "1.8",
+    "source_count": 264
   },
   "sources": [
     {
@@ -1247,6 +1248,878 @@
       "publisher": "Microsoft Learn",
       "accessed_at": "2026-08-11",
       "type": "official"
+    },
+    {
+      "id": "ms-virtual-wan",
+      "title": "What is Azure Virtual WAN?",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-nat-gateway",
+      "title": "What is Azure NAT Gateway?",
+      "url": "https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-dns-private-resolver",
+      "title": "Azure DNS Private Resolver overview",
+      "url": "https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-azcopy-v10",
+      "title": "Get started with AzCopy",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-storage-explorer",
+      "title": "Get started with Storage Explorer",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/storage-explorer/vs-azure-tools-storage-manage-with-storage-explorer",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-functions-overview",
+      "title": "Azure Functions overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-azure-monitor-autoscale",
+      "title": "Overview of autoscale in Azure Monitor",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-container-apps-overview",
+      "title": "Azure Container Apps overview",
+      "url": "https://learn.microsoft.com/en-us/azure/container-apps/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-acr-intro",
+      "title": "Introduction to Azure Container Registry",
+      "url": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-intro",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-data-stores-choice",
+      "title": "Prepare to choose a data store in Azure",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-stores-getting-started",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-cosmos-intro",
+      "title": "Introduction to Azure Cosmos DB",
+      "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-postgresql-overview",
+      "title": "What is Azure Database for PostgreSQL?",
+      "url": "https://learn.microsoft.com/en-us/azure/postgresql/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-mysql-overview",
+      "title": "What is Azure Database for MySQL flexible server?",
+      "url": "https://learn.microsoft.com/en-us/azure/mysql/flexible-server/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-sql-managed-instance-overview",
+      "title": "What is Azure SQL?",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-synapse-overview",
+      "title": "What is Azure Synapse Analytics?",
+      "url": "https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-fabric-overview",
+      "title": "What is Microsoft Fabric?",
+      "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-service-bus-overview",
+      "title": "What is Azure Service Bus?",
+      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-event-grid-overview",
+      "title": "Introduction to Azure Event Grid",
+      "url": "https://learn.microsoft.com/en-us/azure/event-grid/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-event-hubs-overview",
+      "title": "What is Azure Event Hubs?",
+      "url": "https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-apim-overview",
+      "title": "What is Azure API Management?",
+      "url": "https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-logic-apps-overview",
+      "title": "What is Azure Logic Apps?",
+      "url": "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-iot-hub-overview",
+      "title": "What is Azure IoT Hub?",
+      "url": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-concepts-and-iot-hub",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-iot-central-overview",
+      "title": "What is Azure IoT Central?",
+      "url": "https://learn.microsoft.com/en-us/azure/iot-central/core/overview-iot-central",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-messaging-options",
+      "title": "Asynchronous messaging options in Azure",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-entra-groups",
+      "title": "Groups in Microsoft Entra ID",
+      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/concept-learn-about-groups",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-external-identities-overview",
+      "title": "Microsoft Entra External ID overview",
+      "url": "https://learn.microsoft.com/en-us/entra/external-id/external-identities-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-b2c-deployment",
+      "title": "Azure AD B2C deployment plans",
+      "url": "https://learn.microsoft.com/en-us/entra/architecture/b2c-deployment-plans",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-sentinel-overview",
+      "title": "What is Microsoft Sentinel?",
+      "url": "https://learn.microsoft.com/en-us/azure/sentinel/sentinel-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-23",
+      "type": "official"
+    },
+    {
+      "id": "ms-resource-providers",
+      "title": "Azure resource providers and types",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official"
+    },
+    {
+      "id": "ms-resource-graph",
+      "title": "Overview of Azure Resource Graph",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official"
+    },
+    {
+      "id": "ms-landing-zone-overview",
+      "title": "What is an Azure landing zone?",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official"
+    },
+    {
+      "id": "ms-finops-overview",
+      "title": "What is FinOps?",
+      "url": "https://learn.microsoft.com/en-us/cloud-computing/finops/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-cost-reporting",
+      "title": "Get started with Cost Management reporting",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/reporting-get-started",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-cost-budgets",
+      "title": "Create and manage budgets",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-cost-billing-overview",
+      "title": "What is Microsoft Billing?",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-savings-plan-overview",
+      "title": "What are savings plans?",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/savings-plan/savings-plan-compute-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-reservations-overview",
+      "title": "Save with Azure reservations",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-waf-cost-checklist",
+      "title": "Cost Optimization design review checklist",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/checklist",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-advisor-cost",
+      "title": "Azure Advisor cost recommendations",
+      "url": "https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-cost-docs",
+      "title": "Cost Management documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-reliability-principles-2026",
+      "title": "Reliability design principles",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/principles",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-azure-backup-overview-2026",
+      "title": "What is Azure Backup?",
+      "url": "https://learn.microsoft.com/en-us/azure/backup/backup-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-backup-vault-types-2026",
+      "title": "Azure Backup: Recovery Services vault and Backup vault",
+      "url": "https://learn.microsoft.com/en-us/azure/backup/backup-azure-backup-faq",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-resiliency-overview-2026",
+      "title": "What is Resiliency in Azure?",
+      "url": "https://learn.microsoft.com/en-us/azure/resiliency/resiliency-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-reliability-testing-2026",
+      "title": "Architecture strategies for designing a reliability testing strategy",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/reliability-test",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-regions-zones-2026",
+      "title": "Using availability zones and regions",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/resiliency/regions-availability-zones",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-site-recovery-reliability-2026",
+      "title": "Reliability in Azure Site Recovery",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/reliability-site-recovery",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-chaos-studio-2026",
+      "title": "What is Azure Chaos Studio?",
+      "url": "https://learn.microsoft.com/en-us/azure/chaos-studio/chaos-studio-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-caf-migration-strategy-2026",
+      "title": "Select cloud migration strategies",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-caf-modernization-2026",
+      "title": "Plan cloud modernization",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/modernize/plan-cloud-modernization",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-migrate-assessment-2026",
+      "title": "Azure Migrate assessment overview",
+      "url": "https://learn.microsoft.com/en-us/azure/migrate/concepts-overview?view=migrate",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-migrate-waves-2026",
+      "title": "Plan and create migration waves",
+      "url": "https://learn.microsoft.com/en-us/azure/migrate/how-to-plan-create-waves?view=migrate",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-caf-prepare-workloads-2026",
+      "title": "Prepare workloads for cloud migration",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/prepare-workloads-cloud",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-dms-tools-2026",
+      "title": "Database migration tools matrix",
+      "url": "https://learn.microsoft.com/en-us/azure/dms/dms-tools-matrix",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-migrate-webapps-2026",
+      "title": "Web app assessment with Azure Migrate",
+      "url": "https://learn.microsoft.com/en-us/azure/migrate/create-web-app-assessment",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-storage-mover-2026",
+      "title": "Azure Storage Mover overview",
+      "url": "https://learn.microsoft.com/en-us/azure/storage-mover/service-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-overview-2026",
+      "title": "What is DevOps?",
+      "url": "https://learn.microsoft.com/en-us/devops/what-is-devops",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-ci-2026",
+      "title": "Use continuous integration",
+      "url": "https://learn.microsoft.com/en-us/devops/develop/what-is-continuous-integration",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-cd-2026",
+      "title": "What is continuous delivery?",
+      "url": "https://learn.microsoft.com/en-us/devops/deliver/what-is-continuous-delivery",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-suite-2026",
+      "title": "What is Azure DevOps?",
+      "url": "https://learn.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-bicep-2026",
+      "title": "What is Bicep?",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-bicep-faq-2026",
+      "title": "Bicep frequently asked questions",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/frequently-asked-questions",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-terraform-2026",
+      "title": "Comparing Terraform and Bicep",
+      "url": "https://learn.microsoft.com/en-us/azure/developer/terraform/get-started/comparing-terraform-and-bicep",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-arm-template-2026",
+      "title": "ARM template overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-automation-2026",
+      "title": "Azure Automation overview",
+      "url": "https://learn.microsoft.com/en-us/azure/automation/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-hybrid-2026",
+      "title": "Run Azure Automation runbooks on a Hybrid Runbook Worker",
+      "url": "https://learn.microsoft.com/en-us/azure/automation/automation-hrw-run-runbooks",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-state-2026",
+      "title": "Migrate Azure Automation State Configuration to machine configuration",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/machine-configuration/whats-new/migrating-from-azure-automation",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-update-2026",
+      "title": "Azure Update Manager overview",
+      "url": "https://learn.microsoft.com/en-us/azure/update-manager/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-ade-2026",
+      "title": "Azure Deployment Environments maintenance mode",
+      "url": "https://learn.microsoft.com/en-us/azure/deployment-environments/maintenance-mode",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-azd-2026",
+      "title": "Azure Developer CLI full-stack deployment",
+      "url": "https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/full-stack-deployment",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-stacks-2026",
+      "title": "Azure deployment stacks overview",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deployment-stacks",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-ado-wif-2026",
+      "title": "Azure Resource Manager service connections",
+      "url": "https://learn.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-gh-actions-2026",
+      "title": "GitHub Actions quickstart",
+      "url": "https://docs.github.com/en/actions/get-started/quickstart",
+      "publisher": "GitHub Docs",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-gh-env-2026",
+      "title": "GitHub deployment environments",
+      "url": "https://docs.github.com/en/actions/concepts/workflows-and-actions/deployment-environments",
+      "publisher": "GitHub Docs",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-gh-oidc-2026",
+      "title": "Configure OpenID Connect in Azure",
+      "url": "https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-azure",
+      "publisher": "GitHub Docs",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-cli-2026",
+      "title": "Azure CLI overview",
+      "url": "https://learn.microsoft.com/en-us/cli/azure/what-is-azure-cli",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-devops-ps-2026",
+      "title": "Azure PowerShell overview",
+      "url": "https://learn.microsoft.com/en-us/powershell/azure/what-is-azure-powershell",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-foundry-2026",
+      "title": "What is Microsoft Foundry?",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-foundry-ga-2026",
+      "title": "Microsoft Foundry portal general availability",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/general-availability",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-foundry-models-2026",
+      "title": "Microsoft Foundry Models overview",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/foundry-models-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-foundry-openai-2026",
+      "title": "Upgrade Azure OpenAI to Microsoft Foundry",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/how-to/upgrade-azure-openai",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-foundry-agents-2026",
+      "title": "What is Microsoft Foundry Agent Service?",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-foundry-tools-2026",
+      "title": "What are Foundry Tools?",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/what-are-ai-services",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-aml-2026",
+      "title": "What is Azure Machine Learning?",
+      "url": "https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-rai-2026",
+      "title": "What is Responsible AI?",
+      "url": "https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-ai-observability-2026",
+      "title": "Observability in generative AI",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/observability",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-rag-2026",
+      "title": "Design and develop a RAG solution",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-search-2026",
+      "title": "Introduction to Azure AI Search",
+      "url": "https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-search-semantic-2026",
+      "title": "Semantic ranking overview",
+      "url": "https://learn.microsoft.com/en-us/azure/search/semantic-search-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-search-faq-2026",
+      "title": "Azure AI Search FAQ",
+      "url": "https://learn.microsoft.com/en-us/azure/search/search-faq-frequently-asked-questions",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-doc-intel-2026",
+      "title": "Azure Document Intelligence FAQ",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/faq?view=doc-intel-4.0.0",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-content-safety-2026",
+      "title": "What is Azure AI Content Safety?",
+      "url": "https://learn.microsoft.com/en-us/azure/cognitive-services/content-safety/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-stream-analytics-2026",
+      "title": "Introduction to Azure Stream Analytics",
+      "url": "https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-databricks-2026",
+      "title": "What is Azure Databricks?",
+      "url": "https://learn.microsoft.com/en-us/azure/databricks/introduction/",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-adx-2026",
+      "title": "What is Azure Data Explorer?",
+      "url": "https://learn.microsoft.com/en-us/azure/data-explorer/data-explorer-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-adf-2026",
+      "title": "Introduction to Azure Data Factory",
+      "url": "https://learn.microsoft.com/en-us/azure/data-factory/introduction",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-ai-language-migrate-2026",
+      "title": "Migrate from LUIS or QnA Maker to Azure Language",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/language-service/concepts/migrate",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-cloud-2026",
+      "title": "What is cloud computing",
+      "url": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-models-2026",
+      "title": "Define cloud models",
+      "url": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-consumption-2026",
+      "title": "Describe the consumption-based model",
+      "url": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/6-describe-consumption-based-model",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-responsibility-2026",
+      "title": "Shared responsibility in the cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-regions-2026",
+      "title": "What are Azure regions?",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/regions-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-zones-2026",
+      "title": "What are availability zones?",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-pairs-2026",
+      "title": "Azure region pairs and nonpaired regions",
+      "url": "https://learn.microsoft.com/en-us/azure/reliability/regions-paired",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-region-select-2026",
+      "title": "Select Azure regions",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/regions",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-hybrid-2026",
+      "title": "Unified hybrid and multicloud operations",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-local-2026",
+      "title": "What is Azure Local?",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-local/overview",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-serverless-2026",
+      "title": "Architecture best practices for Azure Functions",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-functions",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
+    },
+    {
+      "id": "ms-found-lifecycle-2026",
+      "title": "Infrastructure lifecycle FAQ - Azure",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/faq/azure-infrastructure",
+      "publisher": "Microsoft Learn",
+      "accessed_at": "2026-09-24",
+      "type": "official_documentation"
     }
   ]
 }

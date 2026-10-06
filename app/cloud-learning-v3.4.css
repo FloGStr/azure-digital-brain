@@ -1,0 +1,86 @@
+.cloud-learning .content-sidebar{padding:23px 16px}
+.cloud-learning .content-sidebar h1{font-size:17px}
+.cloud-learning .content-sidebar>p{margin-bottom:14px}
+.cloud-learning .cloud-next-module{border-color:#31566d;background:#0d2535;margin-bottom:13px}
+.cloud-learning .network-flow-stage{display:grid;gap:12px}
+.cloud-system,.cloud-decision,.cloud-responsibility{border:1px solid #315267;border-radius:12px;background:#0b2030;padding:14px}
+.cloud-system{background:radial-gradient(circle at 55% 45%,#123047,#0b2030 80%)}
+.cloud-system-head,.cloud-section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.cloud-system-head b,.cloud-section-title span{color:#d7edf7;font-size:12px}
+.cloud-system-head span{font-size:10px;color:#d7bd80;font-weight:700}
+.cloud-system.overview .cloud-system-head span{color:#a6d5e8}
+.cloud-demand-story{display:grid;gap:6px;margin-bottom:12px;padding:10px 12px;border:1px solid #35576b;border-radius:9px;background:#0d2738}
+.cloud-demand-row{display:grid;grid-template-columns:105px minmax(100px,1fr) 95px;gap:10px;align-items:center;min-width:0}
+.cloud-demand-row b{color:#cbe5ef;font-size:10px}
+.cloud-demand-row span{color:#9cbdcc;font-size:10px;text-align:right}
+.cloud-load-bars{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:end;gap:4px;height:31px;border-bottom:1px solid #44677b}
+.cloud-load-bars i{display:block;width:100%;max-width:27px;justify-self:center;border-radius:2px 2px 0 0;background:#5badd0}
+.cloud-load-bars i.fixed{background:#436f89;opacity:.8}
+.cloud-load-bars i.adjustable,.cloud-load-bars i.peak{background:#c9ad72}
+.cloud-demand-story.step-3{border-color:#9a8359}
+.cloud-demand-consequence{margin:4px 0 0;padding-top:7px;border-top:1px solid #315267;color:#b9d6e2;font-size:10px;line-height:1.4}
+.cloud-demand-consequence b{color:#e0c88d}
+.cloud-system-grid{display:grid;grid-template-columns:minmax(140px,1fr) 105px minmax(230px,1.65fr);gap:9px;align-items:center}
+.cloud-card{min-height:94px;border:1px solid #437c98;border-radius:10px;background:#113247;padding:12px;display:flex;flex-direction:column;justify-content:center;gap:5px;color:#dceef5}
+.cloud-card small,.cloud-responsibility small{color:#88b8ce;font-size:10px}
+.cloud-card b{font-size:14px}
+.cloud-card>span{color:#a8c6d5;font-size:11px}
+.cloud-app{min-height:151px}
+.cloud-infrastructure{display:grid;gap:8px}
+.cloud-owned{opacity:.76}
+.cloud-system-grid:has(.cloud-provider) .cloud-owned{min-height:74px;opacity:.62}
+.cloud-provider{min-height:90px}
+.cloud-card.focused,.cloud-decision.focused,.cloud-capacity.focused,.cloud-responsibility.focused{border-color:#c9ad72;background:#243848;box-shadow:inset 0 0 0 1px #c9ad7244}
+.cloud-owned.focused{opacity:1}
+.cloud-link{text-align:center;color:#87c9e8}
+.cloud-link span{display:block;font-size:30px;line-height:1}
+.cloud-link small{display:block;font-size:9px;line-height:1.25}
+.cloud-link.cloud{color:#cdb579}
+.cloud-demand{display:flex;align-items:end;gap:5px;height:26px;margin-top:5px}
+.cloud-demand i{display:block;flex:1;max-width:16px;border-radius:2px 2px 0 0;background:#4d9ac0;height:10px}
+.cloud-demand i:nth-child(2),.cloud-demand i:nth-child(6){height:16px}
+.cloud-demand i:nth-child(3),.cloud-demand i:nth-child(4){height:25px}
+.cloud-demand i:nth-child(5){height:19px}
+.cloud-core-entity,.cloud-capacity-entity,.cloud-section-entity,.cloud-model-entity,.cloud-service-heading,.cloud-responsibility-entity{cursor:pointer;border:1px solid #4a9cbe;border-radius:7px;background:#173e54;color:#e6f5fa;padding:6px 8px;text-align:left;font-size:11px;font-weight:700}
+.cloud-core-entity{width:max-content;max-width:100%;font-size:13px}
+.cloud-core-entity:hover,.cloud-capacity-entity:hover,.cloud-section-entity:hover,.cloud-model-entity:hover,.cloud-service-heading:hover,.cloud-responsibility-entity:hover,.cloud-learning [data-cloud-entity].selected{border-color:#d9c28b;background:#345267;color:#fff3d9}
+.cloud-capacity{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:10px;border:1px solid #315267;border-radius:9px;padding:10px;background:#102a3c}
+.cloud-capacity-label{display:grid;gap:3px}
+.cloud-capacity b{font-size:11px;color:#ddedf3}
+.cloud-capacity span{font-size:10px;color:#a5c5d4}
+.cloud-capacity-line{display:flex;align-items:end;gap:3px;height:20px;min-width:75px}
+.cloud-capacity-line i{display:block;width:13px;height:8px;background:#b8a16d;border-radius:2px}
+.cloud-capacity-line i:nth-child(2),.cloud-capacity-line i:nth-child(3){height:19px}
+.cloud-capacity-line i:nth-child(4){height:12px}
+.cloud-capacity-entity{margin-left:auto}
+.cloud-section-entity{font-size:10px;white-space:nowrap}
+.cloud-deployment-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.cloud-service-intro{font-size:10px;color:#b9d1dc;margin:0 0 10px}
+.cloud-model{display:flex;flex-direction:column;gap:6px;min-width:0;border:1px solid #345b71;border-radius:9px;background:#102c3e;padding:10px}
+.cloud-decision.focused .cloud-model{border-color:#947f58}
+.cloud-model-picture{color:#c6dfeb;font-size:10px;min-height:19px}
+.cloud-model-entity{text-align:center}
+.cloud-model small{color:#9ebdcc;font-size:10px;text-align:center}
+.cloud-service-grid{display:grid;grid-template-columns:1.35fr repeat(3,minmax(0,1fr));gap:7px}
+.cloud-service-labels,.cloud-service-column{display:grid;grid-template-rows:42px 27px repeat(4,35px);gap:5px;min-width:0}
+.cloud-service-labels b{grid-row:1/3;display:flex;align-items:end;color:#a8d4e6;font-size:11px;padding:5px}
+.cloud-service-labels span{display:flex;align-items:center;font-size:10px;color:#c2d9e3;padding:4px 6px;border-bottom:1px solid #27475a}
+.cloud-service-heading{text-align:center;font-size:13px}
+.cloud-service-column>small{color:#9cbccb;text-align:center;font-size:9px;line-height:1.2}
+.cloud-owner{display:flex;align-items:center;justify-content:center;border:1px solid #315972;border-radius:5px;background:#17374b;color:#d6edf7;font-size:10px}
+.cloud-owner.customer{border-color:#607d8f;background:#263b4a;color:#e4f0f5}
+.cloud-owner.responsibility-focus{border-color:#c9ad72;background:#3b4139;color:#ffedbd}
+.cloud-mobile-layer{display:none}
+.cloud-model-footnote{margin:10px 0 0;color:#9db8c7;font-size:10px}
+.cloud-responsibility{display:flex;align-items:center;gap:15px}
+.cloud-responsibility>div{display:grid;gap:4px;flex:0 0 205px}
+.cloud-responsibility p{margin:0;color:#c7dce5;font-size:11px;line-height:1.45}
+.cloud-azure-bridge{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0;padding:10px 13px;border-left:2px solid #69afcf;color:#c7e4f1;font-size:11px}
+.cloud-azure-bridge span{display:inline-flex;gap:4px;align-items:baseline}
+.cloud-azure-bridge b{color:#e0f3fb}
+.cloud-azure-bridge i{font-style:normal;color:#6eb8d6}
+.cloud-system.overview .cloud-card,.cloud-system.overview .cloud-capacity,.cloud-learning .cloud-system.overview [data-cloud-entity],.cloud-learning .cloud-system.overview .cloud-link{border-color:#4b93b4;background:#12364c;color:#dceef5;box-shadow:none}
+.cloud-system.overview .cloud-capacity-line i{background:#5da9ce}
+.cloud-learning .cloud-system.overview .cloud-owned{opacity:.76}
+@media(max-width:900px){#learningView:not(.network-learning):not(.cloud-learning) .network-flow-entry{flex:0 0 210px;min-width:210px;align-self:stretch}.cloud-learning .selection-list{display:block;overflow:visible}.cloud-learning .network-flow-entry{height:auto;min-width:0;max-width:none;margin-bottom:12px}.cloud-learning .network-flow-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px}.cloud-system-grid{grid-template-columns:minmax(110px,1fr) 58px minmax(150px,1.4fr)}.cloud-link small{font-size:8px}.cloud-responsibility{flex-direction:column;align-items:stretch}.cloud-responsibility>div{flex:auto}}
+@media(max-width:600px){.cloud-demand-row{grid-template-columns:72px minmax(90px,1fr) 72px;gap:5px}.cloud-demand-row b,.cloud-demand-row span{font-size:9px}.cloud-load-bars{gap:2px}.cloud-system-grid{grid-template-columns:1fr}.cloud-link span{transform:rotate(90deg)}.cloud-link small{margin-top:5px}.cloud-deployment-options{grid-template-columns:1fr}.cloud-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.cloud-service-labels{display:none}.cloud-mobile-layer{display:block;font-size:8px;font-weight:400;margin-left:4px}.cloud-owner{display:block;text-align:center;padding:3px}.cloud-service-column{grid-template-rows:42px 35px repeat(4,45px)}.cloud-capacity-entity{margin-left:0}}

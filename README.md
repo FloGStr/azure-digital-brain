@@ -1,170 +1,93 @@
 # Azure Digital Brain V3.4
 
-Die aktuelle Portfolio-Version verbindet fünf Ansichten: Mindmap, 2D Brain, 3D Brain, Architecture und Lernen. Die V3.4-Wissensarchitektur ergänzt die bestehende kanonische Wissensbasis, ohne deren 1.058 Nodes, 243 Relationen oder 155 Quellen zu verändern.
+Azure Digital Brain is an interactive, static web application for exploring structured Azure knowledge, guided learning paths, and architecture decisions. The current portfolio release combines five coordinated views in one browser-based interface:
 
-- [Live-Demo starten](https://flogstr.github.io/azure-digital-brain/START.html)
-- [3D Brain direkt öffnen](https://flogstr.github.io/azure-digital-brain/experiments/3d-brain/index.html)
+- **Mindmap** for hierarchical knowledge exploration
+- **2D Brain** for relationship-focused navigation
+- **3D Brain** for an alternative spatial view of the knowledge graph
+- **Learning** for six guided, context-linked chapters
+- **Architecture** for discovery, readiness, option comparison, trade-offs, and decision documentation
 
-`START.html` kann außerdem direkt per Doppelklick geöffnet werden; Installation und Server sind für die Nutzung nicht erforderlich. Die historische V3.2-Dokumentation bleibt in `README-V3.2.md` erhalten.
+[Open the live demo](https://flogstr.github.io/azure-digital-brain/START.html) · [Open the 3D view](https://flogstr.github.io/azure-digital-brain/app/index.html#mode=brain&renderer=3d)
 
----
+## Current reference scope
 
-## Historische Projektdokumentation bis V1.8
+| Area | Current scope |
+| --- | ---: |
+| Brain | 239 entities, 211 relations, 0 orphan references |
+| Learning | 6 chapters, 39 steps, 98 primary anchors, 76 focus targets |
+| Legacy learning paths | 5 paths, 33 steps |
+| Architecture | V1, Case 01, 6-step decision workflow |
 
-Offline-Wissensplattform mit hierarchischer Mindmap, semantischem Knowledge Graph und einer stabilisierten, KI-fähigen Wissensarchitektur.
+Learning and Architecture V1 are frozen reference areas with completed human review. The application is a portfolio demonstrator and learning system, not a production deployment template or automated Azure assessment service.
 
-## Start auf dem Mac
+## How the application is structured
 
-1. `START.html` doppelklicken.
-2. Safari, Chrome oder Firefox auswählen.
-3. Es ist keine Installation und kein Server erforderlich.
-
-## Technische Basis V1.1
-
-- eine einzige kanonische Wissensquelle unter `data/canonical/`
-- 1.058 vollständig erhaltene Originalknoten und stabile IDs
-- 27 migrierte semantische Beziehungen
-- zentrales Register mit gerichteten Beziehungstypen und Gegenrichtungen
-- drei vorbereitete Erklärungsebenen: einfach, technisch, Architektur
-- klare Trennung von Fachwissen und persönlichen Daten
-- versioniertes Benutzerprofil mit Export und Import
-- validierter Runtime-Build, der die kanonischen Daten niemals verändert
-- prüfbarer Vorschlagsstatus für eine spätere KI-Integration
-
-## Networking-Pilot V1.2
-
-V1.2 verändert die stabile Architektur nicht. Der Pilot reichert 33 vorhandene Networking-Knoten mit einfachen, technischen und architektonischen Erklärungen, Beispielen, ausgewählten Merksätzen/Analogien und offiziellen Microsoft-Quellen an. 29 neue geprüfte Beziehungen ergänzen den Knowledge Graph; insgesamt enthält das Paket 56 Beziehungen und 28 Quellen.
-
-Die Anreicherung ist in `tools/enrich-networking-v1.2.mjs` reproduzierbar dokumentiert. Der Ergebnis- und Qualitätsbericht liegt unter `reports/networking-enrichment-v1.2.md`.
-
-## Content Standard und Identity-Pilot V1.3
-
-V1.3 führt mit `reports/content-standard-v1.md` einen verbindlichen Redaktionsstandard ein. 36 vorhandene Identity-Knoten wurden danach mit 108 Erklärungstexten, realen Beispielen, Merksätzen und offiziellen Microsoft-Quellen angereichert. 35 neue Identity-Beziehungen erweitern den Graph auf insgesamt 91 Beziehungen.
-
-Der Identity-Pilot ist in `tools/enrich-identity-v1.3.mjs` reproduzierbar. Auswertung, QA und Vergleich mit Networking stehen unter `reports/identity-enrichment-v1.3.md`.
-
-## Compute & Architecture Enrichment Pilot V1.4
-
-V1.4 modelliert Compute als Architektur-Brücke zu Networking, Identity, Security und Monitoring. 38 vorhandene Knoten wurden nach Content Standard V1.0 mit 114 Erklärungsebenen, Praxisbeispielen und Merksätzen angereichert. 34 neue geprüfte Beziehungen erweitern den Graph auf 125 Beziehungen; 24 zusätzliche Microsoft-Learn-Quellen erhöhen die Quellenbasis auf 73.
-
-Es wurden keine Knoten ergänzt. Da V1.3 keinen eigenständigen Azure-Container-Apps-Knoten enthält, dokumentiert der Pilot diese Scope-Lücke, statt die bestehende Hierarchie umzudeuten. Die reproduzierbare Anreicherung liegt in `tools/enrich-compute-v1.4.mjs`, der vollständige Pilotbericht in `reports/compute-enrichment-v1.4.md`.
-
-## Governance & Management Enrichment Pilot V1.5
-
-V1.5 ergänzt Governance als vierte Architekturperspektive: Wie werden Azure-Ressourcen über viele Umgebungen kontrolliert, standardisiert und überwacht? 27 vorhandene Governance-Knoten wurden nach Content Standard V1.0 mit 81 Erklärungsebenen, Praxisbeispielen und Merksätzen angereichert. 34 neue Beziehungen erweitern den Knowledge Graph auf 159 Beziehungen; 22 zusätzliche offizielle Quellen erhöhen die Quellenbasis auf 95.
-
-Bestehende Networking-, Identity- und Compute-Inhalte wurden nicht überschrieben. Fehlende Einzelknoten für Policy Definitions, Policy Assignments, Compliance Status, Naming Standards, Security Baselines und Cost Analysis werden als dokumentierte Scope-Lücken behandelt. Die reproduzierbare Anreicherung liegt in `tools/enrich-governance-v1.5.mjs`, der Pilotbericht in `reports/governance-enrichment-v1.5.md`.
-
-## Storage & Data Architecture Enrichment Pilot V1.6
-
-V1.6 ergänzt Storage und Data Architecture als fünfte Architekturperspektive: Wie werden Daten in Azure gespeichert, geschützt, repliziert und verwaltet? 24 vorhandene Knoten wurden nach Content Standard V1.0 mit 72 Erklärungstexten, Praxisbeispielen und Merksätzen angereichert. 26 neue geprüfte Beziehungen erweitern den Knowledge Graph auf 185 Beziehungen; 22 zusätzliche Microsoft-Learn-Quellen erhöhen die Quellenbasis auf 117.
-
-Managed Disks und alle früheren Pilotinhalte wurden nicht überschrieben. Fehlende Einzelknoten für SAS, Access Keys, Lifecycle Management, Verschlüsselung, Soft Delete, Versioning und Blob Backup werden als dokumentierte Scope-Lücken behandelt und nur innerhalb geeigneter vorhandener Knoten erklärt. Die reproduzierbare Anreicherung liegt in `tools/enrich-storage-v1.6.mjs`, die V1.6-QA in `tools/qa-storage-v1.6.mjs` und der vollständige Pilotbericht in `reports/storage-enrichment-v1.6.md`.
-
-## Security & Protection Architecture Enrichment Pilot V1.7
-
-V1.7 verbindet Identity, Networking, Compute, Storage, Governance und Recovery als durchgängige Security-&-Protection-Architektur. 25 vorhandene, bisher nicht pilotierte Knoten wurden nach Content Standard V1.0 mit 75 Erklärungstexten, Praxisbeispielen und Merksätzen angereichert. 34 neue geprüfte Beziehungen erweitern den Knowledge Graph auf 219 Beziehungen; 19 zusätzliche Microsoft-Learn-Quellen erhöhen die Quellenbasis auf 136.
-
-Bereits angereicherte Dienste wie Conditional Access, MFA, PIM, RBAC, Firewall, NSG, DDoS Protection, Private Endpoint, Defender for Cloud, Policy, Azure Backup, Site Recovery und Storage wurden nicht überschrieben. Fehlende Einzelknoten für Secure Score, Vulnerability Assessment, Recovery Services Vault und Immutable Backup werden als Scope-Lücken dokumentiert und innerhalb geeigneter bestehender Knoten erklärt. Die reproduzierbare Anreicherung liegt in `tools/enrich-security-v1.7.mjs`, die QA in `tools/qa-security-v1.7.mjs` und der Pilotbericht in `reports/security-enrichment-v1.7.md`.
-
-## Monitoring, Observability & Operations Architecture Enrichment V1.8
-
-V1.8 schließt den operativen Regelkreis **Plan → Build → Secure → Monitor → Operate → Improve**. 31 vorhandene Monitoring-, Operations-, Reliability- und SLA-Knoten wurden nach Content Standard V1.0 mit 93 Erklärungstexten, Praxisbeispielen und Merksätzen angereichert. 24 neue semantische Beziehungen erweitern den Knowledge Graph auf 243 Beziehungen; 19 zusätzliche Microsoft-Learn-Quellen erhöhen die Quellenbasis auf 155.
-
-Metrics, Logs, Diagnostic Settings, Workbooks, Traces, Resource Health und Incident Response werden in vorhandenen fachlich passenden Knoten erklärt. Da dafür keine eigenständigen kanonischen Knoten existieren, wurden keine neuen Knoten erzeugt. Alle V1.2–V1.7-Inhalte bleiben unverändert; neue Verknüpfungen wurden append-only ergänzt. Die reproduzierbare Anreicherung liegt in `tools/enrich-monitoring-v1.8.mjs`, die QA in `tools/qa-monitoring-v1.8.mjs`, der Pilotbericht in `reports/monitoring-enrichment-v1.8.md` und der Domänenvergleich in `reports/monitoring-comparison-v1.8.md`.
-
-## Datenfluss
+The application uses a canonical knowledge model and browser-ready runtime projections:
 
 ```text
-data/canonical/                 einzige fachliche Source of Truth
-        │
-        ▼
-tools/build-runtime.mjs         validiert IDs, Hierarchie, Quellen und Relationen
-        │
-        ▼
-data/runtime/knowledge-runtime.js
-        │
-        ▼
-Mindmap + Brain + Suche + Detailansicht
+START.html
+└── app/index.html                 single application shell
+    ├── app/                       UI, navigation, learning and architecture logic
+    ├── data/canonical/            canonical nodes, relations and sources
+    ├── data/runtime/              browser-ready runtime data
+    ├── data/learning/             guided learning content and focus mappings
+    ├── data/architecture/         Architecture V1 / Case 01 model
+    └── experiments/3d-brain/      integrated Three.js renderer and local vendor files
 ```
 
-Die Runtime-Datei ist ausschließlich eine automatisch erzeugte, doppelklick-kompatible Projektion. Sie darf nicht manuell gepflegt werden.
+The canonical layer separates knowledge records, relationships, sources, navigation metadata, and generated runtimes. Cross-mode context allows a selected topic or learning focus to be carried between Mindmap, Brain, 3D Brain, Learning, and Architecture where a matching target exists.
 
-## Ordnerstruktur
+## Key implementation ideas
 
-```text
-Azure-Digital-Brain-V1.8/
-├── START.html
-├── app/                         Oberfläche und Renderer
-├── data/
-│   ├── canonical/               kanonisches Fachwissen
-│   │   ├── nodes.json
-│   │   ├── relations.json
-│   │   ├── relation-types.json
-│   │   ├── sources.json
-│   │   └── schema.json
-│   ├── runtime/                 generierte Browser-Laufzeitdaten
-│   └── user/                    Benutzerprofil- und KI-Vorschlagsformate
-├── tools/
-│   ├── build-runtime.mjs
-│   ├── migrate-v1-to-v1.1.mjs   einmalige, geschützte Migration
-│   ├── enrich-networking-v1.2.mjs kontrollierte Networking-Anreicherung
-│   ├── enrich-identity-v1.3.mjs  standardisierte Identity-Anreicherung
-│   ├── enrich-compute-v1.4.mjs   Compute als Architektur-Brücke
-│   ├── enrich-governance-v1.5.mjs Governance & Management
-│   ├── enrich-storage-v1.6.mjs    Storage & Data Architecture
-│   ├── qa-storage-v1.6.mjs        V1.6-Integritätsprüfung
-│   ├── enrich-security-v1.7.mjs   Security & Protection Architecture
-│   ├── qa-security-v1.7.mjs       V1.7-Integritätsprüfung
-│   ├── enrich-monitoring-v1.8.mjs Monitoring, Observability & Operations
-│   └── qa-monitoring-v1.8.mjs     V1.8-Integritätsprüfung
-├── reports/
-└── backups/version-1.7/         vollständige unveränderte Vorgängerversion
+- stable canonical IDs and explicit typed relations
+- structured taxonomy with separate runtime projections
+- deep links and context-preserving cross-mode navigation
+- guided learning with primary anchors and focused knowledge targets
+- progressive disclosure through detail panels and accordions
+- Architecture Decision Model with facts, assumptions, questions, specialist reviews, blockers, readiness, options, and trade-offs
+- WAF- and CAF-oriented review prompts inside the architecture workflow
+- responsive interaction patterns for desktop, tablet, and mobile
+- local Three.js r185 distribution with the corresponding license
+
+## Run locally
+
+For the simplest local use, open `START.html` in a modern browser. A static local server is recommended when reviewing the project exactly as it is delivered by GitHub Pages:
+
+```bash
+python3 -m http.server 8000
 ```
 
-## Fachwissen erweitern
+Then open `http://localhost:8000/START.html`.
 
-Neue Wissensknoten werden ausschließlich in `data/canonical/nodes.json` ergänzt. Neue Beziehungen gehören nach `relations.json`; neue Beziehungstypen zuerst in `relation-types.json`; Quellen in `sources.json`.
+No build step, package installation, API key, backend, or cloud connection is required for the published application.
 
-Anschließend kann mit installiertem Node.js die Runtime neu erzeugt werden:
+## GitHub Pages and direct links
 
-```text
-node tools/build-runtime.mjs
-```
+The repository is designed for project-site hosting from the repository root. Assets use relative paths so the application works below `/azure-digital-brain/`.
 
-Der Build bricht bei ungültigen oder doppelten IDs, defekten Eltern-/Kindbeziehungen, unbekannten Beziehungstypen, fehlenden Gegenrichtungen oder ungültigen Quellenreferenzen ab. Er schreibt ausschließlich nach `data/runtime/`.
+- Main entry: `START.html`
+- Application shell: `app/index.html`
+- Architecture entry: `ARCHITECTURE.html`
+- Architecture Case 01: `ARCHITECTURE-CASE-01.html`
+- 3D entry: `experiments/3d-brain/index.html`
 
-Die fertige Anwendung selbst benötigt Node.js nicht.
+Navigation state is encoded in the URL hash, so GitHub Pages can serve direct view and context links without server-side routing.
 
-## Persönliche Daten
+## Review and quality approach
 
-Notizen und Lernstände liegen getrennt vom Fachwissen im lokalen, versionierten Browserprofil. Über `Profil ↓` kann es gesichert und über `Profil ↑` wieder importiert werden. Das Austauschformat ist unter `data/user/user-profile.example.json` dokumentiert.
+The project was developed through controlled, iterative analysis and implementation. Validation includes canonical-data integrity checks, relationship/orphan checks, cross-mode navigation checks, focused Learning and Architecture regression suites, responsive browser review, and freeze/review records for protected areas.
 
-Es findet keine Cloud-Synchronisation und keine Übertragung an externe Dienste statt.
+AI-assisted analysis and implementation were used as engineering tools. Scope, domain changes, acceptance criteria, browser review, and release decisions remained human-controlled.
 
-## KI-Vorbereitung
+## Known limits
 
-KI darf die kanonische Wissensbasis nicht direkt ändern. `data/user/ai-proposals.example.json` zeigt das vorgesehene Verfahren:
+- The application is a static, client-side demonstrator; state is session- or browser-local.
+- Architecture V1 does not perform AI assessment, external verification, or automatic evidence validation.
+- Architecture diagrams are not automatically recomputed when a preference changes.
+- The architecture case demonstrates a decision workflow and is not a final deployment blueprint.
+- There is no backend, account system, cloud synchronization, support module, or telemetry service.
 
-```text
-Vorschlag → Prüfung → Annehmen oder Ablehnen → kontrollierte Aktualisierung
-```
+## Repository notes
 
-Jeder Vorschlag besitzt Begründung, Quellen, Konfidenz und Status.
-
-## Dokumentation
-
-- `reports/architecture-v1.1.md`
-- `reports/data-model.md`
-- `reports/migration-report.md`
-- `reports/qa-report.md`
-- `reports/networking-enrichment-v1.2.md`
-- `reports/content-standard-v1.md`
-- `reports/identity-enrichment-v1.3.md`
-- `reports/compute-enrichment-v1.4.md`
-- `reports/governance-enrichment-v1.5.md`
-- `reports/storage-enrichment-v1.6.md`
-- `reports/security-enrichment-v1.7.md`
-- `reports/monitoring-enrichment-v1.8.md`
-- `reports/monitoring-comparison-v1.8.md`
-- `reports/qa-v1.8.md`
+The active application is contained in `app/`, `assets/`, `data/`, and `experiments/3d-brain/`. Older version READMEs, reports, build/QA utilities, and the already published version archive are retained as project history; they do not replace the V3.4 runtime described above. No new personal working notes, local review outputs, snapshots, or development backups are included in this release.

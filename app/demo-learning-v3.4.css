@@ -1,0 +1,44 @@
+/* Scoped additions for the six learning chapters. Quiet gold indicates the current thought. */
+#learningView .demo-section{margin:16px 0;padding:18px;border:1px solid #294454;border-radius:12px;background:#101e2b;color:#d5e3ec}
+#learningView .demo-section h2{font-size:17px;margin:0 0 14px;font-weight:600;color:#e2ecf2}
+#learningView .demo-flow{margin:12px 0;padding:12px;border:1px solid #355568;border-radius:9px;background:rgba(60,151,181,.025)}
+#learningView .demo-flow.demo-focus{border:1.5px solid #b49b60;background:rgba(184,153,83,.045)}
+#learningView .demo-action{display:block;font-size:12px;font-weight:600;color:#91b5c8;margin-bottom:9px}
+#learningView .demo-focus .demo-action{color:#d0b879}
+#learningView .demo-chain{display:flex;align-items:stretch;gap:9px;flex-wrap:wrap}
+#learningView .demo-node{flex:1 1 125px;min-width:0;padding:10px;border:1px solid #325064;border-radius:7px;background:#132331;display:flex;flex-direction:column;justify-content:center;gap:7px;text-align:center;font-size:13px;overflow-wrap:anywhere}
+#learningView .demo-node small{display:block;color:#a5bbc8;font-size:12px;line-height:1.55}
+#learningView .demo-node button{color:#d4e7ef;background:transparent;border:0;border-radius:5px;padding:3px;font:inherit;font-weight:600;cursor:pointer;overflow-wrap:anywhere}
+#learningView .demo-node button:hover,#learningView .demo-node button:focus-visible{outline:1px solid #d0b879;outline-offset:3px}
+#learningView .demo-arrow{align-self:center;color:#89afc3;font-size:19px}
+#learningView .demo-focus .demo-arrow{color:#d0b879}
+#learningView .demo-resolution{border-style:dashed!important}
+#learningView .demo-note{font-size:12px;color:#a8bdca;line-height:1.65;margin:12px 0 0}
+#learningView .demo-more{margin:12px 0;border:1px solid #345064;border-radius:8px;padding:0 12px}
+#learningView .demo-more summary{padding:12px 0;cursor:pointer;color:#bed4df;font-size:13px;font-weight:600;line-height:1.5}
+#learningView .demo-more[open] summary{margin-bottom:5px;border-bottom:1px solid #304958}
+#learningView .demo-zones,#learningView .demo-layers{display:flex;gap:12px;flex-wrap:wrap}
+#learningView .demo-zones span{flex:1;padding:12px;border:1px solid #395567;border-radius:7px;text-align:center;font-size:12px;line-height:1.6}
+#learningView .demo-conclusion{padding:14px;border-left:2px solid #67a5bd;color:#b6ceda;font-size:13px;line-height:1.6}
+#learningView .demo-overview .demo-flow{border-color:#365b70;background:rgba(60,151,181,.025)}
+@media(max-width:700px){#learningView .demo-section{padding:12px}#learningView .demo-chain{flex-direction:column}#learningView .demo-arrow{transform:rotate(90deg)}#learningView .demo-node{flex-basis:auto}#learningView .demo-layers{flex-direction:column}}
+#learningView .network-system-map .network-map-edge.didactic:not(.resolution){stroke-dasharray:none}
+#learningView .network-map-heading.overview .network-map-focus{color:#99bdce}
+
+/* One quiet affordance for interactive learning labels, independent of knowledge classification. */
+#learningView .demo-node button{border-bottom:1px solid #537a8e;padding:3px 5px}
+#learningView [data-cloud-entity]::after,#learningView [data-azure-entity]::after,#learningView [data-organization-entity]::after,#learningView [data-access-entity]::after,#learningView [data-governance-entity]::after,#learningView [data-network-entity]::after{content:" ›";color:#9bbdcb;font-weight:500}
+#detailMore{margin:14px 0;border:1px solid #294454;border-radius:9px;padding:0 12px}
+#detailMore>summary{padding:12px 0;cursor:pointer;color:#bed4df;font-weight:600}
+#detailMore[open]>summary{border-bottom:1px solid #294454;margin-bottom:12px}
+#detailMore section{margin-top:12px}
+
+/* Persistent knowledge-link affordance; didactic gold remains on its existing containers. */
+#learningView button[data-cloud-entity],#learningView button[data-azure-entity],#learningView button[data-organization-entity],#learningView button[data-access-entity],#learningView button[data-governance-entity],#learningView button[data-network-entity]{border:1px solid #55798d;border-radius:6px;background:rgba(83,128,151,.10);padding:5px 7px;cursor:pointer;max-width:100%;white-space:normal}
+#learningView .learning-link-term{display:block;font-size:10px;line-height:1.4;font-weight:400;color:#9ebbc9;margin-top:3px}
+#learningView button[data-cloud-entity]:hover,#learningView button[data-azure-entity]:hover,#learningView button[data-organization-entity]:hover,#learningView button[data-access-entity]:hover,#learningView button[data-governance-entity]:hover,#learningView button[data-network-entity]:hover{border-color:#9ec4d5;background:rgba(83,128,151,.18)}
+#learningView button:focus-visible{outline:2px solid #c1d9e5;outline-offset:3px}
+#learningView .learning-link-target{outline:2px dashed #a6cbdc;outline-offset:4px;background:rgba(91,155,185,.13)!important;scroll-margin-block:90px}
+#learningView .learning-link-target::before{content:"Lernziel · ";font-size:10px;color:#c1dbe8;font-weight:500}
+
+#learningView .network-map-node.learning-link-target::before{content:""}

@@ -1,0 +1,95 @@
+.brain-view-switch {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  z-index: 5;
+  display: flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid #29475d;
+  border-radius: 10px;
+  background: #071522ed;
+  box-shadow: 0 8px 22px #0007;
+}
+.brain-view-switch button,
+.brain-view-switch a {
+  display: grid;
+  min-width: 48px;
+  min-height: 33px;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  padding: 7px 10px;
+  background: transparent;
+  color: #91a9bb;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+}
+.brain-view-switch .active,
+.brain-view-switch button:hover,
+.brain-view-switch a:hover,
+.brain-view-switch button:focus-visible,
+.brain-view-switch a:focus-visible {
+  background: #153b52;
+  color: #fff;
+  outline: none;
+}
+
+/* The entire 16-domain legend wraps above the status line. */
+.stage.mindmap-mode .legend,
+.stage.mindmap-mode.networking-focus .legend,
+.stage.brain-mode .legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(135px, 100%), 1fr));
+  align-content: start;
+  gap: 6px;
+  left: 18px;
+  right: 18px;
+  bottom: 52px;
+  width: auto;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  pointer-events: auto;
+}
+.stage.mindmap-mode .legend button {
+  display: flex;
+  align-items: center;
+  min-height: 29px;
+  width: 100%;
+  white-space: normal;
+  line-height: 1.2;
+  text-align: left;
+  padding: 5px 8px;
+}
+.stage.brain-mode .legend button {
+  display: flex;
+  align-items: center;
+  min-height: 29px;
+  width: 100%;
+  white-space: normal;
+  line-height: 1.2;
+  text-align: left;
+  padding: 5px 8px;
+}
+.stage.brain-mode .legend button i { flex: 0 0 7px; }
+.stage.mindmap-mode .legend button i { flex: 0 0 7px; }
+.stage.mindmap-mode .stage-note { bottom: 18px; }
+
+@media (max-width: 760px) {
+  .brain-view-switch { top: 10px; right: 10px; }
+  .stage.mindmap-mode .legend,
+  .stage.mindmap-mode.networking-focus .legend,
+  .stage.brain-mode .legend {
+    left: 10px;
+    right: 10px;
+    bottom: 56px;
+    gap: 5px;
+  }
+  .stage.mindmap-mode .legend button { font-size: 10px; }
+  .stage.mindmap-mode .stage-note { bottom: 17px; }
+}

@@ -2,81 +2,23 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="color-scheme" content="dark">
-  <title>Azure Digital Brain – 3D Brain</title>
-  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=3.4-responsive">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Azure Digital Brain</title>
 </head>
 <body>
-  <div class="poc-shell">
-    <header class="topbar">
-      <div class="brand">
-        <span class="brand-orbit" aria-hidden="true"></span>
-        <div><strong>Azure Digital Brain</strong><small>3D-Wissensgraph · Teil der lokalen Web-App</small></div>
-      </div>
-      <label class="focus-picker">
-        <span>Kontextzentrum</span>
-        <select id="focusSelect" aria-label="Kontextzentrum auswählen"></select>
-      </label>
-      <div class="toolbar" aria-label="3D-Steuerung">
-        <a class="back-to-app" href="../../app/index.html#mode=brain">← 2D Brain</a>
-        <button id="fitView" type="button">Einpassen</button>
-        <button id="zoomOut" type="button" aria-label="Herauszoomen">−</button>
-        <button id="zoomIn" type="button" aria-label="Hineinzoomen">+</button>
-      </div>
-    </header>
-
-    <main class="workspace">
-      <section id="stage" class="stage" aria-label="3D-Wissensgraph">
-        <canvas id="brain3dCanvas" tabindex="0" aria-label="Dreidimensionaler Azure-Kontextgraph"></canvas>
-        <div id="labelLayer" class="label-layer" aria-hidden="true"></div>
-        <div id="graphTooltip" class="graph-tooltip" hidden></div>
-        <div id="fallback" class="fallback" hidden>
-          <strong>3D-Darstellung nicht verfügbar</strong>
-          <span>Das 2D Brain bleibt über die Haupt-App als sichere Alternative verfügbar.</span>
-        </div>
-        <div class="experiment-badge">3D BRAIN · Three.js lokal</div>
-        <div class="navigation-help">
-          <b>Navigation</b>
-          <span>Langsame Eigenrotation · Ziehen: manuell rotieren · Mausrad/Pinch: zoomen · Klick: auswählen · Doppelklick: fokussieren</span>
-        </div>
-        <div class="stage-status"><span id="renderStatus">Initialisierung …</span><span>·</span><span id="contextStatus">–</span></div>
-      </section>
-
-      <aside class="detail-panel" aria-label="Ausgewählter Testknoten">
-        <span id="detailCategory" class="category-pill">Azure</span>
-        <h1 id="detailTitle">3D Brain</h1>
-        <code id="detailId">Kein Knoten ausgewählt</code>
-        <p id="detailPath" class="detail-path">Der Prototyp lädt ausschließlich vorhandene Runtime-Daten.</p>
-
-        <section>
-          <h2>Kontext</h2>
-          <p id="detailSummary">Wähle einen Knoten im 3D-Raum aus.</p>
-        </section>
-
-        <section>
-          <h2>Sichtbare Relationen</h2>
-          <div id="relationList" class="relation-list"><p class="empty">Noch keine Auswahl.</p></div>
-        </section>
-
-        <div class="detail-actions">
-          <button id="focusSelected" type="button" disabled>Als Mittelpunkt</button>
-          <a id="openDetailPanel" href="../../app/index.html" aria-disabled="true">In Haupt-App öffnen →</a>
-        </div>
-
-        <div class="boundary-note">
-          <b>Datenintegrität</b>
-          <span>Diese Ansicht liest die bestehende Wissensbasis. Sie erzeugt keine neuen Knoten oder Relationen.</span>
-        </div>
-      </aside>
-    </main>
-  </div>
-
-  <script src="../../data/runtime/knowledge-runtime.js"></script>
-  <script>var exports = {};</script>
-  <script src="vendor/three.r185.cjs.js"></script>
-  <script>window.THREE = exports;</script>
-  <script src="brain3d.js?v=3.4-integration"></script>
+  <p>Das 3D Brain ist Teil der gemeinsamen Brain-Oberfläche. <a id="brainLink" href="../../app/index.html#mode=brain&amp;renderer=3d">Brain öffnen</a></p>
+  <script>
+    const query = new URLSearchParams(location.search);
+    const incoming = new URLSearchParams(location.hash.slice(1));
+    const target = new URLSearchParams({ mode: 'brain', renderer: '3d' });
+    for (const key of ['node', 'domain', 'center', 'view']) {
+      const value = query.get(key) || incoming.get(key);
+      if (value) target.set(key, value);
+    }
+    if (!target.has('node') && !target.has('domain')) target.set('view', 'overview');
+    const href = `../../app/index.html#${target.toString()}`;
+    document.getElementById('brainLink').href = href;
+    location.replace(href);
+  </script>
 </body>
 </html>

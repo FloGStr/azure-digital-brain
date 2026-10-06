@@ -3,9 +3,9 @@
 
   const DATA = window.AZURE_DIGITAL_BRAIN;
   const THREE = window.THREE;
+  const BRAIN = window.AZURE_BRAIN_SHARED_V34;
   const MAX_CONTEXT_NODES = 64;
-  const VISUAL_NEURON_COUNT = 960;
-  const DEFAULT_FOCUS_ID = 'azure-0322';
+  const VISUAL_NEURON_COUNT = 0;
   const ANIMATION_CONFIG = Object.freeze({
     autoRotationSecondsPerTurn: 180,
     interactionResumeDelayMs: 1400,
@@ -18,64 +18,40 @@
     mobileFrameIntervalMs: 1000 / 30,
     desktopFrameIntervalMs: 1000 / 60
   });
-  const CLUSTER_DEFINITIONS = Object.freeze([
-    { id: 'compute', label: 'Compute', symbol: '◇', categories: ['Compute'], color: '#52c7ff' },
-    { id: 'networking', label: 'Networking', symbol: '⌬', categories: ['Networking'], color: '#43d7ef' },
-    { id: 'storage', label: 'Storage', symbol: '▤', categories: ['Storage'], color: '#7bd66d' },
-    { id: 'identity-security', label: 'Identity & Security', symbol: '⬡', categories: ['Identity', 'Security'], color: '#a889ff' },
-    { id: 'databases', label: 'Databases', symbol: '◫', categories: ['Databases'], color: '#ff9c54' },
-    { id: 'management-governance', label: 'Management & Governance', symbol: '⌁', categories: ['Governance', 'Monitoring', 'Cost & Lifecycle'], color: '#ff6f91' },
-    { id: 'architecture-foundations', label: 'Architecture & Foundations', symbol: '△', categories: ['Architecture', 'Azure Fundamentals'], color: '#f3ce58' }
-  ]);
   const COLORS = {
-    'Architecture': '#f3ce58',
-    'Azure Fundamentals': '#f3ce58',
-    'Compute': '#52c7ff',
-    'Cost & Lifecycle': '#ff6f91',
-    'Databases': '#ff9c54',
-    'Governance': '#ff6f91',
-    'Identity': '#a889ff',
-    'Monitoring': '#ff6f91',
-    'Networking': '#43d7ef',
-    'Security': '#a889ff',
-    'Storage': '#7bd66d'
+    'Cloud & Azure Foundations':'#7d91a8','Compute & Application Platform':'#52c7ff','Containers & Cloud Native':'#33c6b7','Networking':'#43a6ff',
+    'Storage':'#7bd66d','Databases & Data Platforms':'#a889ff','Integration, Messaging & IoT':'#3fd1a5','Identity & Access':'#51e1bf',
+    'Security & Protection':'#ff5f73','Governance & Resource Management':'#ff7e88','Cost Management & FinOps':'#f3ce58','Monitoring & Operations':'#ff9c54',
+    'Reliability & Resilience':'#f0a35e','Migration & Modernization':'#d08cff','DevOps & Automation':'#b38cff','AI & Analytics':'#45d5d0'
   };
+  const CLUSTER_DEFINITIONS = Object.freeze((BRAIN?.model?.domains||[]).map(({name,id})=>({id,label:name,symbol:'◈',categories:[name],color:COLORS[name]})));
 
   const element = (id) => document.getElementById(id);
   const dom = {
-    stage: element('stage'),
+    stage: element('brain3dViewport'),
     canvas: element('brain3dCanvas'),
     labels: element('labelLayer'),
     tooltip: element('graphTooltip'),
-    fallback: element('fallback'),
-    focusSelect: element('focusSelect'),
-    fit: element('fitView'),
-    zoomIn: element('zoomIn'),
-    zoomOut: element('zoomOut'),
-    renderStatus: element('renderStatus'),
-    contextStatus: element('contextStatus'),
-    category: element('detailCategory'),
-    title: element('detailTitle'),
-    id: element('detailId'),
-    path: element('detailPath'),
-    summary: element('detailSummary'),
-    relations: element('relationList'),
-    focusSelected: element('focusSelected'),
-    detailHandoff: element('openDetailPanel')
+    fallback: element('brain3dFallback'),
+    domainLegend: element('legend'),
+    renderStatus: element('viewStatus'),
+    contextStatus: element('visibleStatus')
   };
 
-  if (!DATA?.nodes?.length || !Array.isArray(DATA.relations) || !THREE?.WebGLRenderer) {
+  if (!DATA?.nodes?.length || !BRAIN?.model?.entities?.length || BRAIN.model.domains?.length !== 16 || !THREE?.WebGLRenderer) {
     dom.fallback.hidden = false;
     dom.renderStatus.textContent = 'Runtime oder Three.js fehlt';
     document.documentElement.dataset.pocReady = 'error';
+    window.ADB3D_RENDERER = { onChange() {}, activate() { dom.fallback.hidden = false; }, deactivate() {}, fit() {}, zoomIn() {}, zoomOut() {}, resize() {}, focusNode() { return false; }, selectNode() { return false; }, overview() { return false; }, getState() { return { ready: 'error' }; } };
     return;
   }
 
-  const nodes = DATA.nodes;
-  const relations = DATA.relations;
+  const nodes = BRAIN.model.entities.map(entity=>({...(BRAIN.canonicalById.get(entity.id)||{}),...entity,category:entity.domain,parent:entity.parentId,children:BRAIN.model.entities.filter(candidate=>candidate.parentId===entity.id).map(candidate=>candidate.id)}));
+  const relations = BRAIN.model.relations;
   const relationTypes = DATA.relation_types || [];
   const nodeById = new Map(nodes.map((node) => [node.id, node]));
-  const requestedFocusId = new URLSearchParams(window.location.search).get('node');
+  const requestedFocusId = BRAIN.state.contextCenterId;
+  const primaryIds = new Set(BRAIN.model.entities.map(entity=>entity.id));
   const relationTypeById = new Map(relationTypes.map((type) => [type.id, type]));
   const relationsByNode = new Map(nodes.map((node) => [node.id, []]));
   for (const relation of relations) {
@@ -84,8 +60,9 @@
   }
 
   const state = {
-    focusId: nodeById.has(requestedFocusId) ? requestedFocusId : nodeById.has(DEFAULT_FOCUS_ID) ? DEFAULT_FOCUS_ID : nodes[0].id,
+    focusId: nodeById.has(requestedFocusId) ? requestedFocusId : null,
     selectedId: null,
+    domainFocus: null,
     context: null,
     yaw: 0.62,
     pitch: 0.28,
@@ -94,12 +71,14 @@
     pointerStart: null,
     pinchDistance: null,
     renderer: null,
+    active: false,
     scene: null,
     modelGroup: null,
     camera: null,
     raycaster: new THREE.Raycaster(),
     pointerNdc: new THREE.Vector2(),
     nodeMeshes: [],
+    hitMeshes: [],
     clusterHubs: [],
     signalPool: [],
     signalEdges: [],
@@ -127,6 +106,8 @@
       activeSignals: 0
     }
   };
+  let onShellChange = () => {};
+  function notifyShellChange() { onShellChange(BRAIN.state); }
 
   function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, (character) => ({
@@ -134,69 +115,39 @@
     })[character]);
   }
 
-  function otherNodeId(relation, id) {
-    return relation.source === id ? relation.target : relation.source;
-  }
-
-  function relationLabel(relation) {
-    return relationTypeById.get(relation.type)?.label || relation.type || 'verknüpft';
-  }
-
-  function nodePath(node) {
-    const path = [node];
-    const seen = new Set([node.id]);
-    let current = node;
-    while (current?.parent && nodeById.has(current.parent) && !seen.has(current.parent)) {
-      current = nodeById.get(current.parent);
-      seen.add(current.id);
-      path.unshift(current);
-    }
-    return path.map((item) => item.title).join(' › ');
-  }
-
   function nodeImportance(node) {
     const degree = relationsByNode.get(node.id)?.length || 0;
-    const contentWeight = Number(Boolean(node.content?.simple || node.content?.technical || node.content?.architecture));
+    const contentWeight = Number(Boolean(node.description?.simple || node.description?.technical || node.description?.architecture));
     return degree * 5 + contentWeight + Math.max(0, 10 - Number(node.depth || 10));
   }
 
   function buildContext(focusId, maxNodes = MAX_CONTEXT_NODES) {
-    const include = new Set([focusId]);
-    const hops = new Map([[focusId, 0]]);
-    const donor = new Map();
-    const directRelations = [...(relationsByNode.get(focusId) || [])]
-      .sort((a, b) => nodeImportance(nodeById.get(otherNodeId(b, focusId))) - nodeImportance(nodeById.get(otherNodeId(a, focusId))));
+    const semantic=BRAIN.subgraph(focusId);
+    const include=new Set(semantic.nodeIds),firstHop=new Set(semantic.firstHopIds);
+    const hops=new Map([...include].map(id=>[id,id===focusId?0:firstHop.has(id)?1:2]));
+    const donor=new Map();
+    const contextNodes=[...include].map(id=>({...nodeById.get(id),hop:hops.get(id),donorId:null}));
+    return {focusId,nodes:contextNodes,edges:BRAIN.semanticEdges(include),include,hops,donor};
+  }
 
-    for (const relation of directRelations) {
-      if (include.size >= maxNodes) break;
-      const candidateId = otherNodeId(relation, focusId);
-      if (!nodeById.has(candidateId)) continue;
-      include.add(candidateId);
-      hops.set(candidateId, 1);
-      donor.set(candidateId, focusId);
+  function layoutOverview(context) {
+    const positions=new Map();
+    for(const [index,domain] of BRAIN.model.domains.entries()){
+      const center=fibonacciPosition(index,BRAIN.model.domains.length,74,domain.id);
+      positions.set(domain.id,center);
+      const members=context.nodes.filter(node=>node.category===domain.name&&node.id!==domain.id).sort((a,b)=>a.id.localeCompare(b.id));
+      const direction=center.clone().normalize();
+      const axis=Math.abs(direction.y)>0.86?new THREE.Vector3(1,0,0):new THREE.Vector3(0,1,0);
+      const tangent=new THREE.Vector3().crossVectors(direction,axis).normalize();
+      const bitangent=new THREE.Vector3().crossVectors(direction,tangent).normalize();
+      members.forEach((node,memberIndex)=>{
+        const angle=memberIndex*Math.PI*(3-Math.sqrt(5));
+        const spread=12+Math.sqrt(memberIndex+1)*5.2;
+        const radial=hashUnit(node.id)*12-6;
+        positions.set(node.id,center.clone().addScaledVector(tangent,Math.cos(angle)*spread).addScaledVector(bitangent,Math.sin(angle)*spread).addScaledVector(direction,radial));
+      });
     }
-
-    const firstHop = [...include].filter((id) => hops.get(id) === 1)
-      .sort((a, b) => nodeImportance(nodeById.get(b)) - nodeImportance(nodeById.get(a)));
-    for (const firstHopId of firstHop) {
-      for (const relation of relationsByNode.get(firstHopId) || []) {
-        if (include.size >= maxNodes) break;
-        const candidateId = otherNodeId(relation, firstHopId);
-        if (!nodeById.has(candidateId) || include.has(candidateId)) continue;
-        include.add(candidateId);
-        hops.set(candidateId, 2);
-        donor.set(candidateId, firstHopId);
-      }
-      if (include.size >= maxNodes) break;
-    }
-
-    const contextNodes = [...include].map((id) => ({
-      ...nodeById.get(id),
-      hop: hops.get(id) ?? 2,
-      donorId: donor.get(id) || null
-    }));
-    const contextEdges = relations.filter((relation) => include.has(relation.source) && include.has(relation.target));
-    return { focusId, nodes: contextNodes, edges: contextEdges, include, hops, donor };
+    return positions;
   }
 
   function hashUnit(value) {
@@ -310,6 +261,7 @@
     geometries.forEach((geometry) => geometry.dispose());
     materials.forEach((material) => material.dispose());
     state.nodeMeshes = [];
+    state.hitMeshes = [];
     state.clusterHubs = [];
     state.signalPool = [];
     state.signalEdges = [];
@@ -322,9 +274,9 @@
 
   function createStarField() {
     const positions = [];
-    for (let index = 0; index < 420; index += 1) {
+    for (let index = 0; index < 120; index += 1) {
       const radius = 300 + hashUnit(`star-r-${index}`) * 400;
-      const point = fibonacciPosition(index, 420, radius, `star-${index}`);
+      const point = fibonacciPosition(index, 120, radius, `star-${index}`);
       positions.push(point.x, point.y, point.z);
     }
     const geometry = new THREE.BufferGeometry();
@@ -368,8 +320,8 @@
     state.modelGroup.add(inner, membrane);
   }
 
-  function createVisualNeurons(context, positions) {
-    const activeDefinitions = CLUSTER_DEFINITIONS.filter((definition) => context.nodes.some((node) => definition.categories.includes(node.category)));
+  function createVisualNeurons(context, positions, overview = false) {
+    const activeDefinitions = overview ? CLUSTER_DEFINITIONS : CLUSTER_DEFINITIONS.filter((definition) => context.nodes.some((node) => definition.categories.includes(node.category)));
     if (!activeDefinitions.length) return;
     const clusterEntries = activeDefinitions.map((definition, definitionIndex) => {
       const members = context.nodes.filter((node) => definition.categories.includes(node.category) && positions.has(node.id));
@@ -526,6 +478,20 @@
     state.modelGroup.add(lines, glow);
   }
 
+  function createHierarchyLinks(context, positions) {
+    const vertices=[];
+    for(const node of context.nodes){
+      const source=positions.get(node.parentId),target=positions.get(node.id);
+      if(source&&target)vertices.push(source.x,source.y,source.z,target.x,target.y,target.z);
+    }
+    if(!vertices.length)return;
+    const geometry=new THREE.BufferGeometry();
+    geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
+    const lines=new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:0x6b8799,transparent:true,opacity:0.12,depthWrite:false}));
+    lines.userData.contextObject=true;
+    state.modelGroup.add(lines);
+  }
+
   function createRealNodeHalos(context, positions) {
     const haloPositions = [];
     const haloColors = [];
@@ -557,7 +523,7 @@
   }
 
   function createNodeMesh(node, position) {
-    const radius = node.hop === 0 ? 4.9 : node.hop === 1 ? 2.35 : 1.55;
+    const radius = node.hop === 0 ? 4.9 : node.kind === 'capability' ? 2.7 : node.hop === 1 ? 2.35 : 1.9;
     const geometry = new THREE.SphereGeometry(radius, node.hop === 0 ? 28 : 18, node.hop === 0 ? 20 : 12);
     const material = new THREE.MeshStandardMaterial({
       color: colorForNode(node),
@@ -581,24 +547,38 @@
     };
     state.modelGroup.add(mesh);
     state.nodeMeshes.push(mesh);
+    // Each knowledge mesh gets a larger transparent raycast target. Decorative
+    // neurons and cluster effects remain outside the interactive target list.
+    const hit = new THREE.Mesh(
+      new THREE.SphereGeometry(Math.max(radius + 2.2, 4.1), 12, 8),
+      new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false, colorWrite: false })
+    );
+    hit.position.copy(position);
+    hit.userData = { nodeId: node.id, contextObject: true };
+    state.modelGroup.add(hit);
+    state.hitMeshes.push(hit);
     return mesh;
   }
 
-  function createClusterHubs(context, positions) {
+  function createClusterHubs(context, positions, overview = false) {
     for (const [definitionIndex, definition] of CLUSTER_DEFINITIONS.entries()) {
       const members = context.nodes.filter((node) => definition.categories.includes(node.category) && positions.has(node.id));
-      if (members.length < 2) continue;
+      if (!overview && members.length < 2) continue;
       const centroid = new THREE.Vector3();
       let averageRadius = 0;
-      for (const member of members) {
-        centroid.add(positions.get(member.id));
-        averageRadius += positions.get(member.id).length();
+      if (overview) centroid.copy(fibonacciPosition(definitionIndex, CLUSTER_DEFINITIONS.length, 74, definition.id));
+      else {
+        for (const member of members) {
+          centroid.add(positions.get(member.id));
+          averageRadius += positions.get(member.id).length();
+        }
+        centroid.divideScalar(members.length);
+        averageRadius /= members.length;
+        const hubRadius = Math.max(58, Math.min(92, averageRadius * 0.74));
+        if (definition.id === state.focusId) centroid.set(0, 0, 0);
+        else if (centroid.length() < 8) centroid.copy(fibonacciPosition(definitionIndex, CLUSTER_DEFINITIONS.length, hubRadius, definition.id));
+        else centroid.normalize().multiplyScalar(hubRadius);
       }
-      centroid.divideScalar(members.length);
-      averageRadius /= members.length;
-      const hubRadius = Math.max(58, Math.min(92, averageRadius * 0.74));
-      if (centroid.length() < 8) centroid.copy(fibonacciPosition(definitionIndex, CLUSTER_DEFINITIONS.length, hubRadius, definition.id));
-      else centroid.normalize().multiplyScalar(hubRadius);
 
       const group = new THREE.Group();
       group.position.copy(centroid);
@@ -635,16 +615,25 @@
       }));
       aura.scale.set(34, 34, 1);
       group.add(aura, core, halo);
+      const target = new THREE.Mesh(new THREE.SphereGeometry(11, 12, 8), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false, colorWrite: false }));
+      target.userData = { domainId: definition.id, contextObject: true };
+      group.add(target);
+      state.hitMeshes.push(target);
       state.modelGroup.add(group);
 
-      const label = document.createElement('div');
+      const label = document.createElement('button');
+      label.type = 'button';
       label.className = 'cluster-label';
       label.dataset.clusterId = definition.id;
       label.style.setProperty('--cluster-color', definition.color);
-      label.innerHTML = `<i aria-hidden="true">${escapeHtml(definition.symbol)}</i><b>${escapeHtml(definition.label)}</b><span>${members.length} Knoten</span>`;
+      label.innerHTML = `<i aria-hidden="true">${escapeHtml(definition.symbol)}</i><b>${escapeHtml(definition.label)}</b><span>${overview ? 'Primary Domain' : `${members.length} Knoten`}</span>`;
+      label.setAttribute('aria-label',`${definition.label} als Domain-Fokus anzeigen`);
+      label.addEventListener('click', () => selectDomain(definition.id));
+      label.addEventListener('dblclick', () => buildDomainScene(definition.id));
       dom.labels.append(label);
       state.clusterHubs.push({
         id: definition.id,
+        name: definition.label,
         group,
         label,
         phase: hashUnit(definition.id) * Math.PI * 2,
@@ -710,38 +699,96 @@
   function createLabel(node, className) {
     const label = document.createElement('div');
     label.className = `node-label ${className}`;
+    label.setAttribute('aria-hidden', 'true');
     label.dataset.nodeId = node.id;
     label.innerHTML = `<b>${escapeHtml(node.title)}</b><code>${escapeHtml(node.id)}</code>`;
     dom.labels.append(label);
     return label;
   }
 
-  function buildScene(focusId) {
-    state.focusId = focusId;
-    state.selectedId = focusId;
-    state.context = buildContext(focusId);
-    const positions = layoutContext(state.context);
-    clearScene();
-    createBrainEnvelope();
-    createVisualNeurons(state.context, positions);
-    createEdgeSegments(state.context, positions);
-    createRealNodeHalos(state.context, positions);
-    for (const node of state.context.nodes) createNodeMesh(node, positions.get(node.id));
-    createClusterHubs(state.context, positions);
-    createSignalPool(state.context, positions);
-    createLabel(nodeById.get(focusId), 'focus');
-    updateSelection(focusId, false);
-    fitView();
-    dom.contextStatus.textContent = `${state.context.nodes.length} Wissensknoten · ${state.visualNeuronCount} visuelle Neuronen · ${state.context.edges.length} bestehende Relationen`;
-    dom.focusSelect.value = focusId;
+  function updateDomainFocus() {
+    for (const button of dom.domainLegend.querySelectorAll('[data-domain-id]')) {
+      const active = button.dataset.domainId === BRAIN.state.selectedDomainId;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    }
+    for (const hub of state.clusterHubs) {
+      hub.label.classList.toggle('domain-focused', hub.name === state.domainFocus);
+      hub.label.classList.toggle('domain-dimmed', Boolean(state.domainFocus && hub.name !== state.domainFocus));
+    }
+  }
+
+  function updateRenderStatus() {
+    dom.renderStatus.textContent = 'V3.4 Knowledge Graph · 16 Primary Domains';
+    document.documentElement.dataset.visualNeuronCount = String(state.visualNeuronCount);
+    document.documentElement.dataset.visualFilamentCount = String(state.visualFilamentCount);
+  }
+
+  function selectDomain(domainId) {
+    if(!BRAIN.domainById.has(domainId))return false;
+    state.selectedId=domainId;
+    state.domainFocus=BRAIN.domainById.get(domainId).name;
+    BRAIN.select(domainId);
+    updateDomainFocus();
+    notifyShellChange();
     scheduleRender();
+    return true;
+  }
+
+  function buildOverviewScene(resetState = true) {
+    if (resetState) BRAIN.overview();
+    state.focusId=null;state.selectedId=null;state.domainFocus=null;
+    state.context={focusId:null,nodes:nodes.map(node=>({...node,hop:2})),edges:relations,include:new Set(nodes.map(node=>node.id))};
+    const positions=layoutOverview(state.context);
+    clearScene();createBrainEnvelope();
+    createEdgeSegments(state.context,positions);createHierarchyLinks(state.context,positions);
+    for(const node of state.context.nodes)if(node.kind!=='domain')createNodeMesh(node,positions.get(node.id));
+    createClusterHubs(state.context,positions,true);
+    updateDomainFocus();fitView();
+    notifyShellChange();
+    dom.contextStatus.textContent=`${state.context.nodes.length} Brain-Entities · 0 dekorative Neuronen · ${state.context.edges.length} bestehende Relationen`;
+    updateRenderStatus();scheduleRender();return true;
+  }
+
+  function buildDomainScene(domainId) {
+    if(!BRAIN.domainById.has(domainId))return false;
+    BRAIN.focus(domainId);
+    state.focusId=domainId;state.selectedId=domainId;state.domainFocus=BRAIN.domainById.get(domainId).name;
+    state.context=buildContext(domainId,MAX_CONTEXT_NODES);
+    const positions=layoutContext(state.context);
+    clearScene();createBrainEnvelope();createEdgeSegments(state.context,positions);createHierarchyLinks(state.context,positions);createRealNodeHalos(state.context,positions);
+    for(const node of state.context.nodes)if(node.kind!=='domain')createNodeMesh(node,positions.get(node.id));
+    createClusterHubs(state.context,positions);
+    updateDomainFocus();createSignalPool(state.context,positions);notifyShellChange();fitView();
+    dom.contextStatus.textContent=`${state.context.nodes.length} Brain-Entities · ${state.context.edges.length} bestehende Relationen`;
+    updateRenderStatus();scheduleRender();return true;
+  }
+
+  function buildScene(focusId) {
+    const selected=nodeById.get(focusId);
+    if(!selected)return false;
+    if(selected.kind==='domain')return buildDomainScene(focusId);
+    BRAIN.focus(focusId);
+    state.focusId=focusId;state.selectedId=focusId;state.domainFocus=null;
+    state.context=buildContext(focusId);
+    const positions=layoutContext(state.context);
+    clearScene();createBrainEnvelope();createEdgeSegments(state.context,positions);createHierarchyLinks(state.context,positions);createRealNodeHalos(state.context,positions);
+    for(const node of state.context.nodes)if(node.kind!=='domain')createNodeMesh(node,positions.get(node.id));
+    createClusterHubs(state.context,positions);
+    updateDomainFocus();createSignalPool(state.context,positions);
+    createLabel(selected,'focus');updateSelection(focusId,false);fitView();
+    dom.contextStatus.textContent=`${state.context.nodes.length} Brain-Entities · ${state.context.edges.length} bestehende Relationen`;
+    updateRenderStatus();scheduleRender();return true;
   }
 
   function updateSelection(nodeId, render = true) {
     const node = nodeById.get(nodeId);
     const mesh = state.nodeMeshes.find((candidate) => candidate.userData.nodeId === nodeId);
-    if (!node || !mesh) return false;
+    if (!node) return false;
+    if (node.kind === 'domain') return selectDomain(nodeId);
+    if (!mesh) return false;
     state.selectedId = nodeId;
+    BRAIN.select(nodeId);
     if (state.selectedRing) {
       state.selectedRing.parent?.remove(state.selectedRing);
       state.selectedRing.geometry.dispose();
@@ -754,34 +801,10 @@
     state.selectedRing.position.copy(mesh.position);
     state.selectedRing.userData.contextObject = true;
     state.modelGroup.add(state.selectedRing);
-    updateDetails(node);
+    notifyShellChange();
     syncLabels();
     if (render) scheduleRender();
     return true;
-  }
-
-  function updateDetails(node) {
-    const visibleRelations = state.context.edges.filter((relation) => relation.source === node.id || relation.target === node.id);
-    dom.category.textContent = node.category || 'Azure';
-    dom.category.style.borderColor = colorForNode(node);
-    dom.category.style.color = colorForNode(node);
-    dom.title.textContent = node.title;
-    dom.id.textContent = node.id;
-    dom.path.textContent = nodePath(node);
-    dom.summary.textContent = node.content?.simple || node.summary || `${visibleRelations.length} sichtbare Beziehung(en) im aktuellen 3D-Kontext.`;
-    dom.focusSelected.disabled = node.id === state.focusId;
-    dom.detailHandoff.href = `../../app/index.html#mode=brain&node=${encodeURIComponent(node.id)}`;
-    dom.detailHandoff.setAttribute('aria-disabled', 'false');
-    if (!visibleRelations.length) {
-      dom.relations.innerHTML = '<p class="empty">Keine bestehende Relation im aktuellen Kontext sichtbar.</p>';
-      return;
-    }
-    dom.relations.innerHTML = visibleRelations.map((relation) => {
-      const targetId = otherNodeId(relation, node.id);
-      const target = nodeById.get(targetId);
-      return `<button type="button" data-node-id="${escapeHtml(targetId)}"><span>${escapeHtml(relationLabel(relation))}</span><b>${escapeHtml(target?.title || targetId)}</b><small>${escapeHtml(targetId)}</small></button>`;
-    }).join('');
-    dom.relations.querySelectorAll('[data-node-id]').forEach((button) => button.addEventListener('click', () => updateSelection(button.dataset.nodeId)));
   }
 
   function syncLabels() {
@@ -895,10 +918,12 @@
     for (const hub of state.clusterHubs) {
       const wave = state.reducedMotion ? 0 : Math.sin((now / ANIMATION_CONFIG.clusterPulsePeriodMs) * Math.PI * 2 + hub.phase);
       const scale = 1 + wave * ANIMATION_CONFIG.clusterPulseAmplitude;
-      hub.group.scale.setScalar(scale);
-      hub.core.material.opacity = 0.23 + wave * 0.025;
-      hub.halo.material.opacity = 0.13 + wave * 0.018;
-      hub.aura.material.opacity = 0.17 + wave * 0.02;
+      const selected = hub.name === state.domainFocus;
+      const dimmed = Boolean(state.domainFocus && !selected);
+      hub.group.scale.setScalar(scale * (selected ? 1.32 : 1));
+      hub.core.material.opacity = dimmed ? 0.055 : 0.23 + wave * 0.025;
+      hub.halo.material.opacity = dimmed ? 0.035 : 0.13 + wave * 0.018;
+      hub.aura.material.opacity = dimmed ? 0.05 : 0.17 + wave * 0.02;
     }
   }
 
@@ -914,7 +939,7 @@
   }
 
   function animationFrame(now) {
-    if (document.hidden) {
+    if (document.hidden || !state.active) {
       state.animation.running = false;
       state.animation.frameRequest = null;
       return;
@@ -963,7 +988,7 @@
 
   function scheduleRender() {
     state.dirty = true;
-    if (state.animation.running || document.hidden || !state.renderer) return;
+    if (state.animation.running || document.hidden || !state.active || !state.renderer) return;
     state.animation.running = true;
     state.animation.lastFrameAt = 0;
     state.animation.frameRequest = requestAnimationFrame(animationFrame);
@@ -971,7 +996,7 @@
 
   function resize() {
     const rect = dom.stage.getBoundingClientRect();
-    if (!rect.width || !rect.height) return;
+    if (!rect.width || !rect.height || !state.renderer || !state.camera) return;
     state.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, innerWidth <= 720 ? 1.2 : 1.6));
     state.renderer.setSize(rect.width, rect.height, false);
     state.camera.aspect = rect.width / rect.height;
@@ -983,7 +1008,7 @@
     noteManualInteraction(false);
     state.yaw = 0.62;
     state.pitch = 0.28;
-    state.distance = state.context?.nodes.length > 45 ? 258 : 225;
+    state.distance = state.context?.nodes.length > 150 ? 340 : state.context?.nodes.length > 45 ? 258 : 225;
     scheduleRender();
   }
 
@@ -1002,7 +1027,8 @@
     const point = pointerPosition(event);
     state.pointerNdc.set((point.x / point.width) * 2 - 1, -(point.y / point.height) * 2 + 1);
     state.raycaster.setFromCamera(state.pointerNdc, state.camera);
-    return state.raycaster.intersectObjects(state.nodeMeshes, false)[0]?.object || null;
+    state.modelGroup.updateMatrixWorld(true);
+    return state.raycaster.intersectObjects(state.hitMeshes, false)[0]?.object || null;
   }
 
   function showTooltip(event, mesh) {
@@ -1010,9 +1036,10 @@
       dom.tooltip.hidden = true;
       return;
     }
-    const node = nodeById.get(mesh.userData.nodeId);
+    const node = nodeById.get(mesh.userData.nodeId || mesh.userData.domainId);
+    if(!node)return;
     const point = pointerPosition(event);
-    dom.tooltip.innerHTML = `<b>${escapeHtml(node.title)}</b><code>${escapeHtml(node.id)}</code>`;
+    dom.tooltip.innerHTML = `<b>${escapeHtml(node.title)}</b><code>${escapeHtml(node.id)} · ${escapeHtml(node.category)}</code>`;
     dom.tooltip.style.left = `${point.x + 14}px`;
     dom.tooltip.style.top = `${point.y + 14}px`;
     dom.tooltip.hidden = false;
@@ -1063,7 +1090,7 @@
     state.pointers.delete(event.pointerId);
     if (wasClick) {
       const mesh = pickNode(event);
-      if (mesh) updateSelection(mesh.userData.nodeId);
+      if (mesh) mesh.userData.domainId ? selectDomain(mesh.userData.domainId) : updateSelection(mesh.userData.nodeId);
     }
     if (!state.pointers.size) {
       state.pointerStart = null;
@@ -1072,17 +1099,18 @@
     }
   }
 
-  function initializeFocusSelect() {
-    const candidates = nodes
-      .filter((node) => (relationsByNode.get(node.id)?.length || 0) >= 3)
-      .sort((a, b) => (relationsByNode.get(b.id).length - relationsByNode.get(a.id).length) || a.title.localeCompare(b.title, 'de'))
-      .slice(0, 18);
-    dom.focusSelect.innerHTML = candidates.map((node) => `<option value="${escapeHtml(node.id)}">${escapeHtml(node.title)} · ${node.id}</option>`).join('');
-    if (!candidates.some((node) => node.id === state.focusId)) {
-      const focus = nodeById.get(state.focusId);
-      dom.focusSelect.insertAdjacentHTML('afterbegin', `<option value="${escapeHtml(focus.id)}">${escapeHtml(focus.title)} · ${focus.id}</option>`);
-    }
-    dom.focusSelect.value = state.focusId;
+  function onDoubleClick(event) {
+    const mesh = pickNode(event);
+    if (mesh) mesh.userData.domainId ? buildDomainScene(mesh.userData.domainId) : buildScene(mesh.userData.nodeId);
+  }
+
+  function syncFromSharedState() {
+    const center = BRAIN.state.contextCenterId;
+    const selected = BRAIN.state.selectedEntityId;
+    if (center && BRAIN.domainById.has(center)) buildDomainScene(center);
+    else if (center && nodeById.has(center)) buildScene(center);
+    else buildOverviewScene(false);
+    if (selected && selected !== state.focusId && state.context?.include?.has(selected)) updateSelection(selected);
   }
 
   function initializeRenderer() {
@@ -1107,12 +1135,9 @@
       cyanLight.position.set(-160, -70, 120);
       state.scene.add(cyanLight);
       createStarField();
-      initializeFocusSelect();
-      buildScene(state.focusId);
+      syncFromSharedState();
       resize();
-      dom.renderStatus.textContent = state.reducedMotion
-        ? `WebGL aktiv · reduzierte Bewegung · Three.js r${THREE.REVISION}`
-        : `Live · ${ANIMATION_CONFIG.autoRotationSecondsPerTurn} s/Umdrehung · ${state.clusterHubs.length} Cluster · max. ${ANIMATION_CONFIG.signalPoolSize} Signale`;
+      updateRenderStatus();
       document.documentElement.dataset.pocReady = 'true';
       document.documentElement.dataset.visualNeuronCount = String(state.visualNeuronCount);
       document.documentElement.dataset.visualFilamentCount = String(state.visualFilamentCount);
@@ -1130,10 +1155,7 @@
   dom.canvas.addEventListener('pointercancel', onPointerUp);
   dom.canvas.addEventListener('pointerleave', () => { if (!state.pointers.size) dom.tooltip.hidden = true; });
   dom.canvas.addEventListener('wheel', (event) => { event.preventDefault(); zoom(Math.exp(event.deltaY * 0.001)); }, { passive: false });
-  dom.canvas.addEventListener('dblclick', (event) => {
-    const mesh = pickNode(event);
-    if (mesh) buildScene(mesh.userData.nodeId);
-  });
+  dom.canvas.addEventListener('dblclick', onDoubleClick);
   dom.canvas.addEventListener('keydown', (event) => {
     noteManualInteraction(false);
     if (event.key === 'ArrowLeft') state.yaw -= 0.12;
@@ -1153,11 +1175,6 @@
     dom.renderStatus.textContent = 'WebGL-Kontext verloren';
     document.documentElement.dataset.pocReady = 'context-lost';
   });
-  dom.focusSelect.addEventListener('change', () => buildScene(dom.focusSelect.value));
-  dom.focusSelected.addEventListener('click', () => { if (state.selectedId) buildScene(state.selectedId); });
-  dom.fit.addEventListener('click', fitView);
-  dom.zoomIn.addEventListener('click', () => zoom(0.82));
-  dom.zoomOut.addEventListener('click', () => zoom(1.2));
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) {
       state.animation.lastSignalAt = performance.now();
@@ -1166,19 +1183,40 @@
   });
   new ResizeObserver(resize).observe(dom.stage);
 
-  window.ADB3D_POC = {
+  window.ADB3D_RENDERER = {
+    onChange(callback) { onShellChange = callback; },
+    activate() {
+      state.active = true;
+      if (!state.renderer) initializeRenderer();
+      else if (state.focusId !== BRAIN.state.contextCenterId || state.selectedId !== BRAIN.state.selectedEntityId) syncFromSharedState();
+      if (!state.camera) return;
+      resize();
+      scheduleRender();
+    },
+    deactivate() {
+      state.active = false;
+      if (state.animation.frameRequest) cancelAnimationFrame(state.animation.frameRequest);
+      state.animation.frameRequest = null;
+      state.animation.running = false;
+      dom.tooltip.hidden = true;
+    },
+    fit: fitView,
+    zoomIn() { zoom(0.82); },
+    zoomOut() { zoom(1.2); },
+    resize,
     getState() {
       return {
         ready: document.documentElement.dataset.pocReady,
         focusId: state.focusId,
         selectedId: state.selectedId,
+        domainFocus: state.domainFocus,
+        overview: state.focusId === null,
         nodeCount: state.context?.nodes.length || 0,
         edgeCount: state.context?.edges.length || 0,
         visualNeuronCount: state.visualNeuronCount,
         visualFilamentCount: state.visualFilamentCount,
         threeRevision: THREE.REVISION,
         renderCount: state.renderCount,
-        handoffHref: dom.detailHandoff.getAttribute('href'),
         animation: {
           reducedMotion: state.reducedMotion,
           autoRotationSecondsPerTurn: ANIMATION_CONFIG.autoRotationSecondsPerTurn,
@@ -1198,8 +1236,8 @@
       buildScene(nodeId);
       return true;
     },
+    overview(domainName = null) { return buildOverviewScene(domainName); },
     contextNodeIds() { return state.context?.nodes.map((node) => node.id) || []; }
   };
 
-  initializeRenderer();
 })();

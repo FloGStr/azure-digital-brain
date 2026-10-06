@@ -2,11 +2,12 @@
   "meta": {
     "schema_version": "1.1",
     "title": "Azure Digital Brain – Canonical Relations",
-    "relation_count": 243,
+    "relation_count": 312,
     "migrated_at": "2026-08-11",
     "canonical": true,
     "enrichment_version": "1.8",
-    "networking_relation_count": 29,
+    "networking_relation_count": 36,
+    "networking_goldstandard_relation_count": 7,
     "identity_relation_count": 35,
     "compute_relation_count": 34,
     "governance_relation_count": 34,
@@ -370,19 +371,20 @@
     {
       "schema_version": "1.1",
       "id": "rel-020",
-      "source": "azure-0985",
-      "target": "azure-0983",
-      "type": "part_of",
-      "inverse_type": "contains",
-      "explanation": "Log Analytics dient der Abfrage und Analyse von Azure-Monitor-Logs.",
+      "source": "azure-0983",
+      "target": "azure-0985",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Monitor verwendet Log Analytics Workspaces für seinen Logs-Bereich; der Workspace speichert und erschließt Logdaten.",
       "sources": [
-        "mindmeister-source"
+        "ms-monitor-logs",
+        "ms-log-analytics"
       ],
       "confidence": 0.82,
       "status": "accepted",
       "created_by": "original_mindmap_inference",
       "created_at": "2026-08-10",
-      "reviewed_at": null,
+      "reviewed_at": "2026-09-24",
       "legacy_type": "Teil-von"
     },
     {
@@ -479,7 +481,7 @@
       "schema_version": "1.1",
       "id": "rel-026",
       "source": "azure-0937",
-      "target": "azure-0935",
+      "target": "azure-0933",
       "type": "integrates_with",
       "inverse_type": "integrates_with",
       "explanation": "Microsoft Sentinel und Defender for Cloud können Sicherheitsdaten und Vorfälle zusammenführen.",
@@ -3796,17 +3798,17 @@
       "target": "azure-0116",
       "type": "uses",
       "inverse_type": "used_by",
-      "explanation": "Disaster Recovery verwendet Azure Backup für unabhängige VM-Recovery-Points und Restore-Szenarien.",
+      "explanation": "Eine DR-/Recovery-Strategie kann Azure Backup für unabhängige Backup-Wiederherstellungspunkte und Restore nutzen. Diese Backup-Punkte sind nicht die Replikations-Recovery-Points von Azure Site Recovery; Site Recovery orchestriert für unterstützte Szenarien Replikation, Failover und Failback.",
       "sources": [
-        "ms-vm-backup",
-        "ms-backup-security",
+        "ms-azure-backup-overview-2026",
+        "ms-site-recovery",
         "ms-bcdr-concepts"
       ],
       "confidence": 0.99,
       "status": "accepted",
       "created_by": "knowledge_enrichment_v1.7",
       "created_at": "2026-08-11",
-      "reviewed_at": "2026-08-11"
+      "reviewed_at": "2026-09-24"
     },
     {
       "schema_version": "1.1",
@@ -4167,11 +4169,11 @@
     {
       "schema_version": "1.1",
       "id": "monitoring-rel-016",
-      "source": "azure-0999",
+      "source": "azure-1075",
       "target": "azure-0322",
       "type": "monitors",
       "inverse_type": "monitored_by",
-      "explanation": "Resource Health als Teil der Service-Health-Erfahrungen meldet den Plattformzustand unterstützter virtueller Maschinen.",
+      "explanation": "Azure Resource Health bewertet den Plattformzustand unterstützter virtueller Maschinen als einzelne Ressourcen.",
       "sources": [
         "ms-service-health-overview",
         "ms-resource-health-overview"
@@ -4180,7 +4182,7 @@
       "status": "accepted",
       "created_by": "knowledge_enrichment_v1.8",
       "created_at": "2026-08-11",
-      "reviewed_at": "2026-08-11"
+      "reviewed_at": "2026-09-24"
     },
     {
       "schema_version": "1.1",
@@ -4325,6 +4327,1209 @@
       "created_by": "knowledge_enrichment_v1.8",
       "created_at": "2026-08-11",
       "reviewed_at": "2026-08-11"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-030",
+      "source": "azure-1058",
+      "target": "azure-0442",
+      "type": "connects_to",
+      "inverse_type": "connects_to",
+      "explanation": "Azure Virtual WAN bindet Virtual Networks über verwaltete Virtual-Hub-Verbindungen in ein Transitnetz ein.",
+      "sources": [
+        "ms-virtual-wan"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "networking_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-031",
+      "source": "azure-1058",
+      "target": "azure-0462",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Virtual WAN integriert Site-to-Site- und Point-to-Site-VPN-Konnektivität in seine virtuellen Hubs.",
+      "sources": [
+        "ms-virtual-wan"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "networking_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-032",
+      "source": "azure-1058",
+      "target": "azure-0478",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Virtual WAN integriert ExpressRoute-Verbindungen für private Hybridkonnektivität über virtuelle Hubs.",
+      "sources": [
+        "ms-virtual-wan"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "networking_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-033",
+      "source": "azure-1058",
+      "target": "azure-0841",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Ein gesicherter Virtual Hub kann Azure Firewall für zentral kontrollierten Transitverkehr verwenden.",
+      "sources": [
+        "ms-virtual-wan"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "networking_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-034",
+      "source": "azure-0453",
+      "target": "azure-1059",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Ein Subnet verwendet Azure NAT Gateway für explizite, skalierbare ausgehende Internetkonnektivität.",
+      "sources": [
+        "ms-nat-gateway"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "networking_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-035",
+      "source": "azure-1060",
+      "target": "azure-0558",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Azure DNS Private Resolver verbindet Private-DNS-Namensräume mit DNS-Anfragen aus verbundenen Azure- oder lokalen Netzen.",
+      "sources": [
+        "ms-dns-private-resolver"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "networking_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "net-rel-036",
+      "source": "azure-0545",
+      "target": "azure-1060",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure DNS Private Resolver ist ein Dienst der Azure-DNS-Familie für hybride private Namensauflösung.",
+      "sources": [
+        "ms-dns-private-resolver"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "networking_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "container-rel-001",
+      "source": "azure-1062",
+      "target": "azure-1061",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Container Apps kann private Images aus Azure Container Registry beziehen.",
+      "sources": [
+        "ms-container-apps-overview",
+        "ms-acr-intro"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "containers_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "container-rel-002",
+      "source": "azure-0425",
+      "target": "azure-1061",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "AKS kann Containerimages aus Azure Container Registry beziehen.",
+      "sources": [
+        "ms-aks-overview",
+        "ms-acr-intro"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "containers_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "container-rel-003",
+      "source": "azure-0415",
+      "target": "azure-1061",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "ACI kann Containerimages aus Azure Container Registry beziehen.",
+      "sources": [
+        "ms-aci-overview",
+        "ms-acr-intro"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "containers_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "container-rel-004",
+      "source": "azure-1062",
+      "target": "azure-0425",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Container Apps und AKS bieten unterschiedliche Betriebs- und Kontrollniveaus für containerisierte Anwendungen.",
+      "sources": [
+        "ms-container-apps-overview",
+        "ms-aks-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "containers_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "db-rel-001",
+      "source": "azure-0731",
+      "target": "azure-1063",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Azure SQL Database und Azure SQL Managed Instance sind unterschiedliche verwaltete SQL-Betriebsmodelle.",
+      "sources": [
+        "ms-sql-managed-instance-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "databases_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "db-rel-002",
+      "source": "azure-0760",
+      "target": "azure-1065",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Synapse und Fabric unterstützen Analyseworkloads mit unterschiedlichen Plattform- und Betriebsmodellen.",
+      "sources": [
+        "ms-synapse-overview",
+        "ms-fabric-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "databases_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "db-rel-003",
+      "source": "azure-0731",
+      "target": "azure-0743",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "Azure SQL Database und Azure Database for PostgreSQL sind verwaltete relationale Datenbanken mit unterschiedlichen Engines und Ökosystemen.",
+      "sources": [
+        "ms-data-stores-choice"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "databases_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "integration-rel-001",
+      "source": "azure-1066",
+      "target": "azure-0782",
+      "type": "triggers",
+      "inverse_type": "triggered_by",
+      "explanation": "Service-Bus-Nachrichten können einen Logic-Apps-Workflow starten.",
+      "sources": [
+        "ms-service-bus-overview",
+        "ms-logic-apps-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "integration_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "integration-rel-002",
+      "source": "azure-0785",
+      "target": "azure-0782",
+      "type": "triggers",
+      "inverse_type": "triggered_by",
+      "explanation": "Event-Grid-Ereignisse können Logic-Apps-Workflows auslösen.",
+      "sources": [
+        "ms-event-grid-overview",
+        "ms-logic-apps-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "integration_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "integration-rel-003",
+      "source": "azure-1067",
+      "target": "azure-0782",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "API Management kann Logic Apps als Backend in eine verwaltete API einbinden.",
+      "sources": [
+        "ms-apim-overview",
+        "ms-logic-apps-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "integration_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "integration-rel-004",
+      "source": "azure-0766",
+      "target": "azure-0779",
+      "type": "routes_to",
+      "inverse_type": "receives_from",
+      "explanation": "IoT Hub kann Gerätetelemetrie an Event Hubs für nachgelagerte Stream-Verarbeitung weiterleiten.",
+      "sources": [
+        "ms-iot-hub-overview",
+        "ms-event-hubs-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "integration_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "integration-rel-005",
+      "source": "azure-0779",
+      "target": "azure-0789",
+      "type": "used_by",
+      "inverse_type": "uses",
+      "explanation": "Azure Stream Analytics kann Event-Hubs-Datenströme als Eingabe auswerten.",
+      "sources": [
+        "ms-event-hubs-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "integration_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "integration-rel-006",
+      "source": "azure-0755",
+      "target": "azure-0766",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure IoT Central nutzt IoT-Hub-Funktionen als Teil seiner verwalteten IoT-Anwendungsplattform.",
+      "sources": [
+        "ms-iot-central-overview",
+        "ms-iot-hub-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "integration_goldstandard",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "identity-v34-rel-001",
+      "source": "azure-1068",
+      "target": "azure-0904",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Benutzer und Gruppen sind Verzeichnisobjekte in Microsoft Entra ID.",
+      "sources": [
+        "ms-entra-groups"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "identity_v34_curation",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "identity-v34-rel-002",
+      "source": "azure-1068",
+      "target": "azure-0964",
+      "type": "used_by",
+      "inverse_type": "uses",
+      "explanation": "Gruppen können Azure-RBAC-Rollen erhalten.",
+      "sources": [
+        "ms-rbac"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "identity_v34_curation",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "identity-v34-rel-003",
+      "source": "azure-1069",
+      "target": "azure-0925",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "B2B Collaboration ist ein Szenario für externe Partneridentitäten.",
+      "sources": [
+        "ms-external-identities-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "identity_v34_curation",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "identity-v34-rel-004",
+      "source": "azure-1069",
+      "target": "azure-0926",
+      "type": "alternative_to",
+      "inverse_type": "alternative_to",
+      "explanation": "External ID für neue Kundenidentitäten und B2C-Bestandslösungen benötigen getrennte Planung.",
+      "sources": [
+        "ms-b2c-deployment"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "identity_v34_curation",
+      "created_at": "2026-09-23",
+      "reviewed_at": "2026-09-23"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "governance-v34-rel-001",
+      "source": "azure-0284",
+      "target": "azure-1070",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Resource Manager leitet Verwaltungsanfragen an den zuständigen Resource Provider weiter.",
+      "sources": [
+        "ms-resource-providers"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "governance_v34_curation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "governance-v34-rel-002",
+      "source": "azure-1071",
+      "target": "azure-0284",
+      "type": "integrates_with",
+      "inverse_type": "integrates_with",
+      "explanation": "Resource Graph ergänzt ARM um skalierbare, lesende Abfragen über Ressourceneigenschaften.",
+      "sources": [
+        "ms-resource-graph"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "governance_v34_curation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "governance-v34-rel-003",
+      "source": "azure-0054",
+      "target": "azure-1022",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Landing Zones verwenden Management Groups zur Organisation und Zuweisung gemeinsamer Governance-Regeln.",
+      "sources": [
+        "ms-landing-zone-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "governance_v34_curation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "governance-v34-rel-004",
+      "source": "azure-0054",
+      "target": "azure-0962",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Landing Zones verwenden Azure Policy als technische Guardrail über ihre Scopes hinweg.",
+      "sources": [
+        "ms-landing-zone-overview"
+      ],
+      "confidence": 1,
+      "status": "accepted",
+      "created_by": "governance_v34_curation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "cost-rel-001",
+      "source": "azure-1072",
+      "target": "azure-1034",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Cost Analysis ist die Analyseerfahrung innerhalb von Microsoft Cost Management.",
+      "sources": [
+        "ms-cost-management"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "cost-rel-002",
+      "source": "azure-1073",
+      "target": "azure-0993",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Advisor liefert Cost Recommendations als Eingang für geprüfte Optimierungsentscheidungen; Advisor bleibt fachlich bereichsübergreifend.",
+      "sources": [
+        "ms-advisor-cost"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "cost-rel-003",
+      "source": "azure-1073",
+      "target": "azure-0032",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Commitment-Modelle sind eine mögliche Maßnahme der Kostenoptimierung, wenn das Nutzungsprofil dazu passt.",
+      "sources": [
+        "ms-savings-plan-overview",
+        "ms-reservations-overview"
+      ],
+      "confidence": 0.96,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-025",
+      "source": "azure-1074",
+      "target": "azure-0983",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Azure Monitor Metrics ist der numerische Zeitreihenbereich der Azure-Monitor-Datenplattform.",
+      "sources": [
+        "ms-monitor-metrics"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-026",
+      "source": "azure-0986",
+      "target": "azure-0983",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Azure Monitor Logs ist der Log- und Trace-Bereich der Azure-Monitor-Datenplattform.",
+      "sources": [
+        "ms-monitor-logs"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-027",
+      "source": "azure-0985",
+      "target": "azure-0986",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Der Log Analytics Workspace ist die primäre Ressource zur Speicherung und Analyse von Azure Monitor Logs.",
+      "sources": [
+        "ms-monitor-logs"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "monitoring-rel-028",
+      "source": "azure-1075",
+      "target": "azure-0999",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Azure Resource Health ist die ressourcenbezogene Health-Sicht innerhalb der Azure-Service-Health-Familie.",
+      "sources": [
+        "ms-service-health-overview",
+        "ms-resource-health-overview"
+      ],
+      "confidence": 0.97,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "reliability-rel-001",
+      "source": "azure-0114",
+      "target": "azure-1076",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Ein Disaster-Recovery-Plan braucht festgelegte und getestete Ziele für Wiederanlaufzeit und Datenverlust.",
+      "sources": [
+        "ms-reliability-targets",
+        "ms-bcdr-concepts"
+      ],
+      "confidence": 0.99,
+      "status": "accepted",
+      "created_by": "microsoft_documentation",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "migration-rel-001",
+      "source": "azure-1078",
+      "target": "azure-0645",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Migrate liefert Discovery, Assessment und Business-Case-Daten für die Wahl einer passenden Strategie; die Entscheidung bleibt Architekturarbeit.",
+      "sources": [
+        "ms-caf-migration-strategy-2026",
+        "ms-migrate-assessment-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "migration-rel-002",
+      "source": "azure-1079",
+      "target": "azure-0645",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Für unterstützte Workloads kann Azure Migrate Wellenplanung und Migrationsausführung unterstützen; der Cutover-Plan bleibt workloadübergreifend.",
+      "sources": [
+        "ms-migrate-waves-2026",
+        "ms-azure-migrate"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "migration-rel-003",
+      "source": "azure-0720",
+      "target": "azure-0738",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Für dokumentierte Datenbankpfade kann Datenmigration Azure Database Migration Service verwenden; Datei- und Offline-Transfers benötigen andere Wege.",
+      "sources": [
+        "ms-dms-overview",
+        "ms-dms-tools-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "migration-rel-004",
+      "source": "azure-1080",
+      "target": "azure-1078",
+      "type": "depends_on",
+      "inverse_type": "depended_on_by",
+      "explanation": "Umfang und Zeitpunkt der Modernisierung folgen der pro Workload gewählten Ziel- und Migrationsstrategie.",
+      "sources": [
+        "ms-caf-modernization-2026",
+        "ms-caf-migration-strategy-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-001",
+      "source": "azure-0301",
+      "target": "azure-0284",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Bicep und ARM Templates werden für Azure-Ressourcen über Azure Resource Manager bereitgestellt.",
+      "sources": [
+        "ms-devops-bicep-2026",
+        "ms-devops-arm-template-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-002",
+      "source": "azure-0313",
+      "target": "azure-0300",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Bicep wird in ARM-Template-JSON kompiliert, das ARM für das Deployment verarbeitet.",
+      "sources": [
+        "ms-devops-bicep-faq-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-003",
+      "source": "azure-1083",
+      "target": "azure-0301",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Die Delivery Pipeline validiert und deployed versionierte IaC-Definitionen.",
+      "sources": [
+        "ms-devops-cd-2026",
+        "ms-devops-bicep-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-004",
+      "source": "azure-1083",
+      "target": "azure-1082",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Ein bestimmter Commit und geprüfte Versionshistorie sichern die Rückverfolgbarkeit der Pipeline.",
+      "sources": [
+        "ms-devops-ci-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-005",
+      "source": "azure-1084",
+      "target": "azure-1083",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "GitHub Actions kann CI/CD-Workflows für Build, Test und Deployment ausführen.",
+      "sources": [
+        "ms-devops-gh-actions-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-006",
+      "source": "azure-1085",
+      "target": "azure-1083",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Pipelines kann CI/CD-Stages einschließlich Tests, Freigaben und Bereitstellung ausführen.",
+      "sources": [
+        "ms-devops-suite-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-007",
+      "source": "azure-0797",
+      "target": "azure-1085",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure Pipelines ist ein Dienst der Azure-DevOps-Produktfamilie.",
+      "sources": [
+        "ms-devops-suite-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-008",
+      "source": "azure-1087",
+      "target": "azure-0809",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Automation kann PowerShell-Skripte als Runbooks ausführen.",
+      "sources": [
+        "ms-devops-automation-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-009",
+      "source": "azure-1083",
+      "target": "azure-1088",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Ein Delivery-Prozess kann Rolling-, Blue-Green- oder Canary-Muster zur kontrollierten Freigabe einsetzen.",
+      "sources": [
+        "ms-devops-cd-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-010",
+      "source": "azure-1083",
+      "target": "azure-0962",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Eine Pipeline kann Azure-Policy-Konformität vor und nach dem Deployment prüfen; Policy bleibt Governance-owned.",
+      "sources": [
+        "ms-devops-cd-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-011",
+      "source": "azure-1083",
+      "target": "azure-0964",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Azure-Deployments benötigen eine passend berechtigte Workload-Identität; RBAC bleibt Identity-owned.",
+      "sources": [
+        "ms-devops-ado-wif-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "devops-rel-012",
+      "source": "azure-1083",
+      "target": "azure-0983",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Deployment-Validierung kann Azure-Monitor-Signale auswerten; Observability bleibt Monitoring-owned.",
+      "sources": [
+        "ms-devops-cd-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-001",
+      "source": "azure-1091",
+      "target": "azure-1092",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Microsoft Foundry bietet Foundry Models als Modellkatalog und Deploymentweg.",
+      "sources": [
+        "ms-ai-foundry-2026",
+        "ms-ai-foundry-models-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-002",
+      "source": "azure-1092",
+      "target": "azure-1093",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Azure OpenAI ist ein Teil des Modellangebots in Foundry Models.",
+      "sources": [
+        "ms-ai-foundry-models-2026",
+        "ms-ai-foundry-openai-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-003",
+      "source": "azure-1091",
+      "target": "azure-1094",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Foundry Agent Service ist eine verwaltete Agent-Funktion der Foundry-Plattform.",
+      "sources": [
+        "ms-ai-foundry-2026",
+        "ms-ai-foundry-agents-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-004",
+      "source": "azure-1095",
+      "target": "azure-1096",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "RAG kann Azure AI Search für Indexierung und Retrieval verwenden; RAG selbst ist kein Dienst.",
+      "sources": [
+        "ms-ai-rag-2026",
+        "ms-ai-search-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-005",
+      "source": "azure-1095",
+      "target": "azure-1093",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Eine RAG-Anwendung kann ein Azure-OpenAI-Modell für die Antwort auf abgerufenen Kontext verwenden.",
+      "sources": [
+        "ms-ai-rag-2026",
+        "ms-ai-foundry-openai-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-006",
+      "source": "azure-1097",
+      "target": "azure-1098",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Document Intelligence ist ein spezialisierter Dokumentdienst in Foundry Tools.",
+      "sources": [
+        "ms-ai-foundry-tools-2026",
+        "ms-ai-doc-intel-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-007",
+      "source": "azure-1097",
+      "target": "azure-1099",
+      "type": "contains",
+      "inverse_type": "part_of",
+      "explanation": "Content Safety ist ein AI-spezifischer Schutzdienst in Foundry Tools.",
+      "sources": [
+        "ms-ai-foundry-tools-2026",
+        "ms-ai-content-safety-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-008",
+      "source": "azure-1090",
+      "target": "azure-1099",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Responsible-AI-Umsetzung kann Content Safety als technischen Schutzbaustein verwenden.",
+      "sources": [
+        "ms-ai-rai-2026",
+        "ms-ai-content-safety-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-009",
+      "source": "azure-0768",
+      "target": "azure-1090",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Der ML-Lifecycle erfordert Qualitäts-, Fairness- und Sicherheitsbewertung vor und nach Inferenz.",
+      "sources": [
+        "ms-ai-aml-2026",
+        "ms-ai-rai-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-011",
+      "source": "azure-1091",
+      "target": "azure-0964",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Foundry-Projekte und -Agents benötigen passend berechtigte Azure-Identitäten und RBAC.",
+      "sources": [
+        "ms-ai-foundry-ga-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-012",
+      "source": "azure-1091",
+      "target": "azure-0983",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Foundry kann Telemetrie und Tracing mit Azure-Monitor-/Application-Insights-Funktionen integrieren.",
+      "sources": [
+        "ms-ai-ai-observability-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "ai-rel-013",
+      "source": "azure-0768",
+      "target": "azure-1083",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "MLOps kann versionierte CI/CD-Prüfungen und Freigaben nutzen; der Delivery-Prozess bleibt DevOps-owned.",
+      "sources": [
+        "ms-ai-aml-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "found-rel-001",
+      "source": "azure-1101",
+      "target": "azure-0137",
+      "type": "uses",
+      "inverse_type": "used_by",
+      "explanation": "Azure Public Cloud nutzt für viele Ressourcen verbrauchsbasierte Abrechnung; konkrete Tarife sind dienstabhängig.",
+      "sources": [
+        "ms-found-cloud-2026",
+        "ms-found-consumption-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "found-rel-002",
+      "source": "azure-0197",
+      "target": "azure-0229",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Die Wahl eines Servicemodells erfordert die Prüfung der zugehörigen Kunden- und Providerverantwortung.",
+      "sources": [
+        "ms-found-responsibility-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "found-rel-003",
+      "source": "azure-0007",
+      "target": "azure-0237",
+      "type": "part_of",
+      "inverse_type": "contains",
+      "explanation": "Eine Availability Zone liegt innerhalb einer Azure-Region, sofern diese Region Zonen unterstützt.",
+      "sources": [
+        "ms-found-zones-2026",
+        "ms-found-regions-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "found-rel-004",
+      "source": "azure-0007",
+      "target": "azure-0070",
+      "type": "used_by",
+      "inverse_type": "uses",
+      "explanation": "Reliability-Architekturen können mehrere Availability Zones nutzen; der Schutz muss passend konfiguriert werden.",
+      "sources": [
+        "ms-found-zones-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
+    },
+    {
+      "schema_version": "1.1",
+      "id": "found-rel-005",
+      "source": "azure-0229",
+      "target": "azure-0964",
+      "type": "requires",
+      "inverse_type": "required_by",
+      "explanation": "Der Kunde muss Zugriffskontrollen umsetzen; Azure RBAC ist ein möglicher konkreter Mechanismus.",
+      "sources": [
+        "ms-found-responsibility-2026"
+      ],
+      "confidence": 0.95,
+      "status": "accepted",
+      "created_by": "portfolio_v3.4",
+      "created_at": "2026-09-24",
+      "reviewed_at": "2026-09-24"
     }
   ]
 }

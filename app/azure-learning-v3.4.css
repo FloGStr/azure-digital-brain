@@ -1,0 +1,61 @@
+.azure-learning .content-sidebar{padding:23px 16px}
+.azure-learning .content-sidebar h1{font-size:17px}
+.azure-learning .content-sidebar>p{margin-bottom:14px}
+.azure-learning .azure-previous-module{border-color:#31566d;background:#0d2535;margin:0 0 8px}
+.azure-learning .network-flow-stage{display:grid;gap:12px}
+.azure-platform-scene{display:grid;gap:11px;border:1px solid #315267;border-radius:12px;background:radial-gradient(circle at 48% 35%,#123047,#0b2030 80%);padding:14px}
+.azure-scene-heading{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:9px}
+.azure-scene-heading b{color:#d7edf7;font-size:11px}
+.azure-scene-heading span{color:#91b4c6;font-size:10px}
+.azure-scene-heading.main{margin-bottom:0}
+.azure-scene-heading.main span{color:#ddc48e;font-weight:700}
+.azure-platform-scene.overview .azure-scene-heading.main span{color:#a6d5e8}
+.azure-platform-core{display:flex;align-items:center;gap:10px}
+.azure-core-card{display:flex;flex:1 1 0;min-width:0;min-height:90px;flex-direction:column;justify-content:center;gap:5px;border:1px solid #4281a0;border-radius:9px;background:#12354a;padding:12px;color:#e4f4fa}
+.azure-principle{flex:.85}
+.azure-platform{flex:1.15}
+.azure-core-card small{color:#90bdd1;font-size:10px}
+.azure-core-card b{font-size:14px}
+.azure-core-card span{color:#bbd3df;font-size:10px}
+.azure-core-card.context{opacity:.76}
+.azure-arrow,.azure-flow-arrow{flex:0 0 auto;color:#79bad9;font-size:24px}
+.azure-arrow.focused{color:#d1b77b}
+.azure-platform-scene .focused{border-color:#c9ad72;background:#243848;box-shadow:inset 0 0 0 1px #c9ad7244}
+.azure-scene-section{border:1px solid #315267;border-radius:10px;background:#0e2839;padding:11px}
+.azure-resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.azure-category,.azure-region-entity,.azure-zone-entity,.azure-interface-entity,.azure-arm-entity{cursor:pointer;border:1px solid #4a91b2;border-radius:7px;background:#173d52;color:#e0f1f8;padding:8px;text-align:center;font-size:10px;font-weight:700;line-height:1.3}
+.azure-category{min-height:43px}
+.azure-learning [data-azure-entity]:hover,.azure-learning [data-azure-entity]:focus-visible,.azure-learning [data-azure-entity].selected{border-color:#d9c28b;background:#345267;color:#fff3d9;outline:none}
+.azure-site-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.azure-site-grid>div{display:grid;gap:6px;border:1px solid #4b83a0;border-radius:7px;background:#17374a;color:#d5eaf2;padding:15px 7px;text-align:center;font-size:10px}
+.azure-site-grid>div span{color:#a7cbdc;font-size:9px}
+.azure-infrastructure.focused .azure-site-grid>div{border-color:#a99161}
+.azure-region-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:9px}
+.azure-region-card{display:grid;gap:9px;border:1px solid #457d99;border-radius:9px;background:#123448;padding:10px;min-width:0}
+.azure-region-card.focused{border-color:#c9ad72;background:#233848}
+.azure-region-header,.azure-zone-caption{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.azure-region-header span,.azure-zone-caption span{color:#b4d0de;font-size:10px}
+.azure-zone-group{display:grid;gap:7px;padding:8px;border:1px dashed #6088a0;border-radius:7px;background:#0d2a3c}
+.azure-zone-pair{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.azure-zone-pair span{padding:8px 5px;border:1px solid #7194a8;border-radius:6px;background:#1b4053;color:#d7eaf2;text-align:center;font-size:10px}
+.azure-zone-schematic{color:#9ebdce;font-size:9px;line-height:1.35}
+.azure-region-card.secondary{align-content:center;gap:7px}
+.azure-region-card.secondary b{font-size:11px;color:#d6edf6}
+.azure-region-card.secondary span,.azure-region-card.secondary small{color:#a7c3d1;font-size:10px;line-height:1.3}
+.azure-management-flow{display:flex;align-items:center;gap:7px}
+.azure-team,.azure-target-resource{flex:0 1 105px;border:1px solid #4b83a0;border-radius:7px;background:#17374a;padding:12px 7px;color:#dfedf4;text-align:center;font-size:10px;font-weight:700}
+.azure-interface-group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;flex:1 1 220px;min-width:0}
+.azure-interface-group>span{display:flex;flex-direction:column;justify-content:center;gap:2px;border:1px solid #4a91b2;border-radius:7px;background:#173d52;color:#e0f1f8;padding:6px;text-align:center;font-size:10px;font-weight:700}
+.azure-interface-group>span small{color:#a5c6d6;font-size:8px;font-weight:400}
+.azure-management-layer{display:grid;gap:4px;flex:0 1 150px;text-align:center}
+.azure-management-layer small{color:#adcad8;font-size:9px;line-height:1.25}
+.azure-arm-entity{width:100%}
+.azure-management p{margin:9px 0 0;color:#a8c4d2;font-size:10px;line-height:1.4}
+.azure-next-question{margin:0;padding:10px 13px;border-left:2px solid #69afcf;color:#c7e4f1;font-size:11px}
+.azure-next-question span{margin-left:6px;color:#a9d7e9}
+.azure-platform-scene.overview .azure-core-card,.azure-platform-scene.overview .azure-scene-section,.azure-platform-scene.overview .azure-region-card,.azure-platform-scene.overview .azure-site-grid>div,.azure-platform-scene.overview [data-azure-entity]{border-color:#4b83a0;background:#12354a;color:#e4f4fa;box-shadow:none}
+.azure-platform-scene.overview .azure-arrow,.azure-platform-scene.overview .azure-flow-arrow{color:#79bad9}
+@media(max-width:900px){.azure-learning .selection-list{display:block;overflow:visible}.azure-learning .network-flow-entry{height:auto;min-width:0;max-width:none;margin-bottom:11px}.azure-learning .network-flow-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px}}
+@media(max-width:650px){.azure-platform-core{flex-wrap:wrap}.azure-core-card{flex:1 1 34%}.azure-output{flex:1 1 100%}.azure-resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.azure-region-grid{grid-template-columns:1fr}.azure-management-flow{flex-wrap:wrap}.azure-interface-group{flex:1 1 60%}.azure-arm-entity{flex:1 1 32%}.azure-team,.azure-target-resource{flex:1 1 35%}.azure-flow-arrow{font-size:18px}.azure-next-question span{display:block;margin:4px 0 0}}
+.legacy-context-label{display:grid;gap:4px;border-top:1px solid #315267;padding:12px 9px;color:#d7edf7;font-size:11px}
+.legacy-context-label small{color:#91b4c6;font-size:10px}

@@ -7,8 +7,18 @@
   <title>Azure Digital Brain</title>
   <meta name="description" content="Lokale Azure-Wissensplattform mit Mindmap, Knowledge Graph, Architecture Scenarios und geführten Lernpfaden.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=3.4-portfolio">
-  <link rel="stylesheet" href="mobile-responsive.css?v=3.4-responsive">
+  <link rel="stylesheet" href="architecture-case-v3.4.css?v=20261006-final-ux1">
+  <link rel="stylesheet" href="styles.css?v=3.4-networking-ui-final">
+  <link rel="stylesheet" href="mobile-responsive.css?v=3.4-networking-ui-final">
+  <link rel="stylesheet" href="brain-ux-v3.4.css?v=20260924-final-ux">
+  <link rel="stylesheet" href="networking-learning-v3.4.css?v=20261006-visual-polish">
+  <link rel="stylesheet" href="cloud-learning-v3.4.css?v=20260925-review1">
+  <link rel="stylesheet" href="azure-learning-v3.4.css?v=20260925-chapter2">
+  <link rel="stylesheet" href="organization-learning-v3.4.css?v=20260925-chapter3">
+  <link rel="stylesheet" href="access-learning-v3.4.css?v=20261006-targeted-learning-review">
+  <link rel="stylesheet" href="governance-learning-v3.4.css?v=20261006-targeted-learning-review">
+  <link rel="stylesheet" href="demo-learning-v3.4.css?v=20261006-ux-polish">
+  <link rel="stylesheet" href="../experiments/3d-brain/renderer-embedded-v3.4.css?v=20260924-single-shell">
 </head>
 <body>
   <div class="app-shell">
@@ -17,20 +27,19 @@
       <div class="mode-switch" role="tablist" aria-label="Ansichtsmodus">
         <button id="mindmapMode" class="active" role="tab" aria-selected="true">Mindmap</button>
         <button id="brainMode" role="tab" aria-selected="false">Brain</button>
-        <a id="brain3dMode" class="mode-link" href="../experiments/3d-brain/index.html" role="tab" aria-selected="false" aria-label="3D Brain öffnen">3D Brain</a>
         <button id="architectureMode" role="tab" aria-selected="false">Architecture</button>
         <button id="learningMode" role="tab" aria-selected="false">Lernen</button>
       </div>
       <div class="search-box" role="search">
         <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" placeholder="Node-ID, Titel, Alias oder Inhalt …" autocomplete="off" spellcheck="false" aria-controls="searchResults" aria-autocomplete="list">
+        <input id="searchInput" type="search" placeholder="Begriff suchen …" autocomplete="off" spellcheck="false" aria-controls="searchResults" aria-autocomplete="list">
         <kbd>⌘ K</kbd>
         <div id="searchResults" class="search-results" hidden></div>
       </div>
       <div class="toolbar">
         <button id="expandAllBtn" class="text-button" title="Alle Mindmap-Zweige öffnen">Alles aufklappen</button>
         <button id="collapseBtn" class="text-button" title="Alle Mindmap-Zweige schließen">Alles zuklappen</button>
-        <button id="focusBtn" class="text-button brain-only" hidden>Fokus lösen</button>
+        <button id="focusBtn" class="text-button brain-only" hidden>Gesamtansicht</button>
         <button id="zoomOut" aria-label="Verkleinern">−</button>
         <button id="fitView" class="zoom-readout">Einpassen</button>
         <button id="zoomIn" aria-label="Vergrößern">+</button>
@@ -41,17 +50,30 @@
     </header>
 
     <main class="workspace">
-      <section id="stage" class="stage" aria-label="Azure Wissenskarte">
+      <section id="stage" class="stage mindmap-mode" aria-label="Azure Wissenskarte">
         <svg id="mindmapCanvas" class="visual active" tabindex="0" aria-label="Hierarchische Azure-Mindmap">
           <g id="mindViewport"><g id="mindLinks"></g><g id="mindNodes"></g></g>
         </svg>
+        <nav id="mindScopeSwitch" class="mind-scope-switch" aria-label="Mindmap-Kontext" hidden>
+          <button id="mindScopeFocus" type="button" class="active" aria-pressed="true" title="Nur den ausgewählten Domain-Unterbaum anzeigen">Fokus</button>
+          <button id="mindScopeGlobal" type="button" aria-pressed="false" title="Den ausgewählten Knoten in der vollständigen Azure-Mindmap anzeigen">Gesamt-Mindmap</button>
+        </nav>
         <canvas id="brainCanvas" class="visual" tabindex="0" aria-label="Semantischer Azure Knowledge Graph"></canvas>
+        <div id="brain3dViewport" class="visual brain3d-viewport" aria-label="Dreidimensionaler Azure Knowledge Graph">
+          <canvas id="brain3dCanvas" tabindex="0" aria-label="Dreidimensionaler Azure Knowledge Graph"></canvas>
+          <div id="labelLayer" class="label-layer"></div>
+          <div id="brain3dFallback" class="brain3d-fallback" hidden><strong>3D-Darstellung nicht verfügbar</strong><span>Die 2D-Darstellung bleibt über den Brain-Schalter erreichbar.</span></div>
+        </div>
+        <nav id="brainViewSwitch" class="brain-view-switch" aria-label="Brain-Darstellung" hidden>
+          <button id="brain2dView" type="button" class="active" aria-current="true">2D</button>
+          <button id="brain3dMode" type="button" aria-label="3D-Darstellung des Brain aktivieren">3D</button>
+        </nav>
         <section id="architectureView" class="content-view" aria-label="Architecture Scenarios" hidden>
           <nav class="content-sidebar"><div class="view-kicker">Architecture</div><h1>Referenzarchitekturen</h1><p>Bestehende V2.0-Szenarien im Zusammenhang erkunden.</p><div id="scenarioList" class="selection-list"></div></nav>
           <article id="scenarioContent" class="content-main"></article>
         </section>
-        <section id="learningView" class="content-view" aria-label="Architecture Learning Paths" hidden>
-          <nav class="content-sidebar"><div class="view-kicker">Lernen</div><h1>Architecture Learning</h1><p>Vom mentalen Azure-Modell zur begründeten Architekturentscheidung.</p><div id="learningPathList" class="selection-list"></div></nav>
+        <section id="learningView" class="content-view" aria-label="Azure-Lernreise" hidden>
+          <nav class="content-sidebar"><div class="view-kicker">Lernen</div><h1>Azure-Lernreise</h1><p>Kapitel in fachlicher Reihenfolge.</p><div id="learningPathList" class="selection-list"></div></nav>
           <article id="learningContent" class="content-main"></article>
         </section>
         <div id="graphTooltip" class="graph-tooltip" hidden></div>
@@ -61,6 +83,7 @@
       </section>
 
       <aside id="detailPanel" class="detail-panel" aria-label="Knotendetails">
+        <button id="returnToLearning" class="back-button" type="button" hidden>← Zurück zu Lernen</button>
         <button id="backNavigation" class="back-button" aria-label="Zum vorherigen Wissenskontext zurück" title="Zum vorherigen Wissenskontext zurück" hidden>← Zurück</button>
         <button id="closeDetails" class="close-button" aria-label="Details schließen">×</button>
         <div id="detailCategory" class="category-pill">Azure</div>
@@ -70,28 +93,42 @@
           <button id="contextMindmap" type="button">Mindmap</button>
           <button id="contextBrain" type="button">Brain</button>
           <button id="contextArchitecture" type="button">Architecture</button>
-          <button id="contextLearning" type="button">Lernen</button>
+          <button id="contextLearning" type="button" hidden>Im Lernen verstehen</button>
         </nav>
         <div id="auditBox" class="audit-box" hidden></div>
         <section id="contextSummarySection" hidden><h2>Kontext</h2><div id="contextSummary" class="context-summary"></div></section>
-        <section id="simpleSection"><h2>Kurz erklärt</h2><p id="detailShort">Die ursprüngliche AZ-900-Hierarchie bleibt vollständig erhalten. Der Brain-Modus ergänzt semantische Querverbindungen.</p></section>
-        <section id="technicalSection"><h2>Technische Erklärung</h2><div id="detailTechnical" class="original-content">Lokale Wissensplattform · Local · Offline capable</div></section>
-        <section id="architectureSection" hidden><h2>Architektur-Relevanz</h2><div id="detailArchitecture" class="original-content"></div><div id="architectureContextList" class="architecture-context-list" role="region" aria-label="Architecture-Kontext" aria-live="polite"></div></section>
-        <section id="whySection" hidden><h2>Warum wichtig?</h2><p id="detailWhy"></p></section>
-        <section id="examplesSection" hidden><h2>Beispiele</h2><div id="detailExamples" class="original-content"></div></section>
-        <section id="memorySection" hidden><h2>Merksatz &amp; Analogie</h2><p id="detailMemory"></p></section>
+        <section id="simpleSection"><h2>Kurz erklärt</h2><p id="detailShort">16 fachliche Domains bilden die primäre Mindmap. Der Brain-Modus ergänzt semantische Querverbindungen.</p></section>
+        <section id="whySection" hidden><h2>Warum / wofür brauche ich das?</h2><p id="detailWhy"></p></section>
         <div id="detailMeta" class="detail-meta"></div>
-        <section id="learningSection" hidden>
+        <section id="architectureLinkSection" class="compact-context-section" hidden><h2>Architecture</h2><div id="architectureContextList" role="region" aria-label="Architecture-Kontext" aria-live="polite"></div></section>
+        <section id="learningSection" hidden aria-hidden="true">
           <h2>Lernfortschritt</h2>
           <select id="learningStatus" aria-label="Lernstatus"><option value="unbekannt">Unbekannt</option><option value="offen">Offen</option><option value="in-arbeit">In Arbeit</option><option value="verstanden">Verstanden</option><option value="wiederholen">Wiederholen</option></select>
         </section>
-        <section id="relationsSection" hidden><h2>Verbindungen</h2><div id="relationList" class="relation-list"></div></section>
-        <section id="contextSection" hidden><h2>Lernpfad</h2><div id="contextList" class="context-list" role="region" aria-label="Learning-Kontext" aria-live="polite"></div></section>
-        <section id="sourcesSection" hidden><h2>Quellen</h2><div id="sourceList" class="source-list"></div></section>
+        <section id="relationsSection" hidden><h2>Verbindungen</h2><div id="relationList" class="relation-list"></div><button id="toggleRelations" class="disclosure-button" type="button" hidden></button></section>
+        <section id="contextSection" class="compact-context-section" hidden><h2>Lernen</h2><div id="contextList" class="context-list" role="region" aria-label="Learning-Kontext" aria-live="polite"></div></section>
+        <details id="detailMore" class="detail-disclosure" hidden><summary>Mehr wissen</summary>
+        <section id="technicalSection"><h2>Technische Erklärung</h2><div id="detailTechnical" class="original-content">Lokale Wissensplattform · Local · Offline capable</div></section>
+        <section id="architectureSection" hidden><h2>Architektur-Relevanz</h2><div id="detailArchitecture" class="original-content"></div></section>
+        <section id="examplesSection" hidden><h2>Praxisbeispiele</h2><div id="detailExamples" class="original-content"></div></section>
+        <section id="analogySection" hidden><h2>Bildliches Beispiel / Alltagsanalogie</h2><p id="detailAnalogy"></p></section>
+        <section id="merksatzSection" hidden><h2>Merksatz</h2><p id="detailMerksatz"></p></section>
+        <section id="sourcesSection" hidden>
+          <details id="sourcesDisclosure" class="detail-disclosure">
+            <summary><span>Quellen</span><small id="sourceSummary"></small><b id="sourceDisclosureLabel">Quellen anzeigen</b></summary>
+            <div id="sourceList" class="source-list"></div>
+          </details>
+        </section>
+        </details>
         <details id="qualityDetails" class="quality-details" hidden><summary>Qualitätsinformationen</summary><div id="qualityContent"></div></details>
-        <section id="notesSection" hidden><h2>Eigene Notizen</h2><textarea id="notes" rows="4" placeholder="Nur lokal in diesem Browser gespeichert …"></textarea></section>
+        <section id="notesSection" hidden>
+          <details id="notesDisclosure" class="detail-disclosure">
+            <summary><span>Eigene Notizen</span><small>Nur lokal in diesem Browser</small><b id="notesDisclosureLabel">Notizen öffnen</b></summary>
+            <textarea id="notes" rows="4" placeholder="Nur lokal in diesem Browser gespeichert …"></textarea>
+          </details>
+        </section>
         <div id="detailActions" class="detail-actions" hidden>
-          <button id="toggleBranch" class="secondary">Ast öffnen</button>
+          <button id="toggleBranch" class="secondary">Unterthemen anzeigen</button>
           <button id="showRelations" class="primary">Zusammenhänge anzeigen</button>
         </div>
         <div id="semanticChooser" class="semantic-chooser" role="dialog" aria-modal="false" aria-labelledby="semanticChooserTitle" hidden>
@@ -102,17 +139,34 @@
     </main>
   </div>
   <noscript>Diese Anwendung benötigt JavaScript.</noscript>
-  <script src="../data/runtime/release-runtime.js"></script>
-  <script src="../data/runtime/knowledge-runtime.js"></script>
-  <script src="../data/knowledge-architecture/v3.4/runtime.js"></script>
+  <script src="../data/runtime/release-runtime.js?v=3.4-networking-final"></script>
+  <script src="../data/runtime/knowledge-runtime.js?v=20261006-ux-polish"></script>
+  <script src="../data/runtime/brain-model-v3.4.js?v=20260924-consolidated"></script>
+  <script src="brain-shared-v3.4.js?v=20260924-consolidated"></script>
+  <script src="../data/knowledge-architecture/v3.4/runtime-active.js?v=20260924-consolidated"></script>
   <script src="../data/runtime/architecture-runtime.js"></script>
   <script src="../data/runtime/learning-runtime.js"></script>
-  <script src="../data/runtime/semantic-navigation-runtime.js"></script>
+  <script src="networking-learning-v3.4.js?v=20261006-visual-polish"></script>
+  <script src="cloud-learning-v3.4.js?v=20261006-ux-polish"></script>
+  <script src="azure-learning-v3.4.js?v=20261006-ux-polish"></script>
+  <script src="organization-learning-v3.4.js?v=20261006-ux-polish"></script>
+  <script src="access-learning-v3.4.js?v=20261006-targeted-learning-review"></script>
+  <script src="governance-learning-v3.4.js?v=20261006-ux-polish"></script>
+  <script src="learning-consistency-v3.4.js?v=20261006"></script>
+  <script src="demo-learning-v3.4.js?v=20261006-targeted-learning-review"></script>
+  <script src="../data/runtime/semantic-navigation-v3.4-active.js?v=20260924-consolidated"></script>
   <script src="../data/runtime/context-experience-runtime.js"></script>
   <script src="../data/runtime/phase-3-feature-runtime.js"></script>
   <script src="../data/runtime/cross-mode-runtime-v3.3.js"></script>
   <script src="semantic-navigation-core.js"></script>
   <script src="cross-mode-context-core.js"></script>
-  <script src="app.js"></script>
+  <script>var exports = {};</script>
+  <script src="../experiments/3d-brain/vendor/three.r185.cjs.js"></script>
+  <script>window.THREE = exports;</script>
+  <script src="../experiments/3d-brain/brain3d.js?v=20260924-single-shell"></script>
+  <script src="../data/architecture/case-01-v1.js?v=20261006-dm1"></script>
+  <script src="architecture-decision-model-v1.js?v=20261006-dm1"></script>
+  <script src="architecture-case-v3.4.js?v=20261006-final-ux1"></script>
+  <script src="app.js?v=20261006-final-ux1"></script>
 </body>
 </html>

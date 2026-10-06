@@ -1,0 +1,78 @@
+/* Three.js viewport only. Header, search, controls, legend and detail panel live in app/index.html. */
+.brain3d-viewport {
+  isolation: isolate;
+  overflow: hidden;
+  background: radial-gradient(circle at 52% 46%, #0a2134 0, #050f1a 38%, #02060b 76%, #010306 100%);
+  box-shadow: inset 0 0 130px #000d;
+}
+.brain3d-viewport::before {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  z-index: -1;
+  background: radial-gradient(ellipse at 30% 34%, #22467a18 0, transparent 34%), radial-gradient(ellipse at 72% 66%, #542f8510 0, transparent 31%), radial-gradient(ellipse at 58% 30%, #0ec8d00b 0, transparent 26%);
+  filter: blur(34px);
+  pointer-events: none;
+}
+.brain3d-viewport::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(circle at 50% 48%, transparent 42%, #01050a55 74%, #000b 100%);
+  box-shadow: inset 0 0 95px #000a;
+  pointer-events: none;
+}
+#brain3dCanvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; outline: none; }
+#brain3dCanvas:active { cursor: grabbing; }
+#brain3dCanvas:focus-visible { box-shadow: inset 0 0 0 2px #52c7ff; }
+.brain3d-viewport .label-layer { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.brain3d-viewport .node-label {
+  position: absolute;
+  z-index: 3;
+  transform: translate(-50%, 12px);
+  display: grid;
+  gap: 2px;
+  max-width: 220px;
+  padding: 5px 8px;
+  border: 1px solid #37657ca3;
+  border-radius: 7px;
+  background: #030a11e8;
+  box-shadow: 0 7px 22px #000a, 0 0 18px #2cbff512;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  white-space: nowrap;
+}
+.brain3d-viewport .node-label b { overflow: hidden; text-overflow: ellipsis; color: #eaf7ff; font-size: 10px; }
+.brain3d-viewport .node-label code { color: #71d6ff; font-size: 8px; }
+.brain3d-viewport .node-label.focus { border-color: #79e7ff; background: #071a27f2; box-shadow: 0 7px 25px #000b, 0 0 24px #55d9ff2e; }
+.brain3d-viewport .node-label.selected { border-color: #ffd166; box-shadow: 0 7px 25px #000b, 0 0 20px #ffd16622; }
+.brain3d-viewport .cluster-label {
+  position: absolute;
+  z-index: 3;
+  transform: translate(-50%, 13px);
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+  min-width: 122px;
+  padding: 5px 9px;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: center;
+  pointer-events: auto;
+  cursor: pointer;
+  opacity: .94;
+  text-shadow: 0 0 9px var(--cluster-color), 0 0 24px var(--cluster-color);
+}
+.brain3d-viewport .cluster-label.domain-focused { opacity: 1; filter: drop-shadow(0 0 12px var(--cluster-color)); }
+.brain3d-viewport .cluster-label.domain-dimmed { opacity: .3; }
+.brain3d-viewport .cluster-label:focus-visible { outline: 2px solid var(--cluster-color); outline-offset: 3px; }
+.brain3d-viewport .cluster-label i { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--cluster-color) 72%, transparent); border-radius: 50%; background: color-mix(in srgb, var(--cluster-color) 11%, #02070d); box-shadow: 0 0 18px color-mix(in srgb, var(--cluster-color) 48%, transparent), inset 0 0 12px color-mix(in srgb, var(--cluster-color) 18%, transparent); color: #eefcff; font-size: 17px; font-style: normal; line-height: 1; }
+.brain3d-viewport .cluster-label b { color: var(--cluster-color); font-size: 11px; font-weight: 780; letter-spacing: .035em; }
+.brain3d-viewport .cluster-label span { color: #7890a4; font-size: 7px; letter-spacing: .11em; text-transform: uppercase; }
+.brain3d-fallback { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: min(420px, calc(100% - 40px)); display: grid; gap: 8px; padding: 24px; border: 1px solid #7d4d55; border-radius: 14px; background: #28141be8; text-align: center; z-index: 8; }
+.brain3d-fallback span { color: #d5aeb5; font-size: 12px; line-height: 1.5; }
+.stage.brain-3d-mode .help-chip span { font-size: 0; }
+.stage.brain-3d-mode .help-chip span::after { content: "Ziehen: rotieren · Mausrad/Pinch: zoomen · Klick: auswählen · Doppelklick: fokussieren"; font-size: 11px; }
+@media (max-width: 760px) { .brain3d-viewport .node-label { max-width: 150px; } .brain3d-viewport .cluster-label { min-width: 76px; opacity: .72; } }
